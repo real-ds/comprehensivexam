@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useState, ReactNode } from 'react'
 import type { Question, TopicStats } from '../types'
+import questionsJson from '../../data/questions.json'
 
 interface QueryContextType {
   questions: Question[];
@@ -24,41 +25,35 @@ export function QueryProvider({ children }: { children: ReactNode }) {
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    async function loadQuestions() {
-      try {
-        const response = await fetch('/data/questions.json')
-        if (!response.ok) throw new Error('Failed to load questions')
-        const data = await response.json()
-        const qs: Question[] = data.questions || data
-        setQuestions(qs)
-        const map = new Map<string, Question>(qs.map((q: Question) => [q.id, q]))
-        setQuestionsById(map)
-        const topicSet = new Set<string>(qs.map((q: Question) => q.topic))
-        setTopics(Array.from(topicSet).sort())
-        // Compute stats
-        const stats: TopicStats[] = []
-        for (const topic of topicSet) {
-          const tqs = qs.filter((q: Question) => q.topic === topic)
-          const subtopics: Record<string, number> = {}
-          for (const q of tqs) {
-            if (q.subtopic) subtopics[q.subtopic] = (subtopics[q.subtopic] || 0) + 1
-          }
-          stats.push({
-            topic,
-            total: tqs.length,
-            answered: tqs.filter((q: Question) => q.correctAnswer).length,
-            flagged: tqs.filter((q: Question) => q.needsReview).length,
-            subtopics,
-          })
+    try {
+      const data = questionsJson as any
+      const qs: Question[] = data.questions || data
+      setQuestions(qs)
+      const map = new Map<string, Question>(qs.map((q: Question) => [q.id, q]))
+      setQuestionsById(map)
+      const topicSet = new Set<string>(qs.map((q: Question) => q.topic))
+      setTopics(Array.from(topicSet).sort())
+      const stats: TopicStats[] = []
+      for (const topic of topicSet) {
+        const tqs = qs.filter((q: Question) => q.topic === topic)
+        const subtopics: Record<string, number> = {}
+        for (const q of tqs) {
+          if (q.subtopic) subtopics[q.subtopic] = (subtopics[q.subtopic] || 0) + 1
         }
-        setTopicStats(stats)
-      } catch (e) {
-        setError(e instanceof Error ? e.message : 'Unknown error')
-      } finally {
-        setLoading(false)
+        stats.push({
+          topic,
+          total: tqs.length,
+          answered: tqs.filter((q: Question) => q.correctAnswer).length,
+          flagged: tqs.filter((q: Question) => q.needsReview).length,
+          subtopics,
+        })
       }
+      setTopicStats(stats)
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Unknown error')
+    } finally {
+      setLoading(false)
     }
-    loadQuestions()
   }, [])
 
   const getQuestion = (id: string) => questionsById.get(id)
