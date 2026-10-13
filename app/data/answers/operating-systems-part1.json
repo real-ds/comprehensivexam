@@ -1,0 +1,945 @@
+{
+  "topic": "Operating Systems",
+  "answers": [
+    {
+      "id": "q_0261",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "An operating system is the layer of software that controls all hardware and system resources and provides services to application programs. Every standard definition expresses the same idea in a different way: it is the interface between the hardware and user programs, it is a collection of programs that manages the machine resources, and it is a provider of system services to applications. Since all three statements are true, the key is the option that accepts all of them.\n\nWhy D is correct: All three descriptions are standard, accepted characterisations of an operating system.\n\nWhy the others are wrong:\n- A: True on its own, but it is only one of three valid descriptions.\n- B: True on its own, but it is only one of three valid descriptions.\n- C: True on its own, but it is only one of three valid descriptions.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0262",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A real-time operating system is one that guarantees deterministic, bounded response to events with strict timing deadlines, which rules out Palm OS, a handheld personal digital assistant operating system with no timing guarantees. RTLinux is the real-time version of Linux, QNX is a real-time operating system used in embedded and automotive systems, and VxWorks is a commercial real-time operating system. So Palm OS is the odd one out.\n\nWhy B is correct: Palm OS is a general-purpose handheld PDA operating system with no real-time guarantees.\n\nWhy the others are wrong:\n- A: RTLinux is a real-time variant of Linux with predictable scheduling.\n- C: QNX is a real-time operating system used in embedded systems.\n- D: VxWorks is a commercial real-time operating system.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0263",
+      "subtopic": "Classical IPC",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Blocking and non-blocking send differ in what the sender does after issuing the send call. With a non-blocking send the sender is never suspended by the operation: it hands the message over and immediately resumes its own computation. Option B states exactly this behaviour.\n\nWhy B is correct: A non-blocking send returns at once, so the sending process sends the message and resumes operation.\n\nWhy the others are wrong:\n- A: This describes a blocking send, where the sender waits until the message is received.\n- C: Describes the receiver side, not the sender behaviour of a send call.\n- D: Incorrect, a defined behaviour exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0264",
+      "subtopic": "Classical IPC",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A zero-capacity queue cannot hold any message; it is a pure rendezvous point. The sender therefore cannot deposit a message and return, because there is nowhere to store it. It must block until the receiver executes the matching receive and takes the message directly from the sender.\n\nWhy B is correct: With zero capacity the sender blocks until the receiver receives the message.\n\nWhy the others are wrong:\n- A: False, a zero-capacity queue cannot store even one message.\n- C: False, messages cannot simply be discarded, the sender waits.\n- D: Incorrect, a defined behaviour exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0265",
+      "subtopic": "Classical IPC",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Buffered message systems keep messages in a queue between sender and receiver. A zero-capacity queue has no such storage area, so the message system provides no buffering at all and works only as a direct rendezvous. That is what option B states.\n\nWhy B is correct: A zero-capacity queue is a message system with no buffering, i.e. a rendezvous.\n\nWhy the others are wrong:\n- A: Opposite of the truth, zero capacity means no buffering.\n- C: The word link is not the standard term for a zero-capacity queue.\n- D: Incorrect, a defined term exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0266",
+      "subtopic": "Classical IPC",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "Message queues may be bounded (fixed capacity, sender blocks when full) or unbounded (variable capacity). Both of these still provide storage for messages that the operating system allocates and manages itself, as opposed to the zero-capacity rendezvous which provides no storage at all. Such automatically maintained message buffering is called automatic buffering.\n\nWhy B is correct: Bounded and unbounded capacity queues store messages in system-managed buffers, which is automatic buffering.\n\nWhy the others are wrong:\n- A: Programmed buffering implies the programmer builds the buffer, not the OS.\n- C: User defined buffering implies application code manages the buffer.\n- D: No buffering describes only the zero-capacity queue.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0267",
+      "subtopic": "Classical IPC",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "When a procedure of one process needs the service of a procedure that executes on a remote machine, the local process cannot simply call it, so the OS uses a message-based stub. The client marshals the arguments into a message, the remote server stubs unmarshals them and runs the real procedure, and the reply is sent back as another message. This simulation of a local procedure call across a network is the remote procedure call model.\n\nWhy C is correct: RPC is the IPC mechanism in which a remote procedure appears local and is invoked through message passing.\n\nWhy the others are wrong:\n- A: Local procedure call is a direct in-process call, not message based.\n- B: Inter Process Communication is the general category, not the specific remote-call mechanism described.\n- D: Remote Machine Invocation is not a standard OS term.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0268",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "When power is applied the CPU starts executing at a fixed entry address containing a small program held in non-volatile firmware or ROM. This first program is the bootstrap program: it locates and loads the operating system into main memory and then transfers control to it. The standard OS textbook name for this initial program is the bootstrap program.\n\nWhy D is correct: The bootstrap program is the initial program run at power up that loads the OS.\n\nWhy the others are wrong:\n- A: Boot program is an informal variant of the same term, not the key used here.\n- B: Bootloader is the firmware component that performs the loading, a narrower role.\n- C: Initializer is not the standard term for the power-up program.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0269",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "An interrupt caused by an external device is hardware generated. A trap or exception, by contrast, is raised by the currently executing instruction itself, for example on a divide by zero, an invalid address or a page fault. Because it is generated by software executing an erroneous instruction, a trap is a software-generated interrupt caused by an error.\n\nWhy B is correct: A trap is raised by the running instruction when it detects an error, so it is software generated.\n\nWhy the others are wrong:\n- A: Hardware-generated interrupts come from external devices such as disks and timers.\n- C: There is no category of user generated error interrupts.\n- D: Incorrect, a defined category exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0270",
+      "subtopic": "I/O and device management",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "In memory-mapped I/O the device registers occupy ordinary addresses, so the CPU transfers data by writing the data register and flipping the control bits of the same device register through normal load/store instructions. Option B describes that direct register-level data transfer and status signalling. Options A and C describe polling and interrupt-driven I/O, which are alternative ways of noticing device readiness rather than the addressing scheme itself, and option D describes DMA.\n\nWhy B is correct: The CPU transfers the byte to the data register and signals device readiness through the control register.\n\nWhy the others are wrong:\n- A: Polling is a readiness-detection technique, not what memory mapping defines.\n- C: Interrupts are a notification mechanism and are not specific to memory-mapped I/O.\n- D: A device controller running user code describes DMA.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Standard MCQ banks key this item as (b), but memory-mapped I/O is purely an addressing scheme and is equally usable with polling (a) or interrupts (c); the options describe different I/O techniques rather than one correct memory-mapped behaviour."
+    },
+    {
+      "id": "q_0271",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The short-term scheduler picks a process from the ready queue and puts the CPU in user mode, but the actual handover is made by a separate kernel module. The dispatcher performs the context switch, loads the saved context of the chosen process, and transfers control to it.\n\nWhy A is correct: The dispatcher hands the CPU to the process chosen by the short-term scheduler.\n\nWhy the others are wrong:\n- B: An interrupt is the event that may trigger the dispatcher, not the module that hands over the CPU.\n- C: The scheduler only selects the process, it does not perform the switch.\n- D: Incorrect, a defined module exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0272",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "The long-term (job) scheduler selects jobs from the job queue on secondary storage and admits them to memory. Once admitted, a process that is in main memory and ready to run but waiting for the CPU is kept on the ready queue. That is precisely the list described here.\n\nWhy B is correct: Processes resident in memory that are ready to execute wait on the ready queue.\n\nWhy the others are wrong:\n- A: The job queue holds jobs on secondary storage before admission.\n- C: Execution queue is not the standard name for this list.\n- D: Process queue is not the standard name; the ready queue is.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0273",
+      "subtopic": "Process concepts",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "OS X is built on the XNU kernel, which combines the Mach microkernel with BSD subsystems and loadable kernel extensions in a single address space. Because it mixes microkernel and monolithic ideas in one integrated kernel, it is classified as a hybrid (composite) kernel, the same class as Windows NT and Linux.\n\nWhy D is correct: OS X uses XNU, a hybrid kernel that mixes microkernel and monolithic design.\n\nWhy the others are wrong:\n- A: Monolithic kernel with modules describes Linux more closely.\n- B: A pure microkernel is not what XNU is, it merges both designs.\n- C: A purely monolithic kernel does not describe OS X.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0274",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Turnaround time is measured from the instant a process is submitted to the system until the instant it finishes, that is completion time minus submission time. It therefore contains all of the time the process spent waiting plus the time it ran. Option B is the standard definition.\n\nWhy B is correct: Turnaround time is the interval from submission of a process to its completion.\n\nWhy the others are wrong:\n- A: Waiting time counts only time spent in the ready queue.\n- C: Response time is submission until first response is produced.\n- D: Throughput is the number of processes completed per unit time.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0275",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "First-come, first-served serves the ready queue strictly in arrival order, so the process that requests the CPU first is the one that gets it. The other algorithms order the queue differently: shortest job first orders by burst length and priority scheduling orders by priority.\n\nWhy A is correct: FCFS allocates the CPU to the process that requests it first.\n\nWhy the others are wrong:\n- B: Shortest job scheduling picks the shortest burst, not the first requester.\n- C: Priority scheduling picks the highest priority process.\n- D: Incorrect, a defined algorithm matches.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0276",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "In priority scheduling every process carries a priority value and the scheduler always selects the process with the highest priority from the ready queue. If the numbers are used, the smallest number denotes the highest priority.\n\nWhy A is correct: The CPU is allocated to the process with the highest priority.\n\nWhy the others are wrong:\n- B: Lowest priority processes are the ones that starve under this policy.\n- C: Equal priority processes can be scheduled, usually in FCFS order among equals.\n- D: Incorrect, a defined rule exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0277",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "When a new process arrives in preemptive priority scheduling, the only question that decides whether the CPU changes hands is whether the newcomer outranks the process currently executing. The standard textbook statement is that the arriving process priority is compared with the priority of the currently running process, and preemption occurs only if the new priority is higher.\n\nWhy B is correct: Preemption on arrival is decided by comparing the new process priority against the currently running process.\n\nWhy the others are wrong:\n- A: Comparison against all processes describes queue selection, not the arrival decision described here.\n- C: A process priority is not inherited from its parent in the general case.\n- D: The init process has no special priority for this purpose.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0278",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A time quantum is the fixed slice of CPU time given to a process in a round-robin scheme. When the quantum expires the process is preempted and put at the back of the ready queue. Shortest job first and priority scheduling use burst lengths and priorities, not time slices.\n\nWhy B is correct: The time quantum is the defining parameter of round robin scheduling.\n\nWhy the others are wrong:\n- A: Shortest job first is ordered by predicted burst length, not by a time slice.\n- C: Priority scheduling is ordered by priority, not by a time slice.\n- D: Multilevel queue scheduling uses separate queues, and only multilevel feedback adds a time quantum.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0279",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "A multilevel queue scheduler permanently divides the ready queue into several queues, for example one for interactive foreground processes and one for batch jobs, each with its own scheduling policy. No other algorithm described here groups processes into separate classes of queues.\n\nWhy D is correct: Multilevel queue scheduling classifies processes into groups, each with its own queue.\n\nWhy the others are wrong:\n- A: Shortest job first uses a single queue ordered by burst length.\n- B: Round robin uses a single circular ready queue.\n- C: Priority scheduling uses a single queue ordered by priority.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0280",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "Multilevel feedback scheduling differs from multilevel queue scheduling in that the classification is not permanent. A process that uses too much CPU time is demoted to a lower-priority queue with a longer time quantum, while a process that waits a lot is promoted. Hence a process can move between differently classified ready queues during its lifetime.\n\nWhy A is correct: The defining feature of multilevel feedback scheduling is that processes migrate between queues.\n\nWhy the others are wrong:\n- B: Permanent classification describes multilevel queue scheduling, not multilevel feedback.\n- C: Processes are classified into groups and can change group.\n- D: Incorrect, a defined behaviour exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0281",
+      "subtopic": "Threads",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Kernel-level threads are entities the kernel itself knows about, so the scheduler can dispatch them directly. User-level threads are visible only to the thread library inside the process, and the kernel schedules the whole process as one unit, so it never schedules individual user threads. Processes of course are scheduled by the kernel.\n\nWhy B is correct: User-level threads are managed by a library, not by the kernel scheduler.\n\nWhy the others are wrong:\n- A: Kernel-level threads are scheduled directly by the kernel.\n- C: Processes are the fundamental scheduling unit of the kernel.\n- D: Incorrect, one of the listed choices is right.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0282",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Multiprogramming keeps several jobs in memory and switches the CPU among them, so choosing which resident process runs next is the whole basis of the technique. CPU scheduling is therefore essential to multiprogramming operating systems. It has no special role in multiprocessor systems, where each CPU can run a process simultaneously, nor for the size of memory.\n\nWhy B is correct: CPU scheduling is the basis of multiprogramming operating systems.\n\nWhy the others are wrong:\n- A: Multiprocessor systems run many processes in parallel, so scheduling is not their basis.\n- C: The size of physical memory does not make scheduling possible or necessary.\n- D: Incorrect, a defined choice exists.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Near-duplicate stem of q_0393 (extractionFlags duplicate-stem-of); answered independently as instructed."
+    },
+    {
+      "id": "q_0283",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "In a single-program system the CPU sits idle while the one running program waits for I/O. Multiprogramming switches the CPU to another ready job during such waits, so no processor time is wasted. The resource that is put to productive use is therefore time, in the form of CPU cycles.\n\nWhy A is correct: Multiprogramming keeps the CPU busy by switching jobs, so time is used productively.\n\nWhy the others are wrong:\n- B: Memory space is shared among jobs, but the classic gain of multiprogramming is CPU time.\n- C: Money is not the resource involved.\n- D: Incorrect, only one option is right.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0284",
+      "subtopic": "Process concepts",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "Each process has a private address space, so its code, data and global variables are not visible to other processes. Open files and pending alarms, signals and signal handlers, on the other hand, are not per-process private: they are inherited from the parent at fork time and are typically shared, so the kernel maintains one table for them. Hence the private items are the address space and global variables.\n\nWhy C is correct: Address space and global variables are private to each process.\n\nWhy the others are wrong:\n- A: Open files are inherited and shared with the parent process.\n- B: Pending alarms, signals and handlers are inherited from the parent.\n- D: Incorrect, the other two options are not private per process.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Near-duplicate stem of q_0387 (extractionFlags duplicate-stem-of); answered independently as instructed."
+    },
+    {
+      "id": "q_0285",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Process execution alternates between a CPU burst, where the process is running and using the processor, and an I/O burst, where it waits for a device. This alternating cycle of computation and I/O repeats until the process terminates.\n\nWhy B is correct: Every process execution cycle consists of a CPU burst followed by an I/O burst.\n\nWhy the others are wrong:\n- A: An I/O and OS burst is not the standard pair of terms.\n- C: A memory burst is not a scheduling state of a process.\n- D: An OS and memory burst pair does not describe execution.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0286",
+      "subtopic": "Process scheduling",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "An I/O-bound program spends most of its life waiting for devices, so its processor demand is small and chopped into frequent short slices between I/O operations. It therefore shows many very short CPU bursts with occasional long I/O bursts. A CPU-bound program shows the opposite pattern.\n\nWhy C is correct: I/O-bound processes are characterised by many very short CPU bursts.\n\nWhy the others are wrong:\n- A: A few very short CPU bursts describes neither bound strongly.\n- B: Very short I/O bursts do not characterise I/O-bound programs, their I/O waits are long.\n- D: A few very short I/O bursts contradicts the definition of I/O-bound work.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0287",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Only processes that are in memory and ready to compute sit on the ready queue, and the short-term scheduler picks one of them whenever the CPU becomes free or the current quantum expires. The long-term scheduler instead selects from the job queue, and the blocked queue holds processes waiting for an event, so neither combination fits.\n\nWhy C is correct: The short-term scheduler selects a process from the ready queue to execute.\n\nWhy the others are wrong:\n- A: A blocked process is not eligible to be scheduled.\n- B: The long-term scheduler admits jobs from the job queue to memory.\n- D: Option text is corrupted leftover from the previous question and is not an answer.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0288",
+      "subtopic": "Process scheduling",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "Preemption means the OS takes the CPU away from a process that is still runnable. When a running process requests I/O and moves from running to waiting it voluntarily gives up the CPU, which is allowed under non-preemptive scheduling as well. By contrast, a running to ready move (time slice expiry) and a waiting to ready move are scheduler decisions, and only the first of those actually steals the CPU.\n\nWhy B is correct: Running to waiting is a voluntary release of the CPU, so no preemption is involved.\n\nWhy the others are wrong:\n- A: Running to ready is caused by preemption when the time slice ends.\n- C: Waiting to ready does not involve the CPU at all, the process was not running.\n- D: Incorrect, the cases are not all non-preemptive.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0289",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A context switch is the saving of the CPU state of the outgoing process or thread and the restoring of the saved state of the incoming one. The term is used for both processes and threads, whereas a process switch names only the process case and a task switch is merely an informal synonym.\n\nWhy C is correct: Context switch is the standard term for switching the CPU between processes or threads.\n\nWhy the others are wrong:\n- A: Process switch is too narrow, the switch also happens between threads of a process.\n- B: Task switch is an informal synonym, not the standard term.\n- D: Incorrect, a single precise term is required.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0290",
+      "subtopic": "Process scheduling",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "Dispatch latency is the time required after a scheduling decision to stop the currently running process and actually begin executing the process chosen by the short-term scheduler. It includes the dispatcher overhead of saving the old context and loading the new one, which is why the scheduler tries to keep it very short.\n\nWhy C is correct: Dispatch latency is the time to stop one process and start running another.\n\nWhy the others are wrong:\n- A: Describes a state transition, not a latency; there is no running to ready transition of this kind.\n- B: Adding CPU idle time is wrong, the CPU is busy switching.\n- D: Incorrect, a defined term exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0291",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The goals of CPU scheduling are to keep the processor as busy as possible, to increase throughput, to keep response times short and to increase fairness. Keeping the CPU from sitting idle is exactly increasing CPU utilization, which is what switching among ready processes achieves.\n\nWhy A is correct: Scheduling exists to keep the CPU busy, i.e. to increase CPU utilization.\n\nWhy the others are wrong:\n- B: Decreasing CPU utilization is the opposite of the scheduling goal.\n- C: Leaving the CPU idle wastes system resources.\n- D: Incorrect, there is a clear relation.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Near-duplicate stem of q_0293 (extractionFlags duplicate-stem-of); answered independently as instructed."
+    },
+    {
+      "id": "q_0292",
+      "subtopic": "Process scheduling",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "Turnaround time is completion time minus submission time, so it covers all the time a process spends in the system: waiting in the ready queue plus the time it actually runs. Among the options given, only A comes close, since it counts the whole period a process occupies the system until it finishes execution. The exact textbook wording is missing from the option set.\n\nWhy A is correct: It is the only option that counts the total time a process takes to finish execution.\n\nWhy the others are wrong:\n- B: Time spent only in the ready queue is the waiting time.\n- C: Time spent running is just the CPU burst time.\n- D: Completion till submission is not a measurable positive interval in this sense.\n",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "No option states the correct definition (submission to completion); option A only approximates it by speaking of total waiting time."
+    },
+    {
+      "id": "q_0293",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A good scheduler tries to make processes finish as quickly as possible after they arrive, which means reducing their turnaround time. Increasing it, freezing it or claiming no relation would all contradict the whole purpose of CPU scheduling.\n\nWhy B is correct: Good scheduling minimises the time between submission and completion.\n\nWhy the others are wrong:\n- A: Making processes wait longer is the opposite of good scheduling.\n- C: Keeping turnaround time unchanged defeats the purpose of scheduling.\n- D: Scheduling has a direct effect on turnaround time.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Near-duplicate stem of q_0291 (extractionFlags duplicate-stem-of); answered independently as instructed."
+    },
+    {
+      "id": "q_0294",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Waiting time counts only the interval during which the process is in the ready queue waiting for the CPU. Time spent blocked on I/O is not waiting time for scheduling purposes, and time actually spent running is the CPU burst, so option B is the correct one.\n\nWhy B is correct: The waiting time is the total time a process spends in the ready queue.\n\nWhy the others are wrong:\n- A: Blocked time is not included in waiting time.\n- C: Time in the running state is the CPU execution time.\n- D: Completion till submission is not a valid interval here.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0295",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "In a time-sharing system the time slice assigned to a process expires while it is still runnable. The OS therefore preempts it and puts it back on the ready queue, from where it will be picked again later. The process is neither terminated nor suspended nor blocked, because it still wants to compute and needs no event.\n\nWhy C is correct: On quantum expiry a runnable process goes back to the ready state.\n\nWhy the others are wrong:\n- A: Suspension means swapping the process out of memory, which does not happen here.\n- B: The process has not finished, so it is not terminated.\n- D: The process is not blocked, it is waiting for no event.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0296",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Among the scheduling criteria the classic objectives are maximum CPU utilization, maximum throughput, minimum turnaround time and minimum waiting time. Making processes wait less in the ready queue is a direct objective of the scheduler, so it works to decrease waiting time.\n\nWhy C is correct: A primary scheduling objective is to decrease the waiting time of processes.\n\nWhy the others are wrong:\n- A: Increasing waiting time is the opposite of the scheduling goal.\n- B: Keeping waiting time unchanged ignores a standard scheduling criterion.\n- D: Incorrect, a definite relation exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0297",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Response time is the delay between the moment a job or request is submitted and the moment the system first reacts to it, for example the first line of output appearing. It is therefore shorter than turnaround time, which runs all the way to completion. Option B states exactly that definition.\n\nWhy B is correct: Response time is measured from submission until the first response is produced.\n\nWhy the others are wrong:\n- A: Submission till completion is the turnaround time.\n- C: Till the response is output is vague and not the textbook definition.\n- D: Incorrect, a defined term exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0298",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Round robin is inherently preemptive: each process runs for a fixed time quantum and is then forcibly removed from the CPU even if it has not finished, so that every process gets a fair turn. Without preemption the circle could never advance past the first process.\n\nWhy B is correct: Round robin relies on forced preemption after each time quantum.\n\nWhy the others are wrong:\n- A: Non-preemptive scheduling runs a process to completion, which is not round robin.\n- C: Incorrect, only one category applies.\n- D: Incorrect, round robin is clearly classified.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0299",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "If the time quantum is made so large that no process ever uses it up during its entire CPU burst, then no preemption ever occurs and the circular ready queue is simply served in arrival order. Round robin then degenerates into first come first served. Very small quanta, by contrast, add context-switch overhead and lower performance.\n\nWhy A is correct: A very large time slice degenerates round robin into FCFS.\n\nWhy the others are wrong:\n- B: A very small slice increases overhead, it does not give FCFS.\n- C: Extremely small slices decrease performance through extra context switches.\n- D: Round robin never becomes shortest job first, it ignores burst lengths.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0300",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The dispatching part of the scheduler, the dispatcher, takes a process from the ready queue and makes it the running process by loading its saved context onto the CPU. Moving processes to a waiting or blocked queue is the job of the state-transition routines, not of the dispatcher.\n\nWhy A is correct: The dispatcher assigns a ready process to the CPU.\n\nWhy the others are wrong:\n- B: Ready processes are never moved to the waiting queue by the dispatcher.\n- C: A running process moves to blocked state only when it requests an event.\n- D: Incorrect, only the ready to running transfer is described.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Near-duplicate stem of q_0339 (extractionFlags duplicate-stem-of); answered independently as instructed."
+    },
+    {
+      "id": "q_0301",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "FIFO, first in first out, is a queue discipline in which the job that has been waiting longest is executed first. That is exactly the job that came into the queue first, which is the classic unfair convoy-producing scheduling algorithm.\n\nWhy B is correct: FIFO executes the job that arrived in the queue first.\n\nWhy the others are wrong:\n- A: That is LIFO, the opposite discipline.\n- C: That describes shortest job first.\n- D: That describes longest job first, which nobody uses for this purpose.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Exact duplicate of q_0304 (extractionFlags exact-duplicate-of); answered independently as instructed."
+    },
+    {
+      "id": "q_0302",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Preemptive scheduling is defined as the strategy in which the OS suspends a process that is still logically runnable in order to give the CPU to another process. Taking a runnable process out of the CPU before it finishes is exactly preemption.\n\nWhy B is correct: Temporarily suspending a logically runnable process is preemption.\n\nWhy the others are wrong:\n- A: Non-preemptive scheduling lets a process hold the CPU until it finishes or blocks.\n- C: Shortest job first is an ordering rule, not a suspension strategy.\n- D: FCFS is also an ordering rule, not a suspension strategy.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Exact duplicate of q_0305 (extractionFlags exact-duplicate-of); answered independently as instructed."
+    },
+    {
+      "id": "q_0303",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "Simple policies such as FCFS are adequate when few processes compete for the CPU, but large systems are overloaded with very many processes and need the extra work that multilevel feedback or fair-share scheduling performs to keep response times acceptable. Hence complex scheduling algorithms suit very large computers with heavy process loads.\n\nWhy A is correct: Large computers are overloaded with a greater number of processes, so complex algorithms pay off there.\n\nWhy the others are wrong:\n- B: Complex algorithms cost more, they do not use minimal resources.\n- C: Using many resources is a drawback, not the reason they are preferred.\n- D: Incorrect, only one statement holds.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0304",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "FIFO serves a queue in arrival order, so the job that entered the queue first is the one executed first. This is the classic ordering rule behind queues in general.\n\nWhy B is correct: First in, first out means the earliest arrival runs first.\n\nWhy the others are wrong:\n- A: That is LIFO ordering.\n- C: That describes shortest job first.\n- D: That describes longest job first.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Exact duplicate of q_0301 (extractionFlags exact-duplicate-of); answered independently as instructed."
+    },
+    {
+      "id": "q_0305",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Suspending a process that is still logically runnable in order to run another one is the definition of preemption, that is preemptive scheduling. Under non-preemptive scheduling a process keeps the CPU until it terminates or blocks.\n\nWhy B is correct: Forcibly suspending a runnable process is preemptive scheduling.\n\nWhy the others are wrong:\n- A: Non-preemptive scheduling never takes the CPU away from a runnable process.\n- C: Shortest job first selects by burst length, it does not suspend.\n- D: FCFS selects by arrival order, it does not suspend.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Exact duplicate of q_0302 (extractionFlags exact-duplicate-of); answered independently as instructed."
+    },
+    {
+      "id": "q_0306",
+      "subtopic": "Process concepts",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "Cascading termination is used by some systems as a conservative scheme in which the children of a process are terminated whenever the parent terminates. Since it makes no distinction between a clean exit and a crash, it applies to normal as well as abnormal termination of the parent. The price is that innocent children may be killed.\n\nWhy A is correct: Cascading termination kills all child processes whether the parent ends normally or abnormally.\n\nWhy the others are wrong:\n- B: Restricting it to abnormal termination describes a different, narrower scheme.\n- C: Restricting it to normal termination is not what cascading termination does.\n- D: Incorrect, a defined rule exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0307",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "hard",
+      "correctAnswer": "A",
+      "explanation": "In round robin the worst-case response time is roughly the number of ready processes multiplied by the quantum, so with 10 processes a small quantum is needed. The processes here also run for less than 10 ms, so the quantum should be small enough that a process is not allowed to monopolise the CPU for long slices but still large enough to avoid excessive context-switch overhead. Among the values offered, 15 ms is the only quantum that is smaller than the runtimes of several cycles of 10 processes, so it gives the smallest response times.\n\nWhy A is correct: tQ = 15 ms is the smallest and hence best of the listed quanta for short-running processes.\n\nWhy the others are wrong:\n- B: A 40 ms quantum lets a single process hold the CPU far too long, inflating response time.\n- C: A 45 ms quantum has the same problem as 40 ms.\n- D: A 50 ms quantum is the worst of the four choices for response time.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0308",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Processing jobs strictly in the order they arrive is the definition of the first come, first served rule. The other rules listed are deadline or urgency based: earliest due date sorts by due date, slack time remaining and critical ratio sort by how much buffer a job has before it becomes late.\n\nWhy C is correct: FCFS sequences jobs in arrival order.\n\nWhy the others are wrong:\n- A: Earliest due date sequences by deadline, not arrival.\n- B: Slack time remaining sequences by the buffer before a due date.\n- D: Critical ratio is a deadline-based ratio rule, not arrival order.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0309",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "Multiprogramming improves overall throughput by keeping the CPU busy, but the CPU has to be shared among more jobs. Short jobs therefore usually leave the system sooner than they would have uniprogrammed, while long jobs spend longer queued behind the others and their turnaround time grows slightly.\n\nWhy B is correct: Short jobs get a shorter turnaround time and long jobs a slightly longer one.\n\nWhy the others are wrong:\n- A: Reversed, short jobs are favoured rather than delayed.\n- C: Both being shortened contradicts the cost of sharing the CPU.\n- D: Long jobs are not left unchanged; they wait behind more competitors.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0310",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "Statement I is true because shortest remaining time first is a preemptive policy in which a long job can be pushed aside by a stream of short arrivals and never finish. Statement II is true because preemptive policies such as priority scheduling can starve low-priority processes. Statement III is true because round robin bounds the waiting time of every process and therefore gives a much better response time than FCFS, whose convoy effect is severe.\n\nWhy D is correct: All three statements are true, so the answer is all of them.\n\nWhy the others are wrong:\n- A: II and III are true as well.\n- B: I is true, so listing only I and III is incomplete.\n- C: I is true, so listing only II and III is incomplete.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0311",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Shortest job first gives optimal average waiting time, but it needs to know how long the next CPU burst will be before the process runs. Bursts can only be estimated from the history of the process, which is an approximation and is the real practical difficulty with this algorithm.\n\nWhy B is correct: The algorithm needs the length of the next CPU burst, which is not known in advance.\n\nWhy the others are wrong:\n- A: Being good is a virtue, not a difficulty.\n- C: The algorithm is simple, only its input is unavailable.\n- D: Incorrect, a specific practical difficulty exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0312",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "FCFS is non-preemptive, so a CPU-bound job that arrives first can run for its entire burst while every interactive job behind it waits. In a time-sharing system, where short response times are the whole point, that convoy effect is unacceptable. It is less troublesome in batch multiprogramming where throughput matters more than response time.\n\nWhy A is correct: The convoy effect of FCFS ruins response times in time-sharing systems.\n\nWhy the others are wrong:\n- B: Multiprogramming systems mostly care about throughput, where FCFS is acceptable.\n- C: FCFS per se is not tied to the number of processors.\n- D: The statement is too vague to be the specific trouble spot.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Near-duplicate stem of q_0350 (extractionFlags duplicate-stem-of); answered independently as instructed."
+    },
+    {
+      "id": "q_0313",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "hard",
+      "correctAnswer": "A",
+      "explanation": "With all four processes present at time zero, SJF runs them in order of burst length: P4 (3 ms), P1 (6 ms), P3 (7 ms), P2 (8 ms). P4 runs first, so P1 waits exactly the 3 ms that P4 occupies the CPU before it starts. The computed waiting times are P4 = 0, P1 = 3, P3 = 9 and P2 = 16 ms.\n\nWhy A is correct: P1 starts after P4 finishes, so its waiting time is 3 ms.\n\nWhy the others are wrong:\n- B: 0 ms would be the waiting time of P4, the shortest job.\n- C: 16 ms is the waiting time of P2, the last job.\n- D: 9 ms is the waiting time of P3, the third job.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0314",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "General priority scheduling orders the ready queue by a priority number, and SJF is simply the special case in which the priority is derived from the length of the next CPU burst, with the shortest burst treated as the highest priority. It is not the inverse of the burst, and it is not the current burst.\n\nWhy A is correct: SJF is priority scheduling whose priority is the predicted next CPU burst.\n\nWhy the others are wrong:\n- B: Inverting the burst would rank the longest job first.\n- C: The priority is the predicted next burst, not the current one.\n- D: The priority is fixed by the algorithm, not by the user.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0315",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "Starvation, or indefinite blocking, happens when low-priority or long processes are pushed aside for ever. Aging fixes it by gradually increasing the priority of a process the longer it waits, so that every waiting process eventually becomes the highest priority one and gets to run.\n\nWhy D is correct: Aging boosts the priority of waiting processes so nobody starves.\n\nWhy the others are wrong:\n- A: Starvation is the problem being solved, not the solution.\n- B: The wait queue only stores blocked processes, it fixes nothing.\n- C: The ready queue holds runnable processes, it is not a solution.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0316",
+      "subtopic": "Process scheduling",
+      "difficulty": "hard",
+      "correctAnswer": "D",
+      "explanation": "Starvation is indefinite postponement of a process, and round robin is the fairness-oriented alternative to FCFS. Evaluating each statement: SRTF always serves the process with the least remaining time, so a long process can be pushed back indefinitely as shorter arrivals keep coming, so statement I holds. Any preemptive scheme can be built on priority, so a continuously preempted low-priority process may never run, so statement II holds. Round robin gives every process a fixed time slice, which bounds the wait of a newly arrived process, whereas FCFS can leave it behind a long queue, so statement III holds. All three are true.\n\nWhy D is correct: Statements I, II and III are all true, so the correct choice is \"I, II, and III\".\n\nWhy the others are wrong:\n- A: \"I only\" omits II and III, both of which are true.\n- B: \"I and III only\" omits II, which is true.\n- C: \"II and III only\" omits I, which is true.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0317",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "A blocked process is waiting for an event, here the completion of an I/O request. When the device controller raises the completion interrupt the kernel moves the process out of the blocked state. Since the process only needs the CPU again and no longer waits for anything, it goes to the ready state, not directly to running.\n\nWhy D is correct: On completion of the I/O the process is ready to run and joins the ready queue.\n\nWhy the others are wrong:\n- A: The process has not finished its work.\n- B: Suspension means swapping out of memory, which does not happen.\n- C: The short-term scheduler, not the I/O completion, chooses who runs.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0318",
+      "subtopic": "Synchronization",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Mutual exclusion is the first of the three classic requirements of the critical section problem. It says that if one process is executing inside its critical section, no other process may be executing inside its critical section at the same time. It says nothing about the rest of the system being blocked.\n\nWhy A is correct: Mutual exclusion forbids two processes from being in their critical sections at the same time.\n\nWhy the others are wrong:\n- B: This is the opposite of mutual exclusion.\n- C: Other processes may run their non-critical sections freely.\n- D: Incorrect, a precise definition exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0319",
+      "subtopic": "Synchronization",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "Bounded waiting is the third requirement of the critical section problem. It requires that there is a limit on the number of times other processes may enter their critical sections after a process has requested entry and before that request is granted. Without it, a process could be postponed indefinitely and starve.\n\nWhy A is correct: The bound applies between the moment a process requests entry and the moment it is granted.\n\nWhy the others are wrong:\n- B: That describes mutual exclusion, not bounded waiting.\n- C: A bound after the request is what matters, not before it.\n- D: Incorrect, a precise definition exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0320",
+      "subtopic": "Synchronization",
+      "difficulty": "hard",
+      "correctAnswer": "B",
+      "explanation": "With pure software and busy waiting, a single shared variable is not enough: if two processes both set the one flag before either tests it, both spin forever or both enter. Software solutions such as Dekker and Peterson therefore need two shared variables, typically a flag and a turn indicator, which together enforce exclusion. One variable suffices only if the hardware provides an atomic test-and-set, which is a different assumption.\n\nWhy B is correct: Two shared variables, a flag and a turn variable, are needed for a pure software solution.\n\nWhy the others are wrong:\n- A: One variable works only with an atomic test-and-set instruction.\n- C: Three variables are more than the standard solutions require.\n- D: Four variables are unnecessary.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Option A (1) is defensible if an atomic test-and-set or a wait/signal semaphore is assumed; the standard bank answer for this item is two variables for pure software busy-waiting."
+    },
+    {
+      "id": "q_0321",
+      "subtopic": "Semaphores",
+      "difficulty": "hard",
+      "correctAnswer": "B",
+      "explanation": "With S0 = 1, S1 = 0 and S2 = 0 the first pass goes: P0 waits on S0 (S0 becomes 0), prints the first 0, signals S1 and signals S2 (both become 1). P1 then waits on S1 and signals S0, and P2 waits on S2 and signals S0, so S0 is set to 1 again and the second pass of P0 prints the second 0. After that pass S1 and S2 are set once more, but P1 and P2 have already terminated, so nothing will ever signal S0 again and P0 blocks forever on its next wait. P0 therefore prints exactly twice.\n\nWhy B is correct: P0 runs two complete cycles, prints two zeros and then blocks on wait(S0) forever.\n\nWhy the others are wrong:\n- A: It is exactly twice, not merely at least twice.\n- C: A third print would need another signal of S0, which cannot come.\n- D: One print is impossible, since P1 and P2 unblock S0 exactly once each.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0322",
+      "subtopic": "Semaphores",
+      "difficulty": "hard",
+      "correctAnswer": "D",
+      "explanation": "P10 performs V(mutex) twice per loop and never performs P(mutex), so the value of the counting semaphore grows without bound while P10 keeps running. Once the value is large enough, every one of the other processes can pass its P(mutex) and stay inside its critical section at the same time, so the number simultaneously in the critical section is not limited to 1, 2 or 3 but can reach all eleven processes. None of the listed numbers is therefore correct.\n\nWhy D is correct: Because P10 only increments the semaphore, more than three (in fact up to eleven) processes can be inside the critical section at the same instant.\n\nWhy the others are wrong:\n- A: Mutual exclusion is broken because P10 never decrements.\n- B: 2 would only hold if the semaphore were declared binary, which is not stated.\n- C: 3 is the answer in some published keys but ignores that P10 keeps pumping the semaphore up.",
+      "confidence": "low",
+      "needsReview": true,
+      "reviewReason": "Published keys disagree: standard MCQ banks answer 3 (treating the semaphore as if it stays small), GATE-oriented solutions answer none of the mentioned because a counting semaphore can be inflated without limit by P10, and 2 would follow only under a binary semaphore assumption."
+    },
+    {
+      "id": "q_0323",
+      "subtopic": "Synchronization",
+      "difficulty": "hard",
+      "correctAnswer": "A",
+      "explanation": "Each process sets its own flag and then spins only while the other flag happens to be true; it never re-checks the other flag before entering. If P1 sets w1 = true and P2 sets w2 = true before either of them tests, both skip their spin loops, both clear their own flag and both march into the critical section together. There is no test-and-set anywhere in the construct, so mutual exclusion is not guaranteed.\n\nWhy A is correct: Both processes can pass the flag test simultaneously and enter the critical section together.\n\nWhy the others are wrong:\n- B: The real failure is mutual exclusion; bounded waiting is not the point at issue.\n- C: No alternation is enforced in any way.\n- D: Mutual exclusion is exactly what fails, so this option cannot hold.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0324",
+      "subtopic": "Semaphores",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The whole point of the semaphore is that its two operations, wait and signal, are carried out atomically, that is indivisibly with respect to other processes. That atomicity is what allows the semaphore to enforce exclusion in the critical section problem; a semaphore whose operations could interleave would be useless for that purpose.\n\nWhy C is correct: Wait and signal must be executed atomically for the semaphore to work.\n\nWhy the others are wrong:\n- A: Being placed after a process is meaningless here.\n- B: Periodicity has nothing to do with semaphore correctness.\n- D: Incorrect, a specific property is required.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0325",
+      "subtopic": "Semaphores",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A semaphore is an integer plus exactly two primitives. The wait operation decrements the value and, if it would go negative, blocks the calling process; the signal operation increments the value and wakes a blocked process. These are conventionally called P and V, or wait and signal, and no other operations are defined on a semaphore.\n\nWhy A is correct: Wait and signal are the two atomic operations defined on a semaphore.\n\nWhy the others are wrong:\n- B: Stop is not a semaphore operation.\n- C: Hold and wait together name a deadlock condition, not a semaphore operation.\n- D: Incorrect, a standard pair of operations exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0326",
+      "subtopic": "Semaphores",
+      "difficulty": "hard",
+      "correctAnswer": "C",
+      "explanation": "With X = 5 and the constraints A1 before A2 and B1 before B2 there are six interleavings, and enumerating them gives these final values of X: A1A2B1B2 yields 11, B1B2A1A2 yields 12, A1B1A2B2 yields 6, A1B1B2A2 yields 10, B1A1B2A2 yields 10 and B1A1A2B2 yields 6. The distinct results are therefore 6, 10, 11 and 12, which is four different values of X.\n\nWhy C is correct: Enumerating the six legal interleavings produces exactly the four distinct values 6, 10, 11 and 12.\n\nWhy the others are wrong:\n- A: Two values would mean only two of those four results occur.\n- B: Three values ignores either the 11 or the 12 outcome.\n- D: Eight is impossible, there are only six interleavings in total.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0327",
+      "subtopic": "Semaphores",
+      "difficulty": "hard",
+      "correctAnswer": "A",
+      "explanation": "Process B cannot execute wait(T) until A has executed signal(T), and A issues that signal only after both A1 and A2 have finished. So A1 and A2 always complete first, giving X = 5 times 2 = 10, and only then does B run, setting Z = 10 plus 1 = 11 and X = 11. Every legal execution therefore ends with the same value of X.\n\nWhy A is correct: The semaphore forces A to finish both statements before B runs, so X is always 11.\n\nWhy the others are wrong:\n- B: Two values would require the interleaving freedom that the semaphore removes.\n- C: Three values cannot occur, the order is fixed by the semaphore.\n- D: Four values is the answer to the unsynchronised version, not this one.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0328",
+      "subtopic": "Process concepts",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "Some operating system code is resident, permanently present in memory, such as the kernel and the scheduler. Transient code, by contrast, is loaded into memory only when it is needed, for example a device driver or a system call routine, and is removed again afterwards. That is why it comes and goes as required.\n\nWhy C is correct: Transient code is loaded into memory on demand and removed when no longer needed.\n\nWhy the others are wrong:\n- A: Always staying in memory describes resident code.\n- B: Never entering memory describes code that is never loaded, which is not transient code.\n- D: Accessibility is not the defining property.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0329",
+      "subtopic": "Semaphores",
+      "difficulty": "hard",
+      "correctAnswer": "A",
+      "explanation": "Because the process signals the mutex before it waits on it, and never signals it again after leaving the critical section, the net effect is that the semaphore value is only driven downwards. Each iteration consumes one unit that nobody returns, so after a few iterations the value reaches zero with every process still wanting to enter. All of them then block forever, which is a deadlock.\n\nWhy A is correct: Net signal and wait equal zero over an iteration and nothing ever releases the mutex afterwards, so everyone blocks.\n\nWhy the others are wrong:\n- B: Starvation would need the mutex to keep being released to somebody.\n- C: Several processes in the critical section can occur briefly, but the deadlock option is the decisive outcome.\n- D: Incorrect, the situation ends in deadlock.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0330",
+      "subtopic": "Semaphores",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "The process waits on the binary mutex twice in a row. Since the mutex starts at 1, the first wait consumes it and the second wait finds the value already 0, so the process blocks and can never be released, because nothing will signal it. A process blocking itself in this way is the simplest textbook deadlock.\n\nWhy A is correct: The second wait on an already zero mutex blocks the process for ever.\n\nWhy the others are wrong:\n- B: Starvation needs other processes to keep taking the mutex, which is not the issue here.\n- C: Mutual exclusion still holds, so several processes cannot be in the critical section.\n- D: Incorrect, only the deadlock option describes the outcome.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0331",
+      "subtopic": "Synchronization",
+      "difficulty": "hard",
+      "correctAnswer": "A",
+      "explanation": "P1 is allowed in only when S1 differs from S2, and P2 is allowed in only when S1 equals S2, so the two tests are complementary and at most one process can ever be inside the critical section. Progress is not guaranteed: if S1 is 1 and S2 is 0 and P1 does not want to enter while P2 does, P2 must wait until P1 runs and executes S1 = S2, which may never happen. Strict alternation therefore blocks progress.\n\nWhy A is correct: The complementary flag tests give mutual exclusion but enforce strict alternation, which breaks progress.\n\nWhy the others are wrong:\n- B: Mutual exclusion does hold, so this pair is impossible.\n- C: Mutual exclusion does hold.\n- D: Progress does not hold.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0332",
+      "subtopic": "Deadlocks",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Resources are classified as reusable or consumable. A reusable resource, such as a printer, a CPU or a memory area, can be used again after a process releases it, so use by one process does not deplete it, though it must be used by only one process at a time. A consumable resource, such as printer paper, is used up as it is used.\n\nWhy A is correct: A reusable resource can be reused after release and is not depleted by that use.\n\nWhy the others are wrong:\n- B: Being usable by many processes at once describes a sharable resource, not a reusable one.\n- C: Sharing between threads is about access, not about depletion.\n- D: Incorrect, a precise definition exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0333",
+      "subtopic": "Deadlock detection and recovery",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "The system is in a safe state if the resources can be allocated to the processes one at a time so that each of them can finish and release its resources, leaving the remaining processes satisfiable. Saying that there exists such a safe sequence and saying that resources can be allocated in some order to avoid deadlock are two wordings of exactly this one condition. Since both statements are true, the option that covers both is the right key.\n\nWhy C is correct: Both statements A and B express the single definition of a safe state, so all of them applies.\n\nWhy the others are wrong:\n- A: True, but it is only one of the two equivalent wordings.\n- B: True, but it is only one of the two equivalent wordings.\n- D: Incorrect, the condition is well defined.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Options A and B are both correct restatements of the same definition, so the question has two defensible keys; C (all) is used to cover both, but a reviewer may prefer A or B alone."
+    },
+    {
+      "id": "q_0334",
+      "subtopic": "Deadlocks",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Circular wait arises when the resources are ordered differently by each process, so that a chain of holdings forms a loop. Declaring a total order of all resource types and requiring that a process may request only resources with a higher order than the ones it holds makes such a loop impossible to form.\n\nWhy A is correct: Imposing a linear ordering of resource types breaks the cycle of waiting.\n\nWhy the others are wrong:\n- B: Using threads has no bearing on the circular wait condition.\n- C: Pipes are an IPC mechanism, not a prevention technique.\n- D: Incorrect, only the ordering technique prevents circular wait.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0335",
+      "subtopic": "Deadlocks",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Starvation is the situation in which a process is ready to run but is continually denied the CPU or the resources it needs, so it waits indefinitely while the system as a whole keeps making progress. A deadlock, in contrast, involves a set of processes that are all waiting for each other, so no progress is possible at all.\n\nWhy B is correct: Perpetual denial of necessary resources to a single process is starvation.\n\nWhy the others are wrong:\n- A: Deadlock needs a cycle of mutual waiting, not just denial to one process.\n- C: Inversion is a priority inversion performance problem.\n- D: Aging is the cure for starvation, not its name.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0336",
+      "subtopic": "Deadlocks",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "One standard deadlock prevention technique negates the hold-and-wait condition by requiring a process to request all the resources it will ever need in a single request, and to be granted them all at once. That is the meaning of doing the resource allocation only once; the process then either gets everything or waits without holding anything. Aborting deadlocked processes is a recovery technique, not avoidance, and resource inversion is unrelated to deadlock.\n\nWhy B is correct: A single all-or-nothing allocation request removes the hold-and-wait condition and thus prevents deadlock.\n\nWhy the others are wrong:\n- A: A fixed number of resources is not in itself a deadlock prevention rule.\n- C: Aborting processes is recovery after deadlock, not avoidance.\n- D: Inversion technique refers to priority inversion, not deadlock.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "The widely circulated answer key for this item gives (a), but a fixed number of resources is not a recognised deadlock avoidance technique, while (b) is the standard all-or-nothing request; the option set is poorly worded."
+    },
+    {
+      "id": "q_0337",
+      "subtopic": "Deadlocks",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "User processes cannot touch resource tables or device registers directly. They obtain and release resources by making system calls, such as request and release, which the kernel validates and executes in kernel mode. Those calls, not user commands or interrupts, are the interface through which resources are requested and given back.\n\nWhy C is correct: Requesting and releasing resources are done through system calls.\n\nWhy the others are wrong:\n- A: They are not command line statements issued from the shell.\n- B: Interrupts are device-generated signals, not the user's way of asking for resources.\n- D: They are not separate special programs.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0338",
+      "subtopic": "Threads",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "Threads of the same process share the address space, the open files and the process resources, so they compete for the same mutexes and can lock each other out. Since each thread may hold several of these shared locks at once, the number of possible circular waits grows and multithreaded programs are more prone to deadlock than single-threaded ones. They are certainly not free of deadlock.\n\nWhy B is correct: Shared resources held by several threads create more circular waits, so multithreaded programs are more prone to deadlock.\n\nWhy the others are wrong:\n- A: Sharing makes deadlock more likely, not less.\n- C: Deadlock is fully possible in a multithreaded program.\n- D: Incorrect, a definite relation exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0339",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The dispatching part of the scheduler takes a process that is sitting in the ready queue and makes it the running process, which means assigning a ready process to the CPU. Moves into the waiting or blocked queue belong to the state-transition code, not to the dispatcher.\n\nWhy C is correct: The dispatcher assigns a ready process to the CPU.\n\nWhy the others are wrong:\n- A: Ready processes are not assigned to the waiting queue by the dispatcher.\n- B: A running process becomes blocked only when it waits for an event.\n- D: Incorrect, only the ready to running transfer is described.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Near-duplicate stem of q_0300 (extractionFlags duplicate-stem-of), with the option letters permuted; answered independently as instructed."
+    },
+    {
+      "id": "q_0340",
+      "subtopic": "Deadlocks",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "Mutual exclusion can only exist where a resource is not sharable. A sharable resource, such as a read-only file or a buffer that is written by only one process at a time by convention, imposes no hardware or software exclusion, so for mutual exclusion to prevail at least one resource must be held in a non-sharable mode with exclusion enforced.\n\nWhy A is correct: Mutual exclusion requires at least one resource to be held in a non-sharable mode.\n\nWhy the others are wrong:\n- B: Multiprocessors still need mutual exclusion, the processor count is irrelevant.\n- C: A sharable resource provides no exclusion at all.\n- D: Incorrect, only one statement holds.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0341",
+      "subtopic": "Deadlocks",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Hold and wait is the second of the four necessary conditions for deadlock. It means that a process keeps at least one resource that it already holds while it waits for additional resources that other processes are holding. If a process never held anything while waiting, the condition would not hold.\n\nWhy B is correct: The process holds some resources while waiting for others held by other processes.\n\nWhy the others are wrong:\n- A: Not holding anything while waiting is precisely the negation of the condition.\n- C: Holding without waiting is not hold and wait.\n- D: Incorrect, a precise definition exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0342",
+      "subtopic": "Deadlocks",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Deadlock is possible only when all four necessary conditions, mutual exclusion, hold and wait, no preemption and circular wait, hold at the same time. A prevention scheme therefore only has to destroy one of them, not all four, which is what option A says.\n\nWhy A is correct: Prevention ensures that at least one of the four necessary conditions cannot hold.\n\nWhy the others are wrong:\n- B: Destroying all four conditions is far stronger than necessary.\n- C: Deciding whether to grant a request is deadlock avoidance, not prevention.\n- D: Recovering from a deadlock happens after it occurs.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0343",
+      "subtopic": "Deadlocks",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "The mutual exclusion condition applies only to resources that are not sharable. If a resource may be used by several processes at the same time, for example a read-only file, there is nothing to exclude and no mutual exclusion is required for it.\n\nWhy B is correct: A sharable resource needs no mutual exclusion.\n\nWhy the others are wrong:\n- A: Requiring exclusion contradicts the definition of a sharable resource.\n- C: The requirement is well defined, it simply does not apply here.\n- D: Incorrect, a clear statement exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0344",
+      "subtopic": "Deadlocks",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "The all-or-nothing allocation rule avoids deadlock by making a process wait until everything it needs is free, but that wait is pure waste: the resources sit idle while the process waits, and long processes can hold large holdings for a long time. Resources are therefore poorly utilised, and processes may starve waiting for a complete bundle.\n\nWhy B is correct: Waiting for an entire resource bundle leaves resources idle, so utilisation is low.\n\nWhy the others are wrong:\n- A: Low CPU utilisation is not the characteristic drawback of this scheme.\n- C: High resource utilisation is the opposite of the truth.\n- D: Incorrect, a real drawback exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0345",
+      "subtopic": "Deadlocks",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "The no-preemption condition says that a resource cannot be taken away from a process that holds it. To enforce it, if a process holding resources asks for another resource and cannot be granted it immediately, everything it currently holds must first be preempted and rolled back, and only then may it try again. That is the classic OS/2 or database style rule for eliminating hold and wait.\n\nWhy D is correct: Enforcing no preemption means preempting and releasing all resources the process holds.\n\nWhy the others are wrong:\n- A: Waiting while holding resources is exactly the hold-and-wait situation that must be avoided.\n- B: Repeatedly requesting is the same as waiting and also risks deadlock.\n- C: Letting it proceed without the resource breaks the no-preemption rule.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0346",
+      "subtopic": "Deadlock detection and recovery",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "Deadlock avoidance is safe only if the decision about a request is based on more than the resources free right now, which is the same information deadlock detection uses. An algorithm such as the banker's algorithm simulates what each process will claim and release in the future and checks whether a safe sequence still exists after the request is granted.\n\nWhy D is correct: Avoidance works by simulating the future requests and releases of every process.\n\nWhy the others are wrong:\n- A: Available resources alone are exactly what detection uses; avoidance needs more.\n- B: Past history of processes is irrelevant to the current claim graph.\n- C: Current allocations alone do not reveal whether a deadlock is being created.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0347",
+      "subtopic": "Deadlock detection and recovery",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "In the single-instance case a deadlock is impossible as soon as every process has declared the maximum number of instances of each resource it will ever need, because the sums of the claims then exceed what the system can hold. For multiple-instance systems an equivalent bound is computed from the maximum claims of all processes together. The information needed is therefore the maximum requirement, not the minimum or average.\n\nWhy C is correct: Knowing the maximum number of each resource type a process may request is what allows a deadlock-free bound to be constructed.\n\nWhy the others are wrong:\n- A: A minimum claim does not guarantee that all demands can be met.\n- B: An average claim proves nothing about the worst case.\n- D: An approximate claim cannot be used to guarantee freedom from deadlock.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0348",
+      "subtopic": "Deadlock detection and recovery",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "A deadlock avoidance algorithm keeps a model of which process currently holds which resource instances and which instances are still free, and it re-examines that model on every request. By simulating the possible future claims of each process it guarantees that the circular wait condition never actually arises in the allocation graph.\n\nWhy A is correct: The algorithm dynamically examines the resource allocation state.\n\nWhy the others are wrong:\n- B: System storage state is not the state being examined.\n- C: The algorithm is about the allocation state, not about the OS as a whole.\n- D: Merely looking at resources without their allocation state is not enough.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Near-duplicate stem of q_0361 (extractionFlags duplicate-stem-of); answered independently as instructed."
+    },
+    {
+      "id": "q_0349",
+      "subtopic": "Deadlock detection and recovery",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The necessary and sufficient condition for safety is the existence of a safe sequence: an ordering of the processes in which each one can obtain its outstanding claim, finish and release its holdings so that the next process can also finish. Without such a sequence the system may deadlock, so a safe state implies a safe sequence.\n\nWhy C is correct: A safe state is defined by the existence of a safe sequence.\n\nWhy the others are wrong:\n- A: Safe allocation is not the defined term.\n- B: Safe resource is not the defined term.\n- D: Incorrect, the concept has a precise name.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0350",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "FCFS is non-preemptive, so a long CPU-bound job that arrives first blocks every interactive job queued behind it for its whole burst. In a time-sharing system, whose purpose is quick response to many users, that convoy effect is the worst case of all. Batch multiprogramming systems, which care mainly about throughput, tolerate it.\n\nWhy C is correct: Time-sharing systems are the ones ruined by the FCFS convoy effect.\n\nWhy the others are wrong:\n- A: Too vague to be the specific trouble spot.\n- B: FCFS behaves the same way regardless of processor count.\n- D: Multiprogramming systems mainly care about throughput, where FCFS is acceptable.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Near-duplicate stem of q_0312 (extractionFlags duplicate-stem-of), with the option letters permuted; answered independently as instructed."
+    },
+    {
+      "id": "q_0351",
+      "subtopic": "Deadlock detection and recovery",
+      "difficulty": "hard",
+      "correctAnswer": "D",
+      "explanation": "Total allocated is 5 plus 2 plus 2 = 9, so Available = 12 minus 9 = 3 tape drives, and the remaining needs are P0 = 5, P1 = 2 and P2 = 7. Trying the sequence P1, P0, P2: P1 needs 2 which is within the 3 available, so after it finishes Available becomes 5; P0 then needs exactly 5, which is available, and after P0 finishes Available becomes 10; P2 needs 7, which is within 10. Every process can therefore finish in that order, so P1, P0, P2 is a safe sequence.\n\nWhy D is correct: P1 needs 2 of the 3 available, P0 then needs 5 of the 5 released, and P2 needs 7 of the 10, so the sequence completes safely.\n\nWhy the others are wrong:\n- A: P0 needs 5 drives but only 3 are free at the start.\n- B: After P1 only 5 are free and P2 needs 7, so it would block.\n- C: P2 needs 7 drives but only 3 are free at the start.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0352",
+      "subtopic": "Deadlocks",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "A plain resource-allocation-graph cycle test is valid only when each resource type has a single instance, because then a cycle in the graph is both necessary and sufficient for deadlock. With multiple instances a cycle no longer proves deadlock and a claim-and-request graph with multiple requests per process is needed. Hence the simple graph is not applicable to systems with multiple instances.\n\nWhy A is correct: The simple cycle-detection graph works only for single-instance resource types.\n\nWhy the others are wrong:\n- B: With a single instance of each type the graph is fully applicable.\n- C: The method is applicable in the single instance case, so this blanket statement is false.\n- D: Incorrect, a definite restriction exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0353",
+      "subtopic": "Deadlock detection and recovery",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "The banker's algorithm has to run the safety algorithm, simulating what every process may still claim and release, before it can grant any request, and it has to redo that computation for each subsequent request. The resource-allocation-graph approach needs only a graph search, so the banker's algorithm is the more expensive and hence the less efficient of the two.\n\nWhy A is correct: Repeatedly simulating future claims makes the banker's algorithm less efficient than a graph based test.\n\nWhy the others are wrong:\n- B: The banker's algorithm is the costlier one, not the cheaper one.\n- C: Their costs differ substantially.\n- D: Incorrect, a clear comparison exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0354",
+      "subtopic": "Deadlock detection and recovery",
+      "difficulty": "hard",
+      "correctAnswer": "A",
+      "explanation": "Allocated totals are A = 7, B = 2, C = 5, which matches Available of 3, 3, 2 against the totals 10, 5, 7, so the table is read correctly. The remaining needs are P0 = 7,4,3; P1 = 1,2,2; P2 = 6,0,0; P3 = 0,1,3; P4 = 3,3,1. Running the sequence P1, P3, P4, P2, P0 from Available = 3,3,2: P1 needs 1,2,2 and can proceed, releasing 2,0,0 so Available becomes 5,3,2; P3 then needs 0,1,3 and its demand for C of 3 exceeds the 2 available, so the sequence cannot be completed and the state reached is unsafe.\n\nWhy A is correct: The sequence fails at P3, whose need of 3 instances of C exceeds the 2 available, so it leads to an unsafe state.\n\nWhy the others are wrong:\n- B: A safe sequence such as P1, P4, P3, P2, P0 does exist, but the sequence given here is not it.\n- C: Protected state is not a defined state of the banker's algorithm.\n- D: The system is not necessarily deadlocked; an unsafe state only means deadlock is possible.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    }
+  ]
+}

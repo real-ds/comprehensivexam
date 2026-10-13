@@ -1,0 +1,795 @@
+{
+  "topic": "Database Management Systems",
+  "answers": [
+    {
+      "id": "q_0511",
+      "subtopic": "ER modelling",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "In Chen-style ER notation an entity set is a rectangle, a relationship set is a diamond, and an attribute is an oval. The verb \"registers\" in \"student registers a course\" names the association between the Student and Course entity sets, so it is written inside a diamond placed between the two entity rectangles. Filling the blank with \"inside a diamond between\" matches this convention exactly.\n\nWhy A is correct: A relationship set is drawn as a diamond and is connected to the participating entity sets, so the name goes inside a diamond between them.\n\nWhy the others are wrong:\n- B: Writing the relationship name over the connecting line is the ISO/IE 19755 style, not the Chen notation used here.\n- C: An oval denotes an attribute, and \"registers\" is a relationship, not an attribute.\n- D: A rectangle denotes an entity set, not a relationship set.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Question text is garbled in the source (\"mentioned _________ 2 rectangles\"); the trailing \"2 rectangles\" fragment appears to be leftover page text, but the ER-modelling answer itself is unambiguous."
+    },
+    {
+      "id": "q_0512",
+      "subtopic": "Keys and functional dependencies",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "A candidate key is a minimal superkey. Closing under F = {AB->CD, D->B, C->A}: AB+ = {A,B,C,D} and neither A nor B alone closes to anything, so AB is minimal; AD+ = {A,B,C,D} via D->B then AB->CD, minimal; BC+ = {A,B,C,D} via C->A then AB->CD, minimal; CD+ = {A,B,C,D} via C->A and D->B, minimal. No single attribute is a superkey (A+={A}, B+={B}, C+={A,C}, D+={B,D}) and AC+ = {A,C} and BD+ = {B,D} are not superkeys. That gives exactly four candidate keys: AB, AD, BC, CD.\n\nWhy C is correct: There are exactly 4 minimal superkeys - AB, AD, BC and CD.\n\nWhy the others are wrong:\n- A: 2 undercounts, since AB, AD, BC and CD are all minimal superkeys.\n- B: 3 misses AD, which closes to all of ABCD via D->B then AB->CD.\n- D: 5 is impossible, since any larger set that is a superkey contains one of the four minimal keys already.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0513",
+      "subtopic": "Keys and functional dependencies",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "An attribute X of the left side of X1X2...->Y is extraneous if (X1X2 - X)+ contains all of Y. Here the dependency is AB->CD with F = {AB->CD, D->B}. Removing A leaves B+ = {B}, which cannot produce C or D; removing B leaves A+ = {A}, which cannot produce them either. C and D sit on the right-hand side, so they can never be extraneous. No attribute in AB->CD is extraneous.\n\nWhy D is correct: Neither A nor B is extraneous in AB->CD, and attributes on the right-hand side cannot be extraneous, so the answer is None.\n\nWhy the others are wrong:\n- A: Removing A leaves B+, which does not contain C or D, so A is not extraneous.\n- B: Removing B leaves A+, which does not contain C or D, so B is not extraneous.\n- C: C appears on the right-hand side of AB->CD, so it cannot be extraneous.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0514",
+      "subtopic": "Normalization",
+      "difficulty": "hard",
+      "correctAnswer": "C",
+      "explanation": "C is the only attribute that never appears on a right-hand side, so every key contains C; testing minimality gives candidate keys AC, BC and CD. That makes A, B, C and D all prime attributes, so there are no non-prime attributes and 3NF is satisfied automatically. BCNF is violated by D->B, because D+ = {D,B} is not a superkey. The highest normal form is therefore 3NF.\n\nWhy C is correct: All four attributes are prime, so 3NF holds automatically, but D->B has a non-superkey determinant so BCNF does not.\n\nWhy the others are wrong:\n- A: R is in 3NF, which subsumes 1NF, so 1NF is not the highest form.\n- B: R is in 3NF, which subsumes 2NF.\n- D: BCNF is violated by D->B, since D+ = {D,B} is not a superkey.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0515",
+      "subtopic": "Keys and functional dependencies",
+      "difficulty": "hard",
+      "correctAnswer": "B",
+      "explanation": "A is the only attribute that never appears on a right-hand side, so every key must contain A. Testing the pairs with A: AE+ = {A,B,C,D,E} via AE->BC, then AC->D, then CD->BE; AD+ = full via D->E and then AE->BC; AC+ = full via AC->D and then CD->BE. Each of AC, AD, AE is minimal, so these are the candidate keys and the prime attributes are A, C, D, E. The only non-prime attribute is therefore B.\n\nWhy B is correct: B is the only attribute of R that is not part of any candidate key, so it is the only non-prime attribute.\n\nWhy the others are wrong:\n- A: A, C, D and E are exactly the prime attributes, not the non-prime ones.\n- C: A and C are both prime, since each belongs to a candidate key.\n- D: D and E are prime; only B is non-prime.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0516",
+      "subtopic": "Keys and functional dependencies",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "Starting from AB, the dependency AB->C adds C. Then C->DE adds D and E, and E->F adds F. The remaining FDs C->B and D->A add nothing because B and A are already in the set. So AB+ = {A,B,C,D,E,F}, the entire attribute set.\n\nWhy D is correct: Repeatedly applying the given FDs from {A,B} reaches all six attributes.\n\nWhy the others are wrong:\n- A: {C} is only the first step; C->DE then E->F add the rest.\n- B: F is also reachable through C->DE followed by E->F, so {C,D,E} is incomplete.\n- C: A and B are present from the start, so the closure is the full set, not a partial one.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0517",
+      "subtopic": "Relational algebra",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The extended projection operator pi keeps only the named attributes of a relation and is written pi_attribute(relation). A selection sigma filters tuples using a predicate and cannot produce a single-column projection. The relational algebra equivalent of \"SELECT city FROM store\" is therefore pi_city(store), i.e. sigmacity(store) as printed with Greek letters.\n\nWhy A is correct: Projection pi applied to the relation store keeping attribute city is exactly this query.\n\nWhy the others are wrong:\n- B: The projection symbol is pi, not p, so \"picity(store)\" is not a defined expression.\n- C: sigma is selection, and store is a relation name, not an attribute.\n- D: Both the operator (p) and the argument order are wrong - the attribute comes before the relation only by convention, but the symbol is still wrong.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0518",
+      "subtopic": "Relational algebra",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "Fetching all stores located in India means selecting the tuples of store whose country attribute equals 'India'. Selection is written sigma with the predicate attached to the attribute and the relation as the argument: sigmacountry='India'(store). Projection cannot express a predicate, so the pi options are wrong.\n\nWhy A is correct: sigma applied to relation store with the predicate country='India' is the selection form.\n\nWhy the others are wrong:\n- B: A projection is denoted pi and cannot carry a comparison predicate.\n- C: store is the relation being selected over, not an attribute; the projection form would be pi store(...).\n- D: Same problem as C, plus the operator symbol is wrong.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0519",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A schedule of transactions is a linear ordering of all operations that preserves the relative order of operations inside each transaction. Option C gives W(X), W(Y), R(X), R(Y): for T1 the write of X precedes its read of X, which violates the required internal order R(X) then W(X). Options A, B and D all keep each transaction's operations in their original order.\n\nWhy C is correct: T1 executes W(X) before R(X), so the per-transaction ordering of {R(X), W(X)} is broken and this is not a valid schedule.\n\nWhy the others are wrong:\n- A: T1's two operations then T2's two operations - a valid serial schedule.\n- B: T2's operations then T1's - also a valid serial schedule.\n- D: R(X), R(Y), W(X), W(Y) keeps R(X) before W(X) and R(Y) before W(Y) - valid.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0520",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Two operations from different transactions conflict only when they access the same item and at least one of them is a write. R1(X) and W1(X) belong to the same transaction, so they never form a conflicting pair. R1(X) and R2(X) are both reads of X, and read-read never conflicts. R1(X) and W2(Y) touch different items. W1(X) and R2(X) both touch X and one of them writes, so they conflict.\n\nWhy C is correct: W1(X) and R2(X) access the same item X with a write involved, which is the definition of a conflict.\n\nWhy the others are wrong:\n- A: Both operations belong to T1, so there is no inter-transaction conflict.\n- B: Both are reads of X, and read-read pairs never conflict.\n- D: R1(X) and W2(Y) touch different items, so they cannot conflict.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0521",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty": "hard",
+      "correctAnswer": "C",
+      "explanation": "For each option, build the precedence graph from conflicting pairs. Option C is R1(X), W1(X), R2(Y), R2(X), W2(X), R1(Y). The conflicting pairs are R2(X) after W1(X) giving T1->T2, R1(X) before W2(X) giving T1->T2, and W1(X) before W2(X) giving T1->T2; R2(Y) and R1(Y) are both reads of Y and add nothing. The graph has only the edge T1->T2, so it is acyclic and the schedule is conflict serializable. Options A, B and D each contain a T1->T2 edge and a T2->T1 edge, so each has a cycle.\n\nWhy C is correct: Its precedence graph contains only the edge T1 -> T2, so the schedule is equivalent to the serial order T1 then T2.\n\nWhy the others are wrong:\n- A: W1(X) after R2(X) gives T2 -> T1 while R1(X) before W2(X) gives T1 -> T2 - a cycle.\n- B: W1(X) after R2(X) and W2(X) after R1(X) give edges in both directions - a cycle.\n- D: W1(X) after W2(X) gives T2 -> T1 while R1(X) before W2(X) gives T1 -> T2 - a cycle.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0522",
+      "subtopic": "ER modelling",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "An attribute that can be broken down into meaningful sub-parts is a composite attribute, drawn as an oval with smaller ovals attached. Contact number consisting of a country code plus the local subscriber number is exactly this: each component is separately meaningful. An atomic attribute cannot be subdivided, a multivalued attribute holds a set of values of the same kind, and a derived attribute is computed rather than stored.\n\nWhy B is correct: Splitting contact number into country code and subscriber number makes it a composite attribute.\n\nWhy the others are wrong:\n- A: Atomic means indivisible, which is the opposite of what is described.\n- C: Multivalued means several values per entity (several phone numbers), not several sub-parts.\n- D: Derived means computed from other data (age from date of birth), not stored in parts.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0523",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty": "hard",
+      "correctAnswer": "B",
+      "explanation": "Statement I is false: strict two-phase locking holds exclusive locks until commit, which is precisely what makes its schedules recoverable as well as conflict serializable. Statement II is true: timestamp ordering with Thomas' write rule, which ignores read-write conflicts and permits blind writes, can produce schedules that are view serializable but not conflict serializable. Hence only statement II holds.\n\nWhy B is correct: Only statement II is true.\n\nWhy the others are wrong:\n- A: Statement I is false, because strict 2PL schedules are always recoverable.\n- C: Statement II is true, so not both are false.\n- D: Statement II is true, so it is not the case that neither holds.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0524",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The accepted goals of concurrent execution are improved resource utilization (many transactions sharing the CPU and I/O), improved throughput (more transactions per second) and reduced waiting time. Reducing the probability of deadlock is not a goal - concurrency is itself a cause of deadlock, which is why separate deadlock detection and prevention protocols exist.\n\nWhy C is correct: Reduced probability of deadlock is not a goal of concurrent execution; concurrency makes deadlock more likely.\n\nWhy the others are wrong:\n- A: Improved resource utilization is a standard goal of concurrency.\n- B: Improved throughput is a standard goal of concurrency.\n- D: Reduced waiting time is a standard goal of concurrency.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0525",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Concurrency control guarantees that the interleaved execution of transactions is free from interference, that is, it is equivalent to some serial execution. Option A states exactly that. Option B describes atomicity, which is a separate ACID property, and option C states the opposite of the purpose of concurrency control.\n\nWhy A is correct: Interference freedom between simultaneous operations is precisely what concurrency control guarantees.\n\nWhy the others are wrong:\n- B: All-or-none execution of a transaction's operations is the property of atomicity, not concurrency.\n- C: Concurrency control exists precisely to prevent integrity violations.\n- D: Option A is a true statement about concurrency.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0526",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "Dirty reads are prevented as soon as a transaction may read only committed data, which is exactly the read committed isolation level. Read committed still permits non-repeatable reads, because a row updated by another committed transaction can change between two reads by the same transaction, and it does not lock a predicate, so new rows can appear (phantoms). Repeatable read blocks both dirty and non-repeatable reads, and serializable blocks all three.\n\nWhy A is correct: Read committed prevents dirty reads but still permits non-repeatable reads and phantom reads.\n\nWhy the others are wrong:\n- B: Read uncommitted allows dirty reads, which the question excludes.\n- C: Repeatable read prevents non-repeatable reads as well as dirty reads.\n- D: Serializable prevents dirty reads, non-repeatable reads and phantoms alike.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0527",
+      "subtopic": "Database recovery",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "The standard split of responsibilities is: the recovery subsystem provides atomicity and durability, while the concurrency control subsystem provides isolation and, together with integrity-constraint checking, consistency. Statement C lumps consistency in with atomicity as the job of the recovery component, which is not the accepted division of labour. A and B are both correct descriptions.\n\nWhy C is correct: Consistency is enforced by integrity constraints and concurrency control, not by the recovery management component.\n\nWhy the others are wrong:\n- A: Durability is indeed the responsibility of recovery management - this statement is true.\n- B: Isolation is indeed the responsibility of concurrency control - this statement is true.\n- D: Since C is false, \"none of the options\" cannot be the answer.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0528",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty": "hard",
+      "correctAnswer": "B",
+      "explanation": "Basic timestamp ordering aborts a transaction when it reads an item already written by a younger transaction and when it writes an item written by a younger transaction. Thomas' write rule keeps the write part but drops the read-write check, so it permits blind writes that basic TOCC rejects - which kills A and C. Multiversion timestamp ordering keeps several versions of every item and reads the version matching the reader's timestamp, so it never aborts on a read-write conflict and is more permissive than basic TOCC. Therefore every schedule allowed under the basic protocol is also allowed under multiversion TOCC, making B the only true statement.\n\nWhy B is correct: Multiversion timestamp ordering accepts a superset of the schedules accepted by basic timestamp ordering.\n\nWhy the others are wrong:\n- A: Thomas' write rule permits blind writes that basic timestamp ordering rejects.\n- C: Multiversion timestamp ordering permits schedules that Thomas' write rule rejects.\n- D: A and C are false, so not all statements are true.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0529",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Serializability means a schedule produces the same result as some serial schedule. Not every schedule is serializable: for instance, if T1 writes X after T2 has already read X, the update is lost and the schedule is neither conflict nor view serializable. Statements A, C and D correctly describe serial and non-serial schedules, so the false one is B.\n\nWhy B is correct: Many schedules (lost update, dirty write, inconsistent retrievals) are not serializable.\n\nWhy the others are wrong:\n- A: In a serial schedule transactions run one after another with no interference - correct.\n- C: Some non-serial schedules are still serializable - correct.\n- D: Non-serial schedules do interleave the executions of two transactions - correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0530",
+      "subtopic": "Database recovery",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "The standard recovery techniques for a single-site DBMS are deferred update (holding updates in a buffer until commit), immediate update (undo/redo of updates) and variants such as shadow paging and checkpointing. Two-phase commit is not a recovery technique: it is an atomic commit protocol that reaches a global commit/abort decision among the participants of a distributed transaction, and it performs no undo or redo work on a failed database.\n\nWhy C is correct: Two-phase commit is an atomic commit protocol for distributed transactions, not a recovery technique for undo/redo.\n\nWhy the others are wrong:\n- A: Deferred update is a genuine recovery technique (buffer the updates until commit).\n- B: Immediate update with undo/redo logging is a genuine recovery technique.\n- D: \"Recovery management\" names the subsystem as a whole rather than a technique, so the option set is loose - see the review note.",
+      "confidence": "low",
+      "needsReview": true,
+      "reviewReason": "Option D (\"Recovery management\") also reads as something that is not a \"technique\" since it is the subsystem, so both C and D can be defended; answered C as the better fit but the option set is ambiguous."
+    },
+    {
+      "id": "q_0531",
+      "subtopic": "Database recovery",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Rollback applies the inverse of the operations performed by a transaction that has not committed, restoring the database to the state it had before the transaction began. It is the standard action after a transaction failure such as a logical error, a deadlock victim or a system error. It is not used to update data, to retrieve old records for a user, or to re-run a transaction.\n\nWhy A is correct: Rolling back a failed transaction restores the database to its state before that transaction started.\n\nWhy the others are wrong:\n- B: Updating is the transaction's own work, not what rollback accomplishes.\n- C: Rollback restores previous database values; it is not a record-retrieval operation.\n- D: Re-running a transaction is a separate recovery action, distinct from rollback.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0532",
+      "subtopic": "Indexing and hashing",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "An index is maintained automatically by the DBMS on every insert, update and delete, so it continues to accelerate lookups even on a table that is updated frequently; the cost is a small write overhead. Large (wide) keys make each index entry bigger, so fewer entries fit per page, the tree becomes deeper, and the storage engine has a harder job. Both statements are therefore true.\n\nWhy C is correct: Both statements A and B about indexes are true.\n\nWhy the others are wrong:\n- A: Statement A is true on its own, but the question asks for all true statements.\n- B: Statement B is true on its own, but the question asks for all true statements.\n- D: At least one of A and B is true, so \"none of the options\" is wrong.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0533",
+      "subtopic": "ER modelling",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "The sentence describes a single student being linked to several courses in a semester. Reading the cardinality from student to course, one student maps to many courses, i.e. a one-to-many (1:n) relationship. The fact that many students can also take one course is the other side of the same binary relationship, but the quoted sentence only asserts the student side.\n\nWhy A is correct: One student registering for many courses is a one-to-many relationship.\n\nWhy the others are wrong:\n- B: Many-to-many would need the statement to assert that a course is also shared by many students; the quoted sentence describes only the student side.\n- C: One-to-one would mean a single course per student, contradicting \"more than one course\".\n- D: One of the listed ratios does apply, so \"None\" is wrong.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0534",
+      "subtopic": "Indexing and hashing",
+      "difficulty": "hard",
+      "correctAnswer": "B",
+      "explanation": "An internal B+ tree node of 4096 bytes holding 40-byte index entries can hold floor(4096 / 40) = 102 entries, so each internal node has at most 102 children. Working upward from 1,000,000 search key values in the leaves: 1,000,000 / 102 = 9804 nodes at the first internal level, 9804 / 102 = 97 at the second level, and 97 / 102 < 1 so a single root suffices. The tree is root -> 97 nodes -> 9804 nodes -> leaves, i.e. four levels and four disk accesses per search.\n\nWhy B is correct: Three internal levels plus the leaf level give a B+ tree height of 4.\n\nWhy the others are wrong:\n- A: A height of 5 would require far fewer than 102 entries per node.\n- C: A height of 6 greatly over-estimates the fanout of 102.\n- D: A height of 3 supports only about 102^2 = 10,404 leaf entries, far fewer than one million.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0535",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty": "hard",
+      "correctAnswer": "A",
+      "explanation": "In S = r1(X), w3(X), w3(Y), w2(Y), r1(Z), w3(Z), w2(Z) the conflicting pairs are r1(X) before w3(X) (T1->T3), r1(Z) before w3(Z) (T1->T3), w3(Y) before w2(Y) (T3->T2) and w3(Z) before w2(Z) (T3->T2). The precedence graph is 1 -> 3 -> 2 with 1 -> 2, which contains no cycle, so the schedule is conflict serializable and equivalent to the serial order T1; T3; T2. Since conflict serializability implies view serializability, it is view serializable as well.\n\nWhy A is correct: The precedence graph is acyclic (T1 -> T3 -> T2), so the schedule is conflict serializable and therefore also view serializable.\n\nWhy the others are wrong:\n- B: Conflict serializability already guarantees view serializability, so the \"but not\" clause is false.\n- C: The schedule is conflict serializable too, so \"only view serializable\" is wrong.\n- D: There is no cycle in the precedence graph, so conflict serializability is not excluded.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0536",
+      "subtopic": "Indexing and hashing",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "In a B+ tree every data record (or a pointer to it) is stored in the leaf nodes; the internal nodes hold only separator keys and child pointers, which is why the internal nodes are kept small and the tree shallow. B+ trees are height balanced, keys within each node are sorted, and leaves are threaded together by sibling pointers so that range scans can run sequentially.\n\nWhy B is correct: Only the leaf nodes of a B+ tree contain pointers to the actual data records.\n\nWhy the others are wrong:\n- A: \"B+ Tree is a height-balanced tree\" is true.\n- C: \"Key values in each node are kept in sorted order\" is true.\n- D: \"Each leaf node has a pointer to the next leaf node\" is true.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0537",
+      "subtopic": "Indexing and hashing",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A B+ tree is called balanced because every leaf sits at exactly the same depth, so the length of the path from the root to every leaf is identical and a search always costs the same number of block accesses. The property is maintained by splitting and redistributing on insert and delete. Sibling occupancy and leaf record counts are not the defining balance condition.\n\nWhy A is correct: All root-to-leaf paths have equal length, which is exactly what makes the B+ tree balanced.\n\nWhy the others are wrong:\n- B: The wording is truncated in the source; the paths do not merely differ by a bound, they are equal.\n- C: The number of children of sibling nodes may differ freely; it is not a balance criterion.\n- D: The number of records in two leaves may differ considerably; it is not a balance criterion.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0538",
+      "subtopic": "Indexing and hashing",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "A multilevel (primary) index is a search structure on a search key; the first level is the entry point that is normally called the primary index, and each further level is an index built on the level above it. So the primary index of a multilevel index is its first level.\n\nWhy D is correct: The entry point of a multilevel index is normally referred to as its first level.\n\nWhy the others are wrong:\n- A: Levels are referred to starting from the first level in this phrasing, not the zero level.\n- B: The third level is a later level built on earlier ones, not the primary index.\n- C: The second level is built on the first level, so it is not the entry point.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0539",
+      "subtopic": "Indexing and hashing",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "Only statement B is true. In a B+ tree all records live in the leaves and the leaves are chained, so a range query is answered by one sequential scan of the leaf level, which is faster than the log2(n) descent per key that a B tree requires. A is wrong because both B and B+ trees are disk structures, C reverses the usual assignment (B+ tree for primary indexes, B tree for secondary indexes), and D is wrong because tree height grows as the logarithm of the number of records.\n\nWhy B is correct: Linked leaves allow a B+ tree to answer a range query with a single sequential scan.\n\nWhy the others are wrong:\n- A: Both B and B+ trees are designed for disk storage; neither is limited to main memory.\n- C: The usual pairing is B+ tree for primary indexes and B tree for secondary indexes - the reverse of what is stated.\n- D: The height of a B+ tree grows logarithmically with the number of records, so it is not independent of them.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0540",
+      "subtopic": "Indexing and hashing",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "For a B-tree of order m, meaning a node can have at most m children, the maximum number of keys in a node is m - 1 and the minimum is ceil(m/2) - 1. With m = 4 the maximum is 3 keys and the minimum is 2 - 1 = 1 key, so the pair (max, min) = (3, 1).\n\nWhy B is correct: Maximum 3 keys and minimum 1 key, which matches the option \"3,1\".\n\nWhy the others are wrong:\n- A: 4 and 2 would be correct for a tree of order 5.\n- C: 4 keys exceeds the maximum of m - 1 = 3 for order 4.\n- D: 4,3 ignores that the maximum number of keys is m - 1 = 3.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0541",
+      "subtopic": "Relational model",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "Statement A is incorrect: NoSQL systems are schema-less by default and do not require a schema to be declared before data is added. Statement B is correct: that schema flexibility is exactly what NoSQL provides. Statement C is incorrect: NewSQL systems keep the relational, schema-defined model. So the incorrect statements are A and C, which are not offered as a pair; the only option naming more than one statement is D, even though D's literal wording (\"All the statements\") is false because B is correct.\n\nWhy D is correct: D is the only option that names more than one statement, which is what the plural \"statement(s)\" in the stem requires, and it is the answer the single-answer format appears to expect.\n\nWhy the others are wrong:\n- A: A is indeed incorrect, but C is too, so A alone does not answer \"statement(s)\".\n- B: B is actually a true statement, so it is not an incorrect statement.\n- C: C is indeed incorrect, but A is too, so C alone does not answer \"statement(s)\".",
+      "confidence": "low",
+      "needsReview": true,
+      "reviewReason": "Two statements (A and C) are incorrect but are not offered together, and option D \"All the statements\" is itself false because B is correct; answered D as the likely exam key, but the option set does not admit a strictly correct single answer."
+    },
+    {
+      "id": "q_0542",
+      "subtopic": "Relational model",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "In a single-tier architecture the user interface, application logic and DBMS all run on one machine with no intervening server, which is exactly what a standalone (personal) application implies. Two-tier adds a separate client application and three-tier adds an application server; neither is needed when everything runs on a single machine.\n\nWhy A is correct: A standalone single-machine application requires only the single-tier architecture.\n\nWhy the others are wrong:\n- B: A two-tier architecture assumes a separate client machine talking to the DBMS server.\n- C: A three-tier architecture assumes a separate application server in between.\n- D: Single tier is the correct choice here.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0543",
+      "subtopic": "Relational model",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "The major NoSQL families are key-value stores (Redis, DynamoDB), wide-column stores (Cassandra, HBase) and document stores (MongoDB, CouchDB). Graph databases (Neo4j) form a further family, but every one of the three listed types is a NoSQL category.\n\nWhy D is correct: Key-value, wide-column and document stores are all NoSQL database families.\n\nWhy the others are wrong:\n- A: Key-value is one NoSQL family, but the question asks for all of the NoSQL databases listed.\n- B: Wide-column is one NoSQL family, but the question asks for all of the NoSQL databases listed.\n- C: Document is one NoSQL family, but the question asks for all of the NoSQL databases listed.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0544",
+      "subtopic": "ER modelling",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "In the bank mini-world each branch is located in exactly one city, while one city may contain several branches. An association recorded as an attribute of one entity when it actually relates two entity sets must be modelled as a relationship; here the direction is city \"contains\" branch, giving a one-to-many relationship.\n\nWhy A is correct: One city is associated with many branches, while each branch belongs to one city.\n\nWhy the others are wrong:\n- B: The association is between two entity sets, so it is not modelled as an attribute of city.\n- C: The association is between two entity sets, so it is not modelled as an attribute of branch.\n- D: The association is stored, not computed, so it is not a derived attribute.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0545",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty": "hard",
+      "correctAnswer": "A",
+      "explanation": "A schedule is recoverable if and only if every transaction commits after all transactions whose writes it has read. In S = r1(x), w1(x), r2(x), r1(y), w1(y), w2(x), r2(y), c1, c2 the cross-transaction reads are r2(x), which reads the value written by w1(x), and r2(y), which reads the value written by w1(y), both of them dirty. Recoverability depends on the commit order alone, and c1 comes before c2, so T2 commits after T1 and S is recoverable - statement I is true. Statement II is false. Interchanging the positions of w1(x) and w2(x) gives r1(x), w2(x), r2(x), r1(y), w1(y), w1(x), r2(y), c1, c2: here r2(x) reads T2's own write rather than T1's, the only remaining cross-transaction read is r2(y) reading w1(y), and the commits are still c1 then c2, so the schedule is still recoverable. The interchange moves no commit operation at all, so it cannot turn a recoverable schedule into a non-recoverable one.\n\nWhy A is correct: Only statement I is true - S is recoverable, and interchanging w1(x) and w2(x) still leaves the schedule recoverable.\n\nWhy the others are wrong:\n- B: Statement I is true, so \"Only II\" cannot be the answer.\n- C: Statement II is false, because the swap leaves c1 before c2 and hence the schedule recoverable.\n- D: Statement I is true, so \"None of the options\" is wrong.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Statement II cannot be made true by any literal reading of the printed schedule: interchanging w1(x) and w2(x) leaves c1 before c2, and it additionally breaks T1's own operation order (r1(x), w1(x), r1(y), w1(y) becomes r1(x), r1(y), w1(y), w1(x)). The stem most likely should read \"if the order of c1 and c2 are interchanged\", which does make the schedule non-recoverable and would give C; the source wording needs checking against the official key."
+    },
+    {
+      "id": "q_0546",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty": "hard",
+      "correctAnswer": "C",
+      "explanation": "The conflicting pairs in S = r1(y), r2(x), r2(y), r3(y), w2(x), w1(y), w3(x), r1(x) are w2(x) before r1(x) giving T2->T1, r2(y) before w1(y) giving T2->T1, w3(x) before r1(x) giving T3->T1 and w2(x) before w3(x) giving T2->T3; the two reads of y do not conflict. The graph T2->T3, T3->T1, T2->T1 is acyclic, so the schedule is conflict serializable with the equivalent serial order T2; T3; T1. Checking the reads, r1(x) reads the value written by T3 and every other read sees the initial value, exactly as in that serial schedule, so it is view serializable as well.\n\nWhy C is correct: The precedence graph is acyclic (T2 -> T3 -> T1) and the schedule reproduces that serial order's reads-from and final-write state.\n\nWhy the others are wrong:\n- A: There is no cycle, so conflict serializability is not excluded.\n- B: The schedule is both conflict serializable and view serializable.\n- D: The schedule is conflict serializable, so it is not view-serializable-only.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0547",
+      "subtopic": "ER modelling",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "In Chen notation a rectangle denotes an entity set and an oval denotes an attribute of that entity set. Customers, Products and Stock (inventory items) can each be modelled as an entity set in a shopping mini-world, but ProductName is a property of an individual product, so it is drawn as an oval attached to the Products rectangle.\n\nWhy D is correct: ProductName is an attribute of the Products entity set, not an entity set itself.\n\nWhy the others are wrong:\n- A: Customers is a standard entity set in a shopping mini-world.\n- B: Stock (inventory) can be modelled as an entity set.\n- C: Products is a standard entity set in a shopping mini-world.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0548",
+      "subtopic": "Relational model",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "The special-purpose database types each target a particular data form: multimedia databases hold audio, video and images, a GIS holds spatial and geographic data, and a data warehouse holds consolidated data for analytical reporting. A research document is primarily textual content used for retrieval, so a textual database is the appropriate type.\n\nWhy D is correct: A research document is textual data, so a textual database is the suitable system.\n\nWhy the others are wrong:\n- A: Multimedia databases store audio, video and images rather than plain research text.\n- B: A geographical information system stores spatial and geographic data.\n- C: A data warehouse stores consolidated data for analysis and reporting, not documents.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0549",
+      "subtopic": "Relational model",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The window a net-banking customer sees is a virtual table produced by a query over one or more base tables that restricts the rows and columns to what that user should see. That is exactly the definition of a view, which also provides logical data independence so the underlying tables can change. A schema is the overall structure, a database state is the data at an instant, and the data dictionary stores metadata.\n\nWhy C is correct: The customer-facing window is a view defined over the underlying tables.\n\nWhy the others are wrong:\n- A: The database state is the set of values stored at a given moment, not a display window.\n- B: The schema is the logical structure of the whole database.\n- D: The data dictionary holds DBMS metadata such as schema, indexes and permissions.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0550",
+      "subtopic": "Relational model",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A snapshot of the transactions happening at 4 p.m records the values that the database holds at that instant, which is precisely the database state - the set of values of all variables in the database at a point in time. The schema is the static structural description and does not change moment to moment, and abstraction refers to the levels of data independence rather than to a snapshot.\n\nWhy B is correct: The set of values current in the database at an instant is the database state.\n\nWhy the others are wrong:\n- A: The schema is the static design description of the database, not a point-in-time snapshot.\n- C: Abstraction refers to the logical and physical levels of the DBMS architecture.\n- D: The catalogue stores schema and metadata descriptions, not the data values.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0551",
+      "subtopic": "Relational model",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "A schema construct is any named structural element of the database structure, such as a relation, table or view. Products, inventory and sales are all perfectly valid named structures in a supermarket schema, and there is no reason to prefer one of them over the others.\n\nWhy D is correct: Products, inventory and sales are all valid schema constructs, so all the options apply.\n\nWhy the others are wrong:\n- A: Products is valid, but it is not the only correct option.\n- B: inventory is valid, but it is not the only correct option.\n- C: sales is valid, but it is not the only correct option.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0552",
+      "subtopic": "Relational model",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "In a single-tier architecture the user interface, application logic and the DBMS all run on the same machine with no client/server split, which is what a standalone application implies. Two-tier adds a separate client program and three-tier adds an application server; both exist to serve many remote users of one database, which is not the situation described.\n\nWhy A is correct: A standalone single-user application needs only the single-tier architecture.\n\nWhy the others are wrong:\n- B: A two-tier architecture assumes a separate client machine connecting to the DBMS server.\n- C: A three-tier architecture assumes a separate application server.\n- D: Single tier is the correct choice, so \"none of the mentioned\" is wrong.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0553",
+      "subtopic": "ER modelling",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "Entity sets correspond to the distinguishable things of the mini-world. Option B gives the complete list of cafeteria participants - customers, menu manager, items procurement, meal delivery and bill generation - whereas A and C leave several out and D names only one. Even though several entries read more like processes than things, B is the only option covering the whole set.\n\nWhy B is correct: It is the only option listing the complete set of cafeteria participants.\n\nWhy the others are wrong:\n- A: Omits itemsProcurement and billGeneration.\n- C: Omits itemsProcurement and part of the menu management.\n- D: FoodMenu alone omits the customers and the remaining participants.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0554",
+      "subtopic": "ER modelling",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "An attribute that has meaningful component parts is a composite attribute and is drawn as an oval with sub-ovals for the components. Address = door no + street_name + City + Zipcode is the standard composite-attribute example. It is not multivalued, because one entity has one address, and it is not derived, because the parts are stored.\n\nWhy C is correct: Address is made up of smaller sub-attributes, so it is composite.\n\nWhy the others are wrong:\n- A: A simple attribute has no components, and address clearly does.\n- B: Multivalued means several values (several addresses), not several parts of one value.\n- D: Derived means computed from other data (age from date of birth), and address is stored.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0555",
+      "subtopic": "Keys and functional dependencies",
+      "difficulty": "hard",
+      "correctAnswer": null,
+      "explanation": "The candidate keys are AB, AC and DE, so their proper subsets are {A}, {B}, {A}, {C}, {D} and {E}. Checking each option: BC is contained in none of AB, AC or DE; AD is also contained in none of them; and DE is contained only in itself, so it is not a proper subset of any candidate key. Only C is a proper subset, namely of AC. That means three different options (BC, DE and AD) all satisfy \"is not a proper subset of the candidate key\", so the question has no single correct answer.\n\nWhy no single option can be chosen: Three options are equally correct, so the tie cannot be broken from the printed text.\n\nWhy the others are wrong:\n- A: BC is also not a proper subset of any candidate key, so it is not the only answer.\n- B: DE is a candidate key and is contained in no other candidate key, so it also qualifies.\n- C: C is a proper subset of the candidate key AC, so it is the one option that is excluded.\n- D: AD is contained in none of AB, AC or DE, so it also qualifies.",
+      "confidence": "low",
+      "needsReview": true,
+      "reviewReason": "Multiple options are correct: BC, DE and AD are all not proper subsets of any candidate key, so the question as printed has no unique answer and correctAnswer is null."
+    },
+    {
+      "id": "q_0556",
+      "subtopic": "ER modelling",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "When an entity set participates in a relationship set, the distinct part it plays may need a name - that name is its role. Here Instructor plays the role of teacher in teaches, which distinguishes it from any other participation Instructor might have. Participation constraints instead say whether participation is total or partial, which is a different concept.\n\nWhy B is correct: The distinct function an entity performs in a relationship set is called its role.\n\nWhy the others are wrong:\n- A: Participation states whether an entity must or may take part, not the part it plays.\n- C: An instance is a single occurrence of an entity, not its function in a relationship.\n- D: Position is not part of the ER model's terminology.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0557",
+      "subtopic": "ER modelling",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A multivalued attribute can hold several values for a single entity instance, drawn as a double oval. A person can legitimately have several phone numbers, so Phone_number is multivalued. Date_of_birth is a single stored value, and name is a single value that is more naturally composite (first, middle, last) than multivalued.\n\nWhy A is correct: A person may have several phone numbers, making Phone_number a multivalued attribute.\n\nWhy the others are wrong:\n- B: Name takes a single value per person; at most it is composite.\n- C: Date_of_birth is a single atomic stored value.\n- D: Only Phone_number is a plausible multivalued attribute.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0558",
+      "subtopic": "ER modelling",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "A key attribute uniquely identifies every entity in the set and is drawn underlined inside the rectangle. ProjectId is the natural unique identifier for a project; ProjectName can repeat across projects and ProjLocation certainly repeats, so neither can serve as a key.\n\nWhy D is correct: ProjectId uniquely identifies each project and is therefore the key attribute.\n\nWhy the others are wrong:\n- A: ProjectName need not be unique, so the pair is not a key.\n- B: ProjectName can repeat across projects.\n- C: ProjLocation repeats and carries no identity.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0559",
+      "subtopic": "ER modelling",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A derived attribute is not stored in the database; its value is computed on demand from other stored data and is drawn as a dashed oval. Experience computed as the current date minus dateOfJoining is exactly that, since it would be wasteful to store a value that changes every day.\n\nWhy A is correct: experience is calculated from dateOfJoining rather than stored, so it is derived.\n\nWhy the others are wrong:\n- B: \"Descriptive\" is not the ER classification for computed attributes.\n- C: A simple attribute is stored as one atomic value; experience is computed.\n- D: Multivalued means several values per entity, which does not apply here.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0560",
+      "subtopic": "ER modelling",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "A weak entity has no key of its own; its primary key is the key of its owner entity combined with its partial key, and it must take total part in its identifying relationship. SLOT therefore depends existentially on TIMETABLE through TAKES - if the TIMETABLE goes away the SLOT cannot be identified. The claim that there is no existence dependency is therefore false.\n\nWhy D is correct: A weak entity does have an existence dependency on its identifying owner, TIMETABLE.\n\nWhy the others are wrong:\n- A: A weak entity must have an identifying relationship, so this statement is true.\n- B: A weak entity has exactly one identifying owner entity, so this statement is true.\n- C: Weak entities take total (mandatory) part in the identifying relationship, so this statement is true.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0561",
+      "subtopic": "ER modelling",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "A subclass inherits every attribute of its superclass and adds the attributes specific to itself. SHIPPING is a specialization of ORDERS, so it carries orderId, items and price from ORDERS plus its own shipping-specific attributes such as ShippingId, FromLocation and ToLocation. That is option C, the only list that contains both the inherited and the new attributes.\n\nWhy C is correct: A specialization entity has the superclass attributes plus its own additional attributes, which is exactly option C.\n\nWhy the others are wrong:\n- A: That is only the ORDERS attribute set, with none of the shipping-specific attributes.\n- B: That drops the inherited items and price attributes of ORDERS.\n- D: That omits the inherited price attribute of ORDERS.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0562",
+      "subtopic": "ER modelling",
+      "difficulty": "hard",
+      "correctAnswer": null,
+      "explanation": "In EER modelling an attribute added to a superclass is inherited by every subclass - that is the defining behaviour of inheritance - and this holds whether subclass membership is attribute-defined, predicate-defined or both. Overlapping participation is about an entity taking part in several relationship sets and has nothing to do with attribute propagation. None of the four options states the correct condition (unconditional inheritance), so the question is flawed.\n\nWhy no option can be chosen: None of the four options states the correct condition, which is that superclass attributes are inherited by all subclasses.\n\nWhy the others are wrong:\n- A: Attribute-defined membership determines which entities belong to a subclass, not whether new superclass attributes propagate.\n- B: Predicate-defined membership likewise governs subclass membership, not attribute propagation.\n- C: The propagation rule is unconditional, so it is not contingent on the membership style.\n- D: Overlapping participation concerns participation in multiple relationship sets, not attribute inheritance.",
+      "confidence": "low",
+      "needsReview": true,
+      "reviewReason": "The question contradicts standard EER theory: an attribute added to a superclass is always inherited by subclasses, and none of the four options expresses that condition."
+    },
+    {
+      "id": "q_0563",
+      "subtopic": "ER modelling",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The relationship set in a statement is the verb that links the nouns. In \"Customer buys Products\", Customer and Products are the two entity sets and Buys is the association between them, drawn as a diamond with lines to both rectangles. So the relationship set is Buys.\n\nWhy C is correct: Buys is the verb linking Customer and Products, i.e. the relationship set.\n\nWhy the others are wrong:\n- A: Customer is an entity set, not the relationship.\n- B: Products is an entity set, not the relationship.\n- D: Listing both names gives the participants of the relationship, not the relationship itself.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0564",
+      "subtopic": "ER modelling",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Specialization is the top-down process of defining more specific sub-types of a more general entity set by specifying their distinguishing characteristics, and it is used when one entity set has sub-sets with extra properties. Generalization is the reverse, bottom-up process. Since MovieZone is being divided into Hollywood and Bollywood, this is specialization.\n\nWhy B is correct: Splitting a general entity set into more specific subclasses is specialization.\n\nWhy the others are wrong:\n- A: Generalization is the bottom-up direction, from subclasses to a superclass.\n- C: Inheritance is the resulting property of the subclasses, not the classification process.\n- D: \"Constraint generalization\" is not a standard ER term.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0565",
+      "subtopic": "ER modelling",
+      "difficulty": "hard",
+      "correctAnswer": "B",
+      "explanation": "A simple (atomic, single-valued, stored) attribute has no further decomposition. In the usual readings of these attributes, name is composite (first, middle, last) and VehicleRegistrationNumber is composite (region code plus serial number), which leaves grade and arguably Color as simple attributes. Since at least two options fit the definition, the question has no unique answer as printed.\n\nWhy B is correct: grade is a single stored value that cannot be decomposed, so it is a simple attribute.\n\nWhy the others are wrong:\n- A: name is normally decomposed into first, middle and last names, making it composite.\n- C: Color is also a single indivisible stored value, so it is equally a candidate and makes the question ambiguous.\n- D: VehicleRegistrationNumber is composite (region plus serial number).",
+      "confidence": "low",
+      "needsReview": true,
+      "reviewReason": "No mini-world is given and both \"grade\" and \"Color\" qualify as simple attributes, so the question has more than one defensible answer; answered B as the intended choice."
+    },
+    {
+      "id": "q_0566",
+      "subtopic": "Normalization",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "The normal-form hierarchy is 1NF then 2NF then 3NF then BCNF, each stronger than the one before. Therefore a relation in BCNF is automatically in 3NF and hence in 2NF as well. The only option that follows from BCNF is \"R is in 2NF and 3NF\", because 4NF depends on multivalued dependencies which BCNF does not constrain, and 1NF is presupposed.\n\nWhy D is correct: BCNF implies 3NF, and 3NF implies 2NF, so both hold.\n\nWhy the others are wrong:\n- A: 4NF additionally requires the absence of nontrivial multivalued dependencies, which BCNF does not imply.\n- B: If R is in BCNF it is certainly in 3NF, so \"not in 3NF\" is impossible.\n- C: BCNF presupposes 1NF, so R is certainly in 1NF.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0567",
+      "subtopic": "ER modelling",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "Total participation of DOCTOR on DIAGNOSES means every doctor must appear in at least one diagnosis, so the minimum participation on the doctor side is 1. Nothing restricts how many doctors may diagnose a single patient, so the patient side is \"many\". The minimum cardinality ratio of the relationship is therefore 1:N.\n\nWhy C is correct: Every doctor diagnoses at least one patient while a patient may be diagnosed by many doctors - that is 1:N.\n\nWhy the others are wrong:\n- A: 1:1 would require each patient to be diagnosed by exactly one doctor, which is not stated.\n- B: M:N is a maximum-participation ratio, not the minimum cardinality constraint asked for.\n- D: N:1 would put the mandatory side on the patient, which is not what is stated.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0568",
+      "subtopic": "ER modelling",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The key attribute is the one that uniquely identifies each instance of the entity set. shippingId is an identifier by name and is the natural primary key of SHIPPING. ShipLocations describes where a shipment is going, can repeat across shipments and may even be multivalued, so it cannot identify a shipment.\n\nWhy A is correct: ShippingId uniquely identifies each shipment and is therefore the primary key.\n\nWhy the others are wrong:\n- B: ShipLocations describes locations and does not identify shipments uniquely.\n- C: A composite key needs both parts to be necessary, and ShippingId alone suffices.\n- D: ShippingId is the primary key, so \"none of the options\" is wrong.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0569",
+      "subtopic": "ER modelling",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "SENSE, SELECT and SCOPE are lower-level entity sets that share common characteristics, and DEPARTMENTS is the higher-level entity set formed by grouping them together. Forming a superclass out of existing sub-entity sets, i.e. working bottom-up, is generalization. Specialization would go the other way, defining SENSE, SELECT and SCOPE as subtypes of DEPARTMENTS.\n\nWhy B is correct: Combining several sub-entity sets into a higher-level superclass is generalization.\n\nWhy the others are wrong:\n- A: Specialization is the top-down direction and would define the subtypes instead.\n- C: Top-down is the direction used by specialization, not by forming DEPARTMENTS.\n- D: Inheritance is the outcome of the process, not the name of the process.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0570",
+      "subtopic": "ER modelling",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "\"INVESTOR can buy or sell SHARES\" links two entity sets by a verb, which in ER terminology is a relationship (relationship set) drawn as a diamond between the two rectangles. It is not recursive, because that requires an entity set related to itself, and it is neither a role definition nor a participation constraint.\n\nWhy A is correct: Buy/sell links the INVESTOR and SHARES entity sets, i.e. it is a relationship.\n\nWhy the others are wrong:\n- B: A role definition names the part an entity plays, not the link itself.\n- C: A recursive relationship involves one entity set related to itself.\n- D: Participation states whether entities must take part, not that a link exists.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0571",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "Reading a value written by a transaction that has not yet committed is a dirty read. If that reader then commits and the writer is subsequently rolled back, the database is left holding a value that was computed from data which never officially existed, and no undo record can restore it - an irrecoverable mistake. The other three situations either read only committed data or merely create ordinary conflicts.\n\nWhy A is correct: A dirty read can commit state derived from data that is later rolled back, and that cannot be undone.\n\nWhy the others are wrong:\n- B: Reading data written by a committed transaction is perfectly safe.\n- C: Reading data that has merely been read by an uncommitted transaction reads nothing uncommitted.\n- D: Writing over data read by an uncommitted transaction creates a conflict, not an irrecoverable error.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0572",
+      "subtopic": "Normalization",
+      "difficulty": "hard",
+      "correctAnswer": "C",
+      "explanation": "For statement I, R1(C,A) and R2(A,B) intersect in {A} and (R1 intersection R2)+ = A+ = {A,B} = R2, so by the binary lossless-join test the decomposition is lossless - statement I is true. For statement II, R1(A,B) and R2(B,C) intersect in {B} and B+ = {B} determines neither R1 nor R2, so the decomposition is lossy - statement II is also true.\n\nWhy C is correct: Both the lossless decomposition in I and the lossy decomposition in II are correctly identified.\n\nWhy the others are wrong:\n- A: Statement II is also true, so \"Only I\" is incomplete.\n- B: Statement I is true, so \"Only II\" is wrong.\n- D: Both statements are true, so \"Neither I nor II\" is wrong.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0573",
+      "subtopic": "Database recovery",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Two-phase commit is a protocol in which the coordinator asks every participant to prepare, waits for all votes, and then issues a single commit or abort decision, which is what makes a distributed transaction atomic. Of the four options, only \"Ensures serializability\" can be defended: a uniform global commit decision is a precondition for a globally serializable distributed schedule. The deadlock options are all false, since 2PC neither prevents, detects nor recovers from deadlock - it is deadlock that makes 2PC block. Strictly the guarantee is atomicity, which is not offered.\n\nWhy A is correct: It is the only option that can be defended for a commit protocol; the standard guarantee (atomicity) is closest to it.\n\nWhy the others are wrong:\n- B: 2PC does not prevent deadlock; participants can block waiting for the decision.\n- C: 2PC contains no deadlock-detection mechanism.\n- D: Recovery from deadlock is the job of the deadlock-handling subsystem, not of 2PC.",
+      "confidence": "low",
+      "needsReview": true,
+      "reviewReason": "No option states the actual guarantee of two-phase commit (atomicity of the distributed transaction); answered A as the only defensible option, but the option set does not offer atomicity."
+    },
+    {
+      "id": "q_0574",
+      "subtopic": "Indexing and hashing",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "With at most 7 keys per node a B+ tree node can have 8 children. After a redistribution a node must be at least half full, so it needs at least ceil(8/2) = 4 children, and a node with c children holds c - 1 keys. The minimum number of keys in any non-root node is therefore 4 - 1 = 3.\n\nWhy A is correct: ceil((7+1)/2) - 1 = 4 - 1 = 3 keys.\n\nWhy the others are wrong:\n- B: 1 key would allow nodes only a quarter full, violating the half-full rule.\n- C: 2 keys corresponds to 3 children, which is below the half-full minimum of 4 children.\n- D: 4 is not the minimum; a node may be exactly half full, which gives 3 keys.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0575",
+      "subtopic": "Indexing and hashing",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A clustered index is one in which the logical ordering of the index matches the physical ordering of the data records, so the index and the data live together and scanning the index visits every record. In an unclustered index the entries point to rows stored elsewhere, so a full scan has to follow every row pointer. Sparse and dense refer to whether every search key has an entry, not to ordering.\n\nWhy A is correct: Clustered means the index ordering is the same as the physical ordering of the data records.\n\nWhy the others are wrong:\n- B: Sparse means only some search keys have index entries.\n- C: Dense means every search key has an index entry.\n- D: Unclustered is the opposite of the ordering described in the question.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0576",
+      "subtopic": "Indexing and hashing",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A hashed file computes the physical address of a record directly from its file key using a hash function, typically address = h(key) mod (number of blocks), giving near-constant-time access to the record. A B-tree file or an indexed file instead locates a record by descending an index structure, and a sequential file by scanning - none of which is a direct key-to-position formula.\n\nWhy B is correct: The physical position is computed by applying a hash function to the file key.\n\nWhy the others are wrong:\n- A: A B-tree file locates records by tree descent, not by a hash formula.\n- C: An indexed file locates records through an index, not a hash formula.\n- D: A sequential file is scanned in order, with no key-to-position computation.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0577",
+      "subtopic": "SQL DML",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "DISTINCT is the standard SQL keyword that eliminates duplicates from the result of a SELECT, so SELECT DISTINCT destination FROM flight returns each destination value exactly once. ALL is the opposite modifier and keeps duplicates by default, while DIFFERENT and UNIQUE are not SQL keywords in this position.\n\nWhy B is correct: SELECT DISTINCT destination FROM flight; returns each destination value once.\n\nWhy the others are wrong:\n- A: DIFFERENT is not a SQL keyword.\n- C: ALL retains duplicate rows, the opposite of what is asked.\n- D: UNIQUE is a column constraint in table definitions, not a SELECT modifier.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0578",
+      "subtopic": "Keys and functional dependencies",
+      "difficulty": "hard",
+      "correctAnswer": "D",
+      "explanation": "Only D never appears on a right-hand side (the right sides are BC, CFH, A and E), so every key must contain D. Checking each pair with D: {D,A}+ = {A,B,C} then B -> CFH adds F and F -> E adds E, so DA is a key; {D,B}+ gives C, F, H then F -> E then E -> A, so DB is a key; {D,E}+ gives A then B, C then F, so DE is a key; {D,F}+ gives E then A then B, C, so DF is a key. {D,C}+ stays at {C,D} and D alone gives {D,B}, so neither is a key. Exactly four candidate keys: DA, DB, DE, DF. (H appears in B -> CFH although the relation is stated to have only A-F; the same count of 4 results either reading.)\n\nWhy D is correct: There are exactly 4 candidate keys - DA, DB, DE and DF.\n\nWhy the others are wrong:\n- A: There are 4 candidate keys, not 5.\n- B: There are 4 candidate keys, not 6.\n- C: There are 4 candidate keys, not 3.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0579",
+      "subtopic": "Normalization",
+      "difficulty": "hard",
+      "correctAnswer": "C",
+      "explanation": "The candidate keys are DA, DB, DE and DF, so the prime attributes are A, B, D, E, F and C is the only non-prime attribute. C is nevertheless functionally determined by A (A -> BC), by B (B -> CFH), by E (E -> A -> BC) and by F (F -> E -> A -> BC), each of which is a proper subset of one of the two-attribute candidate keys. A partial dependency of a non-prime attribute on a proper subset of a candidate key violates 2NF, so R is in 1NF (atomic values) but not in 2NF.\n\nWhy C is correct: Non-prime attribute C depends on single attributes A, B, E and F, each a proper subset of a candidate key, which violates 2NF.\n\nWhy the others are wrong:\n- A: R fails 2NF, so it cannot be in 2NF.\n- B: R is not even in 2NF, let alone in 3NF.\n- D: BCNF implies 3NF, which does not hold here.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0580",
+      "subtopic": "Keys and functional dependencies",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "D is the only attribute that never appears on a right-hand side, so every key must contain D. {A,B,D}+ : AB -> C gives C, B -> EF gives E and F, and AD -> G gives G, producing all seven attributes. No two-attribute set works - {A,D}+ = {A,D,G} and {B,D}+ = {B,D,E,F} are both short of a superkey - and A, B and D are each necessary. So {A,B,D} is the unique candidate key.\n\nWhy D is correct: {A, B, D} is the only minimal superkey of the relation.\n\nWhy the others are wrong:\n- A: {A,B,C,D,G} is a superkey but not minimal, since C can be derived and dropped.\n- B: {A,D} closes only to {A,D,G}, missing C, E and F.\n- C: {A,B} closes to {A,B,C,E,F}, missing D and therefore G.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0581",
+      "subtopic": "Keys and functional dependencies",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "A superkey is any attribute set that functionally determines all of R. Since H alone is the key, every superkey must contain H, and any superset of H works. Each of the remaining seven attributes A to G may independently be included or excluded, giving 2^7 = 128 superkeys.\n\nWhy B is correct: Every subset of the other seven attributes can be added to H, giving 2^7 = 128 superkeys.\n\nWhy the others are wrong:\n- A: 64 = 2^6 counts subsets of only six attributes.\n- C: 7 is the number of non-key attributes, not the number of superkeys.\n- D: 256 = 2^8 would be the count only if all eight attributes were optional, but H is mandatory in every superkey.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0582",
+      "subtopic": "Normalization",
+      "difficulty": "hard",
+      "correctAnswer": "C",
+      "explanation": "A lossless, dependency-preserving decomposition into 3NF is always possible - that is the content of the synthesis theorem. Any two-attribute relation is in BCNF, because the only possible nontrivial FDs have a single attribute on the left, which then determines the whole relation and is therefore a superkey. BCNF is indeed stronger than 3NF. But BCNF decomposition is always lossless yet need not be dependency-preserving, so statement C is the false one.\n\nWhy C is correct: BCNF decomposition is always lossless but can fail to preserve dependencies, so \"always possible\" is false.\n\nWhy the others are wrong:\n- A: The synthesis theorem guarantees a lossless, dependency-preserving 3NF decomposition - true.\n- B: In a two-attribute relation every nontrivial FD has a superkey determinant - true.\n- D: BCNF is indeed stronger than 3NF - true.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0583",
+      "subtopic": "Indexing and hashing",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "Order 4 means a node has at most 4 children, hence at most 3 keys, and every non-root node must retain at least ceil(4/2) - 1 = 1 key. A node splits when a fourth key would have to be stored in it; the middle key is promoted to the parent and the node becomes two nodes. Exhaustively simulating all 8! = 40320 insertion orders and validating that each result is a legal order-4 B-tree gives 2 splits for 36864 orders and 3 splits for 3456 orders, so the maximum is 3. A worst case order is 1, 2, 7, 8, 5, 6, 3, 4: inserting 8 overflows the root (split 1, new root 7 over children {1,2} and {8}); inserting 6 overflows {1,2} (split 2, root {5,7} over {1,2}, {6}, {8}); inserting 4 overflows {1,2} again (split 3, root {3,5,7} over {1,2}, {4}, {6}, {8}). More than 3 splits is impossible: a root split adds two nodes and every other split adds one, so the tree can never exceed 5 nodes here (root with 3 keys plus four leaves), and 5 nodes from a single starting node requires exactly one root split plus two child splits, i.e. 3 splits. Reaching a third level would need at least 7 nodes and 7 keys (root 1 key, two internal nodes, four leaves), which 8 insertions under this split rule cannot produce.\n\nWhy A is correct: The maximum number of node-splitting operations over all insertion orders of 8 keys into an order-4 B-tree is 3.\n\nWhy the others are wrong:\n- B: 4 splits would require 6 nodes, and no insertion order of 8 keys into an order-4 B-tree builds 6 nodes.\n- C: 5 splits is not reachable; the root can split only once and only two further child splits are possible.\n- D: 6 is not reachable for the same node-count reason.",
+      "needsReview": false,
+      "reviewReason": null,
+      "confidence": "high"
+    },
+    {
+      "id": "q_0584",
+      "subtopic": "Database recovery",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Durability means that once a transaction has committed, its effects are permanent and survive any subsequent failure. The write-ahead log, together with recovery to the last consistent state and backups, guarantees exactly this across operating-system crashes, power failures and disk failures. So the modifications survive a failure of any kind.\n\nWhy B is correct: Durability guarantees permanence after commit regardless of the kind of failure.\n\nWhy the others are wrong:\n- A: Durability is explicitly guaranteed even across an operating-system crash.\n- C: Durability is explicitly guaranteed even across a power failure.\n- D: Durability is explicitly guaranteed even across a disk crash, via logs and backups.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0585",
+      "subtopic": "SQL DML",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "The query groups the male employees by department and keeps only those groups whose average salary satisfies the HAVING condition. The subquery computes avg(Salary) over the whole Emp table, i.e. the organisation-wide average, so the surviving departments are those in which the average salary of male employees exceeds the organisation's average.\n\nWhy A is correct: The HAVING clause keeps the groups whose average salary is greater than the overall average.\n\nWhy the others are wrong:\n- B: Equality with the organisation average would need a different predicate; the query uses \">\".\n- C: Saying the averages are the same contradicts the strict inequality in the query.\n- D: Less than the organisation average is the opposite of what HAVING asks for.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0586",
+      "subtopic": "Indexing and hashing",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "The query needs only E.eno and the number of rows per eno. A clustered index stores the whole record with the key, so scanning it supplies both. A non-clustered index stores eno together with a row locator, and since every index entry corresponds to exactly one row, scanning it still yields each eno and the row count without touching the base table. Whether the index is organised as a hash or a B+ tree is irrelevant, so all four combinations work.\n\nWhy A is correct: Both hash and B+ tree indexes, clustered or non-clustered, contain enough information to answer the query from the index alone.\n\nWhy the others are wrong:\n- B: A non-clustered B+ tree index on eno also suffices.\n- C: A non-clustered hash index on eno also suffices.\n- D: This option wrongly excludes the non-clustered case.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0587",
+      "subtopic": "Transactions and concurrency control",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "The granularity of a lock determines how much work other transactions are blocked from. A row (tuple) lock blocks only the rows a transaction actually touches, while page and table locks block every transaction that needs any row in that page or table. Finer granularity therefore means less blocking and a higher degree of concurrency, so row level locking is the highest.\n\nWhy B is correct: Row-level locking blocks the least amount of other transactions, giving the highest concurrency.\n\nWhy the others are wrong:\n- A: Table-level locking locks the entire table and gives the lowest concurrency.\n- C: Page-level locking locks a whole page of rows, which blocks more than a single row.\n- D: The three levels clearly give different degrees of concurrency.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0588",
+      "subtopic": "SQL DML",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "The asterisk in SELECT * is shorthand for every column of the table. The WHERE clause only filters which rows are returned and never restricts the columns, so the query outputs every field of every player row that has more than 100 matches and belongs to India.\n\nWhy D is correct: SELECT * projects all attributes of player, with the WHERE clause filtering only the rows.\n\nWhy the others are wrong:\n- A: player is the name of the table, not an output field.\n- B: num_of_matches is only one of the output fields.\n- C: country is output too, along with every other column of the relation.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0589",
+      "subtopic": "SQL DML",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "The standard SQL form is UPDATE <table> SET <column> = <new value> WHERE <condition>. Option B sets LastName to 'Singh' on exactly those rows where LastName is currently 'Mishra', which is the intended change. INTO is not part of the UPDATE syntax, and MODIFY is Oracle's command for altering table structure, not for changing existing rows.\n\nWhy B is correct: UPDATE People SET LastName='Singh' WHERE LastName='Mishra' is the correct standard SQL statement.\n\nWhy the others are wrong:\n- A: INTO is not valid UPDATE syntax, and the assignment direction is reversed.\n- C: MODIFY alters table structure rather than rows, and INTO is still invalid.\n- D: MODIFY cannot be used to update the rows of a table.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    }
+  ]
+}

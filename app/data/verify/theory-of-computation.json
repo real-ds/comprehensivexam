@@ -1,0 +1,399 @@
+{
+  "topic": "Theory of Computation",
+  "questions": [
+    {
+      "id": "q_0448",
+      "verifyReasons": [
+        "confidence=medium",
+        "code/calculation question"
+      ],
+      "topic": "Theory of Computation",
+      "subtopic": "Finite automata",
+      "question": "Statement 2: The nodes Statement 3: The edges or arcs can be used for transitions Which of the following make the correct combination?",
+      "code": "Statement 1: A Finite automata can be represented graphically;\ncan be its states;",
+      "options": [
+        {
+          "key": "A",
+          "text": "Statement 1 is false but Statement 2 and 3 are correct"
+        },
+        {
+          "key": "B",
+          "text": "Statement 1 and 2 are correct while 3 is wrong"
+        },
+        {
+          "key": "C",
+          "text": "None of the mentioned statements are correct"
+        },
+        {
+          "key": "D",
+          "text": "All of the mentioned statements are correct"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "medium",
+      "currentExplanation": "The three statements are scattered across the stem and the code field: statement 1, a finite automaton can be represented graphically; statement 2, the nodes can be its states; statement 3, the edges or arcs can be used for transitions. A finite automaton is normally drawn as a transition diagram in which circles (nodes) are states and labelled arrows (arcs) are transitions, so all three are true.\n\nWhy D is correct: Each of the three statements describes the standard transition-diagram representation of a finite automaton, so all are correct.\n\nWhy the others are wrong:\n- A: it would require statement 1 to be false, but representing an FA graphically is standard and true.\n- B: it would require statement 3 to be false, but labelled arcs are exactly how transitions are drawn.\n- C: all three statements hold, so 'none' cannot be the correct combination.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "the stem is scrambled: the three statements are split across the question field and the code field ('Statement 1: A Finite automata can be represented graphically' / 'can be its states;'), so the question had to be reconstructed before answering.",
+      "sourcePage": 124
+    },
+    {
+      "id": "q_0453",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Theory of Computation",
+      "subtopic": "Deterministic finite automata",
+      "question": "Predict the number of transitions required to build a DFA for the following language using only 3",
+      "code": "states: ∑{0,1}\nL= {w | w ends with 00}",
+      "options": [
+        {
+          "key": "A",
+          "text": "6"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "Cannot be said"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "high",
+      "currentExplanation": "The language {w | w ends with 00} over Sigma = {0,1} needs three states: no trailing zero, exactly one trailing zero, and two or more trailing zeros (final). A DFA transition function is total, so each of the three states must define a move for both 0 and 1, giving 3 x 2 = 6 transitions; running the constructed automaton over all binary strings up to length 6 confirms it accepts exactly the strings ending in 00.\n\nWhy A is correct: With only three states over a two-symbol alphabet the total transition function has 3 x 2 = 6 entries.\n\nWhy the others are wrong:\n- B: 3 would be one transition per state, impossible for a total function over a two-symbol alphabet.\n- C: 4 is below the minimum of 6 entries that three states require.\n- D: the count is fully determined by |Q| x |Sigma| = 3 x 2, so it can be stated.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 125
+    },
+    {
+      "id": "q_0464",
+      "verifyReasons": [
+        "confidence=low"
+      ],
+      "topic": "Theory of Computation",
+      "subtopic": "Context free grammars",
+      "question": "which of the following grammar are useless productions S→aS | A | C A→a B→aa C→aCb",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "S→aS | A | C A→a B→aa C→aCb"
+        },
+        {
+          "key": "B",
+          "text": "S→aS | A | C A→a"
+        },
+        {
+          "key": "C",
+          "text": "S→aS | A | C B→aa"
+        },
+        {
+          "key": "D",
+          "text": "S→C B→aa C→aCb"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "low",
+      "currentExplanation": "A production is useless when it can never take part in a derivation of a terminal string from S. Checking each option by computing which non-terminals are generating and which are reachable from S: in A the rule C -> aCb only ever yields a^n C b^n, so C never derives a terminal and the production S -> C is useless (and B is also unreachable from S); in B the symbol C has no production at all; in C both A and C are undefined; in D, C -> aCb never terminates and B is unreachable from S. All four options therefore contain useless symbols, so the item is defective, and A is recorded because it is exactly the grammar printed in the stem.\n\nWhy A is correct: In this grammar C -> aCb can only produce a^n C b^n, which never reduces to terminals, so S -> C is a useless production.\n\nWhy the others are wrong:\n- B: C is produced by S -> C but has no production, so this option also contains a useless symbol.\n- C: A and C occur in S's productions without any definition, so they are useless too.\n- D: C -> aCb never yields terminals and B is unreachable from S, so this option is useless as well.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "all four options contain useless symbols or productions (verified by computing generating/reachable non-terminals), so the question has no unique correct option; option A was chosen only because it is the grammar that the extraction also printed inside the stem.",
+      "sourcePage": 128
+    },
+    {
+      "id": "q_0467",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Theory of Computation",
+      "subtopic": "Context free grammars",
+      "question": "where V represents Terminals",
+      "code": "In G{V,T,P,S}",
+      "options": [
+        {
+          "key": "A",
+          "text": "true"
+        },
+        {
+          "key": "B",
+          "text": "false"
+        },
+        {
+          "key": "C",
+          "text": "maybe true in some cases"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "high",
+      "currentExplanation": "In G = {V, T, P, S} the letter V stands for variables, that is non-terminals, and T stands for the terminal alphabet. The statement assigns the terminals to V and is therefore false; there is no alternative reading of the notation.\n\nWhy B is correct: V is the non-terminal (variable) set and T is the terminal set, so the claim is false.\n\nWhy the others are wrong:\n- A: 'true' would require V to be the terminal set, but terminals are denoted by T.\n- C: the notation fixes V as the variables, with no case in which it means terminals.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 129
+    },
+    {
+      "id": "q_0468",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Theory of Computation",
+      "subtopic": "Context free grammars",
+      "question": "A grammar G is called a CFG if production has",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "only one terminal in LHS"
+        },
+        {
+          "key": "B",
+          "text": "any combination of terminals and non-terminals on its RHS"
+        },
+        {
+          "key": "C",
+          "text": "RHS always starting with non-terminals"
+        },
+        {
+          "key": "D",
+          "text": "only one terminal in LHS and any combination of terminals and non-terminals on its RHS"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "medium",
+      "currentExplanation": "The defining restriction of a context free grammar is the shape of a production: the left-hand side is a single non-terminal and the right-hand side is an arbitrary string of terminals and non-terminals, epsilon included. Both conditions are needed, which is what option D states, although its wording says 'terminal in LHS' where it should read 'non-terminal'.\n\nWhy D is correct: Only D carries both halves of the CFG condition, a single non-terminal on the left and any mix of terminals and non-terminals on the right.\n\nWhy the others are wrong:\n- A: a CFG left-hand side must be a non-terminal, not a terminal, and this option also omits the RHS condition.\n- B: it constrains only the right side and says nothing about the left side.\n- C: the right side of a CFG production may begin with anything, including a terminal.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "options A and D say 'terminal in LHS' where the CFG condition requires a non-terminal; the intended key is D (it is the only option stating both conditions) but the printed wording is technically wrong.",
+      "sourcePage": 129
+    },
+    {
+      "id": "q_0469",
+      "verifyReasons": [
+        "confidence=low"
+      ],
+      "topic": "Theory of Computation",
+      "subtopic": "Context free grammars",
+      "question": "Which of the following grammar is ambiguous",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "S→aS|Sa|a"
+        },
+        {
+          "key": "B",
+          "text": "S→0S0|1S1|0|1|ε"
+        },
+        {
+          "key": "C",
+          "text": "S→S0S0S|1"
+        },
+        {
+          "key": "D",
+          "text": "All of these"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "low",
+      "currentExplanation": "Counting distinct leftmost derivations (parse trees) for each grammar shows that S -> aS | Sa | a is ambiguous, since the string aa has the two derivations S => aS => aa and S => Sa => aa, and that S -> S0S0S | 1 is ambiguous too, since strings such as 101010101 have several parse trees, while S -> 0S0 | 1S1 | 0 | 1 | epsilon has exactly one parse tree per generated string and is unambiguous. Two options are therefore ambiguous and the item has no unique key; C is recorded as the likely intended answer.\n\nWhy C is correct: With S -> S0S0S | 1 the string 101010101 can be split among the inner S symbols in more than one way, giving several distinct parse trees.\n\nWhy the others are wrong:\n- A: S -> aS | Sa | a is also ambiguous because aa has the two leftmost derivations above, which makes the option set defective.\n- B: S -> 0S0 | 1S1 | 0 | 1 | epsilon has exactly one parse tree for every generated string, so it is unambiguous.\n- D: 'All of these' fails because option B is unambiguous.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "two options are correct: both A (S->aS|Sa|a, witness 'aa') and C (S->S0S0S|1, witness '101010101') are ambiguous, verified by counting parse trees, so the key must be checked against the source.",
+      "sourcePage": 129
+    },
+    {
+      "id": "q_0470",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Theory of Computation",
+      "subtopic": "Regular expressions and languages",
+      "question": "Languages are conditions in forming strings over the symbols available in the alphabet set",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "true"
+        },
+        {
+          "key": "B",
+          "text": "false"
+        },
+        {
+          "key": "C",
+          "text": "may be true in some cases"
+        },
+        {
+          "key": "D",
+          "text": "may be false in most of the cases"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "A language over an alphabet Sigma is a subset of Sigma*, so it is exactly a condition that selects which of the strings formed from the symbols of Sigma belong to it. That is why a language is described as the set of strings over a given alphabet satisfying some stated property.\n\nWhy A is correct: Formally a language is a set of strings over Sigma satisfying a given condition, which is a condition on how strings are formed.\n\nWhy the others are wrong:\n- B: the sentence is the standard informal definition of a language.\n- C: it holds for every language, so 'may be true in some cases' understates it.\n- D: no language fails to restrict the strings formed from its alphabet.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 129
+    },
+    {
+      "id": "q_0472",
+      "verifyReasons": [
+        "confidence=low"
+      ],
+      "topic": "Theory of Computation",
+      "subtopic": "Finite automata",
+      "question": "Which of the following machines accepts regular languages",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "NFA"
+        },
+        {
+          "key": "B",
+          "text": "DFA"
+        },
+        {
+          "key": "C",
+          "text": "PDA"
+        },
+        {
+          "key": "D",
+          "text": "All"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "low",
+      "currentExplanation": "Finite automata are exactly the machines that recognise the regular languages, and both the DFA and the NFA accept precisely the regular languages. A PDA recognises the context free languages, a strictly larger class. Because an NFA accepts exactly the same regular languages as a DFA, and because every regular language is also context free, the option set here admits more than one defensible reading.\n\nWhy B is correct: The DFA is the standard machine model defined as recognising exactly the regular languages, so it is the conventional answer.\n\nWhy the others are wrong:\n- A: an NFA accepts the same regular languages, so the option is defensible too, which is why the item is flagged.\n- C: a PDA recognises context free languages, which includes non-regular ones such as a^n b^n.\n- D: as written, a PDA can also be built to accept any regular language, so 'All' is not cleanly excluded.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "the option set has more than one defensible answer: NFA accepts exactly the regular languages as well, and since regular is a subset of context free a PDA can accept them too, so 'All' is also arguable; B is the conventional key.",
+      "sourcePage": 130
+    },
+    {
+      "id": "q_0474",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Theory of Computation",
+      "subtopic": "Pushdown automata",
+      "question": "which of the following languages are accepted by NPDA but not by DPDA",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "palindrome of even length"
+        },
+        {
+          "key": "B",
+          "text": "L={0^m 1^n 2^p | m,n,p>=0 and m=n}"
+        },
+        {
+          "key": "C",
+          "text": "L={0^m 1^n 2^m | m=n+p,n,p>=0}"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "A language accepted by an NPDA but not by a DPDA is context free yet not deterministic, because the machine must guess something it cannot determine from the input. Palindromes are exactly that case: the PDA has to locate the middle of the string, and no deterministic rule can do it, so an NPDA guesses the halfway point while no DPDA exists. The other options are deterministic: for m = n the machine pushes on 0, pops on 1, ignores 2 and accepts when the stack empties, which is a DPDA, and option C as printed writes 2^m while constraining m = n + p, which forces n = 0 and leaves the regular language 0^m 2^m.\n\nWhy A is correct: An NPDA accepts all palindromes by guessing the halfway point, and no DPDA can, because the machine cannot decide deterministically whether to push the next symbol or to match it.\n\nWhy the others are wrong:\n- B: m = n is enforced deterministically by popping one symbol per 1 and accepting when the stack is empty, so this is a DCFL.\n- C: as printed the third block is 2^m while the condition is m = n + p, which forces n = 0 and gives the regular language {0^m 2^m}.\n- D: 'none' is wrong because even-length palindromes are a genuine NPDA-only example.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "option C is internally inconsistent as printed ({0^m 1^n 2^m with the condition m = n + p leaves p unused and reduces to the regular language {0^m 2^m}); the key A rests on even-length palindromes requiring the nondeterministic halfway-point guess.",
+      "sourcePage": 130
+    },
+    {
+      "id": "q_0479",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Theory of Computation",
+      "subtopic": "Regular expressions and languages",
+      "question": "which of the following language is not regular",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "L={a^n | n>=0}"
+        },
+        {
+          "key": "B",
+          "text": "L={a^n*n | n>=0}"
+        },
+        {
+          "key": "C",
+          "text": "L={a^2n | n>=0}"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "Regular languages are exactly those recognised by finite automata. The set {a^n | n >= 0} is matched by a one-state DFA with a self loop, and {a^2n | n >= 0} needs only two states that track an even or odd number of a's, so A and C are regular; option B, read as {a^n b^n | n >= 0}, is the classic language that no finite automaton can recognise because it must compare the counts of two different symbols.\n\nWhy B is correct: a^n b^n requires matching counts of two different symbols, which no finite automaton can track, so it is not regular.\n\nWhy the others are wrong:\n- A: {a^n | n >= 0} is simply a* and is regular.\n- C: {a^2n | n >= 0} is the even number of a's, recognised by a two-state DFA.\n- D: 'all' fails because A and C are regular.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "option B is printed as 'L={a^n*n | n>=0}', which is not a valid language definition; read as {a^n b^n | n >= 0} it is the only non-regular option, but as printed the item has no well-defined non-regular option.",
+      "sourcePage": 131
+    },
+    {
+      "id": "q_0483",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Theory of Computation",
+      "subtopic": "Regular expressions and languages",
+      "question": "Languages determine the nature of string formed using the given alphabet set",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "yes"
+        },
+        {
+          "key": "B",
+          "text": "no"
+        },
+        {
+          "key": "C",
+          "text": "maybe true in some cases"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "A language is a subset of Sigma* selected by a stated property, so it fixes which of the strings formed from the alphabet's symbols are admitted and which are not. Saying that a language determines the nature of the strings formed from a given alphabet set is a restatement of that definition.\n\nWhy A is correct: A language is precisely the condition that decides which strings over the alphabet belong to it.\n\nWhy the others are wrong:\n- B: 'no' contradicts the definition of a language as a set of strings over Sigma.\n- C: the statement is true for every language, not merely in some cases.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 132
+    },
+    {
+      "id": "q_0485",
+      "verifyReasons": [
+        "confidence=medium",
+        "code/calculation question"
+      ],
+      "topic": "Theory of Computation",
+      "subtopic": "Regular expressions and languages",
+      "question": "",
+      "code": "Σ {0,1}Σ^3 = {000, 001, 010, 011, 100, 101, 110, 111 }",
+      "options": [
+        {
+          "key": "A",
+          "text": "correct"
+        },
+        {
+          "key": "B",
+          "text": "wrong"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "The stem is empty in the source and the statement was extracted into the code field as Sigma {0,1}^3 = {000, 001, 010, 011, 100, 101, 110, 111}, i.e. the third power of the binary alphabet. Generating that set gives exactly the 2^3 = 8 binary strings of length three, with nothing missing and nothing extra, so the stated equality is correct.\n\nWhy A is correct: {0,1}^3 contains exactly the eight binary strings of length three, which are precisely the eight strings listed.\n\nWhy the others are wrong:\n- B: 'wrong' would require a missing or an extra string, and the generated set matches the listed set element for element.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "extractionFlags show an empty stem: the question text was lost and only the code field carries the statement, which had to be read as the third power of the binary alphabet before it could be judged true or false.",
+      "sourcePage": 133
+    }
+  ]
+}

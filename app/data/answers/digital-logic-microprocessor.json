@@ -1,0 +1,255 @@
+{
+  "topic": "Digital Logic and Microprocessor",
+  "answers": [
+    {
+      "id": "q_0236",
+      "subtopic": "Boolean algebra and simplification",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "A minterm is a product term containing every variable exactly once, so it is true for exactly one assignment of the variables. With n variables there are 2^n assignments and therefore 2^n minterms; for n = 2 that is 2^2 = 4, namely X'Y', X'Y, XY', XY. Eight is the count of all canonical terms (minterms plus maxterms), which is the trap in option A.\n\nWhy D is correct: 2^2 = 4 assignments of (X, Y) exist and each assignment yields exactly one minterm, so four minterms can be formed.\n\nWhy the others are wrong:\n- A: Eight is 2^(n+1), the count of minterms plus maxterms together, not minterms alone.\n- B: Six is the number of input pairs where a 2-bit A exceeds a 2-bit B, not a minterm count.\n- C: Five has no basis; minterm counts are always a power of two.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0237",
+      "subtopic": "Flip-flops",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "A JK flip-flop has four input combinations: J = K = 0 holds the present state, J = 1 and K = 0 sets Q, J = 0 and K = 1 resets Q, and J = K = 1 toggles the output on every active clock edge. Toggling therefore needs both inputs held HIGH at the same time.\n\nWhy D is correct: With J = 1 and K = 1 the flip-flop changes state on each clock pulse, which is exactly the toggle (race-around free if edge triggered) mode.\n\nWhy the others are wrong:\n- A: J = 0, K = 0 is the hold or no-change condition, the output keeps its old value.\n- B: J = 1, K = 0 is the set condition, it drives Q to 1 and never toggles.\n- C: J = 0, K = 1 is the reset condition, it drives Q to 0 and never toggles.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0238",
+      "subtopic": "Counters and registers",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "A chain of n flip-flops behaves as a divide-by-2^n counter because each stage halves the frequency, so a divide-by-N device needs ceil(log2 N) flip-flops. For N = 128: 2^6 = 64 and 2^7 = 128, so 128 = 2^7 requires 7 flip-flops.\n\nWhy D is correct: 2^7 = 128, so seven cascaded flip-flops give a divide-by-128 frequency divider.\n\nWhy the others are wrong:\n- A: One flip-flop divides the input frequency by 2 only.\n- B: Four flip-flops divide by at most 16, not 128.\n- C: Six flip-flops divide by 64, which is short of the required factor of 128.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0239",
+      "subtopic": "Flip-flops",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "With J = K = 1 and the clock held HIGH, the output of a level-triggered JK flip-flop toggles repeatedly during one clock pulse. Because every toggle requires J and K to read as 1, the spurious pulses are effectively caught as ones, and this is the race-around or ones-catching behaviour. It disappears in a master-slave or edge-triggered JK flip-flop.\n\nWhy B is correct: Ones catching is the standard name for interpreting unwanted transitions on the J and K inputs while the clock Cp is HIGH.\n\nWhy the others are wrong:\n- A: Parity error checking detects transmission errors and has no connection to JK input levels.\n- C: Digital discrimination is not a recognised flip-flop phenomenon.\n- D: Digital filtering refers to suppressing noise from signals, not to interpreting JK inputs during a HIGH clock.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0240",
+      "subtopic": "Flip-flops",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "A master-slave flip-flop cascades two gated latches which must never be transparent simultaneously, otherwise race-around occurs. The master is enabled while the gate (clock) level is HIGH so that it tracks the J and K inputs, and the slave is enabled only while the gate is LOW so that it transfers the master's data only after the inputs have settled.\n\nWhy B is correct: The master stage is enabled by the HIGH gate level; the slave takes over on the LOW level.\n\nWhy the others are wrong:\n- A: A LOW gate enables the slave stage, not the master.\n- C: The two stages must be enabled on opposite levels, never at the same time.\n- D: One of the listed statements (when the gate is HIGH) is correct, so none of the options is false.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0241",
+      "subtopic": "Flip-flops",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "A gated (clocked) D flip-flop is transparent only while its enable input is HIGH. During that window the output simply follows the data input, so Q takes the value of D on the active clock edge; when the enable returns LOW the circuit holds its last state. There is no toggling action and no constraint that only one input be HIGH.\n\nWhy D is correct: With the enable HIGH, Q follows the input D on the active edge, which is the defining action of a gated D flip-flop.\n\nWhy the others are wrong:\n- A: Toggling requires a JK flip-flop with J = K = 1; a D flip-flop never toggles its output.\n- B: The single data input D may be HIGH or LOW freely; mutual exclusion of two HIGH inputs belongs to the S-R latch.\n- C: The complementary output Q' follows D', not D itself, when the flip-flop is enabled.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0242",
+      "subtopic": "Flip-flops",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "A single flip-flop can change its output at most once per clock cycle, so the maximum frequency at Q is half the clock frequency. With the JK flip-flop in toggle mode (J = K = 1) and a 20 kHz clock, Q toggles every clock pulse, giving 20/2 = 10 kHz, i.e. a square wave at half the clock frequency.\n\nWhy D is correct: One flip-flop divides the 20 kHz clock by two, so Q is a 10 kHz square wave.\n\nWhy the others are wrong:\n- A: Q is not held LOW; in toggle mode the output alternates between 0 and 1.\n- B: Q is not held HIGH either; a constant HIGH would require J = 1, K = 0 (set mode).\n- C: 20 kHz at Q would require no division, but one flip-flop must divide by at least two.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0243",
+      "subtopic": "Sequential circuits",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "In an active-HIGH S-R latch, R = 1 drives Q to 0 while S = 1 would drive Q to 1. With S = 0 and R = 1 the latch is held in the reset state, and when R then goes to 0 both inputs are 0, which is the hold condition, so Q simply stays at 0. The forbidden condition for this latch would be S = R = 1, which never occurs here.\n\nWhy B is correct: With S = 0 and R = 1 the latch is reset, and the later R to 0 transition only holds that state, so the latch remains RESET with Q = 0.\n\nWhy the others are wrong:\n- A: SET would require S = 1, but S is held at 0 throughout.\n- C: Clear is a synonym of RESET here, describing the same Q = 0 state rather than a distinct one.\n- D: Invalid applies to S = R = 1; the sequence S = R = 0 is the legal hold condition.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Options B (RESET) and C (Clear) are effectively synonymous descriptions of the same Q = 0 state, so the option set cannot distinguish between two correct labels."
+    },
+    {
+      "id": "q_0244",
+      "subtopic": "Counters and registers",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A MOD-n binary counter must pass through n distinct states, which requires ceil(log2 n) flip-flops. Here 32 = 2^5 exactly, so five flip-flops are needed and all of their 32 possible bit combinations are used as valid states.\n\nWhy C is correct: 2^5 = 32, so five flip-flops give exactly the 32 states required by a MOD-32 counter.\n\nWhy the others are wrong:\n- A: Three flip-flops give only 2^3 = 8 states, which is a MOD-8 counter.\n- B: 45 is not of the form 2^n and cannot be the state count of any binary counter.\n- D: Six flip-flops give 64 states, which is a MOD-64 counter, one bit more than needed.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0245",
+      "subtopic": "Counters and registers",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "In a ripple (asynchronous) counter each flip-flop is clocked by the output of the preceding stage, so the propagation delays accumulate and intermediate illegal states can appear at the outputs. In a synchronous counter every flip-flop is driven by the same clock line at the same instant, while the J-K or T inputs are steered by combinational logic, so all stages change together and the delay errors are eliminated.\n\nWhy D is correct: Applying the input clock pulses simultaneously to each stage is exactly what removes the ripple delay problems.\n\nWhy the others are wrong:\n- A: Clocking only the first and last stages is not a counter arrangement and leaves the middle stages unclocked.\n- B: Driving only the last stage would leave every other stage without a clock, so no counting takes place.\n- C: Not clocking any stage means the circuit cannot count at all, delay problems or not.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0246",
+      "subtopic": "Combinational circuits",
+      "difficulty": "hard",
+      "correctAnswer": "B",
+      "explanation": "Simplify first: X + XY' + XY'Z = X + XY' (since XY' absorbs XY'Z) = X + Y' (by the absorption rule X + XY' = X + Y'). Then apply De Morgan: X + Y' = (X'Y)'. A NAND gate already supplies the final inversion, so X' = NAND(X, X) is one gate and (X'Y)' = NAND(X', Y) is the second; one gate can only produce a product or a complemented product, never this sum, so two is minimal.\n\nWhy B is correct: Two NAND gates realise the function - NAND(X,X) gives X' and NAND(X',Y) gives (X'Y)' = X + Y' - and a single NAND gate is provably insufficient.\n\nWhy the others are wrong:\n- A: One NAND gate can only realise a product term or its complement, so it cannot produce the sum X + Y'.\n- C: Three is the count only if the final inversion is counted separately, but the NAND's own inversion removes the need for it.\n- D: Two NAND gates do implement the function, so none of the options is not true.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0247",
+      "subtopic": "Boolean algebra and simplification",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The tabulation (canonical) method of Boolean simplification starts from the truth table of the function. Each row in which the output is 1 contributes one product term containing every variable, i.e. a minterm, and the function is then written as the sum of those minterms; the maxterm form is merely the dual obtained from the rows where the output is 0.\n\nWhy A is correct: The tabulation method specifies the function as a list (sum) of minterms taken from the rows where the output is 1.\n\nWhy the others are wrong:\n- B: The maxterm (product-of-sums) form is derived from the rows where the output is 0, it is not the tabulation starting point.\n- C: A plain list of integers is a convenient input for a computer program, not the definition of tabulation.\n- D: List of terms is too vague and is not the tabulation convention.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0248",
+      "subtopic": "Combinational circuits",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "A two-bit comparator has 2^2 = 4 possible values for A and 4 for B, so there are 16 input combinations in all. Counting the cases where A is greater than B: A = 1 beats B = 0 (1 case), A = 2 beats B = 0 and 1 (2 cases), A = 3 beats B = 0, 1 and 2 (3 cases), and A = 0 beats nothing, giving 1 + 2 + 3 = 6. This matches the general formula (2^(2n) - 2^n)/2 = (16 - 4)/2 = 6.\n\nWhy C is correct: The enumeration gives 6 combinations where the output Y is 1.\n\nWhy the others are wrong:\n- A: 2 undercounts badly; A = 2 alone already exceeds two different values of B.\n- B: 4 is the number of possible values of B, not the number of winning combinations.\n- D: 8 is unreachable; after excluding the 4 ties, the 12 remaining cases split evenly into 6 wins and 6 losses.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0249",
+      "subtopic": "Combinational circuits",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Parity is defined as the odd-parity function (XOR of all bits) or the even-parity function (XNOR of all bits). A parity generator applies the exclusive function to the n data bits to produce the parity bit, and a parity checker applies the same exclusive function to the received bits plus the parity bit and signals an error when the result is wrong. Exclusive gates therefore do both jobs directly.\n\nWhy B is correct: EX-OR generates odd parity and EX-NOR generates even parity, and the same gates implement the checking function.\n\nWhy the others are wrong:\n- A: AND, OR and NOT gates cannot express the odd or even parity function.\n- C: NAND gates are universal building blocks but parity is not implemented directly or economically with them.\n- D: NOR gates are likewise universal yet are not the gates conventionally used for parity generation and checking.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0250",
+      "subtopic": "Number systems and codes",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A Gray code is obtained by reflecting (mirroring) the binary count sequence each time a new bit is added, and this construction is therefore called the reflected binary code. Its useful property is that only one bit changes between consecutive code words, which suits mechanical encoders and asynchronous counters.\n\nWhy B is correct: The reflected binary code is precisely the Gray code.\n\nWhy the others are wrong:\n- A: Excess-3 is a weighted self-complementing code where each digit is offset by 3, not a reflected code.\n- C: BCD is plain 8421 binary coding of decimal digits with no reflection step.\n- D: Error code refers to codes such as Hamming codes used for detection and correction, not to a reflected positional code.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0251",
+      "subtopic": "Number systems and codes",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The magnitude of -5 in 8 bits is 0000 0101. Taking the 2's complement, invert all bits to get 1111 1010 and add 1 to obtain 1111 1011. Converting to hexadecimal, the two nibbles are 1111 = F and 1011 = B, giving (FB)16; checking the sign, 251 - 256 = -5.\n\nWhy A is correct: The 8-bit 2's complement of -5 is 1111 1011, which is (FB)16.\n\nWhy the others are wrong:\n- B: 7F is 0111 1111, which is +127 in 8-bit signed form, not -5.\n- C: FF is 1111 1111, which represents -1 in 2's complement.\n- D: FA is 1111 1010, which represents -6 in 2's complement.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0252",
+      "subtopic": "Encoders and decoders",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A decoder accepts n binary input lines and activates exactly one of its 2^n output lines, so it translates a binary code into a unique item such as a digit, a character or a control signal. The reverse direction, decimal or character into binary, is performed by an encoder, and neither device is involved in error prevention or in inter-brand communication.\n\nWhy B is correct: A decoder converts a binary input number into a specific output representing one particular character or digit.\n\nWhy the others are wrong:\n- A: Decimal to binary conversion is the job of an encoder, not a decoder.\n- C: Preventing improper operation of a digital system is the role of interlocking or protection logic.\n- D: Letting one brand of computer talk to another describes an interface or transceiver, not a decoder.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0253",
+      "subtopic": "Flip-flops",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "A gated D-type flip-flop passes data only while its enable is HIGH. While the gate is open Q follows D, so a HIGH input sets Q and a LOW input resets Q; once the gate closes the output is frozen regardless of D. The feature that distinguishes the gated type from the plain D flip-flop is precisely this enable qualifier, which is why option B is the only statement that captures it correctly.\n\nWhy B is correct: With the enable HIGH the D flip-flop copies the input onto its outputs, which is what the enabled statement describes.\n\nWhy the others are wrong:\n- A: As soon as is wrong for a gated D flip-flop, because with the gate closed a change on D has no effect on Q.\n- C: Mutual exclusion of two HIGH inputs is a property of the S-R latch, not of a D flip-flop.\n- D: Toggling when an input is held HIGH is JK behaviour with J = K = 1; a D flip-flop only follows D.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Option B is imprecisely worded (the complementary output follows the complement of D, not D), and option A would be correct for an ungated D flip-flop, so the intended answer cannot be pinned down cleanly."
+    },
+    {
+      "id": "q_0254",
+      "subtopic": "Karnaugh maps",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The cells of a Karnaugh map are arranged so that any two adjacent cells differ in exactly one variable, which is what allows a group of cells to drop out a variable when the function is simplified. This adjacency is obtained by labelling the rows and columns in Gray code order, i.e. 00, 01, 11, 10, rather than in ordinary binary order.\n\nWhy C is correct: Gray code labelling is precisely what makes horizontally and vertically adjacent K-map cells differ in one variable only.\n\nWhy the others are wrong:\n- A: 8-4-2-1 binary order would make neighbouring rows differ in two variables, destroying the adjacency property.\n- B: Hexadecimal labels give no such adjacency guarantee and are not the K-map convention.\n- D: Octal labels are merely a shorthand for three binary bits and say nothing about adjacency.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0255",
+      "subtopic": "Number systems and codes",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "In 1's complement representation the pattern 1000 0000 would represent both +128 and -128, so one of the two is redundant and is normally discarded. An n-bit 1's complement word therefore holds 2^n - 1 distinct values, namely (2^(n-1) - 1) positives, zero (with two encodings) and (2^(n-1) - 1) negatives. For n = 8 that is -127 to +127.\n\nWhy C is correct: With 2^7 - 1 = 127 on each side of zero, the range is -127 to 127.\n\nWhy the others are wrong:\n- A: -256 and +256 cannot both appear in an 8-bit word of any signed representation.\n- B: -256 to 255 is the 9-bit 2's complement range, not an 8-bit 1's complement range.\n- D: -128 to 127 is the 8-bit 2's complement range, which 1's complement cannot reach at the negative end.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0256",
+      "subtopic": "Number systems and codes",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "Binary to Gray conversion keeps the most significant Gray bit equal to the most significant binary bit and makes every later Gray bit the XOR of the binary bit with the binary bit to its left. For 1 0 1 0 1 1 this gives g5 = 1, g4 = 0 XOR 1 = 1, g3 = 1 XOR 0 = 1, g2 = 0 XOR 1 = 1, g1 = 1 XOR 0 = 1, g0 = 1 XOR 1 = 0, i.e. 111110.\n\nWhy D is correct: The bitwise computation gives 111110, which is the Gray word one step (decimal 43 to 42) below 111111.\n\nWhy the others are wrong:\n- A: 101011 is the binary input itself and is not its Gray equivalent.\n- B: 110101 does not satisfy the successive-XOR rule applied to 101011.\n- C: 011111 would put a 0 in the most significant position, but the Gray MSB must equal the binary MSB, which is 1.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0257",
+      "subtopic": "Encoders and decoders",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A 3-to-8 line decoder expands three address bits into eight mutually exclusive output lines, so one such block can cover only 8 of the 32 output lines a 1-of-32 decoder needs. The blocks are combined by feeding two of the five address bits to the enable inputs, so the required number is 32/8 = 4 blocks.\n\nWhy C is correct: 32 output lines divided by 8 lines per 3-to-8 line decoder gives exactly 4 decoders.\n\nWhy the others are wrong:\n- A: One 3-to-8 decoder provides only 8 outputs, far fewer than the 32 required.\n- B: Two decoders give only 16 outputs, still short of the 32 lines.\n- D: Eight decoders would provide 64 outputs, twice as many as the decoder being built.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0258",
+      "subtopic": "Number systems and codes",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "In BCD each group of four bits is one decimal digit, so 0001 0010 0110 represents the digits 1, 2 and 6, i.e. the number 126. Converting 126 to binary: 126 = 64 + 32 + 16 + 8 + 4 + 2 = 1111110.\n\nWhy A is correct: 1 x 100 + 2 x 10 + 6 = 126, and 126 in binary is 1111110, which is option A.\n\nWhy the others are wrong:\n- B: 1111101 equals 125, one less than the BCD value.\n- C: 1111000 equals 120, which is the BCD value minus 6.\n- D: 1111111 equals 127 and would require the BCD group 0111, not 0110.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0259",
+      "subtopic": "Combinational circuits",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "Each distinct combination of switch states must select a different door, so n on/off switches provide 2^n distinct codes and we need 2^n >= 8. Since 2^2 = 4 is less than 8 while 2^3 = 8 is exactly enough, the minimum number of switches is 3.\n\nWhy C is correct: Three on/off switches yield 2^3 = 8 unique codes, exactly enough to address the 8 doors.\n\nWhy the others are wrong:\n- A: One switch gives only 2 codes, which can address at most 2 doors.\n- B: Two switches give 2^2 = 4 codes, which can address at most 4 doors.\n- D: Four switches give 16 codes, more than the 8 needed, so the count is not minimal.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0260",
+      "subtopic": "Combinational circuits",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A magnitude comparator produces three mutually exclusive outputs: A greater than B, A less than B, and A equal to B. Here A = 1011 = 11 and B = 1010 = 10, so A exceeds B by one while the numbers are certainly not equal and not less, giving A > B = 1, A < B = 0, A = B = 0.\n\nWhy C is correct: 11 > 10, so the correct output set is A > B = 1, A < B = 0, A = B = 0, exactly as stated in option C.\n\nWhy the others are wrong:\n- A: It asserts A = B = 1 (and mislabels the third term as A < B a second time), which is impossible for two unequal numbers.\n- B: It claims A < B = 1, but 11 is greater than 10, not less.\n- D: It claims A < B = 1 and A = B = 1 at the same time, which cannot happen for any pair of inputs.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    }
+  ]
+}

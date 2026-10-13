@@ -1,0 +1,4009 @@
+{
+  "topic": "Computer Networks",
+  "questions": [
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 1,
+      "sourcePage": 1,
+      "question": "What is the main purpose of public key cryptography?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Encryption"
+        },
+        {
+          "key": "B",
+          "text": "Authentication"
+        },
+        {
+          "key": "C",
+          "text": "Key exchange"
+        },
+        {
+          "key": "D",
+          "text": "All of the above"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0001"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 2,
+      "sourcePage": 1,
+      "question": "Which algorithm is commonly used for creating and verifying digital signatures?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "RSA"
+        },
+        {
+          "key": "B",
+          "text": "AES"
+        },
+        {
+          "key": "C",
+          "text": "DES"
+        },
+        {
+          "key": "D",
+          "text": "SHA"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0002"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 3,
+      "sourcePage": 1,
+      "question": "What is authentication in cryptography?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "The process of encrypting a message"
+        },
+        {
+          "key": "B",
+          "text": "The process of verifying the identity of a user"
+        },
+        {
+          "key": "C",
+          "text": "The process of generating a digital signature"
+        },
+        {
+          "key": "D",
+          "text": "The process of decrypting a message"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0003"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 4,
+      "sourcePage": 1,
+      "question": "Which of the following is an example of something you know for authentication?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Password"
+        },
+        {
+          "key": "B",
+          "text": "Fingerprint"
+        },
+        {
+          "key": "C",
+          "text": "Smart card"
+        },
+        {
+          "key": "D",
+          "text": "All of the above"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0004"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 5,
+      "sourcePage": 2,
+      "question": "Which type of authentication uses multiple factors",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Single-factor authentication"
+        },
+        {
+          "key": "B",
+          "text": "Two-factor authentication"
+        },
+        {
+          "key": "C",
+          "text": "Three-factor authentication"
+        },
+        {
+          "key": "D",
+          "text": "Multi-factor authentication"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0005"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 6,
+      "sourcePage": 2,
+      "question": "Which type of authentication uses a password and a security token?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Single-factor authentication"
+        },
+        {
+          "key": "B",
+          "text": "Two-factor authentication"
+        },
+        {
+          "key": "C",
+          "text": "Three-factor authentication"
+        },
+        {
+          "key": "D",
+          "text": "Multi-factor authentication"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0006"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 7,
+      "sourcePage": 2,
+      "question": "Which type of authentication uses biometric data?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Single-factor authentication"
+        },
+        {
+          "key": "B",
+          "text": "Two- factor authentication"
+        },
+        {
+          "key": "C",
+          "text": "Three-factor authentication"
+        },
+        {
+          "key": "D",
+          "text": "Multi-factor authentication"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0007"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 8,
+      "sourcePage": 2,
+      "question": "Which type of authentication uses a smart card and a PIN?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Single-factor authentication"
+        },
+        {
+          "key": "B",
+          "text": "Two-factor authentication"
+        },
+        {
+          "key": "C",
+          "text": "Three-factor authentication"
+        },
+        {
+          "key": "D",
+          "text": "Multi-factor authentication"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0008"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 9,
+      "sourcePage": 2,
+      "question": "Which type of attack involves guessing passwords until the correct one is found?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Brute force attack"
+        },
+        {
+          "key": "B",
+          "text": "Dictionary attack"
+        },
+        {
+          "key": "C",
+          "text": "Social engineering attack"
+        },
+        {
+          "key": "D",
+          "text": "Man-in-the-middle attack"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0009"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 10,
+      "sourcePage": 3,
+      "question": "Which type of attack involves using pre-computed hashes to guess passwords?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Brute force attack"
+        },
+        {
+          "key": "B",
+          "text": "Dictionary attack"
+        },
+        {
+          "key": "C",
+          "text": "Rainbow table attack"
+        },
+        {
+          "key": "D",
+          "text": "Man-in-the-middle attack"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0010"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 11,
+      "sourcePage": 3,
+      "question": "Which type of attack involves tricking someone into revealing their password?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Brute force attack"
+        },
+        {
+          "key": "B",
+          "text": "Dictionary attack"
+        },
+        {
+          "key": "C",
+          "text": "Social engineering attack"
+        },
+        {
+          "key": "D",
+          "text": "Man-in-the-middle attack"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0011"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 12,
+      "sourcePage": 3,
+      "question": "Which key is used for encryption in a public key cryptosystem?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Public key"
+        },
+        {
+          "key": "B",
+          "text": "Private key"
+        },
+        {
+          "key": "C",
+          "text": "Symmetric key"
+        },
+        {
+          "key": "D",
+          "text": "None of the above"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0012"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 13,
+      "sourcePage": 3,
+      "question": "Which type of attack involves intercepting and modifying communication between two parties?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Brute force attack"
+        },
+        {
+          "key": "B",
+          "text": "Dictionary attack"
+        },
+        {
+          "key": "C",
+          "text": "Social engineering attack"
+        },
+        {
+          "key": "D",
+          "text": "Man-in-the- middle attack"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0013"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 14,
+      "sourcePage": 4,
+      "question": "Which type of encryption algorithm uses the same key for encryption and decryption?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Public key encryption algorithm"
+        },
+        {
+          "key": "B",
+          "text": "Private key encryption algorithm"
+        },
+        {
+          "key": "C",
+          "text": "Symmetric key encryption algorithm"
+        },
+        {
+          "key": "D",
+          "text": "Asymmetric key encryption algorithm"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0014"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 15,
+      "sourcePage": 4,
+      "question": "Which type of encryption algorithm uses different keys for encryption and decryption?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "a.Public key encryption algorithm"
+        },
+        {
+          "key": "B",
+          "text": "b. Private key encryption algorithm"
+        },
+        {
+          "key": "C",
+          "text": "c. Symmetric key encryption algorithm"
+        },
+        {
+          "key": "D",
+          "text": "d. Asymmetric key encryption algorithm"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0015"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 16,
+      "sourcePage": 4,
+      "question": "Which type of encryption algorithm is faster?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Public key encryption algorithm"
+        },
+        {
+          "key": "B",
+          "text": "Private key encryption algorithm"
+        },
+        {
+          "key": "C",
+          "text": "Symmetric key encryption algorithm"
+        },
+        {
+          "key": "D",
+          "text": "Asymmetric key encryption algorithm"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0016"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 17,
+      "sourcePage": 4,
+      "question": "Which type of encryption algorithm is more secure?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Public key encryption algorithm"
+        },
+        {
+          "key": "B",
+          "text": "Private key encryption algorithm"
+        },
+        {
+          "key": "C",
+          "text": "Symmetric key encryption algorithm"
+        },
+        {
+          "key": "D",
+          "text": "Asymmetric key encryption algorithm"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0017"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 18,
+      "sourcePage": 4,
+      "question": "Which protocol is used for secure communication over the internet?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "TLS/SSL"
+        },
+        {
+          "key": "B",
+          "text": "HTTPS"
+        },
+        {
+          "key": "C",
+          "text": "SSH"
+        },
+        {
+          "key": "D",
+          "text": "TCP/IP"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0018"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 19,
+      "sourcePage": 5,
+      "question": "Which protocol is used for secure remote login and other secure network services over an insecure network?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "TLS/SSL"
+        },
+        {
+          "key": "B",
+          "text": "HTTPS"
+        },
+        {
+          "key": "C",
+          "text": "SSH"
+        },
+        {
+          "key": "D",
+          "text": "TCP/IP"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0019"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 20,
+      "sourcePage": 5,
+      "question": "Anarkali digitally signs a message and sends it to Salim. Verification of the signature by Salim requires",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Anarkali's Public Key"
+        },
+        {
+          "key": "B",
+          "text": "Salim's Public Key"
+        },
+        {
+          "key": "C",
+          "text": "Salim's Private Key"
+        },
+        {
+          "key": "D",
+          "text": "Anarkali's Private Key"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0020"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 21,
+      "sourcePage": 5,
+      "question": "A sender S sends a message m to receiver R, which is digitally signed by S with its private key. In this scenario, one or more of the following security violations can take place. launch a birthday attack to replace m with a fraudulent message. can launch a birthday attack to replace m with a fraudulent message. birthday attack to replace m with a fraudulent message. Which of the following are possible security violations.",
+      "code": "(I) S can\n(II) A third party attacker\n(III) R can launch a",
+      "options": [
+        {
+          "key": "A",
+          "text": "(I) and (II) only"
+        },
+        {
+          "key": "B",
+          "text": "(I) only"
+        },
+        {
+          "key": "C",
+          "text": "(II) only"
+        },
+        {
+          "key": "D",
+          "text": "(II) and (III) only"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0021"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 22,
+      "sourcePage": 6,
+      "question": "AES uses a ____________ bit block size and a key size of __________ bits",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "128; 128 or 256"
+        },
+        {
+          "key": "B",
+          "text": "64; 128 or 192"
+        },
+        {
+          "key": "C",
+          "text": "256; 128, 192, or 256"
+        },
+        {
+          "key": "D",
+          "text": "128; 128, 192, or 256"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0022"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 23,
+      "sourcePage": 6,
+      "question": "Which key is kept secret in a public key cryptosystem?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Public key"
+        },
+        {
+          "key": "B",
+          "text": "Private key"
+        },
+        {
+          "key": "C",
+          "text": "Symmetric key"
+        },
+        {
+          "key": "D",
+          "text": "None of the above"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0023"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 24,
+      "sourcePage": 6,
+      "question": "How many rounds does the AES-256 perform?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "10"
+        },
+        {
+          "key": "B",
+          "text": "12"
+        },
+        {
+          "key": "C",
+          "text": "14"
+        },
+        {
+          "key": "D",
+          "text": "16"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0024"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 25,
+      "sourcePage": 6,
+      "question": "From the following options, what is the key size in the S-AES algorithm?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "16 bits"
+        },
+        {
+          "key": "B",
+          "text": "32 bits"
+        },
+        {
+          "key": "C",
+          "text": "24 bits"
+        },
+        {
+          "key": "D",
+          "text": "None of the above"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0025"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 26,
+      "sourcePage": 6,
+      "question": "Among the fourth-generation firewalls, Dynamic packet filters firewall that work at_________.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Application Layer"
+        },
+        {
+          "key": "B",
+          "text": "TCP"
+        },
+        {
+          "key": "C",
+          "text": "UDP"
+        },
+        {
+          "key": "D",
+          "text": "TCP, UDP"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0026"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 27,
+      "sourcePage": 7,
+      "question": "Authentication and Access control for resources are provided by Network security",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "True"
+        },
+        {
+          "key": "B",
+          "text": "False"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0027"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 28,
+      "sourcePage": 7,
+      "question": ". _____________ is the process of verifying the identity of a user.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Authentication"
+        },
+        {
+          "key": "B",
+          "text": "Identification"
+        },
+        {
+          "key": "C",
+          "text": "Validation"
+        },
+        {
+          "key": "D",
+          "text": "Verification"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0028"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 29,
+      "sourcePage": 7,
+      "question": "A digital signature needs a",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Private-key system"
+        },
+        {
+          "key": "B",
+          "text": "Shared-key system"
+        },
+        {
+          "key": "C",
+          "text": "Public-key system"
+        },
+        {
+          "key": "D",
+          "text": "All of them"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0029"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 30,
+      "sourcePage": 7,
+      "question": "Encryption and decryption provide secrecy, or confidentiality, but not............",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Authentication"
+        },
+        {
+          "key": "B",
+          "text": "Integrity"
+        },
+        {
+          "key": "C",
+          "text": "Privacy"
+        },
+        {
+          "key": "D",
+          "text": "All of the above"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0030"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 31,
+      "sourcePage": 8,
+      "question": "Decrypt the following ciphertext by using Ceaser Cipher HQFUBSWHG WHAW",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "ABANDONED LOCK"
+        },
+        {
+          "key": "B",
+          "text": "ENCRYPTED TEXT"
+        },
+        {
+          "key": "C",
+          "text": "ABANDONED TEXT"
+        },
+        {
+          "key": "D",
+          "text": "ENCRYPTED LOCK"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0031"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 32,
+      "sourcePage": 8,
+      "question": "A ________ signature is included in the document; a _______________ signature is a separate entity",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "conventional; digital"
+        },
+        {
+          "key": "B",
+          "text": "digital; digital"
+        },
+        {
+          "key": "C",
+          "text": "either (a) or (b)"
+        },
+        {
+          "key": "D",
+          "text": "neither (a) nor (b)"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0032"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 33,
+      "sourcePage": 8,
+      "question": "Digital signature provides",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "authentication"
+        },
+        {
+          "key": "B",
+          "text": "nonrepudiation"
+        },
+        {
+          "key": "C",
+          "text": "both (a) and (b)"
+        },
+        {
+          "key": "D",
+          "text": "neither (a) nor (b)"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0033"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 34,
+      "sourcePage": 8,
+      "question": "Which algorithm is commonly used for generating public and private keys?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "RSA"
+        },
+        {
+          "key": "B",
+          "text": "AES"
+        },
+        {
+          "key": "C",
+          "text": "DES"
+        },
+        {
+          "key": "D",
+          "text": "SHA"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0034"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 35,
+      "sourcePage": 8,
+      "question": "Digital signature cannot provide _______ for the message",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "integrity"
+        },
+        {
+          "key": "B",
+          "text": "confidentiality"
+        },
+        {
+          "key": "C",
+          "text": "nonrepudiation"
+        },
+        {
+          "key": "D",
+          "text": ". authentication"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0035"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 36,
+      "sourcePage": 9,
+      "question": "If _________ is needed, a cryptosystem must be applied over the scheme.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "integrity"
+        },
+        {
+          "key": "B",
+          "text": "confidentiality"
+        },
+        {
+          "key": "C",
+          "text": "nonrepudiation"
+        },
+        {
+          "key": "D",
+          "text": "authentication"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0036"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 37,
+      "sourcePage": 9,
+      "question": "The secret key betweenmembers needs to be created as a ________key when two members contact KDC.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "public"
+        },
+        {
+          "key": "B",
+          "text": "session"
+        },
+        {
+          "key": "C",
+          "text": "complimentary"
+        },
+        {
+          "key": "D",
+          "text": "none of the above"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0037"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 38,
+      "sourcePage": 9,
+      "question": ". __________ is a popularsession key creator protocol thatrequires an authentication server and a ticket-granting server.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "KDC"
+        },
+        {
+          "key": "B",
+          "text": "Kerberos"
+        },
+        {
+          "key": "C",
+          "text": "CA"
+        },
+        {
+          "key": "D",
+          "text": "none of the above"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0038"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 39,
+      "sourcePage": 9,
+      "question": "CHAP stands for",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Challenge Handshake authentication protocol"
+        },
+        {
+          "key": "B",
+          "text": "Challenge Hardware authentication protocol"
+        },
+        {
+          "key": "C",
+          "text": "Circuit Hardware authentication protocol"
+        },
+        {
+          "key": "D",
+          "text": "Circuit Handshake authentication protocol"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0039"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 40,
+      "sourcePage": 10,
+      "question": "SSL provides ___________.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "message integrity"
+        },
+        {
+          "key": "B",
+          "text": "confidentiality"
+        },
+        {
+          "key": "C",
+          "text": "Both A and B"
+        },
+        {
+          "key": "D",
+          "text": "None of the above."
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0040"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 41,
+      "sourcePage": 10,
+      "question": "Which one of the following is not a public key distribution means?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Public-Key Certificates"
+        },
+        {
+          "key": "B",
+          "text": "Hashing Certificates"
+        },
+        {
+          "key": "C",
+          "text": "Publicly available directories"
+        },
+        {
+          "key": "D",
+          "text": "Public-Key authority"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0041"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 42,
+      "sourcePage": 10,
+      "question": "Which of the following public key distribution systems is most secure?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Public-Key Certificates"
+        },
+        {
+          "key": "B",
+          "text": "Public announcements"
+        },
+        {
+          "key": "C",
+          "text": "Publicly available directories"
+        },
+        {
+          "key": "D",
+          "text": "Public-Key authority"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0042"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 43,
+      "sourcePage": 10,
+      "question": "Which system uses a trusted third party interface?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Public-Key Certificates"
+        },
+        {
+          "key": "B",
+          "text": "Public announcements"
+        },
+        {
+          "key": "C",
+          "text": "Publicly available directories"
+        },
+        {
+          "key": "D",
+          "text": "Public-Key authority"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0043"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 44,
+      "sourcePage": 11,
+      "question": "The subject unique identifier of the X.509 certificates was added in which version?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "3"
+        },
+        {
+          "key": "D",
+          "text": "4"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0044"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 45,
+      "sourcePage": 11,
+      "question": "What is the primary advantage of using public key cryptography?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Faster encryption speed"
+        },
+        {
+          "key": "B",
+          "text": "Simpler key management"
+        },
+        {
+          "key": "C",
+          "text": "Stronger security"
+        },
+        {
+          "key": "D",
+          "text": "Lower computational overhead"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0045"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 46,
+      "sourcePage": 11,
+      "question": "A total of seven messages are required in the Public-Key distribution scenario. However, the initial five messages need to be used only infrequently because both A and B can save the other's public key for future - a technique known as ____",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "time stamping"
+        },
+        {
+          "key": "B",
+          "text": "polling"
+        },
+        {
+          "key": "C",
+          "text": "caching"
+        },
+        {
+          "key": "D",
+          "text": "squeezing"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0046"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 47,
+      "sourcePage": 11,
+      "question": "In computing, __________ is a network security system that monitors and controls incoming and outgoing network traffic based on predetermined security rules",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Cookie"
+        },
+        {
+          "key": "B",
+          "text": "Spyware"
+        },
+        {
+          "key": "C",
+          "text": "Firewall"
+        },
+        {
+          "key": "D",
+          "text": "Spam"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0047"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 48,
+      "sourcePage": 12,
+      "question": "A digital signature is required for _________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "non-repudiation of communication by a sender"
+        },
+        {
+          "key": "B",
+          "text": "all e-mail sending"
+        },
+        {
+          "key": "C",
+          "text": "all DHCP server"
+        },
+        {
+          "key": "D",
+          "text": "FTP transactions"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0048"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 49,
+      "sourcePage": 12,
+      "question": "To authenticate thedata origin, one needs a",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "MDC"
+        },
+        {
+          "key": "B",
+          "text": "MAC"
+        },
+        {
+          "key": "C",
+          "text": "either (a) or (b)"
+        },
+        {
+          "key": "D",
+          "text": "neither (a) nor (b)"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0049"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 50,
+      "sourcePage": 12,
+      "question": "A layer-4 firewall (a device that can look at all protocol headers up to the transport layer) cannot block _________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "entire HTTP traffic during 9.00PM and 5.00 AM."
+        },
+        {
+          "key": "B",
+          "text": "all ICMP traffic."
+        },
+        {
+          "key": "C",
+          "text": "incoming traffic from a specific IP address but allow outgoing traffic to the same IP address"
+        },
+        {
+          "key": "D",
+          "text": "TCP traffic from a specific user on a multi-user system during 9.00 PM and 5.00 AM."
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0050"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 51,
+      "sourcePage": 12,
+      "question": "A session symmetric key between two parties is used",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Only once"
+        },
+        {
+          "key": "B",
+          "text": "Twice"
+        },
+        {
+          "key": "C",
+          "text": "Multiple times"
+        },
+        {
+          "key": "D",
+          "text": "Conditions dependant"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0051"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 52,
+      "sourcePage": 13,
+      "question": ". One security protocol for the e-mail system is __________.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "IPSec"
+        },
+        {
+          "key": "B",
+          "text": "SSL"
+        },
+        {
+          "key": "C",
+          "text": "PGP"
+        },
+        {
+          "key": "D",
+          "text": "none of the above."
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0052"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 53,
+      "sourcePage": 13,
+      "question": ". ___________ operates in the transport mode or the tunnel mode.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "IPSec"
+        },
+        {
+          "key": "B",
+          "text": "SSL"
+        },
+        {
+          "key": "C",
+          "text": "PGP"
+        },
+        {
+          "key": "D",
+          "text": "none of the above"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0053"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 54,
+      "sourcePage": 13,
+      "question": "________ provides authentication at the IP level",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "AH"
+        },
+        {
+          "key": "B",
+          "text": "ESP"
+        },
+        {
+          "key": "C",
+          "text": "PGP"
+        },
+        {
+          "key": "D",
+          "text": "SSL"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0054"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 55,
+      "sourcePage": 13,
+      "question": "What is a digital signature?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "A message that is encrypted with a private key"
+        },
+        {
+          "key": "B",
+          "text": "A message that is encrypted with a public key"
+        },
+        {
+          "key": "C",
+          "text": "A message that is hashed with a private key"
+        },
+        {
+          "key": "D",
+          "text": "A message that is hashed with a public key"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0055"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 56,
+      "sourcePage": 14,
+      "question": "What is the main purpose of a digital signature?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Encryption"
+        },
+        {
+          "key": "B",
+          "text": "Authentication"
+        },
+        {
+          "key": "C",
+          "text": "Key exchange"
+        },
+        {
+          "key": "D",
+          "text": "All of the above"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0056"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 57,
+      "sourcePage": 14,
+      "question": "Which key is used for creating a digital signature?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Public key"
+        },
+        {
+          "key": "B",
+          "text": "Private key"
+        },
+        {
+          "key": "C",
+          "text": "Symmetric key"
+        },
+        {
+          "key": "D",
+          "text": "None of the above"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0057"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 58,
+      "sourcePage": 14,
+      "question": "Which key is used for verifying a digital signature?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Public key"
+        },
+        {
+          "key": "B",
+          "text": "Private key"
+        },
+        {
+          "key": "C",
+          "text": "Symmetric key"
+        },
+        {
+          "key": "D",
+          "text": "None of the above"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0058"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 59,
+      "sourcePage": 14,
+      "question": "_____ error means that two or more bits in the data unit have changed",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Burst"
+        },
+        {
+          "key": "B",
+          "text": "Double Bit"
+        },
+        {
+          "key": "C",
+          "text": "Single Bit"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0059"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 60,
+      "sourcePage": 15,
+      "question": "Which Topology is used in Ethernet?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Bus"
+        },
+        {
+          "key": "B",
+          "text": "Star"
+        },
+        {
+          "key": "C",
+          "text": "Mesh"
+        },
+        {
+          "key": "D",
+          "text": "Ring"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0060"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 61,
+      "sourcePage": 15,
+      "question": "A signal ranges from 1 KHz to 40 MHz? Find out the bandwidth.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "39.999 MHz"
+        },
+        {
+          "key": "B",
+          "text": "3990 Hz"
+        },
+        {
+          "key": "C",
+          "text": "3 KHz"
+        },
+        {
+          "key": "D",
+          "text": "39 MHz"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0061"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 62,
+      "sourcePage": 15,
+      "question": "A computer is connected directly to the internet, so what type of address it must have?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Public Address"
+        },
+        {
+          "key": "B",
+          "text": "Multicast Address"
+        },
+        {
+          "key": "C",
+          "text": "Private Address"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0062"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 63,
+      "sourcePage": 16,
+      "question": "What is the difference between a switch and a hub?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Hub transmit a signal to all the devices connected to it, whereas switch transmits a signal to four intended ports"
+        },
+        {
+          "key": "B",
+          "text": "Switch works in physical layer, hub works at data-link layer"
+        },
+        {
+          "key": "C",
+          "text": "Switch works at layer 2 while hub works at layer 1"
+        },
+        {
+          "key": "D",
+          "text": "Hub is a smart device, whereas switch is a dumb device"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0063"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 64,
+      "sourcePage": 16,
+      "question": "Assume 10 devices are arranged in a mesh topology. How many cables are needed? How many ports are needed for each device?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "90,9"
+        },
+        {
+          "key": "B",
+          "text": "110,9"
+        },
+        {
+          "key": "C",
+          "text": "45,9"
+        },
+        {
+          "key": "D",
+          "text": "55,9"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0064"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 65,
+      "sourcePage": 16,
+      "question": "Which of the following are not the functions of router i. Data conversion for format to another ii. Forward the packets iii. Constructs the routing table iv. Detects error in the packet v. Queue the incoming packets vi. Forward the packet to all outgoing link",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "i, iv, vi"
+        },
+        {
+          "key": "B",
+          "text": "i, v, vi"
+        },
+        {
+          "key": "C",
+          "text": "i, ii, v, vi"
+        },
+        {
+          "key": "D",
+          "text": "iv, v, vi"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0065"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 66,
+      "sourcePage": 16,
+      "question": "What happens during the failure of a router in the virtual switching circuit?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "All the crashed packets get lost"
+        },
+        {
+          "key": "B",
+          "text": "All the virtual circuits that passes through the router get terminated"
+        },
+        {
+          "key": "C",
+          "text": "Congestion control becomes extremely difficult"
+        },
+        {
+          "key": "D",
+          "text": "Sequence of packets arrival gets disrupted"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0066"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 67,
+      "sourcePage": 17,
+      "question": "How many cross points are needed in a single stage switch with 30 inputs and 30 outputs.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "20"
+        },
+        {
+          "key": "B",
+          "text": "30"
+        },
+        {
+          "key": "C",
+          "text": "900"
+        },
+        {
+          "key": "D",
+          "text": "600"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0067"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 68,
+      "sourcePage": 17,
+      "question": "Which of the following function is not used by TCP server",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Connect()"
+        },
+        {
+          "key": "B",
+          "text": "Socket()"
+        },
+        {
+          "key": "C",
+          "text": "Bind()"
+        },
+        {
+          "key": "D",
+          "text": "Listen()"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0068"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 69,
+      "sourcePage": 17,
+      "question": "Flow control is mainly a function of the layer",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Application"
+        },
+        {
+          "key": "B",
+          "text": "Presentation"
+        },
+        {
+          "key": "C",
+          "text": "Session"
+        },
+        {
+          "key": "D",
+          "text": "Data Link"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0069"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 70,
+      "sourcePage": 17,
+      "question": "What is the hamming distance between 10101010 and 01010101",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "8"
+        },
+        {
+          "key": "B",
+          "text": "0"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0070"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 71,
+      "sourcePage": 18,
+      "question": "What is network address for 12.12.12.12/20",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "12.12.1.1"
+        },
+        {
+          "key": "B",
+          "text": "12.12.0.2"
+        },
+        {
+          "key": "C",
+          "text": "12.12.12.0"
+        },
+        {
+          "key": "D",
+          "text": "12.12.0.0"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0071"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 72,
+      "sourcePage": 18,
+      "question": "Which routing protocol allows throughput to be used as a cost variable for taking routing decision.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "RIP"
+        },
+        {
+          "key": "B",
+          "text": "Distance Vector routinhg"
+        },
+        {
+          "key": "C",
+          "text": "OSPF"
+        },
+        {
+          "key": "D",
+          "text": "Interadomain"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0072"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 73,
+      "sourcePage": 18,
+      "question": "In the IPv6 header, the traffic class field is similar to which field in the IPv4 header?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Fragmentation Field"
+        },
+        {
+          "key": "B",
+          "text": "Fast - Switching"
+        },
+        {
+          "key": "C",
+          "text": "ToS Field"
+        },
+        {
+          "key": "D",
+          "text": "Option Field"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0073"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 74,
+      "sourcePage": 19,
+      "question": "Identify the class of the following IPv4 binary address: 11011110 10101001 10101010 10011001.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Class A"
+        },
+        {
+          "key": "B",
+          "text": "Class B"
+        },
+        {
+          "key": "C",
+          "text": "Class C"
+        },
+        {
+          "key": "D",
+          "text": "Class D"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0074"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 75,
+      "sourcePage": 19,
+      "question": "_________Layer do the task of aggregating the data from different processes and pass that data to ________Layer",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Application, Session"
+        },
+        {
+          "key": "B",
+          "text": "Presentation, Session"
+        },
+        {
+          "key": "C",
+          "text": "Transport, Network"
+        },
+        {
+          "key": "D",
+          "text": "Network, Data Link"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0075"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 76,
+      "sourcePage": 19,
+      "question": "_________________ are the Application Layer Protocol",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "HTTP, SMTP, SNMP"
+        },
+        {
+          "key": "B",
+          "text": "FTP, ICMP, IGMP"
+        },
+        {
+          "key": "C",
+          "text": "DHCP, ARP, ICMP"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0076"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 77,
+      "sourcePage": 19,
+      "question": "In the sliding window method of flow control, if 100 good data frames are sent and received, how many ACK frames have been sent by the receiver?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "99"
+        },
+        {
+          "key": "B",
+          "text": "100"
+        },
+        {
+          "key": "C",
+          "text": "101"
+        },
+        {
+          "key": "D",
+          "text": "Some number less than or equal to 100"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0077"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 78,
+      "sourcePage": 20,
+      "question": "Checksum uses _________ arithmetic",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "1's Complement"
+        },
+        {
+          "key": "B",
+          "text": "2's Complement"
+        },
+        {
+          "key": "C",
+          "text": "None of the options"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0078"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 79,
+      "sourcePage": 20,
+      "question": "A socket uses an address to establish the connection with some other socket. This socket address is a combination of _________and ________.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "IP address and Port number"
+        },
+        {
+          "key": "B",
+          "text": "MAC address Port number"
+        },
+        {
+          "key": "C",
+          "text": "Port Number and Application ID"
+        },
+        {
+          "key": "D",
+          "text": "Email address and IP address"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0079"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 80,
+      "sourcePage": 20,
+      "question": "While using a TCP connection for communication at an instance receiver window size is 5KB and the congestion window size is 2KB. What should be the size of the sending window?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "3KB"
+        },
+        {
+          "key": "B",
+          "text": "2KB"
+        },
+        {
+          "key": "C",
+          "text": "4KB"
+        },
+        {
+          "key": "D",
+          "text": "5KB"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0080"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 81,
+      "sourcePage": 21,
+      "question": "A receiver receives the code 11001100111. When it uses the Hamming encoding algorithm, the result is 0101. Which bit is in error?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "5"
+        },
+        {
+          "key": "D",
+          "text": "No Error"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0081"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 82,
+      "sourcePage": 21,
+      "question": "Network layer add its own header and forward the packet to next layer. In a typical scenario optional information of 20 bytes is added in the header. What is the size of header?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "10"
+        },
+        {
+          "key": "B",
+          "text": "20"
+        },
+        {
+          "key": "C",
+          "text": "30"
+        },
+        {
+          "key": "D",
+          "text": "40"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0082"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 83,
+      "sourcePage": 21,
+      "question": "Adding 1 and 1 in modulo-2 arithmetic results in _________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "0"
+        },
+        {
+          "key": "B",
+          "text": "1"
+        },
+        {
+          "key": "C",
+          "text": "2"
+        },
+        {
+          "key": "D",
+          "text": "11"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0083"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 84,
+      "sourcePage": 21,
+      "question": "The Completion of one full pattern of a signal is called a",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Period"
+        },
+        {
+          "key": "B",
+          "text": "Cycle"
+        },
+        {
+          "key": "C",
+          "text": "Frame"
+        },
+        {
+          "key": "D",
+          "text": "Segment"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0084"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 85,
+      "sourcePage": 22,
+      "question": "FTP follows a ______________approach to transfer data between a client and a server.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Client and Server"
+        },
+        {
+          "key": "B",
+          "text": "Peer to Peer"
+        },
+        {
+          "key": "C",
+          "text": "Cloud based"
+        },
+        {
+          "key": "D",
+          "text": "Parallel"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0085"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 86,
+      "sourcePage": 22,
+      "question": "Consider two nodes A and B are communicating using FTP. Ten files need to be transferred from A to B. How many connections are required for this purpose?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "10"
+        },
+        {
+          "key": "B",
+          "text": "11"
+        },
+        {
+          "key": "C",
+          "text": "12"
+        },
+        {
+          "key": "D",
+          "text": "13"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0086"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 87,
+      "sourcePage": 22,
+      "question": "Which of the protocol can be used by the receiver to extract the email from its server?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "SMTP"
+        },
+        {
+          "key": "B",
+          "text": "IMAP"
+        },
+        {
+          "key": "C",
+          "text": "FTP"
+        },
+        {
+          "key": "D",
+          "text": "TCP"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0087"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 88,
+      "sourcePage": 22,
+      "question": "The term that refers to infinite number of values in the range is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Peak"
+        },
+        {
+          "key": "B",
+          "text": "Analog Signal"
+        },
+        {
+          "key": "C",
+          "text": "Digital Signal"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0088"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 89,
+      "sourcePage": 23,
+      "question": "Both Analog and Digital signals can be",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Periodic"
+        },
+        {
+          "key": "B",
+          "text": "Non-Periodic"
+        },
+        {
+          "key": "C",
+          "text": "Periodic or Non-Periodic"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0089"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 90,
+      "sourcePage": 23,
+      "question": "To efficiently manage the hardware and software components configuration management is required. It includes:",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Monitoring the user behavior and his/her usage pattern"
+        },
+        {
+          "key": "B",
+          "text": "Replacement of the network components"
+        },
+        {
+          "key": "C",
+          "text": "Documentation is done only for the hardware changes in the network, software update is not required."
+        },
+        {
+          "key": "D",
+          "text": "Managing the access of the user's to the network."
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0090"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 91,
+      "sourcePage": 23,
+      "question": "Pick the Odd one of the following as the function of Network Layer?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Routing"
+        },
+        {
+          "key": "B",
+          "text": "Inter-Networking"
+        },
+        {
+          "key": "C",
+          "text": "Error Control"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0091"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 92,
+      "sourcePage": 23,
+      "question": "In a ____________ network, two types of addressing are involved: global and local",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Virtual Circuit"
+        },
+        {
+          "key": "B",
+          "text": "Datagram"
+        },
+        {
+          "key": "C",
+          "text": "Circuit-Switched"
+        },
+        {
+          "key": "D",
+          "text": "All the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0092"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 93,
+      "sourcePage": 24,
+      "question": "In which switching store and forward is used?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Packet Switching"
+        },
+        {
+          "key": "B",
+          "text": "Circuit Switching"
+        },
+        {
+          "key": "C",
+          "text": "Cell Switching"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0093"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 94,
+      "sourcePage": 24,
+      "question": "Circuit switching is employed in",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Physical layer"
+        },
+        {
+          "key": "B",
+          "text": "Datalink layer"
+        },
+        {
+          "key": "C",
+          "text": "Network layer"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0094"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 95,
+      "sourcePage": 24,
+      "question": "Packet switching is employed in",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Physical layer"
+        },
+        {
+          "key": "B",
+          "text": "Datalink layer"
+        },
+        {
+          "key": "C",
+          "text": "Network layer"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0095"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 96,
+      "sourcePage": 25,
+      "question": "Which one of the techniques belongs to connection oriented?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Packet Switching"
+        },
+        {
+          "key": "B",
+          "text": "Circuit Switching"
+        },
+        {
+          "key": "C",
+          "text": "Router"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0096"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 97,
+      "sourcePage": 25,
+      "question": "Which one of the techniques belongs to connectionless?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Packet Switching"
+        },
+        {
+          "key": "B",
+          "text": "Circuit Switching"
+        },
+        {
+          "key": "C",
+          "text": "Router"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0097"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 98,
+      "sourcePage": 25,
+      "question": "Which switching does need to establish connection and provides dedicated connection between hosts?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Packet switching"
+        },
+        {
+          "key": "B",
+          "text": "Circuit switching"
+        },
+        {
+          "key": "C",
+          "text": "Cell switching"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0098"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 99,
+      "sourcePage": 25,
+      "question": "Mesh topology leads to",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Redundant connections"
+        },
+        {
+          "key": "B",
+          "text": "Single point of failure"
+        },
+        {
+          "key": "C",
+          "text": "Hard to add new devices"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0099"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 100,
+      "sourcePage": 26,
+      "question": "Star topology is described as",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Every device in the network is connected to all other devices"
+        },
+        {
+          "key": "B",
+          "text": "Every device in the network is connected to two other nodes"
+        },
+        {
+          "key": "C",
+          "text": "Every device in the network is individually connected to a central node"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0100"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 101,
+      "sourcePage": 26,
+      "question": "Which one does support error or flow control?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Frame Relay"
+        },
+        {
+          "key": "B",
+          "text": "TCP"
+        },
+        {
+          "key": "C",
+          "text": "UDP"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0101"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 102,
+      "sourcePage": 26,
+      "question": "Which one is a connection oriented data service?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "AAL 2"
+        },
+        {
+          "key": "B",
+          "text": "AAL 3"
+        },
+        {
+          "key": "C",
+          "text": "AAL 4"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0102"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 103,
+      "sourcePage": 26,
+      "question": "In an organization with its own private network, most of the applications transmit at constant rates for long duration all the time. Which type of switching is preferred?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Packet"
+        },
+        {
+          "key": "B",
+          "text": "Circuit"
+        },
+        {
+          "key": "C",
+          "text": "Datagram"
+        },
+        {
+          "key": "D",
+          "text": "All the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0103"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 104,
+      "sourcePage": 27,
+      "question": "Which one is not present in TCP/IP model?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Network Layer"
+        },
+        {
+          "key": "B",
+          "text": "Transport Layer"
+        },
+        {
+          "key": "C",
+          "text": "Session Layer"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0104"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 105,
+      "sourcePage": 27,
+      "question": "Which layer that determines the speed of the data transmission in the network?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Logical Layer"
+        },
+        {
+          "key": "B",
+          "text": "Physical Layer"
+        },
+        {
+          "key": "C",
+          "text": "Datalink Layer"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0105"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 106,
+      "sourcePage": 27,
+      "question": "Encryption and Decryption is done by",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Session layer"
+        },
+        {
+          "key": "B",
+          "text": "Application layer"
+        },
+        {
+          "key": "C",
+          "text": "Presentation layer"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0106"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 107,
+      "sourcePage": 27,
+      "question": "Which one is an appropriate example of Half Duplex?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Cardless phone"
+        },
+        {
+          "key": "B",
+          "text": "Telephone"
+        },
+        {
+          "key": "C",
+          "text": "Walkie Talkie"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0107"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 108,
+      "sourcePage": 28,
+      "question": "Coverage area of the LAN technology is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "few kilometers"
+        },
+        {
+          "key": "B",
+          "text": "100 - 1000 kilometers"
+        },
+        {
+          "key": "C",
+          "text": "5 to 50 kilometers"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0108"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 109,
+      "sourcePage": 28,
+      "question": "Data transmission speed of LAN technology is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "upto 100 Mbps"
+        },
+        {
+          "key": "B",
+          "text": "upto 20 Mbps"
+        },
+        {
+          "key": "C",
+          "text": "upto 1000 Mbps"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0109"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 110,
+      "sourcePage": 28,
+      "question": "The functionality of the ARP is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "to map a logical address with a physical address"
+        },
+        {
+          "key": "B",
+          "text": "to map a physical address with a logical address"
+        },
+        {
+          "key": "C",
+          "text": "to map virtual address to logical address"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0110"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 111,
+      "sourcePage": 28,
+      "question": "Which one is the MAC address?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "192.168.10.2"
+        },
+        {
+          "key": "B",
+          "text": "07:01:02:01 :2C:4B"
+        },
+        {
+          "key": "C",
+          "text": "192:220:02:01 :2C"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0111"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 112,
+      "sourcePage": 29,
+      "question": "What is the size of IPV4?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "64 bits"
+        },
+        {
+          "key": "B",
+          "text": "128 bits"
+        },
+        {
+          "key": "C",
+          "text": "32 bits"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0112"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 113,
+      "sourcePage": 29,
+      "question": "Which one allows for communication between networks?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Switch"
+        },
+        {
+          "key": "B",
+          "text": "Router"
+        },
+        {
+          "key": "C",
+          "text": "Repeater"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0113"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 114,
+      "sourcePage": 29,
+      "question": "In the ____________ approach of packet switching, all packets of a message follow the same route from sender to receiver.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Datagram"
+        },
+        {
+          "key": "B",
+          "text": "Virtual circuit"
+        },
+        {
+          "key": "C",
+          "text": "Virtual channel"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0114"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 115,
+      "sourcePage": 29,
+      "question": "Which one allows for communication between two different networks?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Switch"
+        },
+        {
+          "key": "B",
+          "text": "Router"
+        },
+        {
+          "key": "C",
+          "text": "Gateway"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0115"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 116,
+      "sourcePage": 30,
+      "question": "The data unit 10100101 is changed as 10100100 referred as",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Single bit error"
+        },
+        {
+          "key": "B",
+          "text": "Burst error"
+        },
+        {
+          "key": "C",
+          "text": "Common error"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0116"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 117,
+      "sourcePage": 30,
+      "question": "What is the hamming distance between the pair of words (10101,11110)?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "2"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0117"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 118,
+      "sourcePage": 30,
+      "question": "Simple parity check can detect",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "An odd number of errors"
+        },
+        {
+          "key": "B",
+          "text": "An even number of errors"
+        },
+        {
+          "key": "C",
+          "text": "Both odd and even number of errors"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0118"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 119,
+      "sourcePage": 31,
+      "question": "Static routing table",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Contains information entered manually"
+        },
+        {
+          "key": "B",
+          "text": "is updated periodically by using one of the dynamic routing protocols"
+        },
+        {
+          "key": "C",
+          "text": "is updated periodically by using one of the dynamic routing protocols"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0119"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 120,
+      "sourcePage": 31,
+      "question": "Which one is intra domain routing protocols?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Distance vector"
+        },
+        {
+          "key": "B",
+          "text": "Path vector"
+        },
+        {
+          "key": "C",
+          "text": "Border gateway routing protocol"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0120"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 121,
+      "sourcePage": 31,
+      "question": "Which one is inter domain routing protocols?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Distance vector"
+        },
+        {
+          "key": "B",
+          "text": "Path vector"
+        },
+        {
+          "key": "C",
+          "text": "Link state routing protocol"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0121"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 122,
+      "sourcePage": 31,
+      "question": "Routing Information Protocol is an",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Intradomain routing protocol based on distance vector routing"
+        },
+        {
+          "key": "B",
+          "text": "Intradomain routing protocol based on link state routing"
+        },
+        {
+          "key": "C",
+          "text": "interdomain routing protocol based on distance vector routing"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0122"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 123,
+      "sourcePage": 32,
+      "question": "Path vector routing protocol can be used",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "only inside an autonomous system"
+        },
+        {
+          "key": "B",
+          "text": "between autonomous systems"
+        },
+        {
+          "key": "C",
+          "text": "in intradomain"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0123"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 124,
+      "sourcePage": 32,
+      "question": "Broadcast has the relationship between the source and the destination is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "one-to-all"
+        },
+        {
+          "key": "B",
+          "text": "one-to-many"
+        },
+        {
+          "key": "C",
+          "text": "one-to-one"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0124"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 125,
+      "sourcePage": 32,
+      "question": "A Switched network consists of a series of interlinked nodes, called",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Endpoints"
+        },
+        {
+          "key": "B",
+          "text": "Packets"
+        },
+        {
+          "key": "C",
+          "text": "Switches"
+        },
+        {
+          "key": "D",
+          "text": "Lines"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0125"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 126,
+      "sourcePage": 32,
+      "question": "Bursty data is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the rate of the data flow changes in time, with the changes smooth instead of sudden and sharp"
+        },
+        {
+          "key": "B",
+          "text": "the data rate that does not change"
+        },
+        {
+          "key": "C",
+          "text": "the data rate changes suddenly in a very short time"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0126"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 127,
+      "sourcePage": 33,
+      "question": "Discarding policy that",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "routers may prevent congestion and at the same time may not harm the integrity of the transmission"
+        },
+        {
+          "key": "B",
+          "text": "can also prevent congestion in virtual-circuit networks"
+        },
+        {
+          "key": "C",
+          "text": "If the sender feels that a sent packet is lost or corrupted, the packet needs to be retransmitted"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0127"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 128,
+      "sourcePage": 33,
+      "question": "Node to node congestion control is called as",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Choke packet"
+        },
+        {
+          "key": "B",
+          "text": "Back Pressure"
+        },
+        {
+          "key": "C",
+          "text": "Front Pressure"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0128"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 129,
+      "sourcePage": 33,
+      "question": "The data must arrive at the receiver exactly as they were sent is referred as",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Message confidentiality"
+        },
+        {
+          "key": "B",
+          "text": "Message Integrity"
+        },
+        {
+          "key": "C",
+          "text": "Message Authentication"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0129"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 130,
+      "sourcePage": 33,
+      "question": "Which one is the type of relationship between signature and documents in Digital Signature?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "One to many"
+        },
+        {
+          "key": "B",
+          "text": "Many to one"
+        },
+        {
+          "key": "C",
+          "text": "One to one"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0130"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 131,
+      "sourcePage": 34,
+      "question": "The Topology with highest reliability is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Star"
+        },
+        {
+          "key": "B",
+          "text": "Bus"
+        },
+        {
+          "key": "C",
+          "text": "Mesh"
+        },
+        {
+          "key": "D",
+          "text": "Ring"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0131"
+    },
+    {
+      "topic": "Computer Networks",
+      "sourceSection": "CN",
+      "sourceNumber": 132,
+      "sourcePage": 34,
+      "question": "Internet is a type of",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Wide area Network"
+        },
+        {
+          "key": "B",
+          "text": "Local area Network"
+        },
+        {
+          "key": "C",
+          "text": "Personal area network"
+        },
+        {
+          "key": "D",
+          "text": "Metropolitan area network"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0132"
+    }
+  ]
+}

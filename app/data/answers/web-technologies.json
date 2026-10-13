@@ -1,0 +1,515 @@
+{
+  "topic": "Web Technologies",
+  "answers": [
+    {
+      "id": "q_0590",
+      "subtopic": "JavaScript basics",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "JavaScript was created by Brendan Eich at Netscape Communications in 1995, originally for version 2 of the Netscape Navigator browser, and was submitted to ECMA for standardisation (which produced ECMAScript). Microsoft never authored it; Google is only its long-time funder and vendor of the V8 engine, and Oracle appears in the history only because it acquired Sun, which acquired Netscape in 2010. So the originating company is Netscape.\n\nWhy B is correct: Netscape developed JavaScript at Netscape Communications, and it shipped first in Netscape Navigator 2.0 in 1995.\n\nWhy the others are wrong:\n- A: Microsoft only reverse-engineined it as JScript for old Internet Explorer; it did not create the language.\n- C: Google maintains V8 and funds the standards body but had no role in the original 1995 development.\n- D: Oracle's connection is indirect, through its acquisition of Sun and Sun's earlier purchase of Netscape, many years after the fact.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0591",
+      "subtopic": "JavaScript basics",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "JavaScript supports two comment forms: a single-line comment introduced by two forward slashes // that runs to the end of the line, and a multi-line block comment delimited by /* and */. The <!-- and --> pair is the legacy HTML comment style that older browsers tolerated inside scripts so scripts could be hidden from pre-JS browsers; it is not the JavaScript comment syntax. ## is Python and SQL style, and ** has no comment meaning in JavaScript.\n\nWhy B is correct: // starts a single-line comment in JavaScript and everything after it on that line is ignored.\n\nWhy the others are wrong:\n- A: <!-- and --> are legacy HTML markup, tolerated in old scripts but not the JavaScript comment token.\n- C: ## is the comment marker in Python and in MySQL scripts, not JavaScript.\n- D: ** is a Markdown bold marker and has no meaning in JavaScript source.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0592",
+      "subtopic": "JavaScript basics",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "ES6 (2015) introduced let and const, which are block-scoped: their binding lives only inside the enclosing { } block and they can be redeclared in a different block. var is function-scoped, is hoisted to the top of its function, and permits redeclaration. static and function are not variable declaration keywords at all in JavaScript.\n\nWhy B is correct: let creates a variable whose scope is limited to the enclosing block, which is exactly what block-scoped means.\n\nWhy the others are wrong:\n- A: var is function-scoped and ignores block boundaries, so it is the opposite of block-scoped.\n- C: static is a keyword in languages such as Java and C#, not in JavaScript.\n- D: function is the keyword for function declarations, not for declaring a block-scoped variable.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0593",
+      "subtopic": "JavaScript objects",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "In JavaScript an object is a collection of key-value pairs, and a property is read with the dot (member access) operator: student.name, or with bracket notation student['name'] when the key is computed or not a valid identifier. The -> operator belongs to C-style languages for dereferencing pointers, :: belongs to C++ and PHP scope resolution, and calling student(name) would attempt to invoke the object as a function.\n\nWhy C is correct: student.name is the dot-notation member access that reads the name property from the object student.\n\nWhy the others are wrong:\n- A: student(name) calls student as a function and passes name as an argument, it does not read a property.\n- B: student->name is the pointer dereference operator from C and C++, which JavaScript does not have.\n- D: student::name is C++/PHP class scope resolution syntax and is invalid in JavaScript.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0594",
+      "subtopic": "JavaScript arrays and strings",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Array.prototype.push appends one or more elements to the end of an array and returns the new length. The other three are removal operations: pop() deletes and returns the last element, shift() deletes and returns the first element, and unshift() prepends elements at the front. So the only method that adds an element at the end is push().\n\nWhy A is correct: push() adds its arguments to the end of the array, so it is the method for appending an element at the end.\n\nWhy the others are wrong:\n- B: pop() removes the last element and returns it, it does not add anything.\n- C: shift() removes the first element and returns it, it does not add anything.\n- D: unshift() adds elements at the beginning of the array, which is the opposite end.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Exact duplicate of q_0601 (sourceNumber 5 and 12 are byte-identical questions, question, options and printed answer). Answered independently; the bank should keep only one copy."
+    },
+    {
+      "id": "q_0595",
+      "subtopic": "JavaScript arrays and strings",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A JavaScript string exposes a length property that gives the number of UTF-16 code units in the string. It is a property, not a method, so it is written without parentheses as str.length. size() is a Java convention for collections, count() is not a string method in JavaScript, and strlen() is the C function of that name.\n\nWhy C is correct: length is the string property that reports the number of characters, accessed as str.length with no parentheses.\n\nWhy the others are wrong:\n- A: size() is the Java collection method, JavaScript strings have no such method.\n- B: count() is not defined on the JavaScript String prototype at all.\n- D: strlen() is a C standard library function, not a JavaScript string method.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0596",
+      "subtopic": "JavaScript basics",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "break is the JavaScript statement that terminates the innermost enclosing loop or switch immediately, transferring control to the statement after that loop. There is no stop keyword in the language. return leaves the current function rather than just the loop, and exit is not a JavaScript statement, though calling the host-provided exit() in some shells happens to halt a process.\n\nWhy B is correct: break ends the nearest enclosing loop or switch statement and continues after it.\n\nWhy the others are wrong:\n- A: stop is not a JavaScript keyword or statement at all.\n- C: exit is not a JavaScript statement; a global exit() function exists only in some non-browser shells.\n- D: return exits the whole function, not just the loop, and it is only valid inside a function body.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0597",
+      "subtopic": "JavaScript basics",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The strict equality operator === compares operands without type coercion: it returns true only when the values are the same type and the same value, so 1 === '1' is false. The loose operator == coerces one operand to the other's type first, so 1 == '1' is true. != is the negated loose comparison, and = is simple assignment, not a comparison at all.\n\nWhy C is correct: === compares both type and value, never converting either operand, so it is the operator that checks type as well as value.\n\nWhy the others are wrong:\n- A: == compares value only, coercing types, so 1 == '1' evaluates to true.\n- B: != is the loose inequality that also coerces, so it is the opposite test of ==.\n- D: = assigns the right-hand value to the variable on the left and yields no comparison result.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0598",
+      "subtopic": "JavaScript arrays and strings",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "String.prototype.substring(start, end) returns the characters from index start up to but not including index end, so the end index is exclusive. With start = 0 and end = 4 on \"JavaScript\", the characters at indices 0, 1, 2 and 3 are J, a, v and a, giving \"Java\". Running the code under node confirms it prints Java.\n\nWhy A is correct: substring(0,4) takes indices 0 through 3 because the end index is excluded, which yields the four characters \"Java\".\n\nWhy the others are wrong:\n- B: \"JavaS\" would be the result of substring(0,5), which takes five characters.\n- C: \"Script\" is the tail of the string, not a prefix starting at index 0.\n- D: \"avaS\" is not produced by any substring range starting at index 0.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Shares the generic stem \"What will be the output?\" with q_0607 (extractionFlags duplicate-stem-of:q_0607); the two are unrelated code snippets. Answered independently from its own code, but the shared stem is too generic to identify the question in isolation."
+    },
+    {
+      "id": "q_0599",
+      "subtopic": "JavaScript arrays and strings",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Array.prototype.pop() removes the last element of an array and returns that removed element, shortening the array by one. push() adds to the end rather than removing, and shift() removes the first element. delete is an operator for deleting an object property, and although delete arr[n] on an array leaves a hole, it is not the array method for removing the last element.\n\nWhy A is correct: pop() is defined as removing and returning the final element of the array.\n\nWhy the others are wrong:\n- B: push() appends elements to the end, it never removes anything.\n- C: shift() removes the first element, not the last one.\n- D: delete is a language operator for properties and it does not shift the array; delete arr[n] also leaves a hole rather than shrinking it.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0600",
+      "subtopic": "JavaScript basics",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Reading a variable that has been declared with var or let but never assigned, or reading a property that does not exist, yields undefined. Note that undefined is distinct from null: null is an explicit \"no value\" marker a programmer writes, while undefined is what the engine produces automatically, and a variable declared with var and no initialiser is also initialised to undefined.\n\nWhy C is correct: An uninitialised variable holds the value undefined until something assigns to it.\n\nWhy the others are wrong:\n- A: null must be assigned deliberately; the engine never produces it as the default of an uninitialised variable.\n- B: 0 is the default only for numeric accumulators in languages such as C++, and even there it is a convention rather than a language rule.\n- D: \"empty\" is not a JavaScript value at all, there is no empty keyword.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0601",
+      "subtopic": "JavaScript arrays and strings",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Array.prototype.push() takes one or more values and appends them to the end of the array, returning the new length, so it is the method for adding an element at the end. pop() and shift() are removal methods that return the removed last and first elements respectively, and unshift() inserts at the beginning, which is the other end of the array.\n\nWhy A is correct: push() appends its arguments to the end of the array, so it is the method that adds an element at the end.\n\nWhy the others are wrong:\n- B: pop() removes the last element and returns it instead of adding one.\n- C: shift() removes the first element and returns it instead of adding one.\n- D: unshift() adds elements at the start of the array, not the end.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Exact duplicate of q_0594 (sourceNumber 5 and 12 are byte-identical questions, question, options and printed answer). Answered independently; the bank should keep only one copy."
+    },
+    {
+      "id": "q_0602",
+      "subtopic": "JavaScript dates",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "JavaScript exposes date and time through the built-in Date object, which wraps an instant in milliseconds since the Unix epoch and supplies getters such as getFullYear(), getMonth() and getDate() plus setters and ISO formatting. There is no built-in Time, Calendar or Clock constructor; dates and times are always reached through Date.\n\nWhy C is correct: Date is the built-in JavaScript object that represents a date and time and provides all the getter and setter methods for them.\n\nWhy the others are wrong:\n- A: there is no built-in Time object in JavaScript.\n- B: there is no built-in Calendar object; that name belongs to Java's and .NET's date handling.\n- D: there is no built-in Clock object in JavaScript.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0603",
+      "subtopic": "JavaScript dates",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "getFullYear() returns the four-digit year of a Date, for example 2026. The older getYear() is deprecated and returns the year minus 1900, so it would yield 126. getDate() returns the day of the month from 1 to 31 and getMonth() returns the zero-based month index from 0 (January) to 11, so neither returns the year.\n\nWhy B is correct: getFullYear() is the standard method that returns the full four-digit year of a Date object.\n\nWhy the others are wrong:\n- A: getYear() is a deprecated legacy method that returns year - 1900, not the four-digit year.\n- C: getDate() returns the day of the month, 1 through 31.\n- D: getMonth() returns the zero-based month index, 0 for January through 11 for December.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0604",
+      "subtopic": "JavaScript functions and events",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "JavaScript defines a function with the function keyword, either as a declaration function name() {} or as a named expression. Arrow functions () => {} and object method shorthand are alternatives but neither uses the function keyword, and neither method, def nor fun is a JavaScript keyword. def is Python and fun is Kotlin or C#.\n\nWhy B is correct: The reserved word function is what introduces a JavaScript function declaration or function expression.\n\nWhy the others are wrong:\n- A: method is a conceptual term for a function stored on an object, not a declaration keyword.\n- C: def is the Python function declaration keyword and is a syntax error in JavaScript.\n- D: fun is the Kotlin and C# function keyword and is not valid JavaScript.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0605",
+      "subtopic": "JavaScript basics",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "JavaScript has a single numeric type, Number, which is a double-precision IEEE 754 floating point value; there is no separate Float type, and integer and fractional values are both Number. The other three options, Number, Boolean and String, are all primitive types in the language, along with Undefined, Null, Symbol and BigInt.\n\nWhy C is correct: JavaScript has no Float type, because all numeric values including decimals are of the single Number type.\n\nWhy the others are wrong:\n- A: Number is a JavaScript data type, so it cannot be the NOT option.\n- B: Boolean is a JavaScript data type, so it cannot be the NOT option.\n- D: String is a JavaScript data type, so it cannot be the NOT option.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0606",
+      "subtopic": "Regular expressions",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "String.prototype.search() takes a regular expression (or a string that is converted into one) and returns the index of the first match, or -1 if there is none, which is exactly a regex-driven search of a string. find() searches for a fixed substring or a plain value and does not interpret a pattern, and locate() and scan() are not standard JavaScript String methods at all.\n\nWhy B is correct: search() accepts a regular expression pattern and reports where it first matches within the string.\n\nWhy the others are wrong:\n- A: find() matches a literal substring and offers no regular expression interpretation.\n- C: locate() is not a method of the JavaScript String object.\n- D: scan() is not a method of the JavaScript String object.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0607",
+      "subtopic": "JavaScript arrays and strings",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Array.isArray() is a static predicate that tests whether the value passed to it is an array, returning the boolean true for a genuine Array and false for anything else. The array literal [10, 20, 30] creates a real Array, so the call returns true; running it under node prints true. It does not return undefined and it never throws for this input.\n\nWhy B is correct: [10, 20, 30] is an array literal, so Array.isArray() on it returns the boolean true.\n\nWhy the others are wrong:\n- A: false would only be returned for a non-array value such as an object, string or number.\n- C: the function is a predicate that always returns a boolean, it never returns undefined.\n- D: no error is raised; Array.isArray() accepts any value and simply answers the question.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Shares the generic stem \"What will be the output?\" with q_0598 (extractionFlags duplicate-stem-of:q_0598); the two are unrelated code snippets. Answered independently from its own code, but the shared stem is too generic to identify the question in isolation."
+    },
+    {
+      "id": "q_0608",
+      "subtopic": "Web architecture",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The three-tier architecture splits a system into a presentation tier (the user interface), an application or business logic tier, and a data tier (the database). That separation is the defining feature of the three-tier pattern. Client-server only describes a two-party split with no separation of logic from storage, a monolithic architecture is a single undivided unit, and peer-to-peer has no central tiers at all.\n\nWhy C is correct: Three-tier architecture is precisely the pattern that separates presentation, application logic and data storage into three distinct tiers.\n\nWhy the others are wrong:\n- A: a monolithic architecture is one undivided program, so it separates nothing.\n- B: client-server is a two-tier split between a client and a server and does not isolate presentation from logic from data.\n- D: peer-to-peer distributes responsibility among equal peers and has no presentation, logic or data tiers.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0609",
+      "subtopic": "Web architecture",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "In the web's client-server model the browser is the client: it initiates every HTTP request, renders the returned pages and runs scripts locally, while the server waits passively and answers. Middleware would be code sitting between the client and the data or the server, and a database stores records rather than presenting pages to a user.\n\nWhy B is correct: The browser is the client in a web architecture because it issues the requests and displays the responses.\n\nWhy the others are wrong:\n- A: the server waits for and answers requests; the browser is the party that starts them.\n- C: middleware is an intermediate layer for processing or transforming data, not the browser.\n- D: a database stores records and serves queries, it does not act as the user's presentation layer.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0610",
+      "subtopic": "HTTP and request-response",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Web clients and web servers speak HTTP, or HTTPS when the connection is protected with TLS. FTP transfers files, SMTP sends mail, and TCP is the transport protocol underneath all of them rather than the application-level web protocol, so the one that names communication between a web client and a web server is HTTP/HTTPS.\n\nWhy C is correct: HTTP, and its encrypted form HTTPS, is the application protocol used for communication between a web client and a web server.\n\nWhy the others are wrong:\n- A: FTP is the File Transfer Protocol, used for file transfer and historically for serving pages, not for general web client-server communication.\n- B: SMTP is the Simple Mail Transfer Protocol used to send and relay email.\n- D: TCP is the transport layer protocol that HTTP itself runs over, not the web application protocol.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0611",
+      "subtopic": "Web architecture",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "In three-tier architecture the application tier, also called the middle or business logic tier, is where the rules, calculations, validation and authorisation of the application live, sitting between the presentation tier and the data tier. The presentation tier only renders, the data tier only persists, and there is no standard network tier in this model.\n\nWhy C is correct: The application tier is the middle tier of three-tier architecture and is the one that carries out the business logic.\n\nWhy the others are wrong:\n- A: the presentation tier renders the user interface and holds no business rules.\n- B: the data tier performs storage, retrieval and persistence of records.\n- D: there is no network tier in the three-tier model; the tiers are presentation, application logic and data.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0612",
+      "subtopic": "Web architecture",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "A database server is the component dedicated to storing and managing persistent data, keeping it across server restarts and sessions. A web server answers HTTP requests and serves files, an application server runs business logic and may hold short-lived state in memory, and the client browser holds only what it has fetched or cached.\n\nWhy D is correct: The database server is the component whose job is storing and managing persistent data.\n\nWhy the others are wrong:\n- A: a web server serves files and HTTP responses; it delegates storage to a database.\n- B: an application server executes application code and typically keeps state in memory, which is not the same as persistent storage.\n- C: the client browser is a consumer of data and cannot be the authoritative persistent store.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0613",
+      "subtopic": "Web servers",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Apache and Nginx are web servers: they listen on a port, accept HTTP requests, locate and return static files or delegate dynamic requests, and produce the response status line and headers. Executing business logic is the job of an application server or a language runtime, storing data is the database's job, and rendering the client UI is the browser's job.\n\nWhy C is correct: A web server's defining role is accepting HTTP requests and returning the corresponding responses.\n\nWhy the others are wrong:\n- A: executing business logic belongs to the application server or runtime that the web server delegates to.\n- B: storing user data is the role of a database, not of the web server process.\n- D: managing the client UI happens in the browser, not on the server.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0614",
+      "subtopic": "Web architecture",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "REST is the architectural style used for scalable web services because it models resources with URLs, relies on the statelessness of HTTP so any server in a pool can answer any request, and uses a small fixed set of verbs, which is what lets clusters and caching work. The other three options are not architectural styles for scalable services: SOAP and RPC are remote procedure call models tied to a server contract, and CGI is an obsolete interface for spawning a process per request.\n\nWhy B is correct: REST is stateless, cacheable and resource-oriented, which is precisely why it scales to many stateless servers behind a load balancer.\n\nWhy the others are wrong:\n- A: SOAP is a heavyweight XML-based RPC framework with its own WSDL contract, not the standard choice for scalable REST services.\n- C: RPC couples clients tightly to a server-side procedure interface, which hinders independent scaling of client and server.\n- D: CGI forks a new process per request, a per-request overhead model that does not scale compared with persistent server processes or services.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0615",
+      "subtopic": "Web architecture",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A cache keeps a copy of data that is expensive to obtain so repeat requests can be served without repeating that work, which is the standard definition of caching for performance. A load balancer spreads requests across servers and a proxy forwards them, both improving availability rather than avoiding repeated computation, and a firewall filters traffic for security, not speed.\n\nWhy B is correct: A cache stores the result of an expensive operation so frequently accessed data is served directly, which is what improves performance.\n\nWhy the others are wrong:\n- A: a load balancer distributes requests among servers for capacity and availability, not for storing reused results.\n- C: a firewall inspects and filters traffic for security and has no data-reuse role.\n- D: a proxy relays requests on behalf of another party and may add anonymity or filtering, but storing frequently accessed data is not its defining purpose.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0616",
+      "subtopic": "Web architecture",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A load balancer sits in front of a pool of servers and uses algorithms such as round-robin, least-connections or IP hash to spread incoming requests across them, which raises throughput and keeps the service up if one server fails. It does not encrypt storage, it does not change how much scripting the server does, and converting HTTP to HTTPS is the job of TLS termination or a redirect at the web server.\n\nWhy C is correct: Distributing traffic across multiple servers is the defining purpose of a load balancer, and it is what makes horizontal scaling possible.\n\nWhy the others are wrong:\n- A: securing stored data is the job of access control and encryption at rest, not of traffic distribution.\n- B: a load balancer changes nothing about how server-side code is executed.\n- D: HTTP to HTTPS conversion happens through TLS termination or a redirect in the web server, not in a load balancer's core function.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0617",
+      "subtopic": "Web architecture",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "MVC splits an application into Model (data and rules), View (presentation) and Controller (the mediator). The Controller receives the user's input events, validates them and invokes the Model, then selects a View to render, so handling user input is the controller's job. The Model holds and processes data, the View presents the model's state to the user, and the database is not part of MVC at all.\n\nWhy C is correct: The Controller is the component that receives user input, acts on it through the Model and drives the View.\n\nWhy the others are wrong:\n- A: the Model holds the data and the domain rules; it does not receive raw user input.\n- B: the View renders output for the user and is not the receiver of input events.\n- D: the database is a storage component and is not one of the three MVC parts.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0618",
+      "subtopic": "Web servers",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The main function of a web server is to accept HTTP requests over the network, work out what resource is being asked for, and send back a response consisting of a status code, headers and usually a body. Designing pages is a front-end or design task, storing databases is the database server's task, and executing client-side scripts happens in the browser rather than on the server.\n\nWhy C is correct: Handling HTTP requests and sending back responses is the core function a web server exists to perform.\n\nWhy the others are wrong:\n- A: designing web pages is done by developers with HTML and CSS editors, it is not a server function.\n- B: storing databases is the role of a database management system, not of the web server.\n- D: client-side scripts execute in the user's browser; the server does not run them.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0619",
+      "subtopic": "HTTP and request-response",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "HTTP, the HyperText Transfer Protocol, is the protocol that carries web communication between browsers and servers, whether for ordinary pages or for AJAX and API calls. FTP transfers files, SMTP relays email, and SNMP manages and monitors network devices; none of these carries normal web traffic.\n\nWhy C is correct: HTTP is the protocol defined specifically for communication on the web between client and server.\n\nWhy the others are wrong:\n- A: FTP is the File Transfer Protocol, for moving files rather than for web pages and APIs.\n- B: SMTP is the Simple Mail Transfer Protocol, for sending and relaying email.\n- D: SNMP is the Simple Network Management Protocol, for managing and monitoring devices.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0620",
+      "subtopic": "HTTP methods and status codes",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "GET is the safe, idempotent HTTP method whose purpose is to retrieve a representation of the requested resource. POST submits data for processing and normally creates or updates something, PUT replaces an existing resource at a known URI, and DELETE removes the resource at that URI.\n\nWhy B is correct: GET is the method defined for retrieving data from a server.\n\nWhy the others are wrong:\n- A: POST sends data to the server for processing and creation or update, it does not retrieve.\n- C: PUT replaces or updates the resource at a known URI, it is not the retrieval method.\n- D: DELETE removes the resource at a URI, it is not the retrieval method.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0621",
+      "subtopic": "HTTP methods and status codes",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "POST is the method used to submit data to the server for processing, typically creating a new resource or triggering an action, for example a form submission or a login. GET is meant for retrieval, TRACE echoes the received request back for diagnostics, and CONNECT establishes a tunnel for a proxy, so neither of those sends user data to be processed.\n\nWhy B is correct: POST carries a request body of user-supplied data to the server for processing.\n\nWhy the others are wrong:\n- A: GET is a safe method used to retrieve resources and is not for sending data to be processed.\n- C: TRACE is a diagnostic method that echoes the request headers back to the client.\n- D: CONNECT is used to ask a proxy to open a TCP tunnel, as HTTPS proxies do.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0622",
+      "subtopic": "HTTP and request-response",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "HTTP is a request-response protocol driven by the client: the browser builds the request line, headers and body and puts it on the wire, and the server only ever replies. So the client or browser is the component that sends an HTTP request, while the web server, application server and database all play roles on the responding side.\n\nWhy C is correct: The client or browser originates every HTTP request, which is what makes it the request sender.\n\nWhy the others are wrong:\n- A: the web server receives requests and produces responses; it does not originate them.\n- B: the database answers queries from the application layer and never initiates HTTP traffic to the browser.\n- D: the application server handles inbound requests and returns results; it does not send the browser's request.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0623",
+      "subtopic": "HTTP and request-response",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "HTTP is the HyperText Transfer Protocol, the name coined by Tim Berners-Lee at CERN in 1989 for the protocol that links hypertext documents over the web. The other three are word permutations that are not the expansion: only the second and third words are right, HyperText and Transfer, but the fourth is Protocol, not Process.\n\nWhy B is correct: HyperText Transfer Protocol is the correct full expansion of the acronym HTTP.\n\nWhy the others are wrong:\n- A: \"Transfer\" and \"Protocol\" are right but the first word must be \"HyperText\", not \"Hyper Transfer\".\n- C: \"High Transfer Text Protocol\" swaps HyperText for High and puts Transfer before Text, so it is wrong.\n- D: \"Transmission Process\" is not correct; the last word is Protocol.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0624",
+      "subtopic": "HTTP methods and status codes",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The 4xx class signals a client-side error, and 404 is the specific code for Not Found, returned when the server cannot find the requested resource. 200 is the success code, 301 is a permanent redirect, and 500 is a server-side Internal Server Error.\n\nWhy C is correct: Status code 404 Not Found is what a server returns when the requested resource does not exist.\n\nWhy the others are wrong:\n- A: 200 OK means the request succeeded and the resource was found.\n- B: 301 Moved Permanently is a redirect telling the client of a new permanent location.\n- D: 500 Internal Server Error is a server-side failure, not a missing page.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0625",
+      "subtopic": "HTTP methods and status codes",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The 2xx class signals success, and 200 OK is the standard code for a successful response that carries a result body. 404 and 403 are client-side errors in the 4xx class and 500 is a server-side error in the 5xx class, so none of them can indicate success.\n\nWhy A is correct: 200 OK is the canonical success status code returned when a request completes successfully.\n\nWhy the others are wrong:\n- B: 404 Not Found is a 4xx client error.\n- C: 500 Internal Server Error is a 5xx server error.\n- D: 403 Forbidden is a 4xx client error meaning the server understood but refuses the request.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0626",
+      "subtopic": "HTTP and request-response",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "An HTTP response consists of a status line carrying the status code, a set of response headers such as Content-Type and Content-Length, and usually a body containing the requested content. A request header belongs to the request, not the response, and the URL is part of the request line, while cookies would only be present if the server chose to set them.\n\nWhy B is correct: Status code, headers and body are exactly the three parts of an HTTP response message.\n\nWhy the others are wrong:\n- A: the request header belongs to the request message the client sends, not to the response.\n- C: the URL is part of the request line that the client sends, not of the response.\n- D: cookies are an optional exchange set by the server via a Set-Cookie header and are not part of every response.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0627",
+      "subtopic": "HTTP and request-response",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "HTTPS is HTTP carried inside a TLS connection: the HTTP request and response bytes are encrypted between the client and the server, and the server presents a certificate so the client can authenticate it. That confidentiality and integrity is the only difference, the semantics of the requests are unchanged. HTTPS is not FTP, it works across the public internet rather than only on a local network, and it still relies on servers.\n\nWhy B is correct: HTTPS wraps HTTP in TLS (formerly SSL), which encrypts the data in transit between client and server.\n\nWhy the others are wrong:\n- A: HTTPS does not use FTP; it uses HTTP carried over a TLS session.\n- C: HTTPS is used on the public internet, not restricted to local networks.\n- D: HTTPS still requires a server that holds a certificate and answers the requests.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0628",
+      "subtopic": "Cookies and sessions",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "HTTP is stateless, so a cookie is the standard mechanism for giving a server back information about a user on later requests, typically a session ID or a preference, and for maintaining that state across pages. Cookies are stored on the client, not on the server; they do not execute JavaScript; and encryption of HTTP data is the job of HTTPS, not of cookies.\n\nWhy B is correct: The primary purpose of cookies is to let the server maintain per-user state across requests, since the client is the party that stores and returns them.\n\nWhy the others are wrong:\n- A: cookies are client-side key-value pairs stored by the browser; server-side objects live in the session store or database.\n- C: cookies hold data, they do not run code; the HttpOnly flag specifically exists to stop JavaScript reading them.\n- D: encrypting HTTP traffic is the role of HTTPS and TLS, not of cookies.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0629",
+      "subtopic": "Cookies and sessions",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Cookies are stored by the client, that is the user's browser, in its cookie store; the server sends a Set-Cookie header and the browser saves the pair and returns it in a Cookie header on later requests to that domain. A web server or application server writes and reads cookies through those headers but does not hold them, and a database only sees cookie values if the application deliberately stores them.\n\nWhy C is correct: The browser keeps the cookie on the client side, which is why cookies are called client-side storage.\n\nWhy the others are wrong:\n- A: the web server only sends and receives cookies through HTTP headers; it does not store them.\n- B: a database holds rows and records, not the user's cookie store.\n- D: an application server may read and set cookies through the request and response, but the persistent copy lives in the browser.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0630",
+      "subtopic": "Cookies and sessions",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A session cookie is set without an Expires or Max-Age attribute, so it has no explicit lifetime and is discarded when the browser session ends, which is normally when the browser closes. A persistent cookie carries an expiry and survives browser restarts. The Secure and HTTP-only attributes concern transport and script access rather than lifetime, so neither one is deleted on close.\n\nWhy C is correct: Only a cookie with no expiry attribute, a session cookie, is removed when the browser closes.\n\nWhy the others are wrong:\n- A: a persistent cookie has an explicit expiry precisely so that it survives browser restarts.\n- B: Secure only restricts the cookie to HTTPS transport; it says nothing about when it expires.\n- D: HTTP-only only hides the cookie from JavaScript; it does not affect its lifetime.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0631",
+      "subtopic": "State management",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Each HTTP request is independent and the server cannot tell by default which request came from the same user, so a session is the server-side mechanism that ties a series of requests together, usually via a session ID held in a cookie, so that a login persists as the user moves from page to page. That is tracking a user across multiple requests. Sessions are temporary rather than permanent, reducing server load is a side effect at best, and they have nothing to do with page styling.\n\nWhy B is correct: Sessions exist to associate a sequence of otherwise independent HTTP requests with the same user.\n\nWhy the others are wrong:\n- A: sessions expire and are temporary; permanent storage is the job of a database.\n- C: reducing load is an incidental side effect, never the purpose of a session.\n- D: page styling is done in CSS and has no connection to sessions.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0632",
+      "subtopic": "State management",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Session data is normally held on the server, in memory, on disk, or in a dedicated store such as Redis, keyed by a session ID that the client passes in a cookie; that is what keeps the actual data out of reach of the user's machine. Among the options given, only the web server side is where that state lives. A proxy merely relays, a DNS server only maps names to addresses, and the client browser holds only the identifier, not the data.\n\nWhy C is correct: Session data is normally kept server-side in the session store of the web or application server, with the client holding only a session identifier.\n\nWhy the others are wrong:\n- A: the client browser normally holds only the session ID cookie, not the session data itself.\n- B: a proxy forwards traffic and is not the normal place session data lives.\n- D: a DNS server only resolves domain names to IP addresses and stores no user session data.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0633",
+      "subtopic": "AJAX",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "AJAX works by letting the client issue an asynchronous request to the server and then patching part of the page with the returned data while the rest of the page stays live and is never reloaded. The technique that makes this possible is the asynchronous server communication, not the choice of markup language. A normal HTML form submission performs a full page load, and CSS has no role in fetching data.\n\nWhy C is correct: Asynchronous server communication lets the page update only the affected region instead of being reloaded.\n\nWhy the others are wrong:\n- A: an HTML form submission causes a full page reload, which is exactly what AJAX avoids.\n- B: XML parsing may be used to read an XML response, but it is not the technique that avoids the reload.\n- D: CSS only styles the presentation and never performs data retrieval.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0634",
+      "subtopic": "AJAX",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "XMLHttpRequest is the browser API that AJAX was originally built on; it can send a request and fire readystatechange or load events with the response, all without leaving the page, and it underlies jQuery's $.ajax. fetch() is the newer, more modern Promise-based API, which is why the word traditionally in the question matters here. Document and Window are DOM and global objects and are not used to send requests.\n\nWhy B is correct: XMLHttpRequest is the traditional browser object AJAX uses to send requests to the server.\n\nWhy the others are wrong:\n- A: fetch is the modern replacement API, not the traditional one the question asks about.\n- C: Document is the DOM tree of the page and has no request-sending role.\n- D: Window is the global browser object and does not itself send requests.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0635",
+      "subtopic": "AJAX",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "AJAX is the initialism for Asynchronous JavaScript and XML, coined by Jesse James Garrett in 2005 to name the technique of fetching data in the background and updating parts of a page with it. The JavaScript does the requesting and the XML was the original response format; it has nothing to do with Java, XHTML, or JSON, which is only a modern data format that AJAX apps often use.\n\nWhy B is correct: AJAX expands to Asynchronous JavaScript and XML.\n\nWhy the others are wrong:\n- A: it says Java, but the J in AJAX stands for JavaScript, a different language.\n- C: there is no XHTML in the acronym.\n- D: JSON is a modern data format used by AJAX applications but it is not part of the acronym.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0636",
+      "subtopic": "AJAX",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "JSON is the format modern AJAX and REST APIs use most often because it is a compact subset of JavaScript literal syntax, so response.json() parses it with no XML parser and no eval of markup, which is both faster and safer. XML was the original AJAX format and HTML or CSV responses can still be used, but none of them is what modern AJAX applications most commonly exchange.\n\nWhy C is correct: JSON is the data format most commonly used with modern AJAX because it parses directly into JavaScript objects.\n\nWhy the others are wrong:\n- A: XML was the classic AJAX payload but it is verbose and needs a parser, so it is not the modern default.\n- B: HTML fragments are used for injecting markup, not as the primary modern data format.\n- D: CSV lacks types and nesting and requires custom parsing, so it is not the common AJAX format.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0637",
+      "subtopic": "AJAX",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The user-experience benefit of AJAX is that only the part of the page that changed is swapped in, so the user does not lose scroll position, form context or focus and perceives the application as faster and more responsive. A full reload, synchronous blocking calls and server-rendered-only pages are all the things AJAX was introduced to replace.\n\nWhy C is correct: Partial page updates keep the rest of the page intact, which is what makes AJAX feel responsive to the user.\n\nWhy the others are wrong:\n- A: reloading after every request is the classic non-AJAX behaviour that AJAX exists to avoid.\n- B: synchronous communication blocks the browser until the server replies and makes the experience worse.\n- D: server-side rendering only describes traditional full-page responses, which AJAX improves upon.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0638",
+      "subtopic": "AJAX",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "AJAX calls are asynchronous: the browser fires the request and returns control to the event loop immediately, then invokes a callback when the response arrives, so the UI stays responsive during the round trip. JavaScript is single-threaded, so this is event-driven callback scheduling, not multithreading. Batch processing and compilation are unrelated to how a request is made.\n\nWhy B is correct: Asynchronous calls let the request proceed in the background while the rest of the page continues to respond to the user.\n\nWhy the others are wrong:\n- A: JavaScript does not spawn threads for AJAX; the browser's network stack and event loop handle it.\n- C: batch processing is a mainframe data-processing term unrelated to browser requests.\n- D: compilation is about translating source code and has nothing to do with making requests.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0639",
+      "subtopic": "State management",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "Sessions are the best of the four here because the sensitive data stays on the server and the browser holds only an opaque session identifier, so an attacker who reads the client-side value gains nothing and cannot tamper with it. Cookies travel with every request and, unless marked HttpOnly, are readable by any injected script. localStorage is worse still, because it is persistent, script-accessible and never expires, so one XSS exfiltrates everything. Cache is not a user-data store at all and can be evicted at any time. The caveat is that a well-configured cookie with Secure, HttpOnly and SameSite, or a stateless signed token, is also a defensible choice, which is why this question is flagged.\n\nWhy B is correct: Session data lives server-side behind an ID, so the sensitive values never leave the server and cannot be read or edited from the client.\n\nWhy the others are wrong:\n- A: a cookie's value is sent on every request and is readable by JavaScript unless HttpOnly is set, and it is tamperable if unsigned.\n- C: localStorage is script-accessible, persists indefinitely and has no automatic expiry, so any XSS on the origin can read it all.\n- D: the HTTP cache is not a store for user data; it may be evicted, shared or served stale, so it cannot be relied on for sensitive values.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Genuinely contestable opinion-shaped question. B matches the printed key and is the textbook answer, but A is defensible when the cookie is set Secure, HttpOnly and SameSite with signed values, and stateless signed tokens are a common alternative; the question supplies no threat model, so the secure answer depends on assumptions not stated in the stem."
+    },
+    {
+      "id": "q_0640",
+      "subtopic": "AJAX",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "AJAX means the page can talk to the server in the background and incorporate what comes back, without reloading or replacing the whole document. That is the defining capability and it is not restricted to synchronous transfer, does not require a reload, and is not limited to XML, since JSON, plain text and HTML fragments are all used today.\n\nWhy C is correct: Communication with the server without reloading the page is exactly what AJAX enables.\n\nWhy the others are wrong:\n- A: AJAX is asynchronous by definition, so it is not limited to synchronous transfer.\n- B: a reload after every request is the behaviour AJAX was designed to eliminate.\n- D: AJAX responses are commonly JSON or plain text, not only XML.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    }
+  ]
+}

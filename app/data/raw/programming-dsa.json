@@ -1,0 +1,3168 @@
+{
+  "topic": "Programming and Data Structures",
+  "questions": [
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 1,
+      "sourcePage": 35,
+      "question": "If the height of the binary tree is 7, maximum number of internal nodes the tree can have is,",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "128"
+        },
+        {
+          "key": "B",
+          "text": "127"
+        },
+        {
+          "key": "C",
+          "text": "64"
+        },
+        {
+          "key": "D",
+          "text": "63"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0133"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 2,
+      "sourcePage": 35,
+      "question": "The following is the result after first partition of quicksort algorithm 10,8, 6, 9, 11, 14, 16, 15. Which of the following is true?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "11 could be the pivot , 14 could not be pivot."
+        },
+        {
+          "key": "B",
+          "text": "14 could be the pivot , 11 could not be pivot."
+        },
+        {
+          "key": "C",
+          "text": "Either 11 or 14 could be pivot element"
+        },
+        {
+          "key": "D",
+          "text": "11 and 14 both are pivot elements."
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0134"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 3,
+      "sourcePage": 36,
+      "question": "What is the advantage of recursive approach than an iterative approach?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Consumes less memory"
+        },
+        {
+          "key": "B",
+          "text": "Less code and easy to implement"
+        },
+        {
+          "key": "C",
+          "text": "Consumes more memory"
+        },
+        {
+          "key": "D",
+          "text": "All the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0135"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 4,
+      "sourcePage": 36,
+      "question": "Consider the array LA = {1, 2, 4, 3} is sorted using bubble sort. How many iterations is required in order to sort the array?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "4"
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "1"
+        },
+        {
+          "key": "D",
+          "text": "0"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0136"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 5,
+      "sourcePage": 36,
+      "question": "Consider the following code snippet",
+      "code": "char c[]=\"VITEEE2022\";\nchar *p=c;\nprintf(\"%s\",p+p[1]-p[3]);",
+      "options": [
+        {
+          "key": "A",
+          "text": "EE2022"
+        },
+        {
+          "key": "B",
+          "text": "EEE2022"
+        },
+        {
+          "key": "C",
+          "text": "E2022"
+        },
+        {
+          "key": "D",
+          "text": "Error"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected",
+        "duplicate-stem-of:q_0197,q_0209"
+      ],
+      "id": "q_0137"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 6,
+      "sourcePage": 36,
+      "question": "//considering the initial memory location of s is 1000 and one integer is of 4 byte Predict the output",
+      "code": "int main()\n{\nint s[5];\ns++;\nprintf(\"the array is at memory location %d\",s);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "1002"
+        },
+        {
+          "key": "B",
+          "text": "1004"
+        },
+        {
+          "key": "C",
+          "text": "1020"
+        },
+        {
+          "key": "D",
+          "text": "Error"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected",
+        "duplicate-stem-of:q_0198,q_0199"
+      ],
+      "id": "q_0138"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 7,
+      "sourcePage": 37,
+      "question": "Run time of the recurrence T(n) = 7T(n/3)+n^2 log n.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Theta(n^2 log n)"
+        },
+        {
+          "key": "B",
+          "text": "Theta (n^2)"
+        },
+        {
+          "key": "C",
+          "text": "Theta(n^2 Log^2 n"
+        },
+        {
+          "key": "D",
+          "text": "Theta(n log^2 n)"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0139"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 8,
+      "sourcePage": 37,
+      "question": "Minimum (Asymptotic) time required to check whether a given binary tree is a binary search tree or not.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "O(1)"
+        },
+        {
+          "key": "B",
+          "text": "O(n)"
+        },
+        {
+          "key": "C",
+          "text": "O(log n)"
+        },
+        {
+          "key": "D",
+          "text": "O(n log n)"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0140"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 9,
+      "sourcePage": 37,
+      "question": "If you keep track of front, rear and count(no. of items in array), in a circular array when front =0 and rear=maxsize-1, what will be the count value.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "0"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "2"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0141"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 10,
+      "sourcePage": 38,
+      "question": "Which of the following data structure can be applied directly on scheduling and resource allocation problems?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "stack"
+        },
+        {
+          "key": "B",
+          "text": "queue"
+        },
+        {
+          "key": "C",
+          "text": "tree"
+        },
+        {
+          "key": "D",
+          "text": "linked list"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0142"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 11,
+      "sourcePage": 38,
+      "question": "If you are asked to implement stack using queue how many queues are required to represent stack efficiently.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "2"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0143"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 12,
+      "sourcePage": 38,
+      "question": "Which is something you would NOT use a stack for? i. Printing a name in reverse order ii. A function call within another function call iii. Arranging the elements of an array in increasing or decreasing order. iv. Printing the elements of an array in the order they appear within the array.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "only (i)"
+        },
+        {
+          "key": "B",
+          "text": "only (ii) and (iii) are correct"
+        },
+        {
+          "key": "C",
+          "text": "only (iii) and (iv) are correct"
+        },
+        {
+          "key": "D",
+          "text": "None of the options are correct"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0144"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 13,
+      "sourcePage": 38,
+      "question": "Which of the following type of queue is useful in building online multiplayer games.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Simple queue"
+        },
+        {
+          "key": "B",
+          "text": "Circular Queue"
+        },
+        {
+          "key": "C",
+          "text": "Priority Queue"
+        },
+        {
+          "key": "D",
+          "text": "Single Ended Queue"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0145"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 14,
+      "sourcePage": 39,
+      "question": "In a linked list, there is a pointer to the first node, each node has pointer to the next node and last node has pointer to the first node, the name of the linkedlist is,",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Singly linkedlist"
+        },
+        {
+          "key": "B",
+          "text": "Doubly linkedlist"
+        },
+        {
+          "key": "C",
+          "text": "Singly Circular linkedlist"
+        },
+        {
+          "key": "D",
+          "text": "Doubly Circular linkedlist"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0146"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 15,
+      "sourcePage": 39,
+      "question": "An array A of integers is given as A: array [1 ... 5] [1 ... 10]; The array is stored in column-major order and the first element of .The array is stored at location 50, Calculate the address of the element A[i][j] where each integer takes one memory location.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "5i + j + 44"
+        },
+        {
+          "key": "B",
+          "text": "i + 5j + 44"
+        },
+        {
+          "key": "C",
+          "text": "5i + j + 39"
+        },
+        {
+          "key": "D",
+          "text": "5j + i + 39"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0147"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 16,
+      "sourcePage": 39,
+      "question": "In a binary tree, which of the following is not a valid argument?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "It should have at least one node."
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "3"
+        },
+        {
+          "key": "D",
+          "text": "0"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0148"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 17,
+      "sourcePage": 40,
+      "question": "We are given a stack on which two operations are possible, Push( ) and Pop( ). Further, we are given an input sequence 7, 5, 2, 1, 3, 6, where 7 is the first element and 6 is the last element. Which sequence of elements cannot be printed using the given stack?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "6 3 1 2 5 7"
+        },
+        {
+          "key": "B",
+          "text": "2 1 3 6 7 5"
+        },
+        {
+          "key": "C",
+          "text": "5 2 7 1 3 6"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0149"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 18,
+      "sourcePage": 40,
+      "question": "Which of the given options provides the decreasing order of asymptotic complexity of functions f1, f2, f3 and f4?",
+      "code": "f1=O(n),f2=O(log n), f3=O(n^2) f4=O(2n)",
+      "options": [
+        {
+          "key": "A",
+          "text": "f1, f2, f3, f4"
+        },
+        {
+          "key": "B",
+          "text": "f2, f1, f4,f3"
+        },
+        {
+          "key": "C",
+          "text": "f1, f2, f4, f3"
+        },
+        {
+          "key": "D",
+          "text": "f1, f3, f2, f4"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0150"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 19,
+      "sourcePage": 40,
+      "question": "Which of the following methods have time complexity O(n) for a sorted array in descending order, where elements are distinct? (i) Finding maximum element in the array. Finding minimum element in the array. (iii) Finding the mode of the array. any element in an array. i=1, j=1 j=j+1",
+      "code": "(ii)\n(iv) Find\nAlgorithm XY()\n{\nwhile(i<=n)\n{\nwhile(j<=n)\n{\nprint(\"Chennai\")\n}\n}\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "(i)"
+        },
+        {
+          "key": "B",
+          "text": "(ii),(iii),(iv)"
+        },
+        {
+          "key": "C",
+          "text": "(iii),(iv)"
+        },
+        {
+          "key": "D",
+          "text": "(i),(iii)"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "stem-enumeration",
+        "code-detected"
+      ],
+      "id": "q_0151"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 20,
+      "sourcePage": 40,
+      "question": "What is the infix version of the following postfix expression? x 12 + z 17 y + 42 * / +",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "x + 12 + z / ((17 + y) * 42)"
+        },
+        {
+          "key": "B",
+          "text": "x + 12 + z / 17 + y * 42"
+        },
+        {
+          "key": "C",
+          "text": "x + 12 + z / (17 + y) * 42"
+        },
+        {
+          "key": "D",
+          "text": "x + (12 + z) / (17 + y * 42)"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0152"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 21,
+      "sourcePage": 41,
+      "question": "Suppose T1(n) = O(F (n)) and T2(n) = O(F (n)). Which of the following are true?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "T1(n) + T2(n) = O(F (n))"
+        },
+        {
+          "key": "B",
+          "text": "T1(n) *T2(n) = O(F (n))"
+        },
+        {
+          "key": "C",
+          "text": "T1(n)=T2(n) = O(1)"
+        },
+        {
+          "key": "D",
+          "text": "T1(n) = O(T2(n))"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0153"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 22,
+      "sourcePage": 41,
+      "question": "In a connected graph with no loops or multiple edges, which of the following inequalities is not correct? (v is the number of vertices, e is the number of edges)",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "e ≤ v ^2"
+        },
+        {
+          "key": "B",
+          "text": "e ≥ v -1"
+        },
+        {
+          "key": "C",
+          "text": "v ≥ e/2"
+        },
+        {
+          "key": "D",
+          "text": "All the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0154"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 23,
+      "sourcePage": 41,
+      "question": "A circular doubly linked list has exactly two nodes, each of whose addresses are stored in two pointer variables, say head and tail. Which among the following statements is NOT True?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Head->next=tail"
+        },
+        {
+          "key": "B",
+          "text": "Head->prev->next=tail"
+        },
+        {
+          "key": "C",
+          "text": "Tail->prev->next=tail"
+        },
+        {
+          "key": "D",
+          "text": "Tail->next->prev=tail"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0155"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 24,
+      "sourcePage": 42,
+      "question": "We have two stacks, named as A and B. Function Push( &A, data) pushes data on stack A, whereas function Push( &B, data) pushes data on stack B. Pop function on stack A pop out the element from stack A, and pushes it on stack B. On the other hand, Pop function on stack B pops out the element from stack B, and prints it on the screen. Which sequence of character will be printed on the screen after following set of operations: Push( &A, 8 ), Push( &B, 9 ), Push( &A, 4 ), Push(& B, 7 ), Push(&A,3), Pop( &A), Push(&B, 5), Pop( &A ), Pop(&A), Pop(&B), Pop(&B),",
+      "code": "Pop(&B), Pop(&B), Pop(&B), Pop(&B)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "9 7 3 5 4 8"
+        },
+        {
+          "key": "B",
+          "text": "8 4 5 3 7 9"
+        },
+        {
+          "key": "C",
+          "text": "3 4 8 5 7 9"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0156"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 25,
+      "sourcePage": 42,
+      "question": "Which of the following will occur after the following set of operations on an empty stack of size 4. Push( 2 ), Push ( 3 ), Pop( ), Push ( 3 ), Pop ( ), Pop( ), Push( 2 ), Pop ( ), Pop ( ) ?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Stack underflow"
+        },
+        {
+          "key": "B",
+          "text": "Stack overflow"
+        },
+        {
+          "key": "C",
+          "text": "Operations will not lead to any error."
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0157"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 26,
+      "sourcePage": 42,
+      "question": "For the two functions f(n)=n^2+3n+4 and g(n)=n^3 we can conclude that,",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "f(n) = O(g(n))"
+        },
+        {
+          "key": "B",
+          "text": "f(n) = Θ(g(n))"
+        },
+        {
+          "key": "C",
+          "text": "g(n)=O(f(n))"
+        },
+        {
+          "key": "D",
+          "text": "g(n)= Θ(f(n))"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0158"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 27,
+      "sourcePage": 43,
+      "question": "In a stack 'S' the elements 4, 8, 12, 16 are pushed in the same order. Two times pop operation is executed, sum of the returned values is pushed again in stack S. Again two times pop operation is executed and sum of the returned values are pushed in stack S. The current top of the stack S is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "4"
+        },
+        {
+          "key": "B",
+          "text": "16"
+        },
+        {
+          "key": "C",
+          "text": "36"
+        },
+        {
+          "key": "D",
+          "text": "28"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0159"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 28,
+      "sourcePage": 43,
+      "question": "How many vertices are there in a complete graph with 'n' vertices?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "n*(n-1)/2"
+        },
+        {
+          "key": "B",
+          "text": "n*(n+1)/2"
+        },
+        {
+          "key": "C",
+          "text": "2n"
+        },
+        {
+          "key": "D",
+          "text": "n/2"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0160"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 29,
+      "sourcePage": 43,
+      "question": "What is the value of the sum of the minimum in-degree and maximum out-degree of an Directed Acyclic Graph?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Will always be zero"
+        },
+        {
+          "key": "B",
+          "text": "Depends on a graph"
+        },
+        {
+          "key": "C",
+          "text": "Will always be greater than zero"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0161"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 30,
+      "sourcePage": 43,
+      "question": "Traversal of a graph is different than tree because",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "There can be a loop in the graph"
+        },
+        {
+          "key": "B",
+          "text": "DFS on a graph uses stack, while inorder traversal is recursive"
+        },
+        {
+          "key": "C",
+          "text": "Both the given properties"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0162"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 31,
+      "sourcePage": 44,
+      "question": "Why graph traversal is difficult than tree traversal ?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Because tree is binary"
+        },
+        {
+          "key": "B",
+          "text": "Because tree is undefined"
+        },
+        {
+          "key": "C",
+          "text": "Because tree have the root"
+        },
+        {
+          "key": "D",
+          "text": "All the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0163"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 32,
+      "sourcePage": 44,
+      "question": "The worst case time complexity of insertion sort is O(n^2). What will be the worst case time complexity of insertion sort if the correct position for inserting element is calculated using binary search?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "O(n log n)"
+        },
+        {
+          "key": "B",
+          "text": "O(n)"
+        },
+        {
+          "key": "C",
+          "text": "O(n^2)"
+        },
+        {
+          "key": "D",
+          "text": "O(1)"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0164"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 33,
+      "sourcePage": 44,
+      "question": "Consider the code given below: int what is line of code required for while statement to run the insertion sort",
+      "code": "void insertionsort(int arr[],int size)\n{\nI,j,value;\nfor(i=1;i<size;i++)\n{\nvalue=arr[i];\nj=i;\nwhile(...)\n{\narr[j]=arr[j-1];\nj=j-1;\n}\narr[j]=value;\n}\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "(j>0)||(arr[j-1]>value)"
+        },
+        {
+          "key": "B",
+          "text": "(j>0)&&(arr[j-1]>value)"
+        },
+        {
+          "key": "C",
+          "text": "(j>0)&&(arr[j+1]>value)"
+        },
+        {
+          "key": "D",
+          "text": "(j>0)&&(arr[j+1]<value)"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0165"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 34,
+      "sourcePage": 45,
+      "question": "Consider an array of length 5, arr[5] = {9, 7, 4, 2, 1}. What are the steps of insertions done while running insertion sort on the array?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "i)7 9 4 2 1 ii)4 7 9 2 1 iii) 2 4 7 9 1 iv) 1 2 4 7 9"
+        },
+        {
+          "key": "B",
+          "text": "i) 9 7 4 1 2 ii) 9 7 1 2 4 iii) 9 1 2 4 7 iv) 1 2 4 7 9"
+        },
+        {
+          "key": "C",
+          "text": "i) 7 4 2 1 9 ii) 4 2 1 9 7 iii) 2 1 9 7 4 iv) 1 9 7 4 2"
+        },
+        {
+          "key": "D",
+          "text": "i) 7 9 4 2 1 ii) 2 4 7 9 1 iii) 4 7 9 2 1 iv) 1 2 4 7 9"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0166"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 35,
+      "sourcePage": 45,
+      "question": "A connected planar graph having 6 vertices, 7 edges contains _____________ regions.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "11"
+        },
+        {
+          "key": "B",
+          "text": "15"
+        },
+        {
+          "key": "C",
+          "text": "1"
+        },
+        {
+          "key": "D",
+          "text": "3"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0167"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 36,
+      "sourcePage": 45,
+      "question": "When the entries 7, 4, 6, 1, 2, 3, 8, 5 are successively inserted into an initially empty binary search tree, what is the height of the resulting tree?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "4"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "7"
+        },
+        {
+          "key": "D",
+          "text": "2"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0168"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 37,
+      "sourcePage": 45,
+      "question": "How many different trees are possible with 10 nodes?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "512"
+        },
+        {
+          "key": "B",
+          "text": "1024"
+        },
+        {
+          "key": "C",
+          "text": "1014"
+        },
+        {
+          "key": "D",
+          "text": "90"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0169"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 38,
+      "sourcePage": 46,
+      "question": "To implement Stacks using Queues, what are the minimum number of queues required?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "2"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "1"
+        },
+        {
+          "key": "D",
+          "text": "Atleast 3"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0170"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 39,
+      "sourcePage": 46,
+      "question": "There are 8, 15, 13, 14 nodes in 4 different trees. Which of them could have formed a full binary tree?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "8"
+        },
+        {
+          "key": "B",
+          "text": "15"
+        },
+        {
+          "key": "C",
+          "text": "13"
+        },
+        {
+          "key": "D",
+          "text": "14"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0171"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 40,
+      "sourcePage": 46,
+      "question": "The memory use of an adjacency matrix is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "O(n)"
+        },
+        {
+          "key": "B",
+          "text": "O(n^2)"
+        },
+        {
+          "key": "C",
+          "text": "O(n^3)"
+        },
+        {
+          "key": "D",
+          "text": "O(logn)"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0172"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 41,
+      "sourcePage": 46,
+      "question": "A polynomial can be represented in a _____ by just storing the coefficient and exponent of each term.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Array"
+        },
+        {
+          "key": "B",
+          "text": "Linked list"
+        },
+        {
+          "key": "C",
+          "text": "Queue"
+        },
+        {
+          "key": "D",
+          "text": "Stack"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0173"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 42,
+      "sourcePage": 47,
+      "question": "______ is used to convert an infix expression into a postfix expression.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Linked list"
+        },
+        {
+          "key": "B",
+          "text": "Stack"
+        },
+        {
+          "key": "C",
+          "text": "Queue"
+        },
+        {
+          "key": "D",
+          "text": "Tree"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0174"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 43,
+      "sourcePage": 47,
+      "question": "Which type of linked list does not store NULL in next field?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Singly linked list"
+        },
+        {
+          "key": "B",
+          "text": "Circular linked list"
+        },
+        {
+          "key": "C",
+          "text": "Doubly linked list"
+        },
+        {
+          "key": "D",
+          "text": "Linear List"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0175"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 44,
+      "sourcePage": 47,
+      "question": "The circular queue will be full only when",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "FRONT = MAX -1 and REAR = MAX -1"
+        },
+        {
+          "key": "B",
+          "text": "FRONT = 0 and REAR = MAX -1"
+        },
+        {
+          "key": "C",
+          "text": "FRONT = MAX -1 and REAR = 0"
+        },
+        {
+          "key": "D",
+          "text": "FRONT = 0 and REAR = 0"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0176"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 45,
+      "sourcePage": 47,
+      "question": "Which type of linked list contains a pointer to the next as well as the previous node in the sequence?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Singly linked list"
+        },
+        {
+          "key": "B",
+          "text": "Circular linked list"
+        },
+        {
+          "key": "C",
+          "text": "Doubly linked list"
+        },
+        {
+          "key": "D",
+          "text": "All the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0177"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 46,
+      "sourcePage": 48,
+      "question": "In ______, insertions can be done only at one end, while deletions can be done from both the ends.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Double-ended queue"
+        },
+        {
+          "key": "B",
+          "text": "Input restricted deque"
+        },
+        {
+          "key": "C",
+          "text": "Output restricted deque"
+        },
+        {
+          "key": "D",
+          "text": "Circular queue"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0178"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 47,
+      "sourcePage": 48,
+      "question": "If the values of A, B, C, and D are 2, 3, 4, and 5, respectively, what is the value of the following prefix expressions: a. + - * A B C D",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "7"
+        },
+        {
+          "key": "B",
+          "text": "-3"
+        },
+        {
+          "key": "C",
+          "text": "5"
+        },
+        {
+          "key": "D",
+          "text": "3"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0179"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 48,
+      "sourcePage": 48,
+      "question": "What does the following lines of C code does? CURSOR_SPACE[p].next =",
+      "code": "CURSOR_SPACE[0].next;\nCURSOR_SPACE[0].next = p;",
+      "options": [
+        {
+          "key": "A",
+          "text": "Allocates cursor space"
+        },
+        {
+          "key": "B",
+          "text": "Releases cursor space"
+        },
+        {
+          "key": "C",
+          "text": "Initialization of cursor space"
+        },
+        {
+          "key": "D",
+          "text": "Declaration for cursor"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0180"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 49,
+      "sourcePage": 49,
+      "question": "If you consider the following as number of operations that different algorithms take to complete a particular task on n elements, which one is linear ?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "3n^3+3n + 7"
+        },
+        {
+          "key": "B",
+          "text": "3n^2 + 3n + 2"
+        },
+        {
+          "key": "C",
+          "text": "3n + 1"
+        },
+        {
+          "key": "D",
+          "text": "8"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0181"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 50,
+      "sourcePage": 49,
+      "question": "Consider the linear arrays AAA(5:50) and BBB(-5:10). The number of elements in each array",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "50, 18"
+        },
+        {
+          "key": "B",
+          "text": "46, 18"
+        },
+        {
+          "key": "C",
+          "text": "46, 16"
+        },
+        {
+          "key": "D",
+          "text": "50, 16"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0182"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 51,
+      "sourcePage": 49,
+      "question": "Suppose the contents of an array A are, A = {1, null, null, null, null, 10}. What would be the size of the array considering it as a normal array and a sparse array?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "6 and 6"
+        },
+        {
+          "key": "B",
+          "text": "6 and 2"
+        },
+        {
+          "key": "C",
+          "text": "2 and 6"
+        },
+        {
+          "key": "D",
+          "text": "2 and 2"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0183"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 52,
+      "sourcePage": 49,
+      "question": "Consider the following code. else Which operation does the above code perform?",
+      "code": "int fun()\n{\nif(isEmpty())\n{\nreturn -10;\n}\n{\nint n;\nn= q[front];\nfront++;\nreturn n;\n}\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "Enqueue"
+        },
+        {
+          "key": "B",
+          "text": "Dequeue"
+        },
+        {
+          "key": "C",
+          "text": "Return the front element"
+        },
+        {
+          "key": "D",
+          "text": "Dequeue and return the front element"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0184"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 53,
+      "sourcePage": 50,
+      "question": "In the Deque implementation using singly linked list, what would be the time complexity of deleting an element from the rear end?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "O(1)"
+        },
+        {
+          "key": "B",
+          "text": "O(n^2)"
+        },
+        {
+          "key": "C",
+          "text": "O(n)"
+        },
+        {
+          "key": "D",
+          "text": "O(nlogn)"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0185"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 54,
+      "sourcePage": 50,
+      "question": "In a circular queue implementation using an array of size 5, the array index starts with 0 where front and rear values are 3 and 4 respectively. Determine the array index at which the insertion of the next element will take place.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "5"
+        },
+        {
+          "key": "B",
+          "text": "0"
+        },
+        {
+          "key": "C",
+          "text": "1"
+        },
+        {
+          "key": "D",
+          "text": "2"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0186"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 55,
+      "sourcePage": 50,
+      "question": "Which of the following concepts make extensive use of arrays?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Binary trees"
+        },
+        {
+          "key": "B",
+          "text": "Scheduling of processes"
+        },
+        {
+          "key": "C",
+          "text": "Caching"
+        },
+        {
+          "key": "D",
+          "text": "Spatial locality"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0187"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 56,
+      "sourcePage": 51,
+      "question": "Suppose that an intermixed sequence of push and pop operations are performed. The pushes push the integers 0 through 9 in order; the pops print out the return value. Which of the following sequences could not occur?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "4 3 2 1 0 9 8 7 6 5"
+        },
+        {
+          "key": "B",
+          "text": "4 6 8 7 5 3 2 9 0 1"
+        },
+        {
+          "key": "C",
+          "text": "2 5 6 7 4 8 9 3 1 0"
+        },
+        {
+          "key": "D",
+          "text": "4 3 2 1 0 5 6 7 8 9"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0188"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 57,
+      "sourcePage": 51,
+      "question": "Whenever there is a pending operation to be performed, the function becomes ________ recursive.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Direct recursive"
+        },
+        {
+          "key": "B",
+          "text": "Indirect recursive"
+        },
+        {
+          "key": "C",
+          "text": "Tail recursive"
+        },
+        {
+          "key": "D",
+          "text": "Non-tail recursive"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0189"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 58,
+      "sourcePage": 51,
+      "question": "A node is said to be ____________ if it has a possibility of reaching a complete solution.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Non-promising"
+        },
+        {
+          "key": "B",
+          "text": "Promising"
+        },
+        {
+          "key": "C",
+          "text": "Succeeding"
+        },
+        {
+          "key": "D",
+          "text": "Preceding"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0190"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 59,
+      "sourcePage": 51,
+      "question": "Which of the following is false in the case of a spanning tree of a graph G?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "It is tree that spans G"
+        },
+        {
+          "key": "B",
+          "text": "It is a subgraph of the G"
+        },
+        {
+          "key": "C",
+          "text": "It includes every vertex of the G"
+        },
+        {
+          "key": "D",
+          "text": "It can be either cyclic or acyclic"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0191"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 60,
+      "sourcePage": 52,
+      "question": "In a circular queue with the capacity of n elements, insertion and deletion are performed using rear and front respectively. Initially rear and front are set to 1. Which of the following condition must be true for the queue to be full.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "front=rear"
+        },
+        {
+          "key": "B",
+          "text": "front=rear+1"
+        },
+        {
+          "key": "C",
+          "text": "front=rear+1"
+        },
+        {
+          "key": "D",
+          "text": "rear=front+1"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0192"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 61,
+      "sourcePage": 52,
+      "question": "Consider a complete graph G with 4 vertices. The graph G has ____ spanning trees",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "15"
+        },
+        {
+          "key": "B",
+          "text": "8"
+        },
+        {
+          "key": "C",
+          "text": "16"
+        },
+        {
+          "key": "D",
+          "text": "13"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0193"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 62,
+      "sourcePage": 52,
+      "question": "A person wants to visit some places. He starts from a vertex and then wants to visit every place connected to this vertex and so on. What algorithm he should use?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Depth First Search"
+        },
+        {
+          "key": "B",
+          "text": "Breadth First Search"
+        },
+        {
+          "key": "C",
+          "text": "Prim's algorithm"
+        },
+        {
+          "key": "D",
+          "text": "Kruskal's algorithm"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0194"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 63,
+      "sourcePage": 53,
+      "question": "Which of the following is not an application of Depth First Search?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "For generating topological sort of a graph"
+        },
+        {
+          "key": "B",
+          "text": "For generating Strongly Connected Components of a directed graph"
+        },
+        {
+          "key": "C",
+          "text": "Detecting cycles in the graph"
+        },
+        {
+          "key": "D",
+          "text": "Peer to Peer Networks"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0195"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 64,
+      "sourcePage": 53,
+      "question": "Dijkstra's Algorithm cannot be applied on ______________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Directed and weighted graphs"
+        },
+        {
+          "key": "B",
+          "text": "Graphs having negative weight function"
+        },
+        {
+          "key": "C",
+          "text": "Unweighted graphs"
+        },
+        {
+          "key": "D",
+          "text": "Undirected and unweighted graphs"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0196"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 65,
+      "sourcePage": 53,
+      "question": "Consider the following code snippet",
+      "code": "char c[]=\"VITEEE2022\";\nchar *p=c;\nprintf(\"%s\",p+p[1]-p[3]);",
+      "options": [
+        {
+          "key": "A",
+          "text": "EE2022"
+        },
+        {
+          "key": "B",
+          "text": "EEE2022"
+        },
+        {
+          "key": "C",
+          "text": "E2022"
+        },
+        {
+          "key": "D",
+          "text": "Error"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected",
+        "duplicate-stem-of:q_0137,q_0209"
+      ],
+      "id": "q_0197"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 66,
+      "sourcePage": 53,
+      "question": "//considering the initial memory location of s is 1000 and one integer is of 4 byte Predict the output",
+      "code": "int main()\n{\nint s[5];\ns++;\nprintf(\"the array is at memory location %d\",s);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "1002"
+        },
+        {
+          "key": "B",
+          "text": "1004"
+        },
+        {
+          "key": "C",
+          "text": "1020"
+        },
+        {
+          "key": "D",
+          "text": "Error"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected",
+        "duplicate-stem-of:q_0138,q_0199"
+      ],
+      "id": "q_0198"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 67,
+      "sourcePage": 54,
+      "question": "//considering the initial memory location of s is 1000 and one integer is of 4 byte Predict the output",
+      "code": "int main()\n{\nint s[5];\nprintf(\"%d %d\",s+1,&s+1);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "1004 1020"
+        },
+        {
+          "key": "B",
+          "text": "1004 1004"
+        },
+        {
+          "key": "C",
+          "text": "1020 garbage value"
+        },
+        {
+          "key": "D",
+          "text": "Not even pass compilation"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected",
+        "duplicate-stem-of:q_0138,q_0198"
+      ],
+      "id": "q_0199"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 68,
+      "sourcePage": 54,
+      "question": "int return Output of the above will be",
+      "code": "#include<stdio.h>\nint main ()\n{\nint arrayVal[]={5,8,12,14,18,19};\n*pointerVal=(int*) (&arrayVal +1);\nprintf(\"%d\",*( pointerVal -1));\n0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "12"
+        },
+        {
+          "key": "B",
+          "text": "5"
+        },
+        {
+          "key": "C",
+          "text": "19"
+        },
+        {
+          "key": "D",
+          "text": "18"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0200"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 69,
+      "sourcePage": 54,
+      "question": "What will be the output of the following code snippet",
+      "code": "int main()\n{\nint i;\nint s[5]={1};\nfor(i=0;i<5;i++)\n{\nprintf(\"%d\",arr[i]);\n}\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "1 followed by four garbage value"
+        },
+        {
+          "key": "B",
+          "text": "1 0 0 0 0"
+        },
+        {
+          "key": "C",
+          "text": "1 1 1 1 1"
+        },
+        {
+          "key": "D",
+          "text": "0 0 0 0 0"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0201"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 70,
+      "sourcePage": 55,
+      "question": "Consider the following statement What the above statement represents?",
+      "code": "int (*p)[5];",
+      "options": [
+        {
+          "key": "A",
+          "text": "Compilation error"
+        },
+        {
+          "key": "B",
+          "text": "p is a pointer to 5 integers"
+        },
+        {
+          "key": "C",
+          "text": "p is an array of 5 pointers to integers"
+        },
+        {
+          "key": "D",
+          "text": "p is a pointer to an array of 5 integer"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0202"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 71,
+      "sourcePage": 55,
+      "question": "Consider the following pseudocode for the queue Q What will be the change in a queue ?",
+      "code": "Function(Q)\nIf (Q!=empty)\nx=delete(Q)\nFunction(Q)\nInsert(Q,x)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Q element order is reversed"
+        },
+        {
+          "key": "B",
+          "text": "Q is unchanged"
+        },
+        {
+          "key": "C",
+          "text": "Q's Front element is removed and inserted at the rear, other elements are unchanged."
+        },
+        {
+          "key": "D",
+          "text": "Q is emptied"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0203"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 72,
+      "sourcePage": 55,
+      "question": "What will be the output of the following code snippet #inlcude<stdio.h> void test(int *ptr) int",
+      "code": "{\nptr=(int*)malloc(sizeof(int));\n}\nint main()\n{\n*ptr;\ntest(ptr);\n*ptr=6;\nprintf(\"%d n\",*ptr);\nreturn(0);\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "May not work"
+        },
+        {
+          "key": "B",
+          "text": "Works and 6 will be printed"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0204"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 73,
+      "sourcePage": 55,
+      "question": "Consider the following code snippet and identify the true statement among the given options",
+      "code": "int i;\nint main()\n{\nint j;\nint *k=(int *)malloc\n(sizeof(int));\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "i,j and *k are stored in stack segment"
+        },
+        {
+          "key": "B",
+          "text": "i and j are stored in stack segment. *k is stored on heap"
+        },
+        {
+          "key": "C",
+          "text": "i is stored in static area, j is stored in stack area and *k is stored in heap area."
+        },
+        {
+          "key": "D",
+          "text": "j is stored in static area, i is stored in stack area and *k is stored in heap area."
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0205"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 74,
+      "sourcePage": 56,
+      "question": "Consider the following code snippet int",
+      "code": "#include <stdio.h>\nInt main()\n{\nnum=5;\nint const * p=&num;\n++(*p);\nprintf(\"%d\",num);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "Compile time error"
+        },
+        {
+          "key": "B",
+          "text": "Run time error"
+        },
+        {
+          "key": "C",
+          "text": "6"
+        },
+        {
+          "key": "D",
+          "text": "5"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0206"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 75,
+      "sourcePage": 56,
+      "question": "Consider the following code snippet int else",
+      "code": "#include <stdio.h>\nint main()\n{\nnum=5;\nstatic int num1=num;\nif(num== num1)\nprintf(\"equal\");\nif(num> num1)\nprintf(\"greater\");\nprintf(\"less\");\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "Compile time error"
+        },
+        {
+          "key": "B",
+          "text": "Equal"
+        },
+        {
+          "key": "C",
+          "text": "Greater"
+        },
+        {
+          "key": "D",
+          "text": "Less"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0207"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 76,
+      "sourcePage": 56,
+      "question": "Consider the following code snippet val What will be the",
+      "code": "#include <stdio.h>\nint test(int val)\n{\nstatic int number=1;\nif(val >=5)\nreturn val;\n= val +number;\nnumber++;\nreturn test(val);\n}\nvalue of test(1) will be:",
+      "options": [
+        {
+          "key": "A",
+          "text": "5"
+        },
+        {
+          "key": "B",
+          "text": "6"
+        },
+        {
+          "key": "C",
+          "text": "7"
+        },
+        {
+          "key": "D",
+          "text": "8"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0208"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 77,
+      "sourcePage": 57,
+      "question": "Consider the following code snippet",
+      "code": "#include <stdio.h>\nint main(void)\n{\nint num=10;\nconst int * p=&num;\n*p=100;\nprintf(\"i=%d\",num);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "i=100"
+        },
+        {
+          "key": "B",
+          "text": "i=10"
+        },
+        {
+          "key": "C",
+          "text": "compile time error"
+        },
+        {
+          "key": "D",
+          "text": "Runtime error"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected",
+        "duplicate-stem-of:q_0137,q_0197"
+      ],
+      "id": "q_0209"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 78,
+      "sourcePage": 57,
+      "question": "What will be the output if",
+      "code": "Part1 (int i) {\nif (i == 0) return;\nprintf (\"%d\", i);\npart2 (i - 2);\nprintf (\"%d\", i);\n}\nPart2 (int i) {\nif (i == 0) return;\nprintf (\"%d\",\ni;\npart1 (++i);\nprintf (\"%d\", i);\n}\npart1(5) is called",
+      "options": [
+        {
+          "key": "A",
+          "text": "53423122233445"
+        },
+        {
+          "key": "B",
+          "text": "53423120112233"
+        },
+        {
+          "key": "C",
+          "text": "53423122132435"
+        },
+        {
+          "key": "D",
+          "text": "53423120213243"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0210"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 79,
+      "sourcePage": 57,
+      "question": "Consider the following code snippet What would be the output for fun(5)",
+      "code": "int part(int n)\n{\nint x = 1, k;\nif (n =\n= 1) return x;\nfor (k =1; k<n; ++k)\nx = x + fun(k) * fun(n-k);\nreturn x;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "49"
+        },
+        {
+          "key": "B",
+          "text": "50"
+        },
+        {
+          "key": "C",
+          "text": "51"
+        },
+        {
+          "key": "D",
+          "text": "52"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected",
+        "exact-duplicate-of:q_0212"
+      ],
+      "id": "q_0211"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 80,
+      "sourcePage": 58,
+      "question": "Consider the following code snippet What would be the output for fun(5)",
+      "code": "int part(int x)\n{\nint i = 1, n;\nif (x = =\n1) return i;\nfor (n =1; n<x; ++n)\ni = i + fun(n) * fun(x-n);\nreturn i;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "49"
+        },
+        {
+          "key": "B",
+          "text": "50"
+        },
+        {
+          "key": "C",
+          "text": "51"
+        },
+        {
+          "key": "D",
+          "text": "52"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected",
+        "exact-duplicate-of:q_0211"
+      ],
+      "id": "q_0212"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 81,
+      "sourcePage": 58,
+      "question": "What will be the output of the following code? <string.h> //concatenates str1 and str2 and resultant string is stored in str1.",
+      "code": "#include <stdio.h>\n#include\nint main()\n{\nchar str1[] = \"VIT\", str2[] = \" Chennai \";\nstrcat(str1,str2);\nputs(str1);\nputs(str2);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "VIT Chennai Chennai"
+        },
+        {
+          "key": "B",
+          "text": "VIT"
+        },
+        {
+          "key": "C",
+          "text": "VIT Chennai"
+        },
+        {
+          "key": "D",
+          "text": "Compilation Error"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0213"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 82,
+      "sourcePage": 58,
+      "question": "Which of the following statement is more suitable while inserting in a circular queue",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "rear= rear +1"
+        },
+        {
+          "key": "B",
+          "text": "rear= rear-1"
+        },
+        {
+          "key": "C",
+          "text": "rear= (rear+1) mod SIZE"
+        },
+        {
+          "key": "D",
+          "text": "rear=rear mod SIZE +1"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0214"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 83,
+      "sourcePage": 58,
+      "question": "What will be the output of the C Program?",
+      "code": "#include<stdio.h>\nint main()\n{\nchar arr[]=\"function\\0\";\nint num=strlen(arr);\nprintf(\"Length of\nfunction is %d\",num);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "9"
+        },
+        {
+          "key": "B",
+          "text": "7"
+        },
+        {
+          "key": "C",
+          "text": "10"
+        },
+        {
+          "key": "D",
+          "text": "8"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0215"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 84,
+      "sourcePage": 59,
+      "question": "Consider the following 2-D array initialization. Which of the options is correct? int abc[2][]",
+      "code": "= {1, 2, 3 ,4 };",
+      "options": [
+        {
+          "key": "A",
+          "text": "Valid Initalization"
+        },
+        {
+          "key": "B",
+          "text": "Invalid Initialization"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0216"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 85,
+      "sourcePage": 59,
+      "question": "Consider the following 2-D character string MAX_STRING_SIZE 50 char arr[NUMBER_OF_STRING][MAX_STRING_SIZE] = {\"Getting into the Data Structure\", \"is interesting \", \"that make sure to effectively\", \"organize the data and\"\"access & apply the operation\" i++) What the above code will print",
+      "code": "#define NUMBER_OF_STRING 5\n#define\n};\nfor (int i = 0; i < NUMBER_OF_STRING;\n{\nprintf(\"'%s' has length %d\\n\", arr[i], strlen(arr[i]));\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "It will print the length of the string"
+        },
+        {
+          "key": "B",
+          "text": "It will print all strings in a string array with their lengths"
+        },
+        {
+          "key": "C",
+          "text": "It will print all the string in a string array"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0217"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 86,
+      "sourcePage": 59,
+      "question": "Structure in C language is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "a collection of elements that can be of same data type"
+        },
+        {
+          "key": "B",
+          "text": "a collection of elements that can be of different data type"
+        },
+        {
+          "key": "C",
+          "text": "Elements of a structure are called members"
+        },
+        {
+          "key": "D",
+          "text": "All the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0218"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 87,
+      "sourcePage": 60,
+      "question": "The function of strncat and strncmp in string.h library is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Appends not more than n characters from the string pointed to by source to the end of the string pointed to by destination plus a terminating Null-character and Comparison is limited to the number of characters specified during the function call respectively."
+        },
+        {
+          "key": "B",
+          "text": "Comparison is limited to the number of characters specified during the function call and appends not more than n characters from the string pointed to by source to the end of the string pointed to by destination plus a terminating Null-character respectively."
+        },
+        {
+          "key": "C",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0219"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 88,
+      "sourcePage": 60,
+      "question": "Consider the following statements about array and structure and choose the correct statements",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Array is a type of data structure used as container which can hold variables of same type whereas Structure data structure used as container which can hold variables of different types"
+        },
+        {
+          "key": "B",
+          "text": "Array it internally implements Pointer which always points to the first element of Array."
+        },
+        {
+          "key": "C",
+          "text": "Structure is a user defined datatype"
+        },
+        {
+          "key": "D",
+          "text": "All the statements are true"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0220"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 89,
+      "sourcePage": 60,
+      "question": "Which of the following is a properly defined struct?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "struct {int a;}"
+        },
+        {
+          "key": "B",
+          "text": "struct a_struct {int a;}"
+        },
+        {
+          "key": "C",
+          "text": "struct a_struct int a;"
+        },
+        {
+          "key": "D",
+          "text": "struct a_struct {int a;};"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0221"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 90,
+      "sourcePage": 60,
+      "question": "What is the output of C program with structures.? structure hotel",
+      "code": "int main()\n{\n{\nint items;\nchar name[10];\n}a;\nstrcpy(a.name, \"TAJ\");\na.items=10;\nprintf(\"%s\", a.name);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "TAJ"
+        },
+        {
+          "key": "B",
+          "text": "Empty string"
+        },
+        {
+          "key": "C",
+          "text": "Compiler error"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0222"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 91,
+      "sourcePage": 61,
+      "question": "What will be the output of the program in C?",
+      "code": "#include<stdio.h>\nint main()\n{\nant arr[5], i=0;\nwhile(i<5)\narr[i]=++i;\nfor(i=0;i<5;i++)\nprintf(\"%d,\",arr[i]);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "1,2,3,4,5"
+        },
+        {
+          "key": "B",
+          "text": "Garbage value, 1, 2, 3, 4,"
+        },
+        {
+          "key": "C",
+          "text": "0, 1, 2, 3, 4,"
+        },
+        {
+          "key": "D",
+          "text": "2, 3, 4, 5, 6,"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0223"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 92,
+      "sourcePage": 61,
+      "question": "What is the output of this program? int",
+      "code": "#include<stdio.h>\nvoid main()\n{\narr[10];\nprintf(\"%d %d\",arr[-2],arr[11]);\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "0 0"
+        },
+        {
+          "key": "B",
+          "text": "Garbage value 0"
+        },
+        {
+          "key": "C",
+          "text": "Garbage value Garbage value"
+        },
+        {
+          "key": "D",
+          "text": "Compilation Error"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0224"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 93,
+      "sourcePage": 61,
+      "question": "Which of the following recurrence cannot be solved using a master method?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "T (n) = 2T (n/4) + n ^0.51"
+        },
+        {
+          "key": "B",
+          "text": "T (n) = 64T (n/8) - n^2 log n"
+        },
+        {
+          "key": "C",
+          "text": "T (n) = √ 2T (n/2) + log n"
+        },
+        {
+          "key": "D",
+          "text": "T (n) = 16T (n/4) + n!"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0225"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 94,
+      "sourcePage": 62,
+      "question": "Let x be an array. Which of the following operations is illegal? (I) ++x (II) x+1 (III) x++ (IV) x*2",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "I and II"
+        },
+        {
+          "key": "B",
+          "text": "I, II and III"
+        },
+        {
+          "key": "C",
+          "text": "I, III and IV"
+        },
+        {
+          "key": "D",
+          "text": "III and IV"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0226"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 95,
+      "sourcePage": 62,
+      "question": "What is the right way to Initialize array?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "int num[6] = { 2, 4, 12, 5, 45, 5 };"
+        },
+        {
+          "key": "B",
+          "text": "int n{} = { 2, 4, 12, 5, 45, 5 };"
+        },
+        {
+          "key": "C",
+          "text": "int n{6} = { 2, 4, 12 };"
+        },
+        {
+          "key": "D",
+          "text": "int n(6) = { 2, 4, 12, 5, 45, 5 };"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0227"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 96,
+      "sourcePage": 62,
+      "question": "How many stacks are required to implement a queue",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "3"
+        },
+        {
+          "key": "D",
+          "text": "4"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0228"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 97,
+      "sourcePage": 62,
+      "question": "char What will be the output of the above program",
+      "code": "#include<stdio.h>\n#include<conio.h>\nvoid main()\n{\nstr[]=\"VIT\\0Chennai\";\nprintf(\"%s\",str);\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "VIT Chennai"
+        },
+        {
+          "key": "B",
+          "text": "Chennai"
+        },
+        {
+          "key": "C",
+          "text": "VIT\\0Chennai"
+        },
+        {
+          "key": "D",
+          "text": "VIT"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0229"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 98,
+      "sourcePage": 63,
+      "question": "What is the output of C program with string",
+      "code": "int main()\n{\nchar str[]={'V','I','T'};\nprintf(\"%s\",str);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "VIT"
+        },
+        {
+          "key": "B",
+          "text": "V"
+        },
+        {
+          "key": "C",
+          "text": "VIT\\0"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0230"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 99,
+      "sourcePage": 63,
+      "question": "What is the output of following C program",
+      "code": "int main()\n{\nchar str1[]=\"VIT\";\nchar str2[20];\nstr2= str1;\nprintf(\"%s\",str2);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "VIT"
+        },
+        {
+          "key": "B",
+          "text": "VIT\\0"
+        },
+        {
+          "key": "C",
+          "text": "Compile Error"
+        },
+        {
+          "key": "D",
+          "text": "V"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0231"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 100,
+      "sourcePage": 63,
+      "question": "what will be the output of the program",
+      "code": "#include<stdio.h>\n#include<string.h>\nvoid main()\n{\nchar str1[20]= \"VIT\", char str2[20]= \"Chennai\";\nprintf(\"%s\",strcpy(str2,strcat(str1,str2)));\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "ChennaiVIT"
+        },
+        {
+          "key": "B",
+          "text": "Chennai"
+        },
+        {
+          "key": "C",
+          "text": "VIT Chennai"
+        },
+        {
+          "key": "D",
+          "text": "VIT"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0232"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 101,
+      "sourcePage": 64,
+      "question": "char str1[] = \"VIT\", //concatenates str1 and str2 and resultant string is stored in str1.",
+      "code": "#include <stdio.h>\n#include <string.h>\nint main()\n{\nstr2[] = \" Chennai \";\nstrcat(str1,str2);\nputs(str1);\nputs(str2);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "VIT Chennai Chennai"
+        },
+        {
+          "key": "B",
+          "text": "VIT"
+        },
+        {
+          "key": "C",
+          "text": "VIT Chennai"
+        },
+        {
+          "key": "D",
+          "text": "Compilation Error"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0233"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 102,
+      "sourcePage": 64,
+      "question": "Given an array arr = {45,77,89,90,94,99,100} and key = 99; what are the mid values(corresponding array elements) in the first and second levels of recursion?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "90 and 99"
+        },
+        {
+          "key": "B",
+          "text": "90 and 94"
+        },
+        {
+          "key": "C",
+          "text": "89 and 99"
+        },
+        {
+          "key": "D",
+          "text": "89 and 94"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0234"
+    },
+    {
+      "topic": "Programming and Data Structures",
+      "sourceSection": "DSA",
+      "sourceNumber": 103,
+      "sourcePage": 64,
+      "question": "The number of swapping needed to sort the numbers 5,1,4,3,2 in ascending order, using bubble sort is:",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "10"
+        },
+        {
+          "key": "B",
+          "text": "9"
+        },
+        {
+          "key": "C",
+          "text": "8"
+        },
+        {
+          "key": "D",
+          "text": "7"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0235"
+    }
+  ]
+}

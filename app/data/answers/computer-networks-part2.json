@@ -1,0 +1,665 @@
+{
+  "topic": "Computer Networks",
+  "answers": [
+    {
+      "id": "q_0067",
+      "subtopic": "Switching and routing",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "A single-stage (space-division) switch is a crossbar in which every input can be connected to every output, so one cross point is needed for each input-output pair. The number of cross points is therefore inputs x outputs = 30 x 30 = 900. A multistage switch would use far fewer cross points per stage, which is exactly why it is used for large switches.\n\nWhy C is correct: 30 inputs x 30 outputs = 900 cross points, which is what a single-stage crossbar requires.\n\nWhy the others are wrong:\n- A: 20 is not related to the input-output pairing; it appears nowhere in the calculation.\n- B: 30 counts the inputs (or outputs) alone, not every possible connection between them.\n- D: 600 would correspond to 30 x 20, mixing in a figure that is not given.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0068",
+      "subtopic": "Socket programming",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A TCP server passively waits for clients: it creates a socket, binds it to a well-known port, listens for connection requests and accepts them. connect() is the client-side call that initiates the three-way handshake with a server, so a server never uses it.\n\nWhy A is correct: connect() establishes an outbound connection to a remote server and is only called by the TCP client.\n\nWhy the others are wrong:\n- B: socket() creates the communication endpoint and is used by the server too.\n- C: bind() attaches the server socket to a well-known port, which is what makes it reachable by clients.\n- D: listen() puts the bound socket into the listening state so incoming connection requests can be queued.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0069",
+      "subtopic": "Data link layer and framing",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "Flow control is a data link layer function: the receiver advertises how much it can accept (its window) and the sender must not overrun the receiver's buffer. Of the OSI layers offered here, only the data link layer performs this peer-to-peer error and flow control over a link. (TCP also does end-to-end flow control, but TCP is not one of the options.)\n\nWhy D is correct: error and flow control over a single link are data link layer functions; the offered layers above it do not perform it.\n\nWhy the others are wrong:\n- A: the application layer provides network services to user programs, not link flow control.\n- B: the presentation layer translates, compresses and encrypts data formats.\n- C: the session layer establishes, manages and terminates sessions.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0070",
+      "subtopic": "Error detection and correction",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "The Hamming distance is the number of bit positions in which two equal-length binary words differ, which equals the number of 1 bits in their XOR. Here 10101010 XOR 01010101 = 11111111, which has eight 1 bits. The two words are exact bit-for-bit complements, so every one of the eight positions differs.\n\nWhy A is correct: the XOR of 10101010 and 01010101 is 11111111, giving a Hamming distance of 8.\n\nWhy the others are wrong:\n- B: a distance of 0 would mean the two words are identical, which they are not.\n- C: 4 would mean only half the positions differ, but all eight positions differ.\n- D: the distance is computable and equals 8, so 'none' does not apply.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0071",
+      "subtopic": "IP addressing and subnetting",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "A /20 prefix means 20 network bits, giving the mask 255.255.240.0, so the third octet is masked with 240 and the fourth octet is ignored. Applying the mask to 12.12.12.12: third octet 12 AND 240 = 0, fourth octet 12 AND 0 = 0, giving the network address 12.12.0.0. The block spans 12.12.0.0 to 12.12.15.255, so 12.12.1.1 and 12.12.0.2 are host addresses inside it, not the network address.\n\nWhy D is correct: ANDing 12.12.12.12 with the /20 mask 255.255.240.0 yields the network address 12.12.0.0.\n\nWhy the others are wrong:\n- A: 12.12.1.1 is a usable host address in a /24 sub-block, not the network address of the /20.\n- B: 12.12.0.2 is a host address; a network address never ends in the host-range value 2.\n- C: 12.12.12.0 is the network address of a /24, not of the /20 block.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0072",
+      "subtopic": "Routing protocols",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "OSPF is a link-state protocol whose metric is a configurable cost, and the reference method computes the interface cost from the link's throughput (cost = reference bandwidth divided by the interface bandwidth), so throughput is a routing cost variable. RIP is a distance-vector protocol that counts hops only, and BGP is path-vector based on the AS path. Only OSPF uses throughput in the routing decision.\n\nWhy C is correct: OSPF's link cost is derived from interface throughput (reference bandwidth / bandwidth), so throughput is a cost variable in routing decisions.\n\nWhy the others are wrong:\n- A: RIP uses hop count only and ignores link bandwidth.\n- B: distance-vector routing in general uses hop count as its only metric.\n- D: interdomain (BGP) routing uses AS path length, not link throughput.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0073",
+      "subtopic": "IP addressing and subnetting",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "The IPv6 traffic class field performs exactly the job of the IPv4 Type of Service field: it tells routers how to prioritise or otherwise treat the datagram. IPv6 simply renamed ToS to 'traffic class' and later refined it into DifferServ code points. Fragmentation, options and switching techniques are unrelated header concepts.\n\nWhy C is correct: the IPv6 traffic class field is the direct successor of the IPv4 Type of Service (ToS) field.\n\nWhy the others are wrong:\n- A: the fragmentation field is a separate IPv4 field; IPv6 only fragments at the source and has no such field.\n- B: fast switching is a router forwarding technique, not a header field in either version.\n- D: the IPv4 option field carries optional control information, not service prioritisation.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0074",
+      "subtopic": "IP addressing and subnetting",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Classful addressing is decided by the leading bits of the first octet: 0 for Class A, 10 for Class B, 110 for Class C and 1110 for Class D. The address starts 11011110, whose first two bits are 10, so it falls in the Class B range 128.0.0.0 to 191.255.255.255. Class C would require the first three bits to be 110, which is not the case here.\n\nWhy B is correct: the first two bits of 11011110 are 10, which is the Class B signature.\n\nWhy the others are wrong:\n- A: Class A requires a leading 0 bit, so the first octet must be 0-127.\n- C: Class C requires the leading bits 110 (first octet 192-223), but this address begins 10.\n- D: Class D requires the leading bits 1110 (224-239) and is reserved for multicasting.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0075",
+      "subtopic": "OSI and TCP/IP models",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Multiplexing is the transport layer's job: it aggregates the data of the various application processes, adds the appropriate port numbers so the destination can demultiplex it, and passes the resulting segment down to the network layer. The network layer then adds the IP header and routes the packet toward the destination. That is what gives process-to-process delivery.\n\nWhy C is correct: the transport layer multiplexes the data of all processes and passes it to the network layer.\n\nWhy the others are wrong:\n- A: the application layer produces application data; it does not aggregate processes' data for the session layer.\n- B: the presentation layer formats data and the session layer manages dialogs; neither aggregates process data.\n- D: the network layer passes packets to the data link layer, but it does not aggregate data coming from processes.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0076",
+      "subtopic": "Application layer protocols",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "HTTP, SMTP and SNMP are all application layer protocols: each defines an application-specific conversation with a host over a well-known TCP port. Options B and C mix application protocols with ICMP, IGMP and ARP, which are internet/network layer mechanisms used inside the IP datagram, not application protocols.\n\nWhy A is correct: HTTP, SMTP and SNMP all operate at the application layer of the TCP/IP model.\n\nWhy the others are wrong:\n- B: ICMP and IGMP are network/internet layer protocols, so the set is mixed.\n- C: ARP and ICMP are network layer protocols; only DHCP in that set is application layer.\n- D: option A already lists a genuine set of application layer protocols.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0077",
+      "subtopic": "Transport layer",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "In the sliding window (acknowledgement-based) flow control scheme every correctly received data frame is individually acknowledged, so each of the 100 good frames produces one ACK frame from the receiver. There is no extra final ACK beyond one per frame, and no frame goes unacknowledged, because all 100 were received correctly.\n\nWhy B is correct: one ACK is returned for each of the 100 good data frames received, so 100 ACK frames are sent.\n\nWhy the others are wrong:\n- A: 99 would mean one frame was left unacknowledged, but all 100 arrived correctly.\n- C: 101 would require one more ACK than there were good frames received.\n- D: with ordinary sliding window each good frame is acknowledged individually, so the count is exactly 100, not an unspecified number below it.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0078",
+      "subtopic": "Error detection and correction",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "The Internet checksum used by IP, TCP and UDP is computed with one's-complement addition: the 16-bit words are added with end-around carry, the sum is complemented, and at the receiver the recomputed sum comes out as all ones if the data is intact. Two's complement arithmetic is the ordinary arithmetic used by processors for subtraction, not for the Internet checksum.\n\nWhy A is correct: the Internet checksum is defined using one's-complement (end-around-carry) addition and its complement.\n\nWhy the others are wrong:\n- B: two's complement arithmetic is standard integer arithmetic, not the checksum rule.\n- C: a matching option is present (one's complement), so 'none of the options' cannot be right.\n- D: 'None' is meaningless here because option A matches the Internet checksum definition.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0079",
+      "subtopic": "Socket programming",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A socket endpoint is named by the host's IP address plus the port number of the process that owns it. The IP address gives host-to-host delivery and the port number gives process-to-process delivery, which together form the socket address used to set up a connection. MAC addresses identify network interfaces, and e-mail addresses are irrelevant to sockets.\n\nWhy A is correct: a socket address is the combination of an IP address and a port number.\n\nWhy the others are wrong:\n- B: a MAC address is a link-layer hardware address and carries no port or process identifier.\n- C: port number plus an application ID does not identify the host on the network.\n- D: e-mail addresses play no part in socket addressing.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0080",
+      "subtopic": "Transport layer",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "TCP's sending window is limited by two independent mechanisms: the receiver's advertised window (flow control) and the congestion window (congestion control). The amount that may actually be in flight is the smaller of the two, min(rwnd, cwnd). With rwnd = 5KB and cwnd = 2KB, min(5, 2) = 2KB, so congestion control is the binding constraint.\n\nWhy B is correct: the effective sending window is min(receiver window, congestion window) = min(5KB, 2KB) = 2KB.\n\nWhy the others are wrong:\n- A: 3KB is just the difference between the two window sizes, which has no meaning in TCP.\n- C: 4KB does not follow from any combination of the two given windows.\n- D: 5KB is the receiver window, but the sender can never exceed the congestion window.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0081",
+      "subtopic": "Error detection and correction",
+      "difficulty": "hard",
+      "correctAnswer": "C",
+      "explanation": "With 11 bits (7 data plus 4 parity bits at positions 1, 2, 4 and 8) the syndrome is decoded by error position = p1*1 + p2*2 + p4*4 + p8*8. Taking the printed result 0101 in the order p8 p4 p2 p1 gives 1 + 4 = 5, which is one of the offered options, so bit 5 is the intended answer. Note that recomputing the parity checks of the printed codeword 11001100111 from scratch actually yields syndrome 0001 (position 8), so the printed syndrome and the printed codeword do not agree.\n\nWhy C is correct: read in the order p8 p4 p2 p1, the printed syndrome 0101 gives error position 1 + 4 = 5.\n\nWhy the others are wrong:\n- A: bit 1 would require syndrome 0001, which is not the printed result.\n- B: bit 3 would require syndrome 0011, which is not the printed result.\n- D: 'No Error' would mean an all-zero syndrome, but a syndrome was reported.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Inconsistent data: recomputing the Hamming parity checks of 11001100111 gives syndrome 0001 (error at bit 8, not an option), not the printed 0101. Answered from the printed syndrome as the question instructs; 0101 read as p1p2p4p8 would instead give bit 10."
+    },
+    {
+      "id": "q_0082",
+      "subtopic": "IP addressing and subnetting",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "An IPv4 header has a fixed portion of 20 bytes (version/IHL, type of service, total length, identification/flags/fragment offset, TTL, protocol, checksum, source and destination addresses) plus an options field whose length is a multiple of 4 bytes. If the options occupy 20 bytes, the total header size is 20 + 20 = 40 bytes. The 20-byte figure on its own is only the minimum header without options.\n\nWhy D is correct: 20 bytes of fixed fields plus the 20 bytes of options stated in the question gives a 40-byte IP header.\n\nWhy the others are wrong:\n- A: 10 bytes is far below the 20-byte minimum IPv4 header.\n- B: 20 bytes counts only the fixed fields and ignores the 20 bytes of options given in the question.\n- C: 30 bytes would correspond to 10 bytes of options, not the 20 bytes stated.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0083",
+      "subtopic": "Error detection and correction",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Modulo-2 arithmetic is XOR arithmetic: each bit is added modulo 2, so 1 + 1 = 2 mod 2 = 0 because two ones cancel. Only different bits (1 and 0) produce a 1. This is the basis of modulo-2 division used in CRC error detection.\n\nWhy A is correct: in modulo-2 (XOR) arithmetic 1 + 1 = 0.\n\nWhy the others are wrong:\n- B: a result of 1 would come from adding a 1 and a 0.\n- C: 2 is the ordinary arithmetic sum before reduction, not the modulo-2 result.\n- D: '11' is the two operands written side by side, not an arithmetic result.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0084",
+      "subtopic": "Physical layer and transmission",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A periodic signal repeats a pattern; the completion of one full pattern is called a cycle, and the time in seconds taken by that cycle is its period. So the question, which asks for the name of the completed pattern, is answered by cycle rather than period. Frame and segment are data units of the data link and transport layers and have nothing to do with signals.\n\nWhy B is correct: the completion of one full pattern of a signal is called a cycle.\n\nWhy the others are wrong:\n- A: the period is the time in seconds that one cycle takes, not the completion itself.\n- C: a frame is the data link layer unit of header, payload and trailer.\n- D: a segment is the transport layer (TCP) unit of data.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0085",
+      "subtopic": "Application layer protocols",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "FTP (RFC 959) is a client/server protocol: a server listens on port 21 and a client opens the connection, issues commands and receives the data, so the two sides have fixed unequal roles. It is not peer-to-peer, not tied to cloud services and it does not transfer files in parallel.\n\nWhy A is correct: FTP follows a client/server approach, with the client always initiating and the server responding.\n\nWhy the others are wrong:\n- B: peer-to-peer describes BitTorrent-style file sharing, not FTP.\n- C: FTP predates and is independent of cloud storage platforms.\n- D: FTP transfers are sequential request/response exchanges, not parallel transfers.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0086",
+      "subtopic": "Application layer protocols",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "FTP uses two kinds of TCP connection: one control connection on port 21 that stays open for the whole session, and a separate data connection on port 20 opened for each file transferred. Ten files therefore need 1 control connection + 10 data connections = 11 connections in total.\n\nWhy B is correct: one control connection plus one data connection per file gives 1 + 10 = 11 TCP connections.\n\nWhy the others are wrong:\n- A: 10 would leave out the control connection that carries every command and reply.\n- C: 12 would imply one more connection than FTP actually opens.\n- D: 13 would imply two surplus connections that FTP never creates.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0087",
+      "subtopic": "Application layer protocols",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Mail is pushed from client to server by SMTP, but the receiver retrieves and reads it from the mail server with a mail access protocol such as IMAP (or POP3). IMAP leaves messages on the server and lets the client manage folders and message state. FTP is for files and TCP is only the transport underneath.\n\nWhy B is correct: IMAP is the mail access protocol a receiver uses to fetch and manage e-mail stored on its mail server.\n\nWhy the others are wrong:\n- A: SMTP pushes mail from client to server; it is not used to read mail back.\n- C: FTP is a file transfer protocol and has no role in e-mail retrieval.\n- D: TCP carries the mail session but does not define how mail is retrieved or stored.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0088",
+      "subtopic": "Physical layer and transmission",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "An analog signal is continuous in both time and amplitude, so within its range it can take an infinite number of distinct values. A digital signal, by contrast, is limited to a finite set of discrete values. Peak is only the maximum amplitude a signal reaches, not a classification of signals.\n\nWhy B is correct: an analog signal is continuous and therefore admits infinitely many values in its range.\n\nWhy the others are wrong:\n- A: peak is the extreme amplitude of a signal, not a type of signal.\n- C: a digital signal takes only a finite number of discrete values.\n- D: 'None of the options' is wrong because an analog signal is one of the options.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0089",
+      "subtopic": "Physical layer and transmission",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Periodicity is a property of the pattern a signal follows, not of whether the signal is analog or digital. A sine wave is a periodic analog signal and a periodic bit stream is a periodic digital signal, while speech and random noise are aperiodic in either domain. So both kinds of signal may be periodic or non-periodic.\n\nWhy C is correct: periodicity is independent of the analog/digital distinction, so both kinds of signal can be periodic or non-periodic.\n\nWhy the others are wrong:\n- A: not every signal repeats a pattern; speech and noise are aperiodic.\n- B: many analog and digital signals never repeat a measurable pattern.\n- D: 'None of the options' is wrong because option C covers both cases.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0090",
+      "subtopic": "Application layer protocols",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "Configuration management in network administration means configuring (adding, modifying, updating or replacing) the network's hardware and software and documenting those changes; it is one of the five areas of network management together with fault, accounting, performance and security management. Monitoring user behaviour belongs to accounting management and controlling access to the network belongs to security management, while option C is false as printed because software updates must be documented as well. That leaves the reconfiguration/replacement of network components as the only defensible printed choice.\n\nWhy B is correct: modifying or replacing the network's hardware and software components is the reconfiguration part of configuration management.\n\nWhy the others are wrong:\n- A: monitoring user behaviour and usage patterns is the job of accounting management.\n- C: as printed it says software updates need not be documented, but configuration management documents hardware and software changes alike.\n- D: controlling users' access to the network is security management, not configuration management.",
+      "confidence": "low",
+      "needsReview": true,
+      "reviewReason": "No printed option states the standard answer (documentation of both hardware and software changes). Option C appears to be a mangled version of that answer but as printed it asserts software updates need not be documented, which is false, so B was chosen as the best printed option."
+    },
+    {
+      "id": "q_0091",
+      "subtopic": "OSI and TCP/IP models",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "The network layer's responsibilities are logical addressing, routing and internetworking, i.e. forwarding packets hop by hop between networks. Error control in the sense of detecting and correcting errors is a data link layer and transport layer function, so among the items listed it is the one that does not belong to the network layer.\n\nWhy C is correct: error control (error detection and correction) is a data link/transport layer function, not a network layer function.\n\nWhy the others are wrong:\n- A: routing is a core network layer function.\n- B: inter-networking, joining different networks, is a core network layer function.\n- D: since error control really is the odd item out, 'None of the options' is wrong.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0092",
+      "subtopic": "Switching and routing",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "In a datagram (connectionless) network each packet is routed independently, so a packet must carry a destination address that is meaningful across the whole internet - global addressing - as well as the local link address of the next hop - local addressing. In a virtual-circuit network the route is set up first, so only the local (virtual circuit identifier) addressing is needed per hop.\n\nWhy B is correct: in a datagram network packets are routed independently, so both global and local addressing are involved.\n\nWhy the others are wrong:\n- A: a virtual circuit network establishes the path first, so it does not need global addressing for every packet.\n- C: circuit switching is a transmission technique, not an addressing model.\n- D: only the datagram case involves the global-plus-local addressing pair described.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0093",
+      "subtopic": "Switching and routing",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Store and forward means a node receives an entire packet, buffers it until it has arrived in full, and only then forwards it on the next link. That is exactly the packet switching technique, in which each packet is switched independently (typically in a datagram network). Circuit switching streams bits continuously without buffering whole units, and cell switching is the fixed-size ATM variant.\n\nWhy A is correct: buffering complete packets before forwarding them is the defining behaviour of store-and-forward, i.e. packet switching.\n\nWhy the others are wrong:\n- B: circuit switching sets up a path and streams bits continuously; it does not store and forward units.\n- C: cell switching uses fixed 53-byte cells, which is a special case rather than the definition used here.\n- D: 'None' is wrong because packet switching does use store and forward.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0094",
+      "subtopic": "Switching and routing",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Circuit switching is a network layer switching technique: the network layer sets up a dedicated end-to-end path (a virtual circuit) between the source and destination and reserves resources for the duration of the session. The physical layer merely carries bits and the data link layer frames them over a single hop, neither of which switches between end systems.\n\nWhy C is correct: circuit switching, including virtual circuits, is implemented in the network layer, which sets up the dedicated end-to-end path.\n\nWhy the others are wrong:\n- A: the physical layer only transmits raw signals; it cannot establish or switch paths.\n- B: the data link layer frames and links one hop; it does not build an end-to-end circuit.\n- D: 'None' is wrong because the network layer is the right layer.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0095",
+      "subtopic": "Switching and routing",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Packet switching is the network layer's delivery technique: each datagram is routed independently and forwarded hop by hop by the network layer, with no dedicated path reserved in advance. The physical layer only carries signals and the data link layer handles one-hop framing and medium access, neither of them performing packet switching between networks.\n\nWhy C is correct: packet switching is the network layer's method of delivering datagrams across a network of routers.\n\nWhy the others are wrong:\n- A: the physical layer carries signals and has no notion of packets or switching.\n- B: the data link layer delivers frames over a single link only.\n- D: 'None' is wrong because the network layer is the right layer.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0096",
+      "subtopic": "Switching and routing",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A connection-oriented service requires a connection to be established before data can flow and released afterwards. Circuit switching does exactly that: after a setup phase a dedicated path with reserved resources carries the session's traffic. Packet switching in its datagram form is connectionless, and a router is a device rather than a technique.\n\nWhy B is correct: circuit switching reserves a dedicated path after a setup phase, which is the definition of a connection-oriented technique.\n\nWhy the others are wrong:\n- A: packet switching (datagram) forwards packets with no setup, so it is connectionless.\n- C: a router is a network device, not a connection-oriented technique.\n- D: 'None' is wrong because circuit switching is listed.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0097",
+      "subtopic": "Switching and routing",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A connectionless service transmits each packet independently, with the full destination address on every packet and no prior setup phase. Datagram packet switching behaves exactly this way. Circuit switching must establish a connection first, and a router is a piece of hardware rather than a switching technique.\n\nWhy A is correct: datagram packet switching forwards each packet independently with no connection setup, i.e. it is connectionless.\n\nWhy the others are wrong:\n- B: circuit switching must establish a dedicated connection before data flows.\n- C: a router is hardware, not a connectionless technique.\n- D: 'None' is wrong because packet switching is listed.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0098",
+      "subtopic": "Switching and routing",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A dedicated connection between the two hosts means the network reserves resources and a path for the exclusive use of that conversation, which is the defining behaviour of circuit switching after its setup phase. Packet switching shares links dynamically with no reservation, and cell switching is the fixed-size (53-byte) technique used inside ATM networks rather than a dedicated connection.\n\nWhy B is correct: circuit switching establishes a connection first and dedicates resources (a path) to that pair of hosts.\n\nWhy the others are wrong:\n- A: packet switching neither establishes a connection nor reserves a path.\n- C: cell switching is ATM's fixed-size packet technique, not a dedicated connection.\n- D: 'None' is wrong because circuit switching is listed.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0099",
+      "subtopic": "Switching and routing",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "In a mesh topology every node is connected to every other node, so there are many parallel links and alternative routes. That redundancy is what makes a mesh highly fault tolerant: traffic can be rerouted if a link or node fails. Redundancy, not a single point of failure, is the direct consequence of the mesh structure.\n\nWhy A is correct: the multiple parallel links of a mesh provide redundant connections when any single link or node fails.\n\nWhy the others are wrong:\n- B: a single point of failure is a property of bus and star topologies, not mesh.\n- C: adding devices to a mesh is hard and expensive, but that is a cost issue, not the defining outcome asked for here.\n- D: 'None' is wrong because redundancy is a genuine property of mesh.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0100",
+      "subtopic": "Switching and routing",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "In a star topology every device has its own link to one central hub or switch, and there are no links directly between the peripheral devices. That is the definition of a star. All-to-all connectivity describes a mesh, and connecting each device to two others describes a ring.\n\nWhy C is correct: a star is defined by every device being individually connected to a single central node.\n\nWhy the others are wrong:\n- A: every device connected to all other devices describes a full mesh.\n- B: every device connected to two other nodes describes a ring.\n- D: 'None' is wrong because option C is the standard definition of a star.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0101",
+      "subtopic": "TCP and UDP",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "TCP implements both error control (checksum, sequence numbers, acknowledgements and retransmission) and flow control (the receiver's sliding window). UDP provides neither, it is connectionless and simply hands datagrams to IP. Frame Relay is an unreliable packet-switching service that leaves error recovery to the upper layers.\n\nWhy B is correct: TCP provides both error control and flow control through its checksums, acknowledgements and sliding window.\n\nWhy the others are wrong:\n- A: Frame Relay is unreliable and leaves error recovery to the network or higher layers.\n- C: UDP provides neither error control nor flow control.\n- D: 'None' is wrong because TCP is listed.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0102",
+      "subtopic": "Transport layer",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "In ATM the adaptation layers divide as follows: AAL1 is simple and connectionless, AAL2 provides a connection-oriented service, AAL3 and AAL4 were defined for connectionless services such as IP, and AAL5 is a simple connectionless service. So the connection-oriented data service among the options is AAL 2.\n\nWhy A is correct: AAL2 is the ATM adaptation layer that provides a connection-oriented service.\n\nWhy the others are wrong:\n- B: AAL3, used with AAL4, carries connectionless services such as IP over ATM.\n- C: AAL4 was defined as the companion of AAL3 for connectionless service.\n- D: 'None' is wrong because AAL2 is connection oriented.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0103",
+      "subtopic": "Switching and routing",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "Traffic that arrives at a constant rate and continues for a long time is exactly the pattern for which circuit switching is designed: once the reserved bandwidth is in use there is no per-packet header, no queuing and no variation in delay or quality. Packet switching pays statistical multiplexing and is at its best with bursty traffic, where idle capacity can be recovered.\n\nWhy B is correct: constant-rate, long-duration traffic is the traffic pattern that circuit switching is designed to serve.\n\nWhy the others are wrong:\n- A: packet switching adds per-packet headers and delay and suits bursty, variable-rate traffic.\n- C: datagram is the connectionless packet-switching approach, also a poor fit for reserved constant-rate traffic.\n- D: 'All the options' cannot be right because packet and datagram approaches are the poor choice here.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0104",
+      "subtopic": "OSI and TCP/IP models",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The TCP/IP (Internet) model has four or five layers - application, transport, internet and network access/physical - and it folds the OSI presentation and session functions into the application layer. Therefore the session layer has no separate existence in the TCP/IP model, whereas both the network layer and the transport layer definitely exist in it.\n\nWhy C is correct: the session layer is an OSI layer with no separate counterpart in the TCP/IP model.\n\nWhy the others are wrong:\n- A: the network (internet) layer is definitely part of the TCP/IP model.\n- B: the transport layer is definitely part of the TCP/IP model.\n- D: 'None' is wrong because the session layer really is absent.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0105",
+      "subtopic": "Physical layer and transmission",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "The achievable data rate is set by the transmission medium and signalling - cable type and category, connectors, voltage levels and signal frequency - all of which belong to the physical layer. The higher layers only manipulate the bits the physical layer delivers, so the physical layer determines how fast data can actually be transmitted.\n\nWhy B is correct: the physical layer (medium and signalling) determines the transmission speed of data.\n\nWhy the others are wrong:\n- A: the logical/network layer handles addressing and routing, not the wire speed.\n- C: the data link layer frames bits and controls access; the actual rate is a physical property.\n- D: 'None' is wrong because the physical layer does set the transmission speed.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0106",
+      "subtopic": "OSI and TCP/IP models",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "In the OSI model the presentation layer is responsible for data translation, compression and encryption/decryption, i.e. making the data format and its protection meaningful to the application. The session layer manages dialogs between applications and the application layer provides network services such as file transfer and e-mail to user programs.\n\nWhy C is correct: the presentation layer performs data translation including encryption and decryption.\n\nWhy the others are wrong:\n- A: the session layer establishes, manages and terminates conversations, not cipher operations.\n- B: the application layer provides services such as FTP and e-mail to user programs.\n- D: 'None' is wrong because the presentation layer does perform encryption/decryption.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0107",
+      "subtopic": "Physical layer and transmission",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Half duplex means communication can go in both directions but never simultaneously, so the channel must alternate between the two ends. A walkie-talkie is the standard example because only one side can press the push-to-talk button at a time. A cordless phone and a telephone both support simultaneous two-way speech, which is full duplex.\n\nWhy C is correct: a walkie-talkie transmits in only one direction at any instant, which is half duplex.\n\nWhy the others are wrong:\n- A: a cordless phone is a telephone and supports simultaneous two-way conversation (full duplex).\n- B: a plain telephone is full duplex, letting both parties talk at the same time.\n- D: 'None' is wrong because the walkie talkie is listed.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0108",
+      "subtopic": "Physical layer and transmission",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A LAN is by definition a network covering a limited area - a room, a building or a small campus - conventionally a few kilometres at most, because its high rate and low error rate only hold over short distances. The other figures correspond to larger network types: 100-1000 km is a WAN and 5 to 50 km is a metropolitan area network.\n\nWhy A is correct: a LAN covers a limited area, conventionally a few kilometres.\n\nWhy the others are wrong:\n- B: 100-1000 kilometres is the coverage range of a WAN.\n- C: 5 to 50 kilometres is characteristic of a metropolitan area network.\n- D: 'None' is wrong because a few kilometres is the accepted LAN coverage figure.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0109",
+      "subtopic": "Physical layer and transmission",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "A LAN's defining advantage is a very high data rate over a short distance; the conventional textbook figures quoted for LAN technology are rates up to 100 Mbps (Fast Ethernet), with Gigabit Ethernet (1000 Mbps) used where higher rates are needed. Of the choices, 100 Mbps is the classic LAN figure, although the option set is dated because modern LANs routinely exceed it.\n\nWhy A is correct: LAN technology is conventionally quoted as supporting data rates up to 100 Mbps, far above WAN speeds.\n\nWhy the others are wrong:\n- B: 20 Mbps is below even Fast Ethernet and is not a usual LAN rate ceiling.\n- C: 1000 Mbps is Gigabit Ethernet, a defensible modern LAN rate but not the classic figure this item expects.\n- D: 'None' is wrong because a LAN rate is listed.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Loosely worded and date sensitive: both A (100 Mbps, the conventional LAN figure) and C (1000 Mbps, Gigabit Ethernet) are defensible; answered with the classic textbook figure."
+    },
+    {
+      "id": "q_0110",
+      "subtopic": "MAC and addressing",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "ARP (Address Resolution Protocol) translates a protocol-level (logical) address - the IPv4 address - into the corresponding physical MAC address so that a frame can be delivered on the local link. The reverse mapping (physical to logical) is the job of RARP. ARP therefore operates in the logical-to-physical direction.\n\nWhy A is correct: ARP maps a logical address (IP) to the corresponding physical address (MAC).\n\nWhy the others are wrong:\n- B: mapping a physical address to a logical address is RARP's job, not ARP's.\n- C: mapping a virtual address to a logical address is not what ARP does.\n- D: 'None' is wrong because option A states ARP's function correctly.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0111",
+      "subtopic": "MAC and addressing",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A MAC address is 48 bits (6 bytes) written as six colon-separated hexadecimal octets. Option B has exactly six octets (07, 01, 02, 01, 2C, 4B), which is 48 bits. Option A is dotted-decimal IPv4 notation and option C has only four octets, which is too short to be a MAC address.\n\nWhy B is correct: 07:01:02:01:2C:4B is a 48-bit (6-octet) hexadecimal hardware address, the MAC address format.\n\nWhy the others are wrong:\n- A: 192.168.10.2 is a 32-bit dotted-decimal IPv4 address, not a MAC address.\n- C: 192:220:02:01:2C has only four octets (32 bits), short of the required 48 bits.\n- D: 'None' is wrong because option B is a valid MAC address.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0112",
+      "subtopic": "IP addressing and subnetting",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "An IPv4 address is 32 bits wide, normally written as four dotted-decimal octets of 8 bits each. The 128-bit width belongs to IPv6, and 64 bits is not an IP address width at all.\n\nWhy C is correct: IPv4 uses a 32-bit (4-byte) address space written as four dotted-decimal octets.\n\nWhy the others are wrong:\n- A: 64 bits is not the width of an IPv4 address.\n- B: 128 bits is the IPv6 address length.\n- D: 'none' is wrong because 32 bits is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0113",
+      "subtopic": "Switching and routing",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A router operates at layer 3 and forwards packets between different IP networks, choosing the next hop from its routing table; that is precisely what lets hosts on separate networks exchange data. A switch connects devices inside a single LAN, while a repeater merely regenerates a signal to extend a physical link.\n\nWhy B is correct: a router forwards packets between separate networks, which enables communication between networks.\n\nWhy the others are wrong:\n- A: a switch connects devices within the same network, it does not route between networks.\n- C: a repeater only regenerates and forwards a physical signal to extend a link.\n- D: 'None' is wrong because the router is listed.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0114",
+      "subtopic": "Switching and routing",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "In the virtual-circuit approach a logical connection is set up first, and every packet of that message then carries the same virtual circuit identifier, so all packets follow the same route and arrive in order. In the datagram approach each packet is routed independently and may take different paths and arrive out of order.\n\nWhy B is correct: in a virtual-circuit network the path is established once and all packets of the message follow that same route.\n\nWhy the others are wrong:\n- A: in a datagram network each packet is routed independently and packets may take different routes.\n- C: 'virtual channel' is merely another phrase and is not the standard term for this packet-switching approach.\n- D: 'None of the options' is wrong because virtual circuit is listed.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0115",
+      "subtopic": "Switching and routing",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A router joins two or more different IP networks and forwards packets between them using network-layer addresses, which is the normal way two different networks communicate. A switch works inside one network, and a gateway is used to interface systems that use different protocols rather than simply to route between networks.\n\nWhy B is correct: a router connects two or more networks and forwards packets between them.\n\nWhy the others are wrong:\n- A: a switch connects devices within a single network, it does not join different networks.\n- C: a gateway translates between dissimilar protocol stacks, which is not the same as routing between networks.\n- D: 'None' is wrong because the router is listed.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0116",
+      "subtopic": "Error detection and correction",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Comparing 10100101 with 10100100 shows that only the final bit changed, so exactly one bit was altered in transmission. An error that flips a single bit is defined as a single bit error, whereas a burst error changes two or more bits within a short interval.\n\nWhy A is correct: only bit 8 differs between 10100101 and 10100100, so this is a single bit error.\n\nWhy the others are wrong:\n- B: a burst error changes two or more bits over a short span, not a single bit.\n- C: 'common error' is not a defined category in error detection.\n- D: 'None' is wrong because single bit error classifies this correctly.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0117",
+      "subtopic": "Error detection and correction",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "The Hamming distance is the number of positions in which two equal-length binary words differ, equivalently the count of 1 bits in their XOR. 10101 XOR 11110 = 01011, which contains three 1 bits, so the distance is 3. Positions 1 and 3 agree; the other three differ.\n\nWhy B is correct: the XOR of 10101 and 11110 is 01011, which has three 1 bits, so the Hamming distance is 3.\n\nWhy the others are wrong:\n- A: 2 would mean only two positions differ, but three positions differ.\n- C: 4 would mean only one position agrees, but two positions agree.\n- D: 'None' is wrong because the distance is exactly 3.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0118",
+      "subtopic": "Error detection and correction",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "A simple (single) parity bit is chosen so that the total number of 1s in the word is even. Flipping an odd number of bits changes that parity, so the receiver's check fails and the error is detected. Flipping an even number of bits leaves the parity intact, so those errors pass undetected - that is why simple parity checking cannot guarantee detection.\n\nWhy A is correct: simple parity checking detects any odd number of bit errors because each flip changes the parity.\n\nWhy the others are wrong:\n- B: an even number of errors preserves the parity and therefore escapes detection.\n- C: both odd and even cannot be detected with a single parity bit; even errors slip through.\n- D: 'None of the options' is wrong because odd-number detection is exactly what parity provides.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0119",
+      "subtopic": "Routing protocols",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A static routing table is built by hand: the administrator types in each destination network and its next hop, and nothing updates it afterwards, which also means it survives router reboots. Any table 'updated periodically by using one of the dynamic routing protocols' is by definition dynamic, so options B and C describe the opposite case.\n\nWhy A is correct: a static routing table contains information entered manually by the administrator.\n\nWhy the others are wrong:\n- B: periodic updating by a dynamic routing protocol describes a dynamic routing table, not a static one.\n- C: this option is identical to option B and describes the same wrong (dynamic) case.\n- D: 'None' is wrong because option A correctly defines a static routing table.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Options B and C are identical in the source ('is updated periodically by using one of the dynamic routing protocols'); the duplicate does not affect the answer, which is A."
+    },
+    {
+      "id": "q_0120",
+      "subtopic": "Routing protocols",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "Intradomain (interior) protocols route inside a single autonomous system, and the classic example of a distance-vector intradomain protocol is RIP (OSPF is the intradomain link-state counterpart, but link state is not offered here). Path-vector routing and BGP operate between autonomous systems, so they are interdomain mechanisms.\n\nWhy A is correct: distance-vector protocols such as RIP are used for intradomain (intra-AS) routing.\n\nWhy the others are wrong:\n- B: path-vector routing is used between autonomous systems (BGP), not inside one.\n- C: BGP, the border gateway protocol, is an interdomain path-vector protocol.\n- D: 'None' is wrong because distance-vector routing is an intradomain technique.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0121",
+      "subtopic": "Routing protocols",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Interdomain protocols exchange reachability information between autonomous systems, and they do so with the path-vector technique, advertising the sequence of ASes a route crosses; this is exactly what BGP does. Distance-vector (RIP) and link-state (OSPF) protocols are both confined to routing inside one autonomous system.\n\nWhy B is correct: path-vector routing, as used by BGP, is the technique for interdomain routing between autonomous systems.\n\nWhy the others are wrong:\n- A: distance-vector protocols such as RIP operate within a single autonomous system.\n- C: link-state protocols such as OSPF are intradomain.\n- D: 'None of the options' is wrong because path vector is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0122",
+      "subtopic": "Routing protocols",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "RIP (Routing Information Protocol) is an interior gateway protocol that advertises hop counts to its neighbours inside one autonomous system, which makes it an intradomain distance-vector protocol. Link state describes OSPF instead, and interdomain routing uses the path-vector technique, not distance vector.\n\nWhy A is correct: RIP is an intradomain (interior) protocol that uses the distance-vector algorithm based on hop count.\n\nWhy the others are wrong:\n- B: RIP is not link state; OSPF is the intradomain link-state protocol.\n- C: interdomain routing uses path vector (BGP), not distance vector.\n- D: 'None' is wrong because option A describes RIP correctly.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0123",
+      "subtopic": "Routing protocols",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Path-vector protocols advertise the sequence of autonomous systems a route passes through, information that only matters when routing information must cross AS boundaries, which is what BGP does. Inside a single autonomous system, distance-vector or link-state protocols are used instead, so the intra-AS options are wrong.\n\nWhy B is correct: path-vector routing protocols such as BGP are designed for routing between autonomous systems.\n\nWhy the others are wrong:\n- A: inside one autonomous system, distance-vector or link-state protocols are used, not path vector.\n- C: 'in intradomain' means the same as option A and is therefore incorrect.\n- D: 'None' is wrong because 'between autonomous systems' is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0124",
+      "subtopic": "Switching and routing",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "In broadcast communication there is exactly one source and every other host in the domain becomes a destination, so the source-to-destination relationship is one-to-all. One-to-many is the multicast relationship, where only the hosts that joined the group receive the packet, and one-to-one is unicast.\n\nWhy A is correct: broadcasting delivers one packet from a single source to all hosts in the network, a one-to-all relationship.\n\nWhy the others are wrong:\n- B: one-to-many describes multicast, where only group members receive the packet.\n- C: one-to-one describes unicast delivery to a single receiver.\n- D: 'None' is wrong because broadcast is one-to-all.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0125",
+      "subtopic": "Switching and routing",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A switched network is built from interconnected switching nodes - switches and routers - that forward packets from an incoming link to an outgoing link, while the communicating hosts sit at the endpoints attached to those nodes. Hence the interlinked nodes are called switches.\n\nWhy C is correct: the interlinked nodes of a switched network are the switches.\n\nWhy the others are wrong:\n- A: endpoints are the hosts attached to the network, not the interlinked nodes themselves.\n- B: packets are the data units that travel between nodes, not the nodes.\n- D: lines are the links that join the nodes, not the nodes themselves.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0126",
+      "subtopic": "Switching and routing",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Traffic is described as bursty when the data rate changes suddenly and sharply within a very short interval, often with silent periods in between, as happens with interactive or compressed data. Option A, a smoothly varying rate, is the opposite behaviour and is not the definition of bursty traffic.\n\nWhy C is correct: bursty data is characterised by a data rate that changes suddenly in a very short time.\n\nWhy the others are wrong:\n- A: a smooth, gradual rate change describes neither bursty traffic nor a standard data-flow characteristic.\n- B: a data rate that does not change describes continuous (non-bursty) traffic.\n- D: 'None' is wrong because option C is the definition of bursty data.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0127",
+      "subtopic": "Switching and routing",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "A discarding policy lets a router throw away packets that it knows carry no value for the destination (junk filtering), which relieves congestion without harming the transmission because those packets would have been discarded at the end host anyway. That is exactly what option A states, and it is why discarding is a form of congestion avoidance rather than congestion recovery.\n\nWhy A is correct: a discarding policy may prevent congestion while leaving the integrity of the transmission intact.\n\nWhy the others are wrong:\n- B: preventing congestion in virtual-circuit networks is the role of back pressure, not the defining property of a discarding policy.\n- C: this describes how a sender recovers from loss or corruption, which is retransmission, not the discarding policy itself.\n- D: 'None' is wrong because option A states the definition.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "The stem 'Discarding policy that' is truncated in the source. Answered from the options, where A states the defining property of a discarding (junk-filtering) policy."
+    },
+    {
+      "id": "q_0128",
+      "subtopic": "Switching and routing",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "Back pressure is node-to-node congestion control: a congested node stops accepting packets from its immediate upstream node, which then slows down its own upstream node, and the pressure propagates hop by hop back toward the source. In a choke-packet scheme, by contrast, the congested node sends a special control packet directly to the source without warning the intermediate nodes.\n\nWhy B is correct: back pressure is the node-to-node congestion control technique that propagates opposite to the direction of data flow.\n\nWhy the others are wrong:\n- A: a choke packet is a message sent straight to the source to slow it down, not a node-to-node scheme.\n- C: 'front pressure' is not a recognised congestion-control technique.\n- D: 'None' is wrong because back pressure is listed.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0129",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Message integrity is the security service that guarantees the data received is exactly the data that was sent, with no modification in transit. Confidentiality hides the content of the data from eavesdroppers, and authentication establishes the identity of the sender; neither guarantees that the data was not altered.\n\nWhy B is correct: message integrity ensures the data arrives at the receiver exactly as it was sent.\n\nWhy the others are wrong:\n- A: message confidentiality hides the content; it says nothing about modification.\n- C: message authentication verifies the sender's identity (data origin), not that the data is unchanged.\n- D: 'None' is wrong because message integrity is listed.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0130",
+      "subtopic": "Network security",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "A conventional signature has a one-to-many relationship with documents, because one person signs many different papers with the same signature. A digital signature, however, is computed from the specific message (usually over its digest), so the same signature value cannot be reused for another message; the relationship between a digital signature and its document is therefore one-to-one.\n\nWhy C is correct: each digital signature is computed over one specific message, giving a one-to-one relationship between signature and document.\n\nWhy the others are wrong:\n- A: one-to-many describes a conventional handwritten signature, not a digital one.\n- B: many-to-one would mean several signatures for a single document, which is not the case.\n- D: 'None' is wrong because the relationship is one-to-one.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0131",
+      "subtopic": "Switching and routing",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A full mesh gives every node a direct link to every other node, so when a node or link fails traffic still has alternative routes to the destination. That redundancy makes mesh the most reliable and fault-tolerant topology. A star fails entirely if its hub fails, a bus fails if the backbone breaks, and a ring loses connectivity when a single node or link breaks the loop.\n\nWhy C is correct: the redundant links of a mesh give it the highest reliability of the four topologies.\n\nWhy the others are wrong:\n- A: a star has a single point of failure at the central hub.\n- B: a bus fails if its backbone is broken or shorted.\n- D: a ring is broken by the failure of any single node or link.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0132",
+      "subtopic": "Switching and routing",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The Internet is a network of networks that spans the whole globe, interlinking the LANs and MANs of organisations and countries, which places it in the wide area category. A LAN covers only a few kilometres and a PAN only a few metres, neither of which describes the Internet's global scale.\n\nWhy A is correct: the Internet is a global, wide area network formed by interconnecting many networks.\n\nWhy the others are wrong:\n- B: a LAN covers only a small local area such as one building.\n- C: a PAN covers a very short range around a single device.\n- D: a MAN covers a city or metropolitan area, not the entire globe.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    }
+  ]
+}

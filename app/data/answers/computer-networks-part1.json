@@ -1,0 +1,665 @@
+{
+  "topic": "Computer Networks",
+  "answers": [
+    {
+      "id": "q_0001",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "Public key (asymmetric) cryptography uses a mathematically related key pair: the public key is published freely while the private key is kept secret. That structure lets one system provide three services: confidentiality (encrypt with the receiver's public key), authentication and non-repudiation (sign with the sender's private key), and key exchange (Diffie-Hellman or transporting a session key). Since all three listed items are genuine uses of the scheme, the complete answer is All of the above.\n\nWhy D is correct: Encryption, authentication through signatures, and key exchange are all standard uses of public key cryptography.\n\nWhy the others are wrong:\n- A: Encryption is only one of the three uses, so it is an incomplete answer.\n- B: Authentication via digital signatures is a use, but not the whole purpose.\n- C: Key exchange is also a use, but naming it alone leaves out the others.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0002",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A digital signature is created by applying a private-key operation to a message digest and is checked by applying the corresponding public-key operation, which is inherently an asymmetric operation. RSA is the classic public key algorithm used for signing, while AES and DES are symmetric ciphers and SHA is only a hash function that cannot hold a key pair.\n\nWhy A is correct: RSA is a public key algorithm and the standard choice for creating and verifying digital signatures.\n\nWhy the others are wrong:\n- B: AES is a symmetric block cipher and has no signature or key-pair capability.\n- C: DES is an obsolete symmetric cipher and cannot produce a verifiable signature.\n- D: SHA is a hash function; it produces a digest but no key pair and no signature.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0003",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Authentication is the security service that establishes the identity of a subject (user, process or device) that is claiming to send data or requesting a resource. Encryption, signing and decryption are separate mechanisms that may support authentication but are not authentication itself.\n\nWhy B is correct: Verifying the identity of a user is precisely the definition of authentication.\n\nWhy the others are wrong:\n- A: Encryption hides the content and says nothing about who sent it.\n- C: Generating a digital signature is a signing operation, not the identity check.\n- D: Decryption recovers plaintext and likewise proves nothing about identity.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0004",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Authentication factors fall into three classic categories: something you know (knowledge), something you have (possession) and something you are (biometric). A password is a knowledge factor, a fingerprint is a biometric factor and a smart card is a possession factor, so only one listed item is something you know.\n\nWhy A is correct: A password is a knowledge factor, which is exactly the something-you-know category.\n\nWhy the others are wrong:\n- B: A fingerprint is a biometric factor, i.e. something you are.\n- C: A smart card is a possession factor, i.e. something you have.\n- D: All of the above fails because the three items belong to different factor categories.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0005",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "Single-factor authentication uses one factor, while two-factor and three-factor authentication use exactly two or three. Multi-factor authentication is the general term for any scheme that combines two or more factors, so it is the option that means multiple factors regardless of the exact count.\n\nWhy D is correct: Multi-factor authentication is by definition the use of two or more factors.\n\nWhy the others are wrong:\n- A: Single-factor is the opposite of what the question describes.\n- B: Two-factor names one specific count rather than the general concept.\n- C: Three-factor likewise names a specific count, not the general term.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0006",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A password is a knowledge factor and a security token is a possession factor. When exactly these two different factor types are combined the scheme is called two-factor authentication, which is the specific case of multi-factor authentication.\n\nWhy B is correct: Password plus token is exactly two different factor types, i.e. two-factor authentication.\n\nWhy the others are wrong:\n- A: A single factor would use only the password or only the token, not both.\n- C: Three-factor authentication would require a third independent factor as well.\n- D: Multi-factor is technically true but is the general term; the precise name for two factors is two-factor.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0007",
+      "subtopic": "Network security",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "Biometric data such as a fingerprint is a single factor type, something you are. A system that verifies a user with biometrics alone checks only one factor, so it is single-factor authentication; reaching two or three factors would require something else, such as a password or a token.\n\nWhy A is correct: Biometrics alone supplies exactly one factor, so the scheme is single-factor authentication.\n\nWhy the others are wrong:\n- B: Two-factor needs two different factor types, but only biometrics is mentioned.\n- C: Three-factor needs three, which is even further from the stem.\n- D: Multi-factor needs at least two, and no second factor is named here.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0008",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A smart card is a possession factor and a PIN is a knowledge factor. Combining exactly these two factors makes the scheme two-factor authentication, the classic example of combining something you have with something you know.\n\nWhy B is correct: Smart card plus PIN is the standard two-factor combination.\n\nWhy the others are wrong:\n- A: A single factor would use the card or the PIN alone.\n- C: Three-factor would need one more independent factor.\n- D: Multi-factor is the general term; the precise count here is two.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0009",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A brute force attack systematically tries every possible password, or every character combination, until the correct one is found. It needs no dictionary and no user interaction, and its cost is purely combinatorial.\n\nWhy A is correct: Exhaustively guessing passwords until one works is the definition of a brute force attack.\n\nWhy the others are wrong:\n- B: A dictionary attack only tries words from a word list, not every possible password.\n- C: Social engineering tricks a person rather than guessing the password.\n- D: A man-in-the-middle attack intercepts traffic instead of guessing secrets.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0010",
+      "subtopic": "Network security",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "A rainbow table is a pre-computed set of hash values covering many candidate passwords, so an attacker holding a stolen hash only has to look it up instead of hashing every guess. The phrase pre-computed hashes in the stem describes exactly this technique.\n\nWhy C is correct: Pre-computed hash tables looked up against a stolen hash are rainbow tables.\n\nWhy the others are wrong:\n- A: Brute force recomputes a hash for every guess on the fly; nothing is pre-computed.\n- B: A dictionary attack uses a list of candidate words, which is not a full table of arbitrary strings.\n- D: A man-in-the-middle attack intercepts a live session rather than cracking stored hashes.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0011",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Social engineering manipulates people rather than breaking mathematics: phishing emails, phone pretexting and baiting all try to make a victim reveal a password or other secret. The tricking-a-person element is the defining feature.\n\nWhy C is correct: Tricking someone into disclosing their password is social engineering.\n\nWhy the others are wrong:\n- A: A brute force attack guesses computationally, without involving the user.\n- B: A dictionary attack still guesses automatically from a word list.\n- D: A man-in-the-middle attack intercepts an existing communication channel.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0012",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "In a public key cryptosystem each user holds a pair: a public key that is distributed openly and a private key that must be kept secret. For confidentiality the sender encrypts with the receiver's public key, and only the holder of the matching private key can decrypt the result.\n\nWhy A is correct: The freely distributed encryption key is the public key.\n\nWhy the others are wrong:\n- B: The private key decrypts; publishing it would destroy the scheme.\n- C: A symmetric key belongs to conventional encryption, not to a public key pair.\n- D: The public key is the encryption key, so none of the above is wrong.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0013",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "A man-in-the-middle attack places the attacker between two communicating parties and relays, often altering, their traffic so that each believes it is talking directly to the other. Interception plus modification of a live conversation is its hallmark.\n\nWhy D is correct: Intercepting and modifying communication between two parties is exactly the man-in-the-middle attack.\n\nWhy the others are wrong:\n- A: A brute force attack attacks the key space, not the conversation.\n- B: A dictionary attack tries word lists against passwords or hashes.\n- C: Social engineering attacks the user, not an established communication path.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0014",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Conventional or symmetric encryption uses a single shared secret: the same key is applied to the plaintext to produce the ciphertext and to the ciphertext to recover the plaintext. DES, AES and IDEA are all of this type.\n\nWhy C is correct: Using one and the same key for encryption and decryption is the definition of symmetric key encryption.\n\nWhy the others are wrong:\n- A: Public key (asymmetric) encryption uses two different, mathematically related keys.\n- B: A private key on its own is only the secret half of a key pair, not an algorithm class.\n- D: Asymmetric key encryption explicitly uses different keys for the two operations.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0015",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "When the encryption key and the decryption key are different but mathematically related, the algorithm is asymmetric, also called public key encryption. RSA, ElGamal and Diffie-Hellman are examples of this class.\n\nWhy D is correct: Different keys for encryption and decryption is the textbook definition of an asymmetric key encryption algorithm.\n\nWhy the others are wrong:\n- A: Public key encryption is the same class as D, so this option is a synonym and makes the item ambiguous.\n- B: A private key on its own names only the secret half of a pair, not an algorithm class.\n- C: A symmetric key algorithm uses one and the same key, the opposite of the stem.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Options A (public key encryption algorithm) and D (asymmetric key encryption algorithm) are synonyms, so both are defensible; answered D as the standard textbook term."
+    },
+    {
+      "id": "q_0016",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Symmetric ciphers such as AES perform far fewer and simpler operations per block than the modular exponentiation of RSA or ElGamal. That is why real protocols use public key cryptography only to exchange a session key and then switch to symmetric encryption for the data itself.\n\nWhy C is correct: Symmetric key algorithms are orders of magnitude faster than public key ones.\n\nWhy the others are wrong:\n- A: Public key encryption is the slow option because of large modular exponentiation.\n- B: A private key is not an algorithm class and confers no speed advantage.\n- D: Asymmetric encryption is the slowest choice here, not the fastest.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0017",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "Asymmetric schemes such as RSA rest on hard mathematical problems and remove the need for a pre-shared secret between the two parties, which is usually regarded as the stronger security model. Symmetric security depends entirely on getting that shared key to both ends safely.\n\nWhy D is correct: Asymmetric key encryption is normally cited as the more secure of the two because it solves key distribution without a pre-shared secret.\n\nWhy the others are wrong:\n- A: Public key encryption names the same class as D, so this option is a synonym and makes the item ambiguous.\n- B: A private key is only the secret half of a key pair, not an algorithm type.\n- C: Symmetric encryption is secure only if the shared key is pre-distributed safely, which is its weak point.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Options A (public key encryption algorithm) and D (asymmetric key encryption algorithm) describe the same class, so both are defensible; answered D as the standard term."
+    },
+    {
+      "id": "q_0018",
+      "subtopic": "Network security",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "TLS and its predecessor SSL are the transport-layer security protocols that add confidentiality, integrity and peer authentication to a TCP connection. Applications such as HTTPS, SSH and secure SMTP are built on top of them, so the general protocol that secures communication over the internet is TLS/SSL.\n\nWhy A is correct: TLS/SSL is the general purpose secure transport protocol underlying secure internet communication.\n\nWhy the others are wrong:\n- B: HTTPS is only HTTP carried over TLS, an application of A rather than the protocol itself.\n- C: SSH secures remote login and shell access, one specific application built on the same idea.\n- D: TCP/IP is the transport suite itself and provides no encryption or authentication.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0019",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "SSH provides an encrypted and authenticated channel over an untrusted network for remote login, file transfer and port forwarding. It performs its own key exchange and authentication, so it can protect a remote login session on an otherwise insecure network.\n\nWhy C is correct: SSH is the standard protocol for secure remote login and other secure network services over an insecure network.\n\nWhy the others are wrong:\n- A: TLS/SSL is a generic security layer, not a login protocol.\n- B: HTTPS secures web traffic, not remote shell sessions.\n- D: TCP/IP is the underlying insecure transport, which is exactly what SSH protects.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0020",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A digital signature is verified by applying the public-key operation with the signer's public key, and it succeeds only if the signature was produced with the matching private key. The verifier therefore needs the signer's public key and nothing more.\n\nWhy A is correct: Salim verifies with Anarkali's public key, which is exactly what proves she used her private key.\n\nWhy the others are wrong:\n- B: Salim's public key plays no part in verifying someone else's signature.\n- C: Salim's private key is his own secret and is not needed for this check.\n- D: Anarkali's private key creates the signature and must never be published.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0021",
+      "subtopic": "Network security",
+      "difficulty": "hard",
+      "correctAnswer": "C",
+      "explanation": "In a digital signature scheme only a holder of S's private key can create a value that verifies under S's public key. A birthday or collision attack lets a third party who does not know that private key find a different message m' whose digest equals that of m, so that S's existing signature also validates for the fraudulent message. S and R cannot achieve this: S could simply re-sign the fraudulent message, and R has no way to produce a signature that verifies without S's private key.\n\nWhy C is correct: Only statement (II) describes a feasible violation, a third party replacing m with a colliding fraudulent message.\n\nWhy the others are wrong:\n- A: (I) and (II) cannot both hold, since S holding the private key gains nothing from a birthday attack and can just sign directly.\n- B: (I) only is wrong because S is not the party that benefits from such an attack.\n- D: (II) and (III) is wrong because R cannot mount the substitution without S's private key.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "The stem is garbled by column scrambling: fragments of statements (I), (II) and (III) are interleaved with the closing line 'Which of the following are possible security violations'. Answered from the standard version of this question, where only a third-party attacker can mount the birthday attack."
+    },
+    {
+      "id": "q_0022",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "FIPS 197 fixes the AES block at 128 bits (16 bytes) for all three members, while the key may be 128, 192 or 256 bits. AES-128 uses 10 rounds, AES-192 12 rounds and AES-256 14 rounds.\n\nWhy D is correct: AES uses a 128-bit block size and key sizes of 128, 192 or 256 bits.\n\nWhy the others are wrong:\n- A: 128 or 256 omits the standard 192-bit key, so the set is incomplete.\n- B: AES has no 64-bit block; 64 bits is the DES block size.\n- C: 256 is a key size, not the block size, which is 128 bits.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0023",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "The security of asymmetric cryptography rests on the private key being computationally impossible to derive from the public key. Everything else, including public keys, certificates and directories, is deliberately published so anyone can obtain it.\n\nWhy B is correct: The private key is the one key that must be kept secret.\n\nWhy the others are wrong:\n- A: The public key is deliberately published and may be known by anyone.\n- C: A symmetric key belongs to symmetric systems, not to a public key cryptosystem.\n- D: One option does name the secret key, so none of the above is wrong.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0024",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The AES round count is Nk + 6, where Nk is the key length in 32-bit words. That gives 10 rounds for AES-128, 12 rounds for AES-192 and 14 rounds for AES-256.\n\nWhy C is correct: AES-256 performs 14 rounds, as required by FIPS 197.\n\nWhy the others are wrong:\n- A: 10 rounds belongs to AES-128.\n- B: 12 rounds belongs to AES-192.\n- D: 16 is not the round count of any AES variant.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0025",
+      "subtopic": "Network security",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "S-AES, the simplified teaching version of AES, keeps the AES structure with a 128-bit block and a 128-bit key (the 192- and 256-bit cases are treated analogously). Its key size is therefore 128 bits, which is not equal to 16, 32 or 24 bits.\n\nWhy D is correct: S-AES uses a 128-bit key, so none of the listed bit values is correct and none of the above applies.\n\nWhy the others are wrong:\n- A: 16 is the size in bytes, not 16 bits.\n- B: 32 is 256 expressed in bytes, not bits.\n- C: 24 is 192 expressed in bytes, not bits.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0026",
+      "subtopic": "Network security",
+      "difficulty": "hard",
+      "correctAnswer": "D",
+      "explanation": "Firewalls are commonly grouped into generations: packet filters at the network layer, circuit gateways at the transport layer, application-level gateways at the application layer, and dynamic packet filtering firewalls that track connection state at the transport layer while also inspecting payload content. The layer they work at is the transport layer, whose protocols are TCP and UDP.\n\nWhy D is correct: The fourth-generation dynamic packet filtering firewall operates at the transport layer, i.e. on TCP and UDP.\n\nWhy the others are wrong:\n- A: The application layer is the domain of application-level gateway firewalls.\n- B: TCP alone covers only one of the two transport protocols.\n- C: UDP alone likewise covers only part of the transport layer.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "The transport layer spans both TCP and UDP, so option D overlaps with the single-protocol options B and C; answered D as the complete description of the layer."
+    },
+    {
+      "id": "q_0027",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Network security is defined by the services it provides: confidentiality, integrity, authentication, access control, non-repudiation and availability. Authentication establishes who a subject is, while access control decides what that subject may do with a resource, and both are core network security services.\n\nWhy A is correct: The statement is true, since network security supplies both authentication and access control for resources.\n\nWhy the others are wrong:\n- B: False contradicts the definition of network security services.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0028",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Identification only claims an identity, authentication proves it, and validation checks whether that identity is acceptable in a given context. The standard name for the process of verifying the identity of a user is authentication.\n\nWhy A is correct: Verifying the identity of a user is exactly what authentication means.\n\nWhy the others are wrong:\n- B: Identification presents or claims an identity without proving it.\n- C: Validation checks whether an already authenticated identity is acceptable in context.\n- D: Verification is a step inside authentication, not the name of the security service.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0029",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A digital signature requires the signer to hold a private key and the verifier to hold the corresponding public key, so it is built on asymmetric cryptography. A shared-key system can authenticate with a MAC, but then the sender cannot be held accountable because both parties hold the same secret.\n\nWhy C is correct: Only a public-key system provides the asymmetry needed for signature-based authentication and non-repudiation.\n\nWhy the others are wrong:\n- A: A private-key-only system has no key a verifier could use to check the signature.\n- B: A shared-key system can produce a MAC but cannot prove which party signed.\n- D: All of them is wrong because the shared-key system cannot support signatures.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0030",
+      "subtopic": "Network security",
+      "difficulty": "hard",
+      "correctAnswer": "A",
+      "explanation": "Encryption and decryption are confidentiality mechanisms only. On their own they give no assurance about who sent a message and, unless a keyed MAC is added, no assurance that the ciphertext was not altered. Note that privacy in the option list is just another word for the secrecy that encryption does provide.\n\nWhy A is correct: Authentication is the classic service that plain encryption and decryption do not provide.\n\nWhy the others are wrong:\n- B: Integrity is also not provided by plain encryption, so this is a true competing statement and the reason the item is flagged.\n- C: Privacy is the very secrecy that encryption does provide, so this statement is false.\n- D: All of the above cannot hold because the privacy option is false as printed.",
+      "confidence": "low",
+      "needsReview": true,
+      "reviewReason": "The option set is defective: both Authentication and Integrity are true statements while Privacy is the very confidentiality encryption provides, so All of the above is false as printed; answered A as the canonical textbook claim."
+    },
+    {
+      "id": "q_0031",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "The Caesar cipher shifts every letter by a fixed amount. Shifting HQFUBSWHG WHAW three places backwards gives H->E, Q->N, F->C, U->R, B->Y, S->P, W->T, H->E, G->D and W->T, H->E, A->X, W->T, which spells ENCRYPTED TEXT.\n\nWhy B is correct: Shifting every letter back by three positions yields ENCRYPTED TEXT.\n\nWhy the others are wrong:\n- A: ABANDONED LOCK does not correspond to this ciphertext under any consistent shift.\n- C: ABANDONED TEXT matches only the second word and not the first.\n- D: ENCRYPTED LOCK matches only the first word and not the second.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0032",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A conventional or handwritten signature is physically part of the paper it signs, appearing inside the document itself. A digital signature is computed data attached to or transmitted with the message and stored as a separate entity alongside it.\n\nWhy A is correct: A conventional signature is included in the document, while a digital signature is a separate entity.\n\nWhy the others are wrong:\n- B: A digital signature is never part of the document body itself.\n- C: Either (a) or (b) does not describe the distinction the stem asks about.\n- D: Neither (a) nor (b) would leave the statement unanswered.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0033",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A digital signature binds the sender's private key to the message digest. Verifying it with the sender's public key proves the origin of the message (authentication), and because only the private-key holder could have produced it, it also proves the sender cannot deny signing (nonrepudiation).\n\nWhy C is correct: A digital signature provides both authentication and nonrepudiation.\n\nWhy the others are wrong:\n- A: Authentication is provided, but naming it alone ignores nonrepudiation.\n- B: Nonrepudiation is provided too, so this alone is incomplete.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0034",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Generating a public and private key pair requires an asymmetric algorithm: RSA is the classical choice, with Diffie-Hellman, ElGamal, DSA and ECC as others. AES and DES are symmetric and take a key as input, while SHA is a hash function and produces no keys at all.\n\nWhy A is correct: RSA is the public key algorithm classically used to generate key pairs.\n\nWhy the others are wrong:\n- B: AES is a symmetric cipher that consumes a key rather than generating one.\n- C: DES is an obsolete symmetric cipher with no key generation role.\n- D: SHA is a hash function and generates no key pair.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0035",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A signature applies a private-key operation to a message digest. Because everyone holds the signer's public key, anybody can apply the matching public-key operation to the signed digest and recover the digest, and hence search for the original message. So a signature gives integrity and authentication but no secrecy; confidentiality requires encryption.\n\nWhy B is correct: A digital signature cannot provide confidentiality, because the digest it signs is not secret.\n\nWhy the others are wrong:\n- A: Integrity is exactly what the digest inside the signature protects.\n- C: Nonrepudiation follows from only the signer holding the private key.\n- D: Authentication is provided because verification uses the signer's public key.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0036",
+      "subtopic": "Network security",
+      "difficulty": "hard",
+      "correctAnswer": "C",
+      "explanation": "Confidentiality and integrity can be achieved with symmetric or asymmetric encryption alone, but non-repudiation cannot: it requires binding the sender's private key to the message, which means a signature scheme (a cryptosystem) must be applied over the message itself. The printed stem is damaged, with the phrase 'applied over the scheme', so the original wording cannot be recovered with certainty.\n\nWhy C is correct: Non-repudiation is the only one of the four services that forces a signature cryptosystem to be applied over the message.\n\nWhy the others are wrong:\n- A: Integrity needs a hash or MAC over the message, not a key-pair cryptosystem.\n- B: Confidentiality is provided by encryption itself, so no extra cryptosystem is needed.\n- D: Authentication can be obtained by challenge-response or a MAC without a signature over the message.",
+      "confidence": "low",
+      "needsReview": true,
+      "reviewReason": "The stem is garbled ('If _________ is needed, a cryptosystem must be applied over the scheme'), so the original blank cannot be recovered with certainty; answered nonrepudiation on the reading that only non-repudiation forces a signature cryptosystem over the message."
+    },
+    {
+      "id": "q_0037",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "In Kerberos the client authenticates to an authentication server, receives a ticket-granting ticket, and then asks the ticket-granting server for a ticket for the target service. The KDC issues a short-lived key valid for that single conversation, which is a session key.\n\nWhy B is correct: The temporary secret the KDC issues for the two members to use in one conversation is a session key.\n\nWhy the others are wrong:\n- A: A public key must be published, the opposite of a shared secret.\n- C: Complimentary is not a cryptographic key category.\n- D: The KDC certainly does create such a key, so none of the above is wrong.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0038",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Kerberos is the classic network authentication protocol built around a Key Distribution Center that is split into an authentication server and a ticket-granting server. The AS validates the user's identity and the TGS issues service tickets together with session keys for each client/server pair.\n\nWhy B is correct: Kerberos is the session key protocol that uses an authentication server and a ticket-granting server.\n\nWhy the others are wrong:\n- A: KDC is the server side component, not the protocol name.\n- C: CA denotes a certification authority for public keys, a different mechanism.\n- D: A correct protocol is named among the options, so none of the above is wrong.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0039",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "CHAP is the challenge-response authentication protocol used by PPP: the authenticator sends a random challenge, the peer replies with a hash of that challenge combined with its secret, and the peer is authenticated without transmitting the secret itself. The expansion is Challenge Handshake Authentication Protocol.\n\nWhy A is correct: CHAP stands for Challenge Handshake Authentication Protocol.\n\nWhy the others are wrong:\n- B: Hardware does not appear in the expansion of CHAP.\n- C: Circuit Hardware is not part of CHAP; CHAP is a point-to-point handshake.\n- D: Circuit Handshake is not the expansion of CHAP.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0040",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "SSL and TLS are layered security protocols whose record layer encrypts the payload for confidentiality and appends a keyed MAC computed from the negotiated keys for integrity. Both services are therefore built into the protocol rather than being optional extras.\n\nWhy C is correct: SSL provides both message integrity and confidentiality.\n\nWhy the others are wrong:\n- A: Message integrity alone ignores the encryption SSL also performs.\n- B: Confidentiality alone ignores the MAC or message digest SSL also computes.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0041",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Public key distribution has four recognised means: public announcement, a publicly available directory, a public-key authority and public-key certificates signed by a certification authority. Hashing certificates is not one of the recognised schemes.\n\nWhy B is correct: Hashing certificates are not a public key distribution scheme.\n\nWhy the others are wrong:\n- A: Public-Key Certificates are one of the four standard means.\n- C: Publicly available directories are one of the four standard means.\n- D: Public-Key authority is one of the four standard means.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0042",
+      "subtopic": "Network security",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "A public announcement offers no verification at all, a public directory trusts whoever wrote the listing, and a public-key authority needs a trusted server online for every lookup. A public-key certificate binds the key to an identity with a CA signature plus validity dates, so it can be verified offline and revoked if abused, which makes it the most secure of the four.\n\nWhy A is correct: Public-Key Certificates are the most secure distribution system, since the CA signature and timestamps allow offline verification and support revocation.\n\nWhy the others are wrong:\n- B: A public announcement can be forged and proves nothing about ownership of the key.\n- C: A public directory relies on the honesty of whoever maintains the listing.\n- D: A public-key authority needs the authority online for every lookup and is a single point of failure.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0043",
+      "subtopic": "Network security",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "A public-key certificate is issued and signed by a certification authority, an independent trusted third party, and users check that signature against the CA's public key. That trusted third-party vouching is the defining feature of the certificate scheme in this option set.\n\nWhy A is correct: Public-Key Certificates are vouched for by a trusted third party, the CA, whose signature users verify.\n\nWhy the others are wrong:\n- B: A public announcement involves no third party at all.\n- C: A public directory relies on whoever maintains it, not on a certifier.\n- D: A public-key authority is also third-party based, which is why this item is flagged, but the keyed answer here is the CA-signed certificate.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "A public-key authority also relies on a trusted third party, so options A and D are both defensible; answered A, which is how the source MCQ bank keys this item."
+    },
+    {
+      "id": "q_0044",
+      "subtopic": "Network security",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "X.509 version 1 carried only the basic distinguished name and the public key. Version 2 added the optional unique identifier fields, issuerUniqueID and subjectUniqueID, so that a subject reusing a name could still be distinguished; version 3 later added the extension fields such as subjectAltName and key usage.\n\nWhy B is correct: The subjectUniqueID field was introduced in X.509 version 2.\n\nWhy the others are wrong:\n- A: Version 1 had no unique identifier fields at all.\n- C: Version 3 added the extension fields, not the unique identifiers.\n- D: There is no widely deployed X.509 version 4.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0045",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "The bottleneck of conventional encryption is key distribution: every pair of users needs a shared secret delivered beforehand over a secure channel. Public key cryptography removes that requirement because the public key can be published freely, so its chief advantage is simpler key management.\n\nWhy B is correct: Simpler key management, with no secure pre-distribution of shared secrets, is the main advantage of public key cryptography.\n\nWhy the others are wrong:\n- A: Public key encryption is far slower, not faster, than symmetric encryption.\n- C: Security strength depends mainly on key length; long symmetric keys are equally strong.\n- D: Public key operations carry high computational overhead, the opposite of the truth.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0046",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "In the seven-message public key distribution scenario the first five messages register each user's public key with a directory or authority. Because both A and B can then retain the public key they received, they never repeat those steps for later sessions, which is exactly caching.\n\nWhy C is correct: Saving the other party's public key for future use after the initial exchange is caching.\n\nWhy the others are wrong:\n- A: Time stamping records when a key was issued; it does not store keys.\n- B: Polling repeatedly queries a server instead of keeping the key locally.\n- D: Squeezing is not a key distribution technique.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0047",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A firewall is a network security system, implemented in hardware, software or both, placed between trusted and untrusted networks. It monitors and controls traffic according to a predefined rule set, which is exactly the definition given in the question.\n\nWhy C is correct: A firewall monitors and controls incoming and outgoing network traffic based on predetermined security rules.\n\nWhy the others are wrong:\n- A: A cookie is a small text file a browser stores for session or state purposes.\n- B: Spyware is malicious software that secretly collects information.\n- D: Spam is unsolicited bulk e-mail.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0048",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A digital signature binds the message to the signer's private key, which only the signer holds. That is what allows a third party later to prove the sender really sent the message, which is non-repudiation. Ordinary e-mail sending, DHCP and FTP transactions do not require a signature.\n\nWhy A is correct: Non-repudiation of a sender's communication is the service a digital signature exists to provide.\n\nWhy the others are wrong:\n- B: All e-mail sending does not need a digital signature.\n- C: A DHCP server allocates addresses and needs no digital signature.\n- D: FTP transactions do not require a digital signature.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0049",
+      "subtopic": "Network security",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "A modification detection code is a plain hash computed with no key, so anyone who sees the message can recompute it and attach a matching digest to a forged message. A message authentication code is computed with a secret key shared only by the two parties, which is what authenticates the origin as well as detecting modification.\n\nWhy B is correct: Only a MAC uses a secret key, so only a MAC authenticates the origin of the data.\n\nWhy the others are wrong:\n- A: An MDC is keyless and detects modification only; it gives no origin authentication.\n- C: Either (a) or (b) is wrong because the MDC alone cannot authenticate the origin.\n- D: Neither is wrong because a MAC does authenticate the origin.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0050",
+      "subtopic": "Network security",
+      "difficulty": "hard",
+      "correctAnswer": "D",
+      "explanation": "A layer-4 firewall can filter on IP addresses, protocol numbers, ports, direction, connection state and time schedules. It therefore can block whole HTTP sessions during set hours, drop all ICMP, or permit only outbound traffic to a given address. It cannot see which user account is behind a connection, since user identity lives above the transport layer.\n\nWhy D is correct: Blocking TCP traffic from a named user on a multi-user host requires user-level identification, which a layer-4 firewall cannot perform.\n\nWhy the others are wrong:\n- A: Time-based and protocol-based HTTP rules are fully within a layer-4 firewall's reach.\n- B: Dropping ICMP is a simple protocol-number filter a layer-4 firewall can apply.\n- C: Directional filtering by source and destination IP address is standard firewall filtering.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0051",
+      "subtopic": "Network security",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "A session key is generated for one conversation, protects the traffic of that session, and is then discarded, being replaced on rekeying or on the next session. Limiting a symmetric key's lifetime reduces how much ciphertext an attacker can collect against a single key.\n\nWhy A is correct: A session symmetric key is used for a single session only, which is what the word session means.\n\nWhy the others are wrong:\n- B: Twice has no basis in key lifetime rules.\n- C: Multiple reuse defeats the short lifetime that gives a session key its security value.\n- D: Conditions dependant is too vague; the defining property is one session.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0052",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "E-mail security needs confidentiality, integrity and authentication for the message body together with a web of trust for keys. PGP and S/MIME provide exactly that at the mail layer, whereas IPSec and SSL are lower layer mechanisms that do not define mail security.\n\nWhy C is correct: PGP is the security protocol designed for the e-mail system.\n\nWhy the others are wrong:\n- A: IPSec secures IP packets, not the e-mail application.\n- B: SSL secures a transport connection and is not an e-mail security protocol.\n- D: A correct protocol is listed, so none of the above is wrong.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0053",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "IPSec defines two modes. In transport mode only the payload of the IP packet is protected and the original IP header stays visible, while in tunnel mode the whole original packet is encapsulated inside a new IP header. This transport versus tunnel distinction belongs to IPSec alone.\n\nWhy A is correct: IPSec operates in either transport mode or tunnel mode.\n\nWhy the others are wrong:\n- B: SSL and TLS have no transport or tunnel mode distinction.\n- C: PGP operates on mail content and key management, not on IP encapsulation.\n- D: A correct protocol is listed, so none of the above is wrong.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0054",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The IP Authentication Header provides source authentication, data integrity and anti-replay protection at the IP layer but no confidentiality. ESP adds encryption, with authentication optional. So the protocol that authenticates at the IP level without encrypting the payload is AH.\n\nWhy A is correct: AH, the Authentication Header, authenticates the packet and its source at the IP level.\n\nWhy the others are wrong:\n- B: ESP primarily provides encryption, with authentication optional.\n- C: PGP is an application-layer mail protocol, not an IP-level mechanism.\n- D: SSL sits above IP and does not authenticate the IP header.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0055",
+      "subtopic": "Network security",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "A digital signature is produced by applying the private-key (signing) operation of an asymmetric algorithm to the message digest, which is conventionally described as signing, i.e. encrypting with the private key. Hashing never involves a key, and encrypting with the public key would let anyone produce a value that verifies.\n\nWhy A is correct: Of the four descriptions, only an operation with the private key can produce a signature that only the signer could create.\n\nWhy the others are wrong:\n- B: Encrypting with the public key is a public operation, so anyone could forge such a signature.\n- C: A hash function takes no key, so hashed with a private key is meaningless.\n- D: Hashing with a public key is likewise meaningless; hashing never uses a key.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0056",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A digital signature proves the identity of the signer: it authenticates the sender and binds the message to that sender, making forgery detectable and repudiation ineffective. It neither encrypts the data nor exchanges keys; those jobs belong to the encryption and key-agreement parts of a public key system.\n\nWhy B is correct: Authentication of the sender, with non-repudiation as a bonus, is the purpose of a digital signature.\n\nWhy the others are wrong:\n- A: Encryption hides the content, while a signature is applied to a digest and gives no secrecy.\n- C: Key exchange is done by Diffie-Hellman or by encrypting a session key, not by signing.\n- D: All of the above fails because a signature provides neither encryption nor key exchange.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0057",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Only the holder of the private key can produce a value that verifies under the corresponding public key, so the signing operation must use the private key. Using the public key to sign would let anyone forge a signature.\n\nWhy B is correct: The signature is created with the sender's private key.\n\nWhy the others are wrong:\n- A: The public key is used for verification, and signing with it would allow forgery.\n- C: A symmetric key belongs to symmetric systems and gives no verifiable signature binding.\n- D: None of the above is wrong because the private key is exactly the signing key.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0058",
+      "subtopic": "Network security",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Verification applies the public-key operation with the signer's public key to the signature and compares the recovered digest with a freshly computed hash of the received message. The public key is public precisely so that anyone can perform this check.\n\nWhy A is correct: A signature is verified with the public key corresponding to the signer's private key.\n\nWhy the others are wrong:\n- B: The private key is never distributed and cannot be used by a verifier.\n- C: A symmetric key cannot distinguish signer from verifier and gives no non-repudiation.\n- D: None of the above is wrong because the public key is the verification key.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0059",
+      "subtopic": "Error detection and correction",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Transmission errors are classified by how many bits of a data unit are damaged. A single-bit error flips exactly one bit, while a burst error is a run of two or more corrupted bits, typically caused by impulse noise or a short line fault. The stem describes two or more changed bits.\n\nWhy A is correct: Two or more bits changed in a data unit is the definition of a burst error.\n\nWhy the others are wrong:\n- B: A double bit error involves exactly two bits and does not cover the two-or-more definition.\n- C: A single bit error is exactly one bit changed.\n- D: None is wrong because the description matches burst error.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0060",
+      "subtopic": "Physical layer and transmission",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The original Ethernet LAN over coaxial cable is a shared broadcast medium, i.e. a bus topology using CSMA/CD, and that is the topology classically associated with Ethernet in the standard networking literature. Modern switched Ethernet is physically wired as a star around a switch while remaining logically a shared broadcast medium.\n\nWhy A is correct: Ethernet LANs are classically described as using the bus topology.\n\nWhy the others are wrong:\n- B: Star describes the modern switched physical layout rather than the classical Ethernet topology this item refers to.\n- C: A full mesh is far too expensive to be used for Ethernet.\n- D: Ring is the Token Ring and FDDI topology, not Ethernet.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Classical Ethernet uses a bus but modern switched Ethernet is physically a star, so both A and B are defensible depending on which Ethernet is meant; answered A per the standard textbook and source MCQ bank key."
+    },
+    {
+      "id": "q_0061",
+      "subtopic": "Physical layer and transmission",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The bandwidth of a band of frequencies is the width of the range, that is the highest frequency minus the lowest. Here it is 40 MHz minus 1 KHz, which is 40,000,000 Hz minus 1,000 Hz, equal to 39,999,000 Hz or 39.999 MHz.\n\nWhy A is correct: 40 MHz minus 1 KHz equals 39,999,000 Hz, i.e. 39.999 MHz.\n\nWhy the others are wrong:\n- B: 3990 Hz is not the difference between the two given frequencies.\n- C: 3 KHz is unrelated to the stated range of 1 KHz to 40 MHz.\n- D: 39 MHz would require the lower frequency to be 1 MHz rather than 1 KHz.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0062",
+      "subtopic": "IP addressing and subnetting",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A host connected directly to the Internet must be reachable from anywhere, so it needs an address from the globally unique public address space administered by a regional registry. Private RFC 1918 addresses are translated only at a NAT inside the customer's network, and multicast addresses are for group delivery.\n\nWhy A is correct: Direct Internet connectivity requires a publicly routable address.\n\nWhy the others are wrong:\n- B: A multicast address delivers to a group and is not a host's own address.\n- C: A private address cannot be used on the public Internet without NAT.\n- D: None of the options is wrong because a public address is the correct choice.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0063",
+      "subtopic": "Switching and routing",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A hub is a layer-1 repeater: it regenerates the incoming signal and repeats it out of every other port, so all hosts share the collision domain and the bandwidth. A switch is a layer-2 device that learns MAC addresses and forwards each frame only out of the port leading to the destination, giving a separate collision domain per port.\n\nWhy C is correct: A switch works at data link layer 2 using MAC addresses, whereas a hub works at physical layer 1.\n\nWhy the others are wrong:\n- A: A hub, not a switch, repeats a signal to all ports; and a switch forwards to the intended port, not to four fixed ports.\n- B: The layers are swapped: the hub is layer 1 and the switch is layer 2.\n- D: It is the other way round; the switch is the intelligent device and the hub the dumb repeater.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0064",
+      "subtopic": "Physical layer and transmission",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A fully connected mesh gives every node a direct link to every other node, so the number of cables is n(n-1)/2 and each node needs n-1 ports. For n = 10 this gives 10 x 9 / 2 = 45 cables and 10 - 1 = 9 ports per device.\n\nWhy C is correct: 45 cables and 9 ports per device follow from n(n-1)/2 = 45 and n-1 = 9.\n\nWhy the others are wrong:\n- A: 90 would be n(n-1), which double-counts every cable.\n- B: 110 corresponds to no valid formula for mesh cabling.\n- D: 55 is n(n+1)/2, which would also count self-links.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0065",
+      "subtopic": "Switching and routing",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "A router is a network-layer device whose job is to forward datagrams, build and maintain a routing table, parse headers and queue packets awaiting an outgoing link. It does not convert between protocol or data formats, which is a gateway function, it leaves error control to the data link layer, and it forwards to the next hop rather than to every outgoing link.\n\nWhy A is correct: The functions a router does not perform are data conversion (i), error detection in the packet (iv) and forwarding the packet to all outgoing links (vi).\n\nWhy the others are wrong:\n- B: Wrong because queuing incoming packets (v) is a genuine router function.\n- C: Wrong because forwarding the packets (ii) is a router function.\n- D: Wrong because queueing (v) is a router function.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0066",
+      "subtopic": "Switching and routing",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "In a virtual circuit network the switch keeps per-circuit state, such as the VPI/VCI mapping, along the established path. If a switch in the middle fails, that state is lost, so every virtual circuit passing through it is broken and has to be re-established. This is the classic trade-off against datagram networks, where only the packets in flight would be lost.\n\nWhy B is correct: Failure of a router breaks the state of every virtual circuit passing through it, so all of them are terminated and must be re-established.\n\nWhy the others are wrong:\n- A: Losing only the packets in flight would describe a datagram network, not circuit state.\n- C: Congestion control is not what changes when the router fails.\n- D: Disruption of packet order is a general effect, but the defining consequence in a virtual circuit network is the loss of the circuits themselves.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    }
+  ]
+}

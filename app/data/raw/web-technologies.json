@@ -1,0 +1,1545 @@
+{
+  "topic": "Web Technologies",
+  "questions": [
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 1,
+      "sourcePage": 163,
+      "question": "Which company developed JavaScript?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Microsoft"
+        },
+        {
+          "key": "B",
+          "text": "Netscape"
+        },
+        {
+          "key": "C",
+          "text": "Google"
+        },
+        {
+          "key": "D",
+          "text": "Oracle"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0590"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 2,
+      "sourcePage": 163,
+      "question": "Which symbol is used for single-line comments in JavaScript?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "<!-- -->"
+        },
+        {
+          "key": "B",
+          "text": "//"
+        },
+        {
+          "key": "C",
+          "text": "##"
+        },
+        {
+          "key": "D",
+          "text": "**"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0591"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 3,
+      "sourcePage": 163,
+      "question": "Which keyword declares a block-scoped variable?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "var"
+        },
+        {
+          "key": "B",
+          "text": "let"
+        },
+        {
+          "key": "C",
+          "text": "static"
+        },
+        {
+          "key": "D",
+          "text": "function"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0592"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 4,
+      "sourcePage": 163,
+      "question": "How do you access a property name of an object student?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "student(name)"
+        },
+        {
+          "key": "B",
+          "text": "student->name"
+        },
+        {
+          "key": "C",
+          "text": "student.name"
+        },
+        {
+          "key": "D",
+          "text": "student::name"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0593"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 5,
+      "sourcePage": 164,
+      "question": "Which method adds an element at the end of an array?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "push()"
+        },
+        {
+          "key": "B",
+          "text": "pop()"
+        },
+        {
+          "key": "C",
+          "text": "shift()"
+        },
+        {
+          "key": "D",
+          "text": "unshift()"
+        }
+      ],
+      "printedAnswer": "A",
+      "marks": 1,
+      "extractionFlags": [
+        "exact-duplicate-of:q_0601"
+      ],
+      "id": "q_0594"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 6,
+      "sourcePage": 164,
+      "question": "Which method returns the length of a string?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "size()"
+        },
+        {
+          "key": "B",
+          "text": "count()"
+        },
+        {
+          "key": "C",
+          "text": "length"
+        },
+        {
+          "key": "D",
+          "text": "strlen()"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0595"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 7,
+      "sourcePage": 164,
+      "question": "Which keyword stops loop execution?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "stop"
+        },
+        {
+          "key": "B",
+          "text": "break"
+        },
+        {
+          "key": "C",
+          "text": "exit"
+        },
+        {
+          "key": "D",
+          "text": "return"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0596"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 8,
+      "sourcePage": 164,
+      "question": "Which operator checks both value and type?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "=="
+        },
+        {
+          "key": "B",
+          "text": "!="
+        },
+        {
+          "key": "C",
+          "text": "==="
+        },
+        {
+          "key": "D",
+          "text": "="
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0597"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 9,
+      "sourcePage": 164,
+      "question": "What will be the output?",
+      "code": "let str = \"JavaScript\";\nconsole.log(str.substring(0,4));",
+      "options": [
+        {
+          "key": "A",
+          "text": "Java"
+        },
+        {
+          "key": "B",
+          "text": "JavaS"
+        },
+        {
+          "key": "C",
+          "text": "Script"
+        },
+        {
+          "key": "D",
+          "text": "avaS"
+        }
+      ],
+      "printedAnswer": "A",
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected",
+        "duplicate-stem-of:q_0607"
+      ],
+      "id": "q_0598"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 10,
+      "sourcePage": 165,
+      "question": "Which method removes the last array element?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "pop()"
+        },
+        {
+          "key": "B",
+          "text": "push()"
+        },
+        {
+          "key": "C",
+          "text": "shift()"
+        },
+        {
+          "key": "D",
+          "text": "delete()"
+        }
+      ],
+      "printedAnswer": "A",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0599"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 11,
+      "sourcePage": 165,
+      "question": "What is the default value of an uninitialized variable?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "null"
+        },
+        {
+          "key": "B",
+          "text": "0"
+        },
+        {
+          "key": "C",
+          "text": "undefined"
+        },
+        {
+          "key": "D",
+          "text": "empty"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0600"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 12,
+      "sourcePage": 165,
+      "question": "Which method adds an element at the end of an array?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "push()"
+        },
+        {
+          "key": "B",
+          "text": "pop()"
+        },
+        {
+          "key": "C",
+          "text": "shift()"
+        },
+        {
+          "key": "D",
+          "text": "unshift()"
+        }
+      ],
+      "printedAnswer": "A",
+      "marks": 1,
+      "extractionFlags": [
+        "exact-duplicate-of:q_0594"
+      ],
+      "id": "q_0601"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 13,
+      "sourcePage": 165,
+      "question": "Which object is used to work with dates and time in JavaScript?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Time"
+        },
+        {
+          "key": "B",
+          "text": "Calendar"
+        },
+        {
+          "key": "C",
+          "text": "Date"
+        },
+        {
+          "key": "D",
+          "text": "Clock"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0602"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 14,
+      "sourcePage": 165,
+      "question": "Which method returns the current year from a Date object?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "getYear()"
+        },
+        {
+          "key": "B",
+          "text": "getFullYear()"
+        },
+        {
+          "key": "C",
+          "text": "getDate()"
+        },
+        {
+          "key": "D",
+          "text": "getMonth()"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0603"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 15,
+      "sourcePage": 166,
+      "question": "Which keyword defines a function?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "method"
+        },
+        {
+          "key": "B",
+          "text": "function"
+        },
+        {
+          "key": "C",
+          "text": "def"
+        },
+        {
+          "key": "D",
+          "text": "fun"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0604"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 16,
+      "sourcePage": 166,
+      "question": "Which of the following is NOT a JavaScript data type?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Number"
+        },
+        {
+          "key": "B",
+          "text": "Boolean"
+        },
+        {
+          "key": "C",
+          "text": "Float"
+        },
+        {
+          "key": "D",
+          "text": "String"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0605"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 17,
+      "sourcePage": 166,
+      "question": "Which method is used to search a string using a regular expression?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "find()"
+        },
+        {
+          "key": "B",
+          "text": "search()"
+        },
+        {
+          "key": "C",
+          "text": "locate()"
+        },
+        {
+          "key": "D",
+          "text": "scan()"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0606"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 18,
+      "sourcePage": 166,
+      "question": "What will be the output?",
+      "code": "console.log(Array.isArray([10, 20, 30]));",
+      "options": [
+        {
+          "key": "A",
+          "text": "false"
+        },
+        {
+          "key": "B",
+          "text": "true"
+        },
+        {
+          "key": "C",
+          "text": "undefined"
+        },
+        {
+          "key": "D",
+          "text": "Error"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected",
+        "duplicate-stem-of:q_0598"
+      ],
+      "id": "q_0607"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 19,
+      "sourcePage": 166,
+      "question": "Which architecture separates presentation, application logic, and data storage?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Monolithic architecture"
+        },
+        {
+          "key": "B",
+          "text": "Client-Server architecture"
+        },
+        {
+          "key": "C",
+          "text": "Three-tier architecture"
+        },
+        {
+          "key": "D",
+          "text": "Peer-to-Peer architecture"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0608"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 20,
+      "sourcePage": 167,
+      "question": "In web architecture, the browser acts as:",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Server"
+        },
+        {
+          "key": "B",
+          "text": "Client"
+        },
+        {
+          "key": "C",
+          "text": "Middleware"
+        },
+        {
+          "key": "D",
+          "text": "Database"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0609"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 21,
+      "sourcePage": 167,
+      "question": "Which protocol is primarily used for communication between web client and server?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "FTP"
+        },
+        {
+          "key": "B",
+          "text": "SMTP"
+        },
+        {
+          "key": "C",
+          "text": "HTTP/HTTPS"
+        },
+        {
+          "key": "D",
+          "text": "TCP"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0610"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 22,
+      "sourcePage": 167,
+      "question": "Which tier handles business logic in a three-tier web architecture?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Presentation tier"
+        },
+        {
+          "key": "B",
+          "text": "Data tier"
+        },
+        {
+          "key": "C",
+          "text": "Application tier"
+        },
+        {
+          "key": "D",
+          "text": "Network tier"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0611"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 23,
+      "sourcePage": 167,
+      "question": "Which component stores and manages persistent data?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Web server"
+        },
+        {
+          "key": "B",
+          "text": "Application server"
+        },
+        {
+          "key": "C",
+          "text": "Client browser"
+        },
+        {
+          "key": "D",
+          "text": "Database server"
+        }
+      ],
+      "printedAnswer": "D",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0612"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 24,
+      "sourcePage": 167,
+      "question": "What is the role of a web server (e.g., Apache, Nginx)?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Executes business logic"
+        },
+        {
+          "key": "B",
+          "text": "Stores user data"
+        },
+        {
+          "key": "C",
+          "text": "Handles HTTP requests and responses"
+        },
+        {
+          "key": "D",
+          "text": "Manages client UI"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0613"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 25,
+      "sourcePage": 167,
+      "question": "Which architectural style is commonly used for scalable web services?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "SOAP"
+        },
+        {
+          "key": "B",
+          "text": "REST"
+        },
+        {
+          "key": "C",
+          "text": "RPC"
+        },
+        {
+          "key": "D",
+          "text": "CGI"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0614"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 26,
+      "sourcePage": 168,
+      "question": "Which component improves performance by storing frequently accessed data?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Load balancer"
+        },
+        {
+          "key": "B",
+          "text": "Cache"
+        },
+        {
+          "key": "C",
+          "text": "Firewall"
+        },
+        {
+          "key": "D",
+          "text": "Proxy"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0615"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 27,
+      "sourcePage": 168,
+      "question": "What is the main purpose of a load balancer?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Store data securely"
+        },
+        {
+          "key": "B",
+          "text": "Reduce server-side scripting"
+        },
+        {
+          "key": "C",
+          "text": "Distribute traffic across multiple servers"
+        },
+        {
+          "key": "D",
+          "text": "Convert HTTP to HTTPS"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0616"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 28,
+      "sourcePage": 168,
+      "question": "In MVC architecture, which component handles user input?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Model"
+        },
+        {
+          "key": "B",
+          "text": "View"
+        },
+        {
+          "key": "C",
+          "text": "Controller"
+        },
+        {
+          "key": "D",
+          "text": "Database"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0617"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 29,
+      "sourcePage": 168,
+      "question": "What is the main function of a web server?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Design web pages"
+        },
+        {
+          "key": "B",
+          "text": "Store databases"
+        },
+        {
+          "key": "C",
+          "text": "Handle HTTP requests and send responses"
+        },
+        {
+          "key": "D",
+          "text": "Execute client-side scripts"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0618"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 30,
+      "sourcePage": 168,
+      "question": "Which protocol is used for web communication?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "FTP"
+        },
+        {
+          "key": "B",
+          "text": "SMTP"
+        },
+        {
+          "key": "C",
+          "text": "HTTP"
+        },
+        {
+          "key": "D",
+          "text": "SNMP"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0619"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 31,
+      "sourcePage": 169,
+      "question": "Which HTTP method is used to retrieve data from a server?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "POST"
+        },
+        {
+          "key": "B",
+          "text": "GET"
+        },
+        {
+          "key": "C",
+          "text": "PUT"
+        },
+        {
+          "key": "D",
+          "text": "DELETE"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0620"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 32,
+      "sourcePage": 169,
+      "question": "Which HTTP method is mainly used to send data to the server?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "GET"
+        },
+        {
+          "key": "B",
+          "text": "POST"
+        },
+        {
+          "key": "C",
+          "text": "TRACE"
+        },
+        {
+          "key": "D",
+          "text": "CONNECT"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0621"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 33,
+      "sourcePage": 169,
+      "question": "Which component sends an HTTP request?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Web server"
+        },
+        {
+          "key": "B",
+          "text": "Database"
+        },
+        {
+          "key": "C",
+          "text": "Client/Browser"
+        },
+        {
+          "key": "D",
+          "text": "Application server"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0622"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 34,
+      "sourcePage": 169,
+      "question": "What does HTTP stand for?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Hyper Transfer Text Protocol"
+        },
+        {
+          "key": "B",
+          "text": "HyperText Transfer Protocol"
+        },
+        {
+          "key": "C",
+          "text": "High Transfer Text Protocol"
+        },
+        {
+          "key": "D",
+          "text": "HyperText Transmission Process"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0623"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 35,
+      "sourcePage": 169,
+      "question": "Which status code indicates \"Page Not Found\"?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "200"
+        },
+        {
+          "key": "B",
+          "text": "301"
+        },
+        {
+          "key": "C",
+          "text": "404"
+        },
+        {
+          "key": "D",
+          "text": "500"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0624"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 36,
+      "sourcePage": 170,
+      "question": "Which status code indicates a successful request?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "200"
+        },
+        {
+          "key": "B",
+          "text": "404"
+        },
+        {
+          "key": "C",
+          "text": "500"
+        },
+        {
+          "key": "D",
+          "text": "403"
+        }
+      ],
+      "printedAnswer": "A",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0625"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 37,
+      "sourcePage": 170,
+      "question": "What is included in an HTTP response?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Only request header"
+        },
+        {
+          "key": "B",
+          "text": "Status code, headers, and body"
+        },
+        {
+          "key": "C",
+          "text": "Only URL"
+        },
+        {
+          "key": "D",
+          "text": "Only cookies"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0626"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 38,
+      "sourcePage": 170,
+      "question": "HTTPS differs from HTTP because it:",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Uses FTP protocol"
+        },
+        {
+          "key": "B",
+          "text": "Encrypts data using SSL/TLS"
+        },
+        {
+          "key": "C",
+          "text": "Works only on local networks"
+        },
+        {
+          "key": "D",
+          "text": "Does not use servers"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0627"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 39,
+      "sourcePage": 170,
+      "question": "What is the primary purpose of cookies?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Store server-side objects"
+        },
+        {
+          "key": "B",
+          "text": "Maintain user state on the client"
+        },
+        {
+          "key": "C",
+          "text": "Execute JavaScript code"
+        },
+        {
+          "key": "D",
+          "text": "Encrypt HTTP data"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0628"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 40,
+      "sourcePage": 170,
+      "question": "Where are cookies stored?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Web server"
+        },
+        {
+          "key": "B",
+          "text": "Database"
+        },
+        {
+          "key": "C",
+          "text": "Client browser"
+        },
+        {
+          "key": "D",
+          "text": "Application server"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0629"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 41,
+      "sourcePage": 170,
+      "question": "Which cookie is deleted when the browser is closed?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Persistent cookie"
+        },
+        {
+          "key": "B",
+          "text": "Secure cookie"
+        },
+        {
+          "key": "C",
+          "text": "Session cookie"
+        },
+        {
+          "key": "D",
+          "text": "HTTP-only cookie"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0630"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 42,
+      "sourcePage": 171,
+      "question": "Sessions are mainly used to:",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Store data permanently"
+        },
+        {
+          "key": "B",
+          "text": "Track users across multiple requests"
+        },
+        {
+          "key": "C",
+          "text": "Reduce server load"
+        },
+        {
+          "key": "D",
+          "text": "Improve page styling"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0631"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 43,
+      "sourcePage": 171,
+      "question": "Where is session data usually stored?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Client browser"
+        },
+        {
+          "key": "B",
+          "text": "Proxy server"
+        },
+        {
+          "key": "C",
+          "text": "Web server"
+        },
+        {
+          "key": "D",
+          "text": "DNS server"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0632"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 44,
+      "sourcePage": 171,
+      "question": "Which technique is used by AJAX to update a web page without reloading?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "HTML forms"
+        },
+        {
+          "key": "B",
+          "text": "XML parsing"
+        },
+        {
+          "key": "C",
+          "text": "Asynchronous server communication"
+        },
+        {
+          "key": "D",
+          "text": "CSS styling"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0633"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 45,
+      "sourcePage": 171,
+      "question": "Which object is traditionally used in AJAX to send requests?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Fetch"
+        },
+        {
+          "key": "B",
+          "text": "XMLHttpRequest"
+        },
+        {
+          "key": "C",
+          "text": "Document"
+        },
+        {
+          "key": "D",
+          "text": "Window"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0634"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 46,
+      "sourcePage": 171,
+      "question": "What does AJAX stand for?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Asynchronous Java and XML"
+        },
+        {
+          "key": "B",
+          "text": "Asynchronous JavaScript and XML"
+        },
+        {
+          "key": "C",
+          "text": "Advanced JavaScript and XHTML"
+        },
+        {
+          "key": "D",
+          "text": "Asynchronous JSON and XML"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0635"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 47,
+      "sourcePage": 171,
+      "question": "Which data format is most commonly used with modern AJAX?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "XML"
+        },
+        {
+          "key": "B",
+          "text": "HTML"
+        },
+        {
+          "key": "C",
+          "text": "JSON"
+        },
+        {
+          "key": "D",
+          "text": "CSV"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0636"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 48,
+      "sourcePage": 172,
+      "question": "Which AJAX feature improves user experience?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Page reload after every request"
+        },
+        {
+          "key": "B",
+          "text": "Synchronous communication"
+        },
+        {
+          "key": "C",
+          "text": "Partial page updates"
+        },
+        {
+          "key": "D",
+          "text": "Server-side rendering only"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0637"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 49,
+      "sourcePage": 172,
+      "question": "AJAX requests are typically handled in the background using:",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Multithreading"
+        },
+        {
+          "key": "B",
+          "text": "Asynchronous calls"
+        },
+        {
+          "key": "C",
+          "text": "Batch processing"
+        },
+        {
+          "key": "D",
+          "text": "Compilation"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0638"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 50,
+      "sourcePage": 172,
+      "question": "Which is more secure for storing sensitive user data?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Cookies"
+        },
+        {
+          "key": "B",
+          "text": "Sessions"
+        },
+        {
+          "key": "C",
+          "text": "Local storage"
+        },
+        {
+          "key": "D",
+          "text": "Cache"
+        }
+      ],
+      "printedAnswer": "B",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0639"
+    },
+    {
+      "topic": "Web Technologies",
+      "sourceSection": "Web Technology",
+      "sourceNumber": 51,
+      "sourcePage": 172,
+      "question": "AJAX allows:",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Only synchronous data transfer"
+        },
+        {
+          "key": "B",
+          "text": "Page reload after every request"
+        },
+        {
+          "key": "C",
+          "text": "Communication with server without reloading the page"
+        },
+        {
+          "key": "D",
+          "text": "Only XML data transfer"
+        }
+      ],
+      "printedAnswer": "C",
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0640"
+    }
+  ]
+}

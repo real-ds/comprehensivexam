@@ -1,0 +1,1088 @@
+{
+  "topic": "Theory of Computation",
+  "questions": [
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 1,
+      "sourcePage": 124,
+      "question": "Statement 2: The nodes Statement 3: The edges or arcs can be used for transitions Which of the following make the correct combination?",
+      "code": "Statement 1: A Finite automata can be represented graphically;\ncan be its states;",
+      "options": [
+        {
+          "key": "A",
+          "text": "Statement 1 is false but Statement 2 and 3 are correct"
+        },
+        {
+          "key": "B",
+          "text": "Statement 1 and 2 are correct while 3 is wrong"
+        },
+        {
+          "key": "C",
+          "text": "None of the mentioned statements are correct"
+        },
+        {
+          "key": "D",
+          "text": "All of the mentioned statements are correct"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0448"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 2,
+      "sourcePage": 124,
+      "question": "In a Turing machine the header can move over two cells at the same time",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "true"
+        },
+        {
+          "key": "B",
+          "text": "false"
+        },
+        {
+          "key": "C",
+          "text": "maybe false in some cases"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0449"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 3,
+      "sourcePage": 125,
+      "question": "John is asked to make an deterministic finite automaton which accepts a given string for all the occurrence of '1001' in it. How many number of transitions would John use such that, the string processing application works?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "10"
+        },
+        {
+          "key": "B",
+          "text": "11"
+        },
+        {
+          "key": "C",
+          "text": "12"
+        },
+        {
+          "key": "D",
+          "text": "15"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0450"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 4,
+      "sourcePage": 125,
+      "question": "The production of form -> ε is called:",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Sigma"
+        },
+        {
+          "key": "B",
+          "text": "Null Transition"
+        },
+        {
+          "key": "C",
+          "text": "Null state"
+        },
+        {
+          "key": "D",
+          "text": "All of the mentioned"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0451"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 5,
+      "sourcePage": 125,
+      "question": "The number of tuples in an Non Deterministic Finite Automaton:",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "5"
+        },
+        {
+          "key": "B",
+          "text": "6"
+        },
+        {
+          "key": "C",
+          "text": "7"
+        },
+        {
+          "key": "D",
+          "text": "4"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0452"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 6,
+      "sourcePage": 125,
+      "question": "Predict the number of transitions required to build a DFA for the following language using only 3",
+      "code": "states: ∑{0,1}\nL= {w | w ends with 00}",
+      "options": [
+        {
+          "key": "A",
+          "text": "6"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "Cannot be said"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0453"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 7,
+      "sourcePage": 126,
+      "question": "In NFA a state cannot travel to more than one state using the same input symbol",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "true"
+        },
+        {
+          "key": "B",
+          "text": "false"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0454"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 8,
+      "sourcePage": 126,
+      "question": "In the tuples which is used to represent an automata Q represents the states in the automata",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "true"
+        },
+        {
+          "key": "B",
+          "text": "false"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0455"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 9,
+      "sourcePage": 126,
+      "question": "In the tuples which is used to represent an automata, F represents the non final state elements in the automata",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "true"
+        },
+        {
+          "key": "B",
+          "text": "false"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0456"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 10,
+      "sourcePage": 126,
+      "question": "All DFA's can be called as NFA's",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "true"
+        },
+        {
+          "key": "B",
+          "text": "false"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0457"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 11,
+      "sourcePage": 126,
+      "question": "Kleen closure property is represented with * symbol",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "true"
+        },
+        {
+          "key": "B",
+          "text": "false"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0458"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 12,
+      "sourcePage": 127,
+      "question": "Alphabet set is formed using symbols",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "True"
+        },
+        {
+          "key": "B",
+          "text": "False"
+        },
+        {
+          "key": "C",
+          "text": "May not be true in all cases"
+        },
+        {
+          "key": "D",
+          "text": "May be false in some cases"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0459"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 13,
+      "sourcePage": 127,
+      "question": "Positive closure represented with *",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "true"
+        },
+        {
+          "key": "B",
+          "text": "false"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0460"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 14,
+      "sourcePage": 127,
+      "question": "In a Context Free Grammar every Terminal produces a language",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "true"
+        },
+        {
+          "key": "B",
+          "text": "false"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0461"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 15,
+      "sourcePage": 127,
+      "question": "The formal notation of a context free grammar is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "G={V,T,P,S}"
+        },
+        {
+          "key": "B",
+          "text": "G={V,T,P}"
+        },
+        {
+          "key": "C",
+          "text": "G={V,T,S}"
+        },
+        {
+          "key": "D",
+          "text": "G={G1,V,T,P,S}"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0462"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 16,
+      "sourcePage": 128,
+      "question": "A variable non terminal may be __________ if there is no way of getting terminal from it.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "useful"
+        },
+        {
+          "key": "B",
+          "text": "useless"
+        },
+        {
+          "key": "C",
+          "text": "cannot determine"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0463"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 17,
+      "sourcePage": 128,
+      "question": "which of the following grammar are useless productions S→aS | A | C A→a B→aa C→aCb",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "S→aS | A | C A→a B→aa C→aCb"
+        },
+        {
+          "key": "B",
+          "text": "S→aS | A | C A→a"
+        },
+        {
+          "key": "C",
+          "text": "S→aS | A | C B→aa"
+        },
+        {
+          "key": "D",
+          "text": "S→C B→aa C→aCb"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0464"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 18,
+      "sourcePage": 128,
+      "question": "A grammar is said to be ambiguous when",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "if there exists some w∈L(G) which has atleast two left most or right most derivations"
+        },
+        {
+          "key": "B",
+          "text": "if there exists some w∈L(G) which has atleast one left most or right most derivations"
+        },
+        {
+          "key": "C",
+          "text": "if there exists some w∈L(G) which no left most or right most derivations"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0465"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 19,
+      "sourcePage": 128,
+      "question": "Any production of a context free grammar of the form A→B where A,B∈V is called",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Unit production"
+        },
+        {
+          "key": "B",
+          "text": "Useless Symbol"
+        },
+        {
+          "key": "C",
+          "text": "Null Production"
+        },
+        {
+          "key": "D",
+          "text": "All"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0466"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 20,
+      "sourcePage": 129,
+      "question": "where V represents Terminals",
+      "code": "In G{V,T,P,S}",
+      "options": [
+        {
+          "key": "A",
+          "text": "true"
+        },
+        {
+          "key": "B",
+          "text": "false"
+        },
+        {
+          "key": "C",
+          "text": "maybe true in some cases"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0467"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 21,
+      "sourcePage": 129,
+      "question": "A grammar G is called a CFG if production has",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "only one terminal in LHS"
+        },
+        {
+          "key": "B",
+          "text": "any combination of terminals and non-terminals on its RHS"
+        },
+        {
+          "key": "C",
+          "text": "RHS always starting with non-terminals"
+        },
+        {
+          "key": "D",
+          "text": "only one terminal in LHS and any combination of terminals and non-terminals on its RHS"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0468"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 22,
+      "sourcePage": 129,
+      "question": "Which of the following grammar is ambiguous",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "S→aS|Sa|a"
+        },
+        {
+          "key": "B",
+          "text": "S→0S0|1S1|0|1|ε"
+        },
+        {
+          "key": "C",
+          "text": "S→S0S0S|1"
+        },
+        {
+          "key": "D",
+          "text": "All of these"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0469"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 23,
+      "sourcePage": 129,
+      "question": "Languages are conditions in forming strings over the symbols available in the alphabet set",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "true"
+        },
+        {
+          "key": "B",
+          "text": "false"
+        },
+        {
+          "key": "C",
+          "text": "may be true in some cases"
+        },
+        {
+          "key": "D",
+          "text": "may be false in most of the cases"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0470"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 24,
+      "sourcePage": 130,
+      "question": "The CFG for the language L={0^n 1^n |n>=1} is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "S→0S|S0|1"
+        },
+        {
+          "key": "B",
+          "text": "S→0S0|1S1|0|1|ε"
+        },
+        {
+          "key": "C",
+          "text": "S→S0S0S|1"
+        },
+        {
+          "key": "D",
+          "text": "S→0S1 | 01"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0471"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 25,
+      "sourcePage": 130,
+      "question": "Which of the following machines accepts regular languages",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "NFA"
+        },
+        {
+          "key": "B",
+          "text": "DFA"
+        },
+        {
+          "key": "C",
+          "text": "PDA"
+        },
+        {
+          "key": "D",
+          "text": "All"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0472"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 26,
+      "sourcePage": 130,
+      "question": "Which of the following languages can be accepted by DPDA",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "L={WcW^r | W{a,b}*}"
+        },
+        {
+          "key": "B",
+          "text": "L={a^nb^n|n>=1}"
+        },
+        {
+          "key": "C",
+          "text": "both are correct"
+        },
+        {
+          "key": "D",
+          "text": "both are wrong"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0473"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 27,
+      "sourcePage": 130,
+      "question": "which of the following languages are accepted by NPDA but not by DPDA",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "palindrome of even length"
+        },
+        {
+          "key": "B",
+          "text": "L={0^m 1^n 2^p | m,n,p>=0 and m=n}"
+        },
+        {
+          "key": "C",
+          "text": "L={0^m 1^n 2^m | m=n+p,n,p>=0}"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0474"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 28,
+      "sourcePage": 131,
+      "question": "PDA is equivalent to finite automata except that it has an extra memory unit called as queue",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "true"
+        },
+        {
+          "key": "B",
+          "text": "false"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0475"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 29,
+      "sourcePage": 131,
+      "question": "Finite state machines have limited memory only in the form of states.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "true"
+        },
+        {
+          "key": "B",
+          "text": "false"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0476"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 30,
+      "sourcePage": 131,
+      "question": "PDA may be deterministic or non-deterministic.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "true"
+        },
+        {
+          "key": "B",
+          "text": "false"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0477"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 31,
+      "sourcePage": 131,
+      "question": "In formal notation Z0 is stack bottom symbol",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "true"
+        },
+        {
+          "key": "B",
+          "text": "false"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0478"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 32,
+      "sourcePage": 131,
+      "question": "which of the following language is not regular",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "L={a^n | n>=0}"
+        },
+        {
+          "key": "B",
+          "text": "L={a^n*n | n>=0}"
+        },
+        {
+          "key": "C",
+          "text": "L={a^2n | n>=0}"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0479"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 33,
+      "sourcePage": 132,
+      "question": "If the PDA does not stop on an accepting state and the stack is not empty, the string is:",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "rejected"
+        },
+        {
+          "key": "B",
+          "text": "accepted"
+        },
+        {
+          "key": "C",
+          "text": "all of the mentioned"
+        },
+        {
+          "key": "D",
+          "text": "none of the mentioned"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0480"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 34,
+      "sourcePage": 132,
+      "question": "Strings can have symbols which are not shown in the alphabet set",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "yes"
+        },
+        {
+          "key": "B",
+          "text": "no"
+        },
+        {
+          "key": "C",
+          "text": "maybe in special case"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0481"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 35,
+      "sourcePage": 132,
+      "question": "The operations of PDA never work on elements, other than the top symbol in stack.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "TRUE"
+        },
+        {
+          "key": "B",
+          "text": "FALSE"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0482"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 36,
+      "sourcePage": 132,
+      "question": "Languages determine the nature of string formed using the given alphabet set",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "yes"
+        },
+        {
+          "key": "B",
+          "text": "no"
+        },
+        {
+          "key": "C",
+          "text": "maybe true in some cases"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0483"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 37,
+      "sourcePage": 132,
+      "question": "Identify the string set for the Σ {0,1}∗ even count of zeros and even count of ones",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "{00,11,0101,00001111,0101,.....}"
+        },
+        {
+          "key": "B",
+          "text": "{ε,00,11,0101,00001111,0101,.....}"
+        },
+        {
+          "key": "C",
+          "text": "{ε,010,101,001,0000111,0101,.....}"
+        },
+        {
+          "key": "D",
+          "text": "None of the choice"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0484"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 38,
+      "sourcePage": 133,
+      "question": "",
+      "code": "Σ {0,1}Σ^3 = {000, 001, 010, 011, 100, 101, 110, 111 }",
+      "options": [
+        {
+          "key": "A",
+          "text": "correct"
+        },
+        {
+          "key": "B",
+          "text": "wrong"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "empty-stem",
+        "code-detected"
+      ],
+      "id": "q_0485"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 39,
+      "sourcePage": 133,
+      "question": "Identify the string set for the Σ {0,1}+ even count of zeros and odd count of ones",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "{ε,001,100,0000111,10101}"
+        },
+        {
+          "key": "B",
+          "text": "{001,100,01,0000111,10101}"
+        },
+        {
+          "key": "C",
+          "text": "{0101,1010,1001,01000111,101001}"
+        },
+        {
+          "key": "D",
+          "text": "{001,100,001,0000111,10101}"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0486"
+    },
+    {
+      "topic": "Theory of Computation",
+      "sourceSection": "TOC",
+      "sourceNumber": 40,
+      "sourcePage": 133,
+      "question": "In DFA, a state cannot travel to more than one state with the same input symbol",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "true"
+        },
+        {
+          "key": "B",
+          "text": "false"
+        },
+        {
+          "key": "C",
+          "text": "maybe true in some cases"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0487"
+    }
+  ]
+}

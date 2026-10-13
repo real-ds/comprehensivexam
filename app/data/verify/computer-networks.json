@@ -1,0 +1,780 @@
+{
+  "topic": "Computer Networks",
+  "questions": [
+    {
+      "id": "q_0015",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Network security",
+      "question": "Which type of encryption algorithm uses different keys for encryption and decryption?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "a.Public key encryption algorithm"
+        },
+        {
+          "key": "B",
+          "text": "b. Private key encryption algorithm"
+        },
+        {
+          "key": "C",
+          "text": "c. Symmetric key encryption algorithm"
+        },
+        {
+          "key": "D",
+          "text": "d. Asymmetric key encryption algorithm"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "medium",
+      "currentExplanation": "When the encryption key and the decryption key are different but mathematically related, the algorithm is asymmetric, also called public key encryption. RSA, ElGamal and Diffie-Hellman are examples of this class.\n\nWhy D is correct: Different keys for encryption and decryption is the textbook definition of an asymmetric key encryption algorithm.\n\nWhy the others are wrong:\n- A: Public key encryption is the same class as D, so this option is a synonym and makes the item ambiguous.\n- B: A private key on its own names only the secret half of a pair, not an algorithm class.\n- C: A symmetric key algorithm uses one and the same key, the opposite of the stem.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Options A (public key encryption algorithm) and D (asymmetric key encryption algorithm) are synonyms, so both are defensible; answered D as the standard textbook term.",
+      "sourcePage": 4
+    },
+    {
+      "id": "q_0017",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Network security",
+      "question": "Which type of encryption algorithm is more secure?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Public key encryption algorithm"
+        },
+        {
+          "key": "B",
+          "text": "Private key encryption algorithm"
+        },
+        {
+          "key": "C",
+          "text": "Symmetric key encryption algorithm"
+        },
+        {
+          "key": "D",
+          "text": "Asymmetric key encryption algorithm"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "medium",
+      "currentExplanation": "Asymmetric schemes such as RSA rest on hard mathematical problems and remove the need for a pre-shared secret between the two parties, which is usually regarded as the stronger security model. Symmetric security depends entirely on getting that shared key to both ends safely.\n\nWhy D is correct: Asymmetric key encryption is normally cited as the more secure of the two because it solves key distribution without a pre-shared secret.\n\nWhy the others are wrong:\n- A: Public key encryption names the same class as D, so this option is a synonym and makes the item ambiguous.\n- B: A private key is only the secret half of a key pair, not an algorithm type.\n- C: Symmetric encryption is secure only if the shared key is pre-distributed safely, which is its weak point.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Options A (public key encryption algorithm) and D (asymmetric key encryption algorithm) describe the same class, so both are defensible; answered D as the standard term.",
+      "sourcePage": 4
+    },
+    {
+      "id": "q_0018",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Network security",
+      "question": "Which protocol is used for secure communication over the internet?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "TLS/SSL"
+        },
+        {
+          "key": "B",
+          "text": "HTTPS"
+        },
+        {
+          "key": "C",
+          "text": "SSH"
+        },
+        {
+          "key": "D",
+          "text": "TCP/IP"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "TLS and its predecessor SSL are the transport-layer security protocols that add confidentiality, integrity and peer authentication to a TCP connection. Applications such as HTTPS, SSH and secure SMTP are built on top of them, so the general protocol that secures communication over the internet is TLS/SSL.\n\nWhy A is correct: TLS/SSL is the general purpose secure transport protocol underlying secure internet communication.\n\nWhy the others are wrong:\n- B: HTTPS is only HTTP carried over TLS, an application of A rather than the protocol itself.\n- C: SSH secures remote login and shell access, one specific application built on the same idea.\n- D: TCP/IP is the transport suite itself and provides no encryption or authentication.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 4
+    },
+    {
+      "id": "q_0021",
+      "verifyReasons": [
+        "confidence=medium",
+        "code/calculation question"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Network security",
+      "question": "A sender S sends a message m to receiver R, which is digitally signed by S with its private key. In this scenario, one or more of the following security violations can take place. launch a birthday attack to replace m with a fraudulent message. can launch a birthday attack to replace m with a fraudulent message. birthday attack to replace m with a fraudulent message. Which of the following are possible security violations.",
+      "code": "(I) S can\n(II) A third party attacker\n(III) R can launch a",
+      "options": [
+        {
+          "key": "A",
+          "text": "(I) and (II) only"
+        },
+        {
+          "key": "B",
+          "text": "(I) only"
+        },
+        {
+          "key": "C",
+          "text": "(II) only"
+        },
+        {
+          "key": "D",
+          "text": "(II) and (III) only"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "In a digital signature scheme only a holder of S's private key can create a value that verifies under S's public key. A birthday or collision attack lets a third party who does not know that private key find a different message m' whose digest equals that of m, so that S's existing signature also validates for the fraudulent message. S and R cannot achieve this: S could simply re-sign the fraudulent message, and R has no way to produce a signature that verifies without S's private key.\n\nWhy C is correct: Only statement (II) describes a feasible violation, a third party replacing m with a colliding fraudulent message.\n\nWhy the others are wrong:\n- A: (I) and (II) cannot both hold, since S holding the private key gains nothing from a birthday attack and can just sign directly.\n- B: (I) only is wrong because S is not the party that benefits from such an attack.\n- D: (II) and (III) is wrong because R cannot mount the substitution without S's private key.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "The stem is garbled by column scrambling: fragments of statements (I), (II) and (III) are interleaved with the closing line 'Which of the following are possible security violations'. Answered from the standard version of this question, where only a third-party attacker can mount the birthday attack.",
+      "sourcePage": 5
+    },
+    {
+      "id": "q_0025",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Network security",
+      "question": "From the following options, what is the key size in the S-AES algorithm?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "16 bits"
+        },
+        {
+          "key": "B",
+          "text": "32 bits"
+        },
+        {
+          "key": "C",
+          "text": "24 bits"
+        },
+        {
+          "key": "D",
+          "text": "None of the above"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "medium",
+      "currentExplanation": "S-AES, the simplified teaching version of AES, keeps the AES structure with a 128-bit block and a 128-bit key (the 192- and 256-bit cases are treated analogously). Its key size is therefore 128 bits, which is not equal to 16, 32 or 24 bits.\n\nWhy D is correct: S-AES uses a 128-bit key, so none of the listed bit values is correct and none of the above applies.\n\nWhy the others are wrong:\n- A: 16 is the size in bytes, not 16 bits.\n- B: 32 is 256 expressed in bytes, not bits.\n- C: 24 is 192 expressed in bytes, not bits.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 6
+    },
+    {
+      "id": "q_0026",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Network security",
+      "question": "Among the fourth-generation firewalls, Dynamic packet filters firewall that work at_________.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Application Layer"
+        },
+        {
+          "key": "B",
+          "text": "TCP"
+        },
+        {
+          "key": "C",
+          "text": "UDP"
+        },
+        {
+          "key": "D",
+          "text": "TCP, UDP"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "medium",
+      "currentExplanation": "Firewalls are commonly grouped into generations: packet filters at the network layer, circuit gateways at the transport layer, application-level gateways at the application layer, and dynamic packet filtering firewalls that track connection state at the transport layer while also inspecting payload content. The layer they work at is the transport layer, whose protocols are TCP and UDP.\n\nWhy D is correct: The fourth-generation dynamic packet filtering firewall operates at the transport layer, i.e. on TCP and UDP.\n\nWhy the others are wrong:\n- A: The application layer is the domain of application-level gateway firewalls.\n- B: TCP alone covers only one of the two transport protocols.\n- C: UDP alone likewise covers only part of the transport layer.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "The transport layer spans both TCP and UDP, so option D overlaps with the single-protocol options B and C; answered D as the complete description of the layer.",
+      "sourcePage": 6
+    },
+    {
+      "id": "q_0027",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Network security",
+      "question": "Authentication and Access control for resources are provided by Network security",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "True"
+        },
+        {
+          "key": "B",
+          "text": "False"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "Network security is defined by the services it provides: confidentiality, integrity, authentication, access control, non-repudiation and availability. Authentication establishes who a subject is, while access control decides what that subject may do with a resource, and both are core network security services.\n\nWhy A is correct: The statement is true, since network security supplies both authentication and access control for resources.\n\nWhy the others are wrong:\n- B: False contradicts the definition of network security services.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 7
+    },
+    {
+      "id": "q_0030",
+      "verifyReasons": [
+        "confidence=low"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Network security",
+      "question": "Encryption and decryption provide secrecy, or confidentiality, but not............",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Authentication"
+        },
+        {
+          "key": "B",
+          "text": "Integrity"
+        },
+        {
+          "key": "C",
+          "text": "Privacy"
+        },
+        {
+          "key": "D",
+          "text": "All of the above"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "low",
+      "currentExplanation": "Encryption and decryption are confidentiality mechanisms only. On their own they give no assurance about who sent a message and, unless a keyed MAC is added, no assurance that the ciphertext was not altered. Note that privacy in the option list is just another word for the secrecy that encryption does provide.\n\nWhy A is correct: Authentication is the classic service that plain encryption and decryption do not provide.\n\nWhy the others are wrong:\n- B: Integrity is also not provided by plain encryption, so this is a true competing statement and the reason the item is flagged.\n- C: Privacy is the very secrecy that encryption does provide, so this statement is false.\n- D: All of the above cannot hold because the privacy option is false as printed.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "The option set is defective: both Authentication and Integrity are true statements while Privacy is the very confidentiality encryption provides, so All of the above is false as printed; answered A as the canonical textbook claim.",
+      "sourcePage": 7
+    },
+    {
+      "id": "q_0036",
+      "verifyReasons": [
+        "confidence=low"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Network security",
+      "question": "If _________ is needed, a cryptosystem must be applied over the scheme.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "integrity"
+        },
+        {
+          "key": "B",
+          "text": "confidentiality"
+        },
+        {
+          "key": "C",
+          "text": "nonrepudiation"
+        },
+        {
+          "key": "D",
+          "text": "authentication"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "low",
+      "currentExplanation": "Confidentiality and integrity can be achieved with symmetric or asymmetric encryption alone, but non-repudiation cannot: it requires binding the sender's private key to the message, which means a signature scheme (a cryptosystem) must be applied over the message itself. The printed stem is damaged, with the phrase 'applied over the scheme', so the original wording cannot be recovered with certainty.\n\nWhy C is correct: Non-repudiation is the only one of the four services that forces a signature cryptosystem to be applied over the message.\n\nWhy the others are wrong:\n- A: Integrity needs a hash or MAC over the message, not a key-pair cryptosystem.\n- B: Confidentiality is provided by encryption itself, so no extra cryptosystem is needed.\n- D: Authentication can be obtained by challenge-response or a MAC without a signature over the message.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "The stem is garbled ('If _________ is needed, a cryptosystem must be applied over the scheme'), so the original blank cannot be recovered with certainty; answered nonrepudiation on the reading that only non-repudiation forces a signature cryptosystem over the message.",
+      "sourcePage": 9
+    },
+    {
+      "id": "q_0042",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Network security",
+      "question": "Which of the following public key distribution systems is most secure?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Public-Key Certificates"
+        },
+        {
+          "key": "B",
+          "text": "Public announcements"
+        },
+        {
+          "key": "C",
+          "text": "Publicly available directories"
+        },
+        {
+          "key": "D",
+          "text": "Public-Key authority"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "A public announcement offers no verification at all, a public directory trusts whoever wrote the listing, and a public-key authority needs a trusted server online for every lookup. A public-key certificate binds the key to an identity with a CA signature plus validity dates, so it can be verified offline and revoked if abused, which makes it the most secure of the four.\n\nWhy A is correct: Public-Key Certificates are the most secure distribution system, since the CA signature and timestamps allow offline verification and support revocation.\n\nWhy the others are wrong:\n- B: A public announcement can be forged and proves nothing about ownership of the key.\n- C: A public directory relies on the honesty of whoever maintains the listing.\n- D: A public-key authority needs the authority online for every lookup and is a single point of failure.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 10
+    },
+    {
+      "id": "q_0043",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Network security",
+      "question": "Which system uses a trusted third party interface?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Public-Key Certificates"
+        },
+        {
+          "key": "B",
+          "text": "Public announcements"
+        },
+        {
+          "key": "C",
+          "text": "Publicly available directories"
+        },
+        {
+          "key": "D",
+          "text": "Public-Key authority"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "A public-key certificate is issued and signed by a certification authority, an independent trusted third party, and users check that signature against the CA's public key. That trusted third-party vouching is the defining feature of the certificate scheme in this option set.\n\nWhy A is correct: Public-Key Certificates are vouched for by a trusted third party, the CA, whose signature users verify.\n\nWhy the others are wrong:\n- B: A public announcement involves no third party at all.\n- C: A public directory relies on whoever maintains it, not on a certifier.\n- D: A public-key authority is also third-party based, which is why this item is flagged, but the keyed answer here is the CA-signed certificate.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "A public-key authority also relies on a trusted third party, so options A and D are both defensible; answered A, which is how the source MCQ bank keys this item.",
+      "sourcePage": 10
+    },
+    {
+      "id": "q_0044",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Network security",
+      "question": "The subject unique identifier of the X.509 certificates was added in which version?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "3"
+        },
+        {
+          "key": "D",
+          "text": "4"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "X.509 version 1 carried only the basic distinguished name and the public key. Version 2 added the optional unique identifier fields, issuerUniqueID and subjectUniqueID, so that a subject reusing a name could still be distinguished; version 3 later added the extension fields such as subjectAltName and key usage.\n\nWhy B is correct: The subjectUniqueID field was introduced in X.509 version 2.\n\nWhy the others are wrong:\n- A: Version 1 had no unique identifier fields at all.\n- C: Version 3 added the extension fields, not the unique identifiers.\n- D: There is no widely deployed X.509 version 4.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 11
+    },
+    {
+      "id": "q_0045",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Network security",
+      "question": "What is the primary advantage of using public key cryptography?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Faster encryption speed"
+        },
+        {
+          "key": "B",
+          "text": "Simpler key management"
+        },
+        {
+          "key": "C",
+          "text": "Stronger security"
+        },
+        {
+          "key": "D",
+          "text": "Lower computational overhead"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "The bottleneck of conventional encryption is key distribution: every pair of users needs a shared secret delivered beforehand over a secure channel. Public key cryptography removes that requirement because the public key can be published freely, so its chief advantage is simpler key management.\n\nWhy B is correct: Simpler key management, with no secure pre-distribution of shared secrets, is the main advantage of public key cryptography.\n\nWhy the others are wrong:\n- A: Public key encryption is far slower, not faster, than symmetric encryption.\n- C: Security strength depends mainly on key length; long symmetric keys are equally strong.\n- D: Public key operations carry high computational overhead, the opposite of the truth.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 11
+    },
+    {
+      "id": "q_0051",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Network security",
+      "question": "A session symmetric key between two parties is used",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Only once"
+        },
+        {
+          "key": "B",
+          "text": "Twice"
+        },
+        {
+          "key": "C",
+          "text": "Multiple times"
+        },
+        {
+          "key": "D",
+          "text": "Conditions dependant"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "A session key is generated for one conversation, protects the traffic of that session, and is then discarded, being replaced on rekeying or on the next session. Limiting a symmetric key's lifetime reduces how much ciphertext an attacker can collect against a single key.\n\nWhy A is correct: A session symmetric key is used for a single session only, which is what the word session means.\n\nWhy the others are wrong:\n- B: Twice has no basis in key lifetime rules.\n- C: Multiple reuse defeats the short lifetime that gives a session key its security value.\n- D: Conditions dependant is too vague; the defining property is one session.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 12
+    },
+    {
+      "id": "q_0055",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Network security",
+      "question": "What is a digital signature?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "A message that is encrypted with a private key"
+        },
+        {
+          "key": "B",
+          "text": "A message that is encrypted with a public key"
+        },
+        {
+          "key": "C",
+          "text": "A message that is hashed with a private key"
+        },
+        {
+          "key": "D",
+          "text": "A message that is hashed with a public key"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "A digital signature is produced by applying the private-key (signing) operation of an asymmetric algorithm to the message digest, which is conventionally described as signing, i.e. encrypting with the private key. Hashing never involves a key, and encrypting with the public key would let anyone produce a value that verifies.\n\nWhy A is correct: Of the four descriptions, only an operation with the private key can produce a signature that only the signer could create.\n\nWhy the others are wrong:\n- B: Encrypting with the public key is a public operation, so anyone could forge such a signature.\n- C: A hash function takes no key, so hashed with a private key is meaningless.\n- D: Hashing with a public key is likewise meaningless; hashing never uses a key.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 13
+    },
+    {
+      "id": "q_0060",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Physical layer and transmission",
+      "question": "Which Topology is used in Ethernet?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Bus"
+        },
+        {
+          "key": "B",
+          "text": "Star"
+        },
+        {
+          "key": "C",
+          "text": "Mesh"
+        },
+        {
+          "key": "D",
+          "text": "Ring"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "The original Ethernet LAN over coaxial cable is a shared broadcast medium, i.e. a bus topology using CSMA/CD, and that is the topology classically associated with Ethernet in the standard networking literature. Modern switched Ethernet is physically wired as a star around a switch while remaining logically a shared broadcast medium.\n\nWhy A is correct: Ethernet LANs are classically described as using the bus topology.\n\nWhy the others are wrong:\n- B: Star describes the modern switched physical layout rather than the classical Ethernet topology this item refers to.\n- C: A full mesh is far too expensive to be used for Ethernet.\n- D: Ring is the Token Ring and FDDI topology, not Ethernet.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Classical Ethernet uses a bus but modern switched Ethernet is physically a star, so both A and B are defensible depending on which Ethernet is meant; answered A per the standard textbook and source MCQ bank key.",
+      "sourcePage": 15
+    },
+    {
+      "id": "q_0065",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Switching and routing",
+      "question": "Which of the following are not the functions of router i. Data conversion for format to another ii. Forward the packets iii. Constructs the routing table iv. Detects error in the packet v. Queue the incoming packets vi. Forward the packet to all outgoing link",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "i, iv, vi"
+        },
+        {
+          "key": "B",
+          "text": "i, v, vi"
+        },
+        {
+          "key": "C",
+          "text": "i, ii, v, vi"
+        },
+        {
+          "key": "D",
+          "text": "iv, v, vi"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "A router is a network-layer device whose job is to forward datagrams, build and maintain a routing table, parse headers and queue packets awaiting an outgoing link. It does not convert between protocol or data formats, which is a gateway function, it leaves error control to the data link layer, and it forwards to the next hop rather than to every outgoing link.\n\nWhy A is correct: The functions a router does not perform are data conversion (i), error detection in the packet (iv) and forwarding the packet to all outgoing links (vi).\n\nWhy the others are wrong:\n- B: Wrong because queuing incoming packets (v) is a genuine router function.\n- C: Wrong because forwarding the packets (ii) is a router function.\n- D: Wrong because queueing (v) is a router function.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 16
+    },
+    {
+      "id": "q_0066",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Switching and routing",
+      "question": "What happens during the failure of a router in the virtual switching circuit?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "All the crashed packets get lost"
+        },
+        {
+          "key": "B",
+          "text": "All the virtual circuits that passes through the router get terminated"
+        },
+        {
+          "key": "C",
+          "text": "Congestion control becomes extremely difficult"
+        },
+        {
+          "key": "D",
+          "text": "Sequence of packets arrival gets disrupted"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "In a virtual circuit network the switch keeps per-circuit state, such as the VPI/VCI mapping, along the established path. If a switch in the middle fails, that state is lost, so every virtual circuit passing through it is broken and has to be re-established. This is the classic trade-off against datagram networks, where only the packets in flight would be lost.\n\nWhy B is correct: Failure of a router breaks the state of every virtual circuit passing through it, so all of them are terminated and must be re-established.\n\nWhy the others are wrong:\n- A: Losing only the packets in flight would describe a datagram network, not circuit state.\n- C: Congestion control is not what changes when the router fails.\n- D: Disruption of packet order is a general effect, but the defining consequence in a virtual circuit network is the loss of the circuits themselves.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 16
+    },
+    {
+      "id": "q_0081",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Error detection and correction",
+      "question": "A receiver receives the code 11001100111. When it uses the Hamming encoding algorithm, the result is 0101. Which bit is in error?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "5"
+        },
+        {
+          "key": "D",
+          "text": "No Error"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "With 11 bits (7 data plus 4 parity bits at positions 1, 2, 4 and 8) the syndrome is decoded by error position = p1*1 + p2*2 + p4*4 + p8*8. Taking the printed result 0101 in the order p8 p4 p2 p1 gives 1 + 4 = 5, which is one of the offered options, so bit 5 is the intended answer. Note that recomputing the parity checks of the printed codeword 11001100111 from scratch actually yields syndrome 0001 (position 8), so the printed syndrome and the printed codeword do not agree.\n\nWhy C is correct: read in the order p8 p4 p2 p1, the printed syndrome 0101 gives error position 1 + 4 = 5.\n\nWhy the others are wrong:\n- A: bit 1 would require syndrome 0001, which is not the printed result.\n- B: bit 3 would require syndrome 0011, which is not the printed result.\n- D: 'No Error' would mean an all-zero syndrome, but a syndrome was reported.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Inconsistent data: recomputing the Hamming parity checks of 11001100111 gives syndrome 0001 (error at bit 8, not an option), not the printed 0101. Answered from the printed syndrome as the question instructs; 0101 read as p1p2p4p8 would instead give bit 10.",
+      "sourcePage": 21
+    },
+    {
+      "id": "q_0090",
+      "verifyReasons": [
+        "confidence=low"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Application layer protocols",
+      "question": "To efficiently manage the hardware and software components configuration management is required. It includes:",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Monitoring the user behavior and his/her usage pattern"
+        },
+        {
+          "key": "B",
+          "text": "Replacement of the network components"
+        },
+        {
+          "key": "C",
+          "text": "Documentation is done only for the hardware changes in the network, software update is not required."
+        },
+        {
+          "key": "D",
+          "text": "Managing the access of the user's to the network."
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "low",
+      "currentExplanation": "Configuration management in network administration means configuring (adding, modifying, updating or replacing) the network's hardware and software and documenting those changes; it is one of the five areas of network management together with fault, accounting, performance and security management. Monitoring user behaviour belongs to accounting management and controlling access to the network belongs to security management, while option C is false as printed because software updates must be documented as well. That leaves the reconfiguration/replacement of network components as the only defensible printed choice.\n\nWhy B is correct: modifying or replacing the network's hardware and software components is the reconfiguration part of configuration management.\n\nWhy the others are wrong:\n- A: monitoring user behaviour and usage patterns is the job of accounting management.\n- C: as printed it says software updates need not be documented, but configuration management documents hardware and software changes alike.\n- D: controlling users' access to the network is security management, not configuration management.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "No printed option states the standard answer (documentation of both hardware and software changes). Option C appears to be a mangled version of that answer but as printed it asserts software updates need not be documented, which is false, so B was chosen as the best printed option.",
+      "sourcePage": 23
+    },
+    {
+      "id": "q_0109",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Physical layer and transmission",
+      "question": "Data transmission speed of LAN technology is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "upto 100 Mbps"
+        },
+        {
+          "key": "B",
+          "text": "upto 20 Mbps"
+        },
+        {
+          "key": "C",
+          "text": "upto 1000 Mbps"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "A LAN's defining advantage is a very high data rate over a short distance; the conventional textbook figures quoted for LAN technology are rates up to 100 Mbps (Fast Ethernet), with Gigabit Ethernet (1000 Mbps) used where higher rates are needed. Of the choices, 100 Mbps is the classic LAN figure, although the option set is dated because modern LANs routinely exceed it.\n\nWhy A is correct: LAN technology is conventionally quoted as supporting data rates up to 100 Mbps, far above WAN speeds.\n\nWhy the others are wrong:\n- B: 20 Mbps is below even Fast Ethernet and is not a usual LAN rate ceiling.\n- C: 1000 Mbps is Gigabit Ethernet, a defensible modern LAN rate but not the classic figure this item expects.\n- D: 'None' is wrong because a LAN rate is listed.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Loosely worded and date sensitive: both A (100 Mbps, the conventional LAN figure) and C (1000 Mbps, Gigabit Ethernet) are defensible; answered with the classic textbook figure.",
+      "sourcePage": 28
+    },
+    {
+      "id": "q_0119",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Routing protocols",
+      "question": "Static routing table",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Contains information entered manually"
+        },
+        {
+          "key": "B",
+          "text": "is updated periodically by using one of the dynamic routing protocols"
+        },
+        {
+          "key": "C",
+          "text": "is updated periodically by using one of the dynamic routing protocols"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "A static routing table is built by hand: the administrator types in each destination network and its next hop, and nothing updates it afterwards, which also means it survives router reboots. Any table 'updated periodically by using one of the dynamic routing protocols' is by definition dynamic, so options B and C describe the opposite case.\n\nWhy A is correct: a static routing table contains information entered manually by the administrator.\n\nWhy the others are wrong:\n- B: periodic updating by a dynamic routing protocol describes a dynamic routing table, not a static one.\n- C: this option is identical to option B and describes the same wrong (dynamic) case.\n- D: 'None' is wrong because option A correctly defines a static routing table.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Options B and C are identical in the source ('is updated periodically by using one of the dynamic routing protocols'); the duplicate does not affect the answer, which is A.",
+      "sourcePage": 31
+    },
+    {
+      "id": "q_0127",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Networks",
+      "subtopic": "Switching and routing",
+      "question": "Discarding policy that",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "routers may prevent congestion and at the same time may not harm the integrity of the transmission"
+        },
+        {
+          "key": "B",
+          "text": "can also prevent congestion in virtual-circuit networks"
+        },
+        {
+          "key": "C",
+          "text": "If the sender feels that a sent packet is lost or corrupted, the packet needs to be retransmitted"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "A discarding policy lets a router throw away packets that it knows carry no value for the destination (junk filtering), which relieves congestion without harming the transmission because those packets would have been discarded at the end host anyway. That is exactly what option A states, and it is why discarding is a form of congestion avoidance rather than congestion recovery.\n\nWhy A is correct: a discarding policy may prevent congestion while leaving the integrity of the transmission intact.\n\nWhy the others are wrong:\n- B: preventing congestion in virtual-circuit networks is the role of back pressure, not the defining property of a discarding policy.\n- C: this describes how a sender recovers from loss or corruption, which is retransmission, not the discarding policy itself.\n- D: 'None' is wrong because option A states the definition.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "The stem 'Discarding policy that' is truncated in the source. Answered from the options, where A states the defining property of a discarding (junk-filtering) policy.",
+      "sourcePage": 33
+    }
+  ]
+}

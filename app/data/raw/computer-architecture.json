@@ -1,0 +1,709 @@
+{
+  "topic": "Computer Architecture and Organization",
+  "questions": [
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 1,
+      "sourcePage": 134,
+      "question": "In memory transfer location address is supplied by____ that puts this on address bus",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "ALU"
+        },
+        {
+          "key": "B",
+          "text": "CPU"
+        },
+        {
+          "key": "C",
+          "text": "MAR"
+        },
+        {
+          "key": "D",
+          "text": "MDR"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0488"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 2,
+      "sourcePage": 134,
+      "question": "Control memory is part of ______ that has addressable storage registers and used as temporary storage for data",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "ROM"
+        },
+        {
+          "key": "B",
+          "text": "RAM"
+        },
+        {
+          "key": "C",
+          "text": "CPU"
+        },
+        {
+          "key": "D",
+          "text": "Memory"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0489"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 3,
+      "sourcePage": 134,
+      "question": "How many modes the address in control memory are divided into?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "2"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "5"
+        },
+        {
+          "key": "D",
+          "text": "7"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0490"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 4,
+      "sourcePage": 135,
+      "question": "which of the following is interrupt mode",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Task mode"
+        },
+        {
+          "key": "B",
+          "text": "Executive mode"
+        },
+        {
+          "key": "C",
+          "text": "Both a & b"
+        },
+        {
+          "key": "D",
+          "text": "None of these"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0491"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 5,
+      "sourcePage": 135,
+      "question": "Mode of addresses in control memory are:",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Executive mode"
+        },
+        {
+          "key": "B",
+          "text": "Task mode"
+        },
+        {
+          "key": "C",
+          "text": "Both Executive mode & Task Mode"
+        },
+        {
+          "key": "D",
+          "text": "None of these"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0492"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 6,
+      "sourcePage": 135,
+      "question": "On what method search in cache memory used by the system",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Cache directing"
+        },
+        {
+          "key": "B",
+          "text": "Cache mapping"
+        },
+        {
+          "key": "C",
+          "text": "Cache controlling"
+        },
+        {
+          "key": "D",
+          "text": "Cache invalidation"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0493"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 7,
+      "sourcePage": 135,
+      "question": "Microprograms are usually stored in",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "ROM"
+        },
+        {
+          "key": "B",
+          "text": "RAM"
+        },
+        {
+          "key": "C",
+          "text": "SAM"
+        },
+        {
+          "key": "D",
+          "text": "SAN"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0494"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 8,
+      "sourcePage": 136,
+      "question": "In which addressing the operand is actually present in instruction",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Immediate addressing"
+        },
+        {
+          "key": "B",
+          "text": "Direct addressing"
+        },
+        {
+          "key": "C",
+          "text": "Register addressing"
+        },
+        {
+          "key": "D",
+          "text": "None of these"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0495"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 9,
+      "sourcePage": 136,
+      "question": "In which addressing the simplest addressing mode where an operand is fetched from memory is_____",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Immediate addressing"
+        },
+        {
+          "key": "B",
+          "text": "Direct addressing"
+        },
+        {
+          "key": "C",
+          "text": "Register addressing"
+        },
+        {
+          "key": "D",
+          "text": "None of these"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0496"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 10,
+      "sourcePage": 136,
+      "question": "which addressing is a way of direct addressing",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Immediate addressing"
+        },
+        {
+          "key": "B",
+          "text": "Direct addressing"
+        },
+        {
+          "key": "C",
+          "text": "Register addressing"
+        },
+        {
+          "key": "D",
+          "text": "None of these"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0497"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 11,
+      "sourcePage": 136,
+      "question": "In which mode the main memory location holds the Effective Address of the operand",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Immediate addressing"
+        },
+        {
+          "key": "B",
+          "text": "Direct addressing"
+        },
+        {
+          "key": "C",
+          "text": "Register addressing"
+        },
+        {
+          "key": "D",
+          "text": "Indirect addressing"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0498"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 12,
+      "sourcePage": 137,
+      "question": "Operation of memory transfer are",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Read"
+        },
+        {
+          "key": "B",
+          "text": "Write"
+        },
+        {
+          "key": "C",
+          "text": "Both Read and Write"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0499"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 13,
+      "sourcePage": 137,
+      "question": "Which addressing is an extremely influential way of addressing",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Displacement addressing"
+        },
+        {
+          "key": "B",
+          "text": "Immediate addressing"
+        },
+        {
+          "key": "C",
+          "text": "Direct addressing"
+        },
+        {
+          "key": "D",
+          "text": "Register addressing"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0500"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 14,
+      "sourcePage": 137,
+      "question": "Which algorithm is a multiplication algorithm which multiplies two signed binary numbers in 2's complement notation",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Usual multiplication"
+        },
+        {
+          "key": "B",
+          "text": "Booth's multiplication"
+        },
+        {
+          "key": "C",
+          "text": "Both"
+        },
+        {
+          "key": "D",
+          "text": "None of these"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0501"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 15,
+      "sourcePage": 137,
+      "question": ". ________interrupt establishes a priority over the various sources to determine which request should be entertained first",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Priority interrupt"
+        },
+        {
+          "key": "B",
+          "text": "Polling"
+        },
+        {
+          "key": "C",
+          "text": "Daisy chaining"
+        },
+        {
+          "key": "D",
+          "text": "None of these"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0502"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 16,
+      "sourcePage": 138,
+      "question": "An instruction code must specify the address of the____",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Opcode"
+        },
+        {
+          "key": "B",
+          "text": "Operand"
+        },
+        {
+          "key": "C",
+          "text": "Both"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0503"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 17,
+      "sourcePage": 138,
+      "question": "In memory, the read operation puts memory address on to a register known as",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "PC"
+        },
+        {
+          "key": "B",
+          "text": "ALU"
+        },
+        {
+          "key": "C",
+          "text": "MAR"
+        },
+        {
+          "key": "D",
+          "text": "All of these"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0504"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 18,
+      "sourcePage": 138,
+      "question": "Which operation puts memory address in memory address register and data in DR",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Memory read"
+        },
+        {
+          "key": "B",
+          "text": "Memory write"
+        },
+        {
+          "key": "C",
+          "text": "Both"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0505"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 19,
+      "sourcePage": 138,
+      "question": "The memory bus is also referred as______",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Data bus"
+        },
+        {
+          "key": "B",
+          "text": "Address bus"
+        },
+        {
+          "key": "C",
+          "text": "Memory bus"
+        },
+        {
+          "key": "D",
+          "text": "All of these"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0506"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 20,
+      "sourcePage": 139,
+      "question": "DDR2 stands for",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Double data rate 2"
+        },
+        {
+          "key": "B",
+          "text": "Data double rate 2"
+        },
+        {
+          "key": "C",
+          "text": "Dynamic data rate 2"
+        },
+        {
+          "key": "D",
+          "text": "Dynamic double rate 2"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0507"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 21,
+      "sourcePage": 139,
+      "question": "SDRAM stands for",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "System dynamic random access memory"
+        },
+        {
+          "key": "B",
+          "text": "Synchronous dynamic random access memory"
+        },
+        {
+          "key": "C",
+          "text": "Both"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0508"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 22,
+      "sourcePage": 139,
+      "question": "______is the sequence of operations performed by CPU in processing an instruction",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Execute cycle"
+        },
+        {
+          "key": "B",
+          "text": "Fetch cycle"
+        },
+        {
+          "key": "C",
+          "text": "Decode"
+        },
+        {
+          "key": "D",
+          "text": "Instruction cycle"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0509"
+    },
+    {
+      "topic": "Computer Architecture and Organization",
+      "sourceSection": "CAO",
+      "sourceNumber": 23,
+      "sourcePage": 140,
+      "question": "IRET stand for",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Interrupt enter"
+        },
+        {
+          "key": "B",
+          "text": "Interrupt return"
+        },
+        {
+          "key": "C",
+          "text": "Interrupt delete"
+        },
+        {
+          "key": "D",
+          "text": "None of these"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0510"
+    }
+  ]
+}

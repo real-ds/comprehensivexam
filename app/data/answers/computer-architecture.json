@@ -1,0 +1,235 @@
+{
+  "topic": "Computer Architecture and Organization",
+  "answers": [
+    {
+      "id": "q_0488",
+      "subtopic": "Memory interfacing",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Every CPU to memory transfer starts by loading the address of the target word into a dedicated register whose only job is to drive the address bus, and that register is the memory address register (MAR). The MAR is wired directly to the address bus and holds the address stable for the whole read or write cycle, while the data word travels on the separate data bus through the MDR. The ALU computes addresses but is never connected to the address bus, and the CPU as a whole supplies the address only indirectly, through its MAR.\n\nWhy C is correct: The MAR holds the address of the memory location and is the register whose output is placed on the address bus.\n\nWhy the others are wrong:\n- A: The ALU only computes addresses and is not connected to the address bus.\n- B: The CPU produces the address through its MAR; the CPU itself is not the register that drives the bus.\n- D: The MDR (data register) sits on the data bus and carries the data word, not the address.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "The published key for this item in the source question bank is CPU, but the register that puts the address on the address bus is unambiguously the MAR; answered as printed using standard theory."
+    },
+    {
+      "id": "q_0489",
+      "subtopic": "Data path and control unit",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Control memory is the control store of a microprogrammed control unit, holding the microinstructions that drive the datapath. The relative clause in the stem, \"that has addressable storage registers and used as temporary storage for data\", is the textbook description of random access memory, so the blank is RAM on the wording of the source text. Note that mainstream textbooks instead present the control store as a read only memory inside the CPU, which is why this item is flagged.\n\nWhy B is correct: RAM is random access memory made of addressable storage locations and used as temporary storage for data, exactly as the stem describes.\n\nWhy the others are wrong:\n- A: ROM is read only, so it cannot serve as temporary storage for data as the stem requires.\n- C: The CPU does contain the control unit, but a CPU is not described as addressable storage registers used for temporary data storage.\n- D: \"Memory\" is too general; the stem's wording points specifically at random access memory.",
+      "confidence": "low",
+      "needsReview": true,
+      "reviewReason": "Stem is garbled and contradicts standard theory (control memory/control store is normally a ROM inside the CPU); the source text defines control memory as a RAM of addressable storage registers, which is why RAM was chosen."
+    },
+    {
+      "id": "q_0490",
+      "subtopic": "Data path and control unit",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The address space of control memory is split into two groups, a task mode and an executive (interrupt) mode, each addressed through its own address select logic. So the number of modes the control memory address is divided into is two. This is confirmed by the companion item in the same bank, whose answer choice is \"Both Executive mode & Task Mode\", which implies exactly two modes.\n\nWhy A is correct: The control memory addresses are divided into two groups, the task mode and the executive (interrupt) mode.\n\nWhy the others are wrong:\n- B: Three address modes do not exist for control memory.\n- C: Five is the maximum number of register groups inside control memory, not the number of address modes.\n- D: Seven is not a count that occurs anywhere in the control memory address scheme.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0491",
+      "subtopic": "Data path and control unit",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Control memory addresses are divided into a task mode and an executive mode, and the executive mode is explicitly the interrupt mode, used for the control storage that serves interrupt handling while the task mode serves normal programmed operation. Since the question asks which of the listed modes is the interrupt mode, the executive mode is the answer.\n\nWhy B is correct: The executive mode is the interrupt mode group of control memory addresses.\n\nWhy the others are wrong:\n- A: Task mode is the other address group, used for ordinary programmed CPU operation rather than interrupts.\n- C: Both are control memory modes, but only the executive mode carries the interrupt label.\n- D: A defined mode does exist, namely the executive mode.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0492",
+      "subtopic": "Data path and control unit",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The mode of addressing control memory is split into two groups, the task mode and the executive (interrupt) mode. Because both of the listed modes exist, the correct choice is the option that accepts both. This matches the companion item in the same bank, which records two modes as the count.\n\nWhy C is correct: Both the executive mode and the task mode are the two modes of addressing control memory.\n\nWhy the others are wrong:\n- A: Executive mode alone is incomplete, the task mode group also exists.\n- B: Task mode alone is incomplete, the executive (interrupt) group also exists.\n- D: Incorrect, both modes are named in the definition of control memory addressing.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0493",
+      "subtopic": "Cache",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "When a processor with a cache issues a memory reference, the address is generated and the cache is searched to see whether a copy is held there. The way that search is carried out depends on the cache mapping technique the system uses, that is whether the cache is direct mapped, set associative or fully associative. Of the four choices, only cache mapping names that technique.\n\nWhy B is correct: The method used to search the cache depends on the type of cache mapping employed by the computer system.\n\nWhy the others are wrong:\n- A: \"Cache directing\" is not a recognised cache technique.\n- C: \"Cache controlling\" refers to the control logic around the cache, not to how a requested address is searched for.\n- D: Cache invalidation is one of the three areas of the cache process (it writes only to the directory to remove an entry), not the search method.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0494",
+      "subtopic": "Data path and control unit",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A microprogram is the ordered set of microinstructions that implements the machine instruction set of a microprogrammed control unit, and it is held in the control store. That store is normally a read only memory so the microcode cannot be changed by ordinary operation or by a stray write, which is why microprograms are usually stored in ROM.\n\nWhy A is correct: Microprograms are normally kept in the read only control store, a ROM, so the microcode remains fixed.\n\nWhy the others are wrong:\n- B: RAM is volatile and writable, so it is used only when the control store is deliberately writable (dynamic microprogramming), not the usual case.\n- C: SAM (semiconductor access memory) is a telecommunications memory term and is never used for microprograms.\n- D: SAN (storage area network) is a networking concept with no role in control storage.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0495",
+      "subtopic": "Addressing modes",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "In immediate addressing the data operand itself is coded into the instruction word, so the processor needs no further memory or register reference to obtain it. This is the only mode in which the operand, rather than a reference to it, appears inside the instruction.\n\nWhy A is correct: With immediate addressing the operand value is actually present in the instruction itself.\n\nWhy the others are wrong:\n- B: In direct addressing only the address of the operand is in the instruction; the operand must still be fetched from memory.\n- C: In register addressing the operand is held in a register selected by a field of the instruction.\n- D: Incorrect, one of the listed modes is the correct answer.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0496",
+      "subtopic": "Addressing modes",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Direct (absolute) addressing is the simplest of the modes in which the operand is fetched from memory, because the address field of the instruction is used as the effective address with no register, displacement or indexing added. The operand therefore comes straight from the memory location named in the instruction.\n\nWhy B is correct: Direct addressing uses the instruction address field as the effective address, so the operand is fetched directly from memory.\n\nWhy the others are wrong:\n- A: Immediate addressing takes the operand from inside the instruction, not from memory.\n- C: Register addressing takes the operand from a processor register, not from memory.\n- D: Incorrect, one of the listed modes is the correct answer.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0497",
+      "subtopic": "Addressing modes",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "The stem is circular, asking which addressing is a way of direct addressing, so it can only be answered as printed. Answered that way, direct addressing is the mode in which the address field of the instruction is the effective address of the operand itself, with no pointer or index involved, and that is the option chosen.\n\nWhy B is correct: Direct addressing is the mode in which the address given in the instruction is used as the effective address of the operand.\n\nWhy the others are wrong:\n- A: Immediate addressing places the operand itself in the instruction, so it is not a way of direct addressing.\n- C: Register addressing names a register rather than using the address in the instruction.\n- D: Incorrect, direct addressing is one of the listed options.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Stem is tautological/garbled (\"which addressing is a way of direct addressing\"); answered B as printed, which is the only option consistent with the wording."
+    },
+    {
+      "id": "q_0498",
+      "subtopic": "Addressing modes",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "Indirect addressing is the mode in which the address field of the instruction points to a memory location whose content is the effective address of the operand. That is the distinguishing feature described in the stem, a main memory location holding the effective address, and it costs one extra memory reference compared with direct addressing.\n\nWhy D is correct: In indirect addressing the effective address of the operand is held in a main memory location pointed to by the instruction.\n\nWhy the others are wrong:\n- A: Immediate addressing keeps the operand in the instruction, so no address is stored in memory at all.\n- B: Direct addressing uses the instruction address field itself, with nothing stored in memory to be dereferenced.\n- C: Register addressing keeps the address in a processor register, not in a main memory location.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0499",
+      "subtopic": "Memory interfacing",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Memory transfer covers both directions of traffic between the CPU and memory. A read moves a word from a memory location into the processor, and a write moves a word from the processor into a memory location, so the set of memory transfer operations is read and write together.\n\nWhy C is correct: The memory transfer operations are read and write, so both are required.\n\nWhy the others are wrong:\n- A: Read is only one direction of memory transfer; the write operation is the other.\n- B: Write is only one direction of memory transfer; the read operation is the other.\n- D: Incorrect, read and write are both genuine memory transfer operations.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0500",
+      "subtopic": "Addressing modes",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "Displacement addressing forms the effective address by adding a displacement to a base register, an index register or the program counter. It is the most influential mode in practice because it is what lets one instruction reach an element of an array, a stack frame or a structure, all of which need an address that is computed at run time. Immediate, direct and register addressing are all simpler but cannot express such a computed address.\n\nWhy A is correct: Displacement addressing, by adding a displacement to a register or the PC, is the influential mode that makes arrays, stacks and structures addressable.\n\nWhy the others are wrong:\n- B: Immediate addressing cannot reach beyond the instruction word.\n- C: Direct addressing needs a full address field in every instruction, so its range and code density are poor.\n- D: Register addressing operates on a register and never names a memory operand.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0501",
+      "subtopic": "Data path and control unit",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "Multiplying two signed binary numbers held in 2's complement requires that the sign be handled arithmetically rather than stripped off first. Booth's algorithm does this by recoding the multiplier bits as M+1, M or M-1 so that the whole signed product is formed with additions and arithmetic shifts only. The usual shift and add multiplier, by contrast, is defined on unsigned magnitudes.\n\nWhy B is correct: Booth's multiplication algorithm is the algorithm that multiplies two signed binary numbers in 2's complement notation.\n\nWhy the others are wrong:\n- A: The usual multiplication algorithm is the plain shift and add multiplier for unsigned values, and is not the 2's complement signed algorithm.\n- C: The usual multiplier is not the signed 2's complement algorithm, so \"Both\" is wrong.\n- D: Incorrect, Booth's algorithm exists and is the standard signed multiplier.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0502",
+      "subtopic": "I/O and interrupts",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "When several devices can raise an interrupt at the same time, the hardware needs a rule for deciding which request is serviced first. A priority interrupt scheme assigns each source a priority level so that the highest priority pending request is entertained first, and the blank in the stem is followed by the word interrupt, so the phrase must end in \"interrupt\".\n\nWhy A is correct: A priority interrupt establishes a priority over the various sources to determine which request should be entertained first.\n\nWhy the others are wrong:\n- B: \"Polling interrupt\" is not a scheme; polling is a software technique that queries devices in turn and establishes no priority among them.\n- C: \"Daisy chaining interrupt\" is not a term; daisy chaining is one physical wiring technique for a fixed priority, not the generic scheme described.\n- D: Incorrect, a defined term exists and it is priority interrupt.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0503",
+      "subtopic": "Instruction formats",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "An instruction has two logical parts, an opcode field that names the operation and an address field that identifies the operand. As well as saying what to do, the instruction must therefore say where the operand is, by giving its address directly or by giving the information needed to compute it, otherwise the operation could not be carried out.\n\nWhy B is correct: An instruction code must specify the address of the operand on which the operation is to be performed.\n\nWhy the others are wrong:\n- A: The opcode names the operation itself and says nothing about a location in memory.\n- C: The opcode and the address field are separate parts of the instruction; only the address field specifies the operand.\n- D: Incorrect, the address of the operand is one of the things an instruction code must specify.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0504",
+      "subtopic": "Memory interfacing",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A memory read is started by putting the address of the wanted word into the memory address register, whose output is wired to the address bus, and then asserting the read control line; the word returns on the data bus into the MDR. The register that receives the address for this purpose is the MAR, while the PC only ever supplies the address of the next instruction.\n\nWhy C is correct: The MAR is the register that holds the memory address and puts it on to the address bus for the read.\n\nWhy the others are wrong:\n- A: The PC holds the address of the next instruction to be fetched, it is not the register driving the address bus for a memory read.\n- B: The ALU performs arithmetic and logic and is not the register that drives the address bus.\n- D: Incorrect, only the MAR holds the address placed on the bus, so \"All of these\" is false.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0505",
+      "subtopic": "Memory interfacing",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "In a memory write cycle the CPU itself loads both halves of the transfer before the cycle starts: the address of the destination word goes into the memory address register and the data word goes into the data register, and only then is the write signal asserted so the memory latches the word. In a read the CPU loads only the address, and the data word arrives from memory into the data register rather than being put there by the CPU, which is the distinction the stem relies on.\n\nWhy B is correct: In a memory write the CPU puts the address in the MAR and the data in the DR before the write cycle begins.\n\nWhy the others are wrong:\n- A: In a memory read the data is delivered by memory into the DR, the CPU does not put it there.\n- C: \"Both\" can also be defended, since a read uses the MAR and the DR too, which is why this item is flagged for review.\n- D: Incorrect, memory write is a defined memory transfer operation.",
+      "confidence": "low",
+      "needsReview": true,
+      "reviewReason": "Genuinely ambiguous: in a memory read the address also goes into the MAR and the returned data lands in the DR, so option C (Both) is defensible as well as B; answered B as the published key has it."
+    },
+    {
+      "id": "q_0506",
+      "subtopic": "Memory interfacing",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "The memory bus is the collection of lines that connects the CPU to main memory, and it comprises the address lines that select the location, the data lines that carry the word in each direction, and the control lines that mark read or write. Since the option set offers the address bus, the data bus and the memory bus itself, only the option that accepts all of those can be describing the whole memory bus, even though the usual synonym offered in textbooks is system bus, which is missing from the options.\n\nWhy D is correct: The memory bus comprises the address and data lines (plus control) used to reach memory, so the only option covering all of the listed names is All of these.\n\nWhy the others are wrong:\n- A: The data bus carries only the data word and is just one part of the memory bus.\n- B: The address bus carries only the address and is just one part of the memory bus.\n- C: \"Memory bus\" merely repeats the words already in the stem and names no alternative.",
+      "confidence": "low",
+      "needsReview": true,
+      "reviewReason": "Stem appears mis-extracted or garbled: the standard synonym for the memory bus is the system bus, which is not offered, and none of the individual options is a true synonym; answered D as the only option that can cover the whole memory bus."
+    },
+    {
+      "id": "q_0507",
+      "subtopic": "Memory and memory organization",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "DDR is the family name for double data rate SDRAM, in which data is transferred on both the rising and the falling edge of the clock, so the transfer rate is twice the clock frequency. The digit that follows names the generation of the design, so DDR2 is the second generation of double data rate memory.\n\nWhy A is correct: DDR2 expands to double data rate 2, the second generation of double data rate SDRAM.\n\nWhy the others are wrong:\n- B: The words are transposed, the expansion is \"double data rate\", not \"data double rate\".\n- C: \"Dynamic data rate\" is not an expansion of DDR; dynamic describes DRAM, not the doubling.\n- D: \"Dynamic double rate\" is likewise not the expansion of DDR2.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0508",
+      "subtopic": "Memory and memory organization",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "DRAM stores each bit as charge on a capacitor and must be refreshed, and its chips are normally organised so that their outputs are presented at a fixed time in step with the system clock. SDRAM is that synchronous form of DRAM, synchronised to the system clock, and the initial S stands for Synchronous.\n\nWhy B is correct: SDRAM is Synchronous Dynamic Random Access Memory, DRAM clocked in step with the system clock.\n\nWhy the others are wrong:\n- A: The S stands for Synchronous, not System.\n- C: \"Both\" is wrong, the system expansion is not correct.\n- D: Incorrect, one of the listed expansions is exactly right.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0509",
+      "subtopic": "Data path and control unit",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "The instruction cycle is the complete sequence of events the control unit carries out for one instruction, that is the fetch cycle to retrieve the instruction from memory followed by the execute cycle to decode it and perform the operation. The phrase in the stem describes that whole sequence, not just one part of it.\n\nWhy D is correct: The instruction cycle is the sequence of operations performed by the CPU in processing an instruction.\n\nWhy the others are wrong:\n- A: The execute cycle is only the portion of the sequence that performs the operation, not the whole cycle.\n- B: The fetch cycle is only the portion that retrieves the instruction from memory.\n- C: Decoding is a single phase within the cycle, not the sequence itself.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0510",
+      "subtopic": "I/O and interrupts",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "IRET is the instruction a processor executes at the end of an interrupt service routine. It restores the saved status, program counter and general registers that were pushed when the interrupt was taken and then resumes the interrupted program, so the name reads as interrupt return.\n\nWhy B is correct: IRET stands for Interrupt Return, the instruction that returns from an interrupt service routine.\n\nWhy the others are wrong:\n- A: \"Interrupt enter\" is not what IRET denotes.\n- C: \"Interrupt delete\" is not a real term and no such instruction exists.\n- D: Incorrect, IRET is a defined instruction whose name is Interrupt Return.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    }
+  ]
+}

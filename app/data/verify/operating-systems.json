@@ -1,0 +1,1094 @@
+{
+  "topic": "Operating Systems",
+  "questions": [
+    {
+      "id": "q_0266",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Classical IPC",
+      "question": "Bounded capacity and Unbounded capacity queues are referred to as __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Programmed buffering"
+        },
+        {
+          "key": "B",
+          "text": "Automatic buffering"
+        },
+        {
+          "key": "C",
+          "text": "User defined buffering"
+        },
+        {
+          "key": "D",
+          "text": "No buffering"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "Message queues may be bounded (fixed capacity, sender blocks when full) or unbounded (variable capacity). Both of these still provide storage for messages that the operating system allocates and manages itself, as opposed to the zero-capacity rendezvous which provides no storage at all. Such automatically maintained message buffering is called automatic buffering.\n\nWhy B is correct: Bounded and unbounded capacity queues store messages in system-managed buffers, which is automatic buffering.\n\nWhy the others are wrong:\n- A: Programmed buffering implies the programmer builds the buffer, not the OS.\n- C: User defined buffering implies application code manages the buffer.\n- D: No buffering describes only the zero-capacity queue.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 74
+    },
+    {
+      "id": "q_0270",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "I/O and device management",
+      "question": "In a memory mapped input/output __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the CPU uses polling to watch the control bit constantly, looping to see if a device is ready"
+        },
+        {
+          "key": "B",
+          "text": "the CPU writes one data byte to the data register and sets a bit in control register to show that a byte is available"
+        },
+        {
+          "key": "C",
+          "text": "the CPU receives an interrupt when the device is ready for the next byte"
+        },
+        {
+          "key": "D",
+          "text": "the CPU runs a user written code and does accordingly"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "In memory-mapped I/O the device registers occupy ordinary addresses, so the CPU transfers data by writing the data register and flipping the control bits of the same device register through normal load/store instructions. Option B describes that direct register-level data transfer and status signalling. Options A and C describe polling and interrupt-driven I/O, which are alternative ways of noticing device readiness rather than the addressing scheme itself, and option D describes DMA.\n\nWhy B is correct: The CPU transfers the byte to the data register and signals device readiness through the control register.\n\nWhy the others are wrong:\n- A: Polling is a readiness-detection technique, not what memory mapping defines.\n- C: Interrupts are a notification mechanism and are not specific to memory-mapped I/O.\n- D: A device controller running user code describes DMA.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Standard MCQ banks key this item as (b), but memory-mapped I/O is purely an addressing scheme and is equally usable with polling (a) or interrupts (c); the options describe different I/O techniques rather than one correct memory-mapped behaviour.",
+      "sourcePage": 75
+    },
+    {
+      "id": "q_0277",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Scheduling algorithms",
+      "question": "In priority scheduling algorithm, when a process arrives at the ready queue, its priority is compared with the priority of ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "all process"
+        },
+        {
+          "key": "B",
+          "text": "currently running process"
+        },
+        {
+          "key": "C",
+          "text": "parent process"
+        },
+        {
+          "key": "D",
+          "text": "init process"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "When a new process arrives in preemptive priority scheduling, the only question that decides whether the CPU changes hands is whether the newcomer outranks the process currently executing. The standard textbook statement is that the arriving process priority is compared with the priority of the currently running process, and preemption occurs only if the new priority is higher.\n\nWhy B is correct: Preemption on arrival is decided by comparing the new process priority against the currently running process.\n\nWhy the others are wrong:\n- A: Comparison against all processes describes queue selection, not the arrival decision described here.\n- C: A process priority is not inherited from its parent in the general case.\n- D: The init process has no special priority for this purpose.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 77
+    },
+    {
+      "id": "q_0292",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Process scheduling",
+      "question": "What is Turnaround time?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the total waiting time for a process to finish execution"
+        },
+        {
+          "key": "B",
+          "text": "the total time spent in the ready queue"
+        },
+        {
+          "key": "C",
+          "text": "the total time spent in the running queue"
+        },
+        {
+          "key": "D",
+          "text": "the total time from the completion till the submission of a process"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "Turnaround time is completion time minus submission time, so it covers all the time a process spends in the system: waiting in the ready queue plus the time it actually runs. Among the options given, only A comes close, since it counts the whole period a process occupies the system until it finishes execution. The exact textbook wording is missing from the option set.\n\nWhy A is correct: It is the only option that counts the total time a process takes to finish execution.\n\nWhy the others are wrong:\n- B: Time spent only in the ready queue is the waiting time.\n- C: Time spent running is just the CPU burst time.\n- D: Completion till submission is not a measurable positive interval in this sense.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "No option states the correct definition (submission to completion); option A only approximates it by speaking of total waiting time.",
+      "sourcePage": 81
+    },
+    {
+      "id": "q_0303",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Scheduling algorithms",
+      "question": "Complex scheduling algorithms ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "are very appropriate for very large computers"
+        },
+        {
+          "key": "B",
+          "text": "use minimal resources"
+        },
+        {
+          "key": "C",
+          "text": "use many resources"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "Simple policies such as FCFS are adequate when few processes compete for the CPU, but large systems are overloaded with very many processes and need the extra work that multilevel feedback or fair-share scheduling performs to keep response times acceptable. Hence complex scheduling algorithms suit very large computers with heavy process loads.\n\nWhy A is correct: Large computers are overloaded with a greater number of processes, so complex algorithms pay off there.\n\nWhy the others are wrong:\n- B: Complex algorithms cost more, they do not use minimal resources.\n- C: Using many resources is a drawback, not the reason they are preferred.\n- D: Incorrect, only one statement holds.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 84
+    },
+    {
+      "id": "q_0316",
+      "verifyReasons": [
+        "enumerated statements, easy to mis-parse"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Process scheduling",
+      "question": "Which of the following statements are true? i) Shortest remaining time first scheduling may cause starvation ii) Preemptive scheduling may cause starvation iii) Round robin is better than FCFS in terms of response time",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "I only"
+        },
+        {
+          "key": "B",
+          "text": "I and III Only"
+        },
+        {
+          "key": "C",
+          "text": "II and III only"
+        },
+        {
+          "key": "D",
+          "text": "I, II, and III"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "high",
+      "currentExplanation": "Starvation is indefinite postponement of a process, and round robin is the fairness-oriented alternative to FCFS. Evaluating each statement: SRTF always serves the process with the least remaining time, so a long process can be pushed back indefinitely as shorter arrivals keep coming, so statement I holds. Any preemptive scheme can be built on priority, so a continuously preempted low-priority process may never run, so statement II holds. Round robin gives every process a fixed time slice, which bounds the wait of a newly arrived process, whereas FCFS can leave it behind a long queue, so statement III holds. All three are true.\n\nWhy D is correct: Statements I, II and III are all true, so the correct choice is \"I, II, and III\".\n\nWhy the others are wrong:\n- A: \"I only\" omits II and III, both of which are true.\n- B: \"I and III only\" omits II, which is true.\n- C: \"II and III only\" omits I, which is true.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 87
+    },
+    {
+      "id": "q_0320",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Synchronization",
+      "question": "A minimum of _____ variable(s) is/are required to be shared between processes to solve the critical section problem.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "3"
+        },
+        {
+          "key": "D",
+          "text": "4"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "With pure software and busy waiting, a single shared variable is not enough: if two processes both set the one flag before either tests it, both spin forever or both enter. Software solutions such as Dekker and Peterson therefore need two shared variables, typically a flag and a turn indicator, which together enforce exclusion. One variable suffices only if the hardware provides an atomic test-and-set, which is a different assumption.\n\nWhy B is correct: Two shared variables, a flag and a turn variable, are needed for a pure software solution.\n\nWhy the others are wrong:\n- A: One variable works only with an atomic test-and-set instruction.\n- C: Three variables are more than the standard solutions require.\n- D: Four variables are unnecessary.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Option A (1) is defensible if an atomic test-and-set or a wait/signal semaphore is assumed; the standard bank answer for this item is two variables for pure software busy-waiting.",
+      "sourcePage": 89
+    },
+    {
+      "id": "q_0321",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Semaphores",
+      "question": "The following program consists of 3 concurrent processes and 3 binary semaphores. The semaphores are initialized as S0 = 1, S1 = 0, S2 = 0. Process P0 Process P1 Process P2 How many times will P0 print '0'?",
+      "code": "while(true)\n{\nwait(S0);\nprint '0';\nrelease(S1);\nrelease(S2);\n}\nwait(S1);\nrelease(S0);\nwait(S2);\nrelease(S0);",
+      "options": [
+        {
+          "key": "A",
+          "text": "At least twice"
+        },
+        {
+          "key": "B",
+          "text": "Exactly twice"
+        },
+        {
+          "key": "C",
+          "text": "Exactly thrice"
+        },
+        {
+          "key": "D",
+          "text": "Exactly once"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "high",
+      "currentExplanation": "With S0 = 1, S1 = 0 and S2 = 0 the first pass goes: P0 waits on S0 (S0 becomes 0), prints the first 0, signals S1 and signals S2 (both become 1). P1 then waits on S1 and signals S0, and P2 waits on S2 and signals S0, so S0 is set to 1 again and the second pass of P0 prints the second 0. After that pass S1 and S2 are set once more, but P1 and P2 have already terminated, so nothing will ever signal S0 again and P0 blocks forever on its next wait. P0 therefore prints exactly twice.\n\nWhy B is correct: P0 runs two complete cycles, prints two zeros and then blocks on wait(S0) forever.\n\nWhy the others are wrong:\n- A: It is exactly twice, not merely at least twice.\n- C: A third print would need another signal of S0, which cannot come.\n- D: One print is impossible, since P1 and P2 unblock S0 exactly once each.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 89
+    },
+    {
+      "id": "q_0322",
+      "verifyReasons": [
+        "confidence=low",
+        "code/calculation question"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Semaphores",
+      "question": "Each process Pi, i = 0,1,2,3,......,9 is coded as follows. repeat forever The code for P10 is identical except that it uses V(mutex) instead of P(mutex). What is the largest number of processes that can be inside the critical section at any moment (the mutex being initialized to 1)?",
+      "code": "P(mutex)\n{Critical Section}\nV(mutex)",
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "3"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "low",
+      "currentExplanation": "P10 performs V(mutex) twice per loop and never performs P(mutex), so the value of the counting semaphore grows without bound while P10 keeps running. Once the value is large enough, every one of the other processes can pass its P(mutex) and stay inside its critical section at the same time, so the number simultaneously in the critical section is not limited to 1, 2 or 3 but can reach all eleven processes. None of the listed numbers is therefore correct.\n\nWhy D is correct: Because P10 only increments the semaphore, more than three (in fact up to eleven) processes can be inside the critical section at the same instant.\n\nWhy the others are wrong:\n- A: Mutual exclusion is broken because P10 never decrements.\n- B: 2 would only hold if the semaphore were declared binary, which is not stated.\n- C: 3 is the answer in some published keys but ignores that P10 keeps pumping the semaphore up.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Published keys disagree: standard MCQ banks answer 3 (treating the semaphore as if it stays small), GATE-oriented solutions answer none of the mentioned because a counting semaphore can be inflated without limit by P10, and 2 would follow only under a binary semaphore assumption.",
+      "sourcePage": 89
+    },
+    {
+      "id": "q_0323",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Synchronization",
+      "question": "Two processes, P1 and P2, need to access a critical section of code. Consider the following synchronization construct used by the processes. Process P1 : Critical section Remainder Section Process P2 : Critical section Remainder Section Here, w1 and w2 have shared variables, which are initialized to false. Which one of the following statements is TRUE about the above construct?",
+      "code": "while(true)\n{\nw1 = true;\nwhile(w2 == true);\nw1 = false;\n}\nwhile(true)\n{\nw2 = true;\nwhile(w1\n== true);\nw2 = false;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "It does not ensure mutual exclusion"
+        },
+        {
+          "key": "B",
+          "text": "It does not ensure bounded waiting"
+        },
+        {
+          "key": "C",
+          "text": "It requires that processes enter the critical section in strict alternation"
+        },
+        {
+          "key": "D",
+          "text": "It does not prevent deadlocks but ensures mutual exclusion"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "high",
+      "currentExplanation": "Each process sets its own flag and then spins only while the other flag happens to be true; it never re-checks the other flag before entering. If P1 sets w1 = true and P2 sets w2 = true before either of them tests, both skip their spin loops, both clear their own flag and both march into the critical section together. There is no test-and-set anywhere in the construct, so mutual exclusion is not guaranteed.\n\nWhy A is correct: Both processes can pass the flag test simultaneously and enter the critical section together.\n\nWhy the others are wrong:\n- B: The real failure is mutual exclusion; bounded waiting is not the point at issue.\n- C: No alternation is enforced in any way.\n- D: Mutual exclusion is exactly what fails, so this option cannot hold.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 90
+    },
+    {
+      "id": "q_0326",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Semaphores",
+      "question": "The following pair of processes share a common variable X. Process A Process B X is set to 5 before either process begins execution. As usual, statements within a process are executed sequentially, but statements in process A may execute in any order with respect to statements in process B. How many different values of X are possible after both processes finish executing?",
+      "code": "int Y;\nA1: Y = X*2;\nA2: X = Y;\nint Z;\nB1: Z = X+1;\nB2: X = Z;",
+      "options": [
+        {
+          "key": "A",
+          "text": "2"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "8"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "high",
+      "currentExplanation": "With X = 5 and the constraints A1 before A2 and B1 before B2 there are six interleavings, and enumerating them gives these final values of X: A1A2B1B2 yields 11, B1B2A1A2 yields 12, A1B1A2B2 yields 6, A1B1B2A2 yields 10, B1A1B2A2 yields 10 and B1A1A2B2 yields 6. The distinct results are therefore 6, 10, 11 and 12, which is four different values of X.\n\nWhy C is correct: Enumerating the six legal interleavings produces exactly the four distinct values 6, 10, 11 and 12.\n\nWhy the others are wrong:\n- A: Two values would mean only two of those four results occur.\n- B: Three values ignores either the 11 or the 12 outcome.\n- D: Eight is impossible, there are only six interleavings in total.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 90
+    },
+    {
+      "id": "q_0327",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Semaphores",
+      "question": "The program follows to use a shared binary semaphore T. Process A Process B B1: T is set to 0 before either process begins execution and, as before, X is set to 5. Now, how many different values of X are possible after both processes finish executing?",
+      "code": "int Y;\nA1: Y = X*2;\nA2: X = Y;\nsignal(T);\nint Z;\nwait(T);\nB2: Z = X+1;\nX = Z;",
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "3"
+        },
+        {
+          "key": "D",
+          "text": "4"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "high",
+      "currentExplanation": "Process B cannot execute wait(T) until A has executed signal(T), and A issues that signal only after both A1 and A2 have finished. So A1 and A2 always complete first, giving X = 5 times 2 = 10, and only then does B run, setting Z = 10 plus 1 = 11 and X = 11. Every legal execution therefore ends with the same value of X.\n\nWhy A is correct: The semaphore forces A to finish both statements before B runs, so X is always 11.\n\nWhy the others are wrong:\n- B: Two values would require the interleaving freedom that the semaphore removes.\n- C: Three values cannot occur, the order is fixed by the semaphore.\n- D: Four values is the answer to the unsynchronised version, not this one.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 91
+    },
+    {
+      "id": "q_0329",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Semaphores",
+      "question": "All processes share a semaphore variable mutex, initialized to 1. Each process must execute wait(mutex) before entering the critical section and signal(mutex) afterward. Suppose a process executes in the following manner. ..... critical section ..... In this situation :",
+      "code": "signal(mutex);\nwait(mutex);",
+      "options": [
+        {
+          "key": "A",
+          "text": "a deadlock will occur"
+        },
+        {
+          "key": "B",
+          "text": "processes will starve to enter critical section"
+        },
+        {
+          "key": "C",
+          "text": "several processes maybe executing in their critical section"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "high",
+      "currentExplanation": "Because the process signals the mutex before it waits on it, and never signals it again after leaving the critical section, the net effect is that the semaphore value is only driven downwards. Each iteration consumes one unit that nobody returns, so after a few iterations the value reaches zero with every process still wanting to enter. All of them then block forever, which is a deadlock.\n\nWhy A is correct: Net signal and wait equal zero over an iteration and nothing ever releases the mutex afterwards, so everyone blocks.\n\nWhy the others are wrong:\n- B: Starvation would need the mutex to keep being released to somebody.\n- C: Several processes in the critical section can occur briefly, but the deadlock option is the decisive outcome.\n- D: Incorrect, the situation ends in deadlock.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 91
+    },
+    {
+      "id": "q_0330",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Semaphores",
+      "question": "All processes share a semaphore variable mutex, initialized to 1. Each process must execute wait(mutex) before entering the critical section and signal(mutex) afterward. Suppose a process executes in the following manner. ..... critical section .....",
+      "code": "wait(mutex);\nwait(mutex);",
+      "options": [
+        {
+          "key": "A",
+          "text": "a deadlock will occur"
+        },
+        {
+          "key": "B",
+          "text": "processes will starve to enter critical section"
+        },
+        {
+          "key": "C",
+          "text": "several processes maybe executing in their critical section"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "high",
+      "currentExplanation": "The process waits on the binary mutex twice in a row. Since the mutex starts at 1, the first wait consumes it and the second wait finds the value already 0, so the process blocks and can never be released, because nothing will signal it. A process blocking itself in this way is the simplest textbook deadlock.\n\nWhy A is correct: The second wait on an already zero mutex blocks the process for ever.\n\nWhy the others are wrong:\n- B: Starvation needs other processes to keep taking the mutex, which is not the issue here.\n- C: Mutual exclusion still holds, so several processes cannot be in the critical section.\n- D: Incorrect, only the deadlock option describes the outcome.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 92
+    },
+    {
+      "id": "q_0331",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Synchronization",
+      "question": "Consider the methods used by processes P1 and P2 for accessing their critical sections whenever needed, as given below. The initial values of shared boolean variables S1 and S2 are randomly assigned. Method used by P1 : Critical section Method used by P2 : Critical section S2 = Which of the following statements describes properties achieved?",
+      "code": "while(S1==S2);\nS1 = S2;\nwhile(S1!=S2);\nnot(S1);",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mutual exclusion but not progress"
+        },
+        {
+          "key": "B",
+          "text": "Progress but not mutual exclusion"
+        },
+        {
+          "key": "C",
+          "text": "Neither mutual exclusion nor progress"
+        },
+        {
+          "key": "D",
+          "text": "Both mutual exclusion and progress"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "high",
+      "currentExplanation": "P1 is allowed in only when S1 differs from S2, and P2 is allowed in only when S1 equals S2, so the two tests are complementary and at most one process can ever be inside the critical section. Progress is not guaranteed: if S1 is 1 and S2 is 0 and P1 does not want to enter while P2 does, P2 must wait until P1 runs and executes S1 = S2, which may never happen. Strict alternation therefore blocks progress.\n\nWhy A is correct: The complementary flag tests give mutual exclusion but enforce strict alternation, which breaks progress.\n\nWhy the others are wrong:\n- B: Mutual exclusion does hold, so this pair is impossible.\n- C: Mutual exclusion does hold.\n- D: Progress does not hold.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 92
+    },
+    {
+      "id": "q_0333",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Deadlock detection and recovery",
+      "question": "A system is in the safe state if ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the system can allocate resources to each process in some order and still avoid a deadlock"
+        },
+        {
+          "key": "B",
+          "text": "there exist a safe sequence"
+        },
+        {
+          "key": "C",
+          "text": "all"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "The system is in a safe state if the resources can be allocated to the processes one at a time so that each of them can finish and release its resources, leaving the remaining processes satisfiable. Saying that there exists such a safe sequence and saying that resources can be allocated in some order to avoid deadlock are two wordings of exactly this one condition. Since both statements are true, the option that covers both is the right key.\n\nWhy C is correct: Both statements A and B express the single definition of a safe state, so all of them applies.\n\nWhy the others are wrong:\n- A: True, but it is only one of the two equivalent wordings.\n- B: True, but it is only one of the two equivalent wordings.\n- D: Incorrect, the condition is well defined.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Options A and B are both correct restatements of the same definition, so the question has two defensible keys; C (all) is used to cover both, but a reviewer may prefer A or B alone.",
+      "sourcePage": 93
+    },
+    {
+      "id": "q_0336",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Deadlocks",
+      "question": "To avoid deadlock ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "there must be a fixed number of resources to allocate"
+        },
+        {
+          "key": "B",
+          "text": "resource allocation must be done only once"
+        },
+        {
+          "key": "C",
+          "text": "all deadlocked processes must be aborted"
+        },
+        {
+          "key": "D",
+          "text": "inversion technique can be used"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "One standard deadlock prevention technique negates the hold-and-wait condition by requiring a process to request all the resources it will ever need in a single request, and to be granted them all at once. That is the meaning of doing the resource allocation only once; the process then either gets everything or waits without holding anything. Aborting deadlocked processes is a recovery technique, not avoidance, and resource inversion is unrelated to deadlock.\n\nWhy B is correct: A single all-or-nothing allocation request removes the hold-and-wait condition and thus prevents deadlock.\n\nWhy the others are wrong:\n- A: A fixed number of resources is not in itself a deadlock prevention rule.\n- C: Aborting processes is recovery after deadlock, not avoidance.\n- D: Inversion technique refers to priority inversion, not deadlock.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "The widely circulated answer key for this item gives (a), but a fixed number of resources is not a recognised deadlock avoidance technique, while (b) is the standard all-or-nothing request; the option set is poorly worded.",
+      "sourcePage": 94
+    },
+    {
+      "id": "q_0351",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Deadlock detection and recovery",
+      "question": "A system has 12 magnetic tape drives and 3 processes : P0, P1, and P2. Process P0 requires 10 tape drives, P1 requires 4 and P2 requires 9 tape drives. Process P0 P1 P2 Maximum needs (process-wise: P0 through P2 top to bottom) 10 4 9 5 2 2 Which of the following sequence is a safe sequence?",
+      "code": "Currently allocated (process-wise)",
+      "options": [
+        {
+          "key": "A",
+          "text": "P0, P1, P2"
+        },
+        {
+          "key": "B",
+          "text": "P1, P2, P0"
+        },
+        {
+          "key": "C",
+          "text": "P2, P0, P1"
+        },
+        {
+          "key": "D",
+          "text": "P1, P0, P2"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "high",
+      "currentExplanation": "Total allocated is 5 plus 2 plus 2 = 9, so Available = 12 minus 9 = 3 tape drives, and the remaining needs are P0 = 5, P1 = 2 and P2 = 7. Trying the sequence P1, P0, P2: P1 needs 2 which is within the 3 available, so after it finishes Available becomes 5; P0 then needs exactly 5, which is available, and after P0 finishes Available becomes 10; P2 needs 7, which is within 10. Every process can therefore finish in that order, so P1, P0, P2 is a safe sequence.\n\nWhy D is correct: P1 needs 2 of the 3 available, P0 then needs 5 of the 5 released, and P2 needs 7 of the 10, so the sequence completes safely.\n\nWhy the others are wrong:\n- A: P0 needs 5 drives but only 3 are free at the start.\n- B: After P1 only 5 are free and P2 needs 7, so it would block.\n- C: P2 needs 7 drives but only 3 are free at the start.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 98
+    },
+    {
+      "id": "q_0355",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Deadlock detection and recovery",
+      "question": "The wait-for graph is a deadlock detection algorithm that is applicable when ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "all resources have a single instance"
+        },
+        {
+          "key": "B",
+          "text": "all resources have multiple instances"
+        },
+        {
+          "key": "C",
+          "text": "all resources have multiple instances"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "A wait-for graph is obtained from the resource-allocation graph only when every resource type has at most one instance, so each resource can be reduced to a single edge between the holder and the requester. When a resource type has several instances, a cycle in the wait-for graph is only a necessary condition for deadlock, so the reduction algorithm applied to the resource-allocation graph is used instead.\n\nWhy A is correct: the wait-for graph detection method applies when all resources have a single instance.\n\nWhy the others are wrong:\n- B: \"all resources have multiple instances\" is precisely the case the wait-for graph does not handle correctly.\n- C: identical wording to option B, so it is wrong for the same reason.\n- D: \"all\" is false, since the method breaks down for multiple instances.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Options B and C are word-for-word identical (\"all resources have multiple instances\"), so the option set is defective; A is the only distinct statement and is the intended answer.",
+      "sourcePage": 99
+    },
+    {
+      "id": "q_0356",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Deadlock detection and recovery",
+      "question": "An edge from process Pi to Pj in a wait for graph indicates that ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Pi is waiting for Pj to release a resource that Pi needs"
+        },
+        {
+          "key": "B",
+          "text": "Pi is waiting for Pj to release a resource that Pi needs"
+        },
+        {
+          "key": "C",
+          "text": "all resources have multiple instances"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "In a wait-for graph each node is a process, and an edge Pi -> Pj is drawn only when Pi has requested a resource that is currently held by Pj. The arrow therefore runs from the blocked (requesting) process to the owning process that must release the resource.\n\nWhy A is correct: an edge Pi to Pj means Pi is waiting for Pj to release a resource that Pi needs.\n\nWhy the others are wrong:\n- B: identical wording to option A, so it states the same true thing twice.\n- C: \"all resources have multiple instances\" belongs to a different question and says nothing about edge direction.\n- D: \"all\" is false, because option C is meaningless here.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Options A and B are word-for-word identical, so two option keys carry the same correct statement.",
+      "sourcePage": 99
+    },
+    {
+      "id": "q_0357",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Deadlock detection and recovery",
+      "question": "If the wait for graph contains a cycle ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "then a deadlock does not exist"
+        },
+        {
+          "key": "B",
+          "text": "then a deadlock exists"
+        },
+        {
+          "key": "C",
+          "text": "hen a deadlock exists"
+        },
+        {
+          "key": "D",
+          "text": "either deadlock exists or system is in a safe state"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "With single-instance resources a cycle in the wait-for graph is equivalent to a deadlock: every process on the cycle is blocked waiting for a resource held by the next process on the cycle, so none of them can ever proceed. The converse also holds, which is why the absence of a cycle proves that no deadlock exists.\n\nWhy B is correct: a cycle in the wait-for graph means a deadlock exists.\n\nWhy the others are wrong:\n- A: \"then a deadlock does not exist\" states the opposite of the standard rule.\n- C: \"hen a deadlock exists\" is a truncated duplicate of option B and means the same thing.\n- D: \"either deadlock exists or system is in a safe state\" only applies to the resource-allocation graph when a resource type has multiple instances, not to the wait-for graph.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Option C is a truncated copy of option B (\"hen\" is a lost \"T\"), so two keys carry the same correct statement; B is given as the properly spelled one.",
+      "sourcePage": 99
+    },
+    {
+      "id": "q_0359",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Deadlock detection and recovery",
+      "question": "For an effective operating system, when to check for deadlock?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "at fixed time intervals"
+        },
+        {
+          "key": "B",
+          "text": "every time a resource request is made"
+        },
+        {
+          "key": "C",
+          "text": "every time a resource request is made at fixed time intervals"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "Running detection on every resource request would make the search cost dominate the real work, so the standard design is to invoke the detection algorithm periodically, at fixed time intervals such as once a second. This bounds how long a deadlock can persist while keeping detection overhead tolerable.\n\nWhy A is correct: the detection algorithm is invoked at fixed time intervals.\n\nWhy the others are wrong:\n- B: \"every time a resource request is made\" is far too expensive because each request triggers a full search.\n- C: \"every time a resource request is made at fixed time intervals\" is a garbled mash-up of the other two options and is self-contradictory.\n- D: \"none\" is false.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Widely circulated answer keys for this exact item select option C (\"every time a resource request is made at fixed time intervals\"), but that wording is self-contradictory; the textbook rule is periodic invocation at fixed time intervals, so A is given here.",
+      "sourcePage": 100
+    },
+    {
+      "id": "q_0363",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Memory management",
+      "question": "The main memory accommodates ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "cpu"
+        },
+        {
+          "key": "B",
+          "text": "user processes"
+        },
+        {
+          "key": "C",
+          "text": "operating system"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "Main memory is split so that the resident portion holds the kernel and the rest holds the running user programs. Among the choices offered, the operating system is unambiguously the resident occupant of main memory for the whole session, which is the statement this item is keyed on.\n\nWhy C is correct: the operating system is accommodated in main memory.\n\nWhy the others are wrong:\n- A: \"cpu\" is wrong, the processor is a separate hardware unit and does not sit in main memory.\n- B: \"user processes\" is also genuinely true of main memory, which makes the option set ambiguous.\n- D: \"all\" is wrong because it drags in the CPU.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Option B (user processes) is also factually true of main memory, and the natural answer would be D \"all\" if it did not wrongly include the CPU; C is the keyed answer.",
+      "sourcePage": 101
+    },
+    {
+      "id": "q_0384",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Multiprocessor and distributed systems",
+      "question": "Network operating system runs on ___________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "every system in the network"
+        },
+        {
+          "key": "B",
+          "text": "server"
+        },
+        {
+          "key": "C",
+          "text": "both server and every system in the network"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "In the network operating-system model the shared resources such as files, printers and user accounts are managed centrally, and the system software that actually provides those services runs on the machine that owns them, which is the server. Machines elsewhere in the network act as clients and reach that software through the network protocol.\n\nWhy B is correct: the network operating system runs on the server.\n\nWhy the others are wrong:\n- A: \"every system in the network\" is wrong, clients run only client stubs, not the NOS itself.\n- C: \"both server and every system in the network\" double-counts, since the server is itself one of the systems in the network.\n- D: \"none\" is false, because option B is correct.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 107
+    },
+    {
+      "id": "q_0385",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Multiprocessor and distributed systems",
+      "question": "What are the types of distributed operating systems?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Zone based Operating system"
+        },
+        {
+          "key": "B",
+          "text": "Level based Operating system"
+        },
+        {
+          "key": "C",
+          "text": "Network Operating system"
+        },
+        {
+          "key": "D",
+          "text": "All"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "Of the three categories listed, only the network operating system is a recognised member of the distributed-systems taxonomy, in which a single unified view of shared resources is offered across networked machines. \"Zone based\" and \"level based\" operating systems are not standard classifications of distributed operating systems.\n\nWhy C is correct: Network Operating system is a valid type of distributed operating system.\n\nWhy the others are wrong:\n- A: \"Zone based Operating system\" is not a recognised type of distributed operating system.\n- B: \"Level based Operating system\" is not a recognised type of distributed operating system.\n- D: \"All\" is false, because two of the listed items are not types of distributed OS.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 107
+    },
+    {
+      "id": "q_0386",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Process concepts",
+      "question": "The systems which allow only one process execution at a time, are called __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "uniprogramming systems"
+        },
+        {
+          "key": "B",
+          "text": "uniprocessing systems"
+        },
+        {
+          "key": "C",
+          "text": "unitasking systems"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "Uniprocessing means the machine has a single processor, and in the single-process form of such a system only one process may execute at any instant while all others wait their turn for the CPU. Strictly speaking the term that means one program resident in memory is uniprogramming, so the wording of the question and its keyed answer are not fully consistent.\n\nWhy B is correct: the intended key for this item is \"uniprocessing systems\".\n\nWhy the others are wrong:\n- A: \"uniprogramming systems\" is the term that actually means a single program in memory, so it is also defensible.\n- C: \"unitasking systems\" refers to a process executing one task at a time, not to single-process execution.\n- D: \"none\" is false, because option B is the intended answer.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Options A (\"uniprogramming systems\") and B (\"uniprocessing systems\") are both defensible readings of the stem; B is the key used by this source bank while A is the technically precise term.",
+      "sourcePage": 107
+    },
+    {
+      "id": "q_0389",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Process concepts",
+      "question": "What is the ready state of a process?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "when process is scheduled to run after some execution"
+        },
+        {
+          "key": "B",
+          "text": "when process is unable to run until some task has been completed"
+        },
+        {
+          "key": "C",
+          "text": "when process is using the CPU"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "The ready state means the process is sitting in the ready queue: it already holds everything it needs to execute and is waiting only for the CPU. Option A describes exactly that situation for a process that has finished some earlier execution and is now waiting to be dispatched again.\n\nWhy A is correct: the process is ready to be scheduled to run after some execution.\n\nWhy the others are wrong:\n- B: \"when process is unable to run until some task has been completed\" is the blocked or waiting state.\n- C: \"when process is using the CPU\" is the running state.\n- D: \"none\" is false, because option A is the intended answer.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 108
+    },
+    {
+      "id": "q_0407",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Process scheduling",
+      "question": "When the process issues an I/O request __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "It is placed in an I/O queue"
+        },
+        {
+          "key": "B",
+          "text": "It is placed in a waiting queue"
+        },
+        {
+          "key": "C",
+          "text": "It is placed in the ready queue"
+        },
+        {
+          "key": "D",
+          "text": "It is placed in the Job queue"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "When a running process issues an I/O request it cannot continue, so the OS blocks it and links it into the device queue for that device; only when the I/O completes is it moved to the ready queue. The job queue, by contrast, holds jobs that have not yet been admitted to the system at all.\n\nWhy A is correct: the process is placed in an I/O queue.\n\nWhy the others are wrong:\n- B: \"It is placed in a waiting queue\" describes the same outcome in different words, so the option set is not exclusive.\n- C: \"It is placed in the ready queue\" happens only after the I/O completes.\n- D: \"It is placed in the Job queue\" is wrong, that queue holds jobs before admission.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Option B (\"placed in a waiting queue\") expresses the same outcome as A in different words; A is the term used for the device/I-O queue and is the keyed answer.",
+      "sourcePage": 113
+    },
+    {
+      "id": "q_0408",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Process concepts",
+      "question": "What will happen when a process terminates?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "It is removed from all queues"
+        },
+        {
+          "key": "B",
+          "text": "It is removed from all, but the job queue"
+        },
+        {
+          "key": "C",
+          "text": "Its process control block is de-allocated"
+        },
+        {
+          "key": "D",
+          "text": "Its process control block is never de-allocated"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "When a process terminates the kernel releases all its resources, removes it from every queue to which it belongs, and frees its PCB, leaving at most a zombie entry until the parent waits. The first observable effect, and the one this item is keyed on, is its removal from all queues.\n\nWhy A is correct: a terminating process is removed from all the queues.\n\nWhy the others are wrong:\n- B: \"It is removed from all, but the job queue\" is wrong, it leaves every queue without exception.\n- C: \"Its process control block is de-allocated\" is also true of termination, so the option set is not exclusive.\n- D: \"Its process control block is never de-allocated\" is false, the PCB is freed or left only as a zombie entry.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Both A and C describe what the textbook says happens on termination (removal from all queues and freeing the PCB), so two options are defensible; A is the keyed answer.",
+      "sourcePage": 113
+    },
+    {
+      "id": "q_0427",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Semaphores",
+      "question": "A semaphore is a shared integer variable __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "that can not drop below zero"
+        },
+        {
+          "key": "B",
+          "text": "that can not be more than zero"
+        },
+        {
+          "key": "C",
+          "text": "that can not drop below one"
+        },
+        {
+          "key": "D",
+          "text": "that can not be more than one"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "In the usual presentation the semaphore starts at 1 for a binary lock or at the number of free units for a counting semaphore; signal increments it and wait decrements it, so the value is not driven below zero and a value of zero means no unit is free. Note that in Dijkstra's original formulation a counting semaphore may legitimately take negative values, so the wording here is a simplification.\n\nWhy A is correct: the intended statement is that a semaphore cannot drop below zero.\n\nWhy the others are wrong:\n- B: \"that can not be more than zero\" is wrong, a semaphore is positive when resources are free.\n- C: \"that can not drop below one\" is wrong, a binary semaphore legitimately sits at 0.\n- D: \"that can not be more than one\" is wrong, that would restrict it to a plain lock.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 118
+    },
+    {
+      "id": "q_0445",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Classical IPC",
+      "question": "The link between two processes P and Q to send and receive messages is called __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "communication link"
+        },
+        {
+          "key": "B",
+          "text": "message-passing link"
+        },
+        {
+          "key": "C",
+          "text": "synchronization link"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "In the direct, or logical, communication model the connection that lets process P send and Q receive is called a communication link, and it is associated with exactly the two named processes. \"Message-passing link\" and \"synchronization link\" are not the terms used for it.\n\nWhy A is correct: it is a communication link.\n\nWhy the others are wrong:\n- B: \"message-passing link\" is not the defined term.\n- C: \"synchronization link\" is not the defined term.\n- D: \"all\" is false, since only option A uses the correct term.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 123
+    },
+    {
+      "id": "q_0446",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Operating Systems",
+      "subtopic": "Classical IPC",
+      "question": "Which of the following are TRUE for direct communication?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "A communication link can be associated with N number of process(N = max. number of processes supported by system)"
+        },
+        {
+          "key": "B",
+          "text": "A communication link is associated with exactly two processes"
+        },
+        {
+          "key": "C",
+          "text": "Exactly N/2 links exist between each pair of processes(N = max. number of processes supported by system)"
+        },
+        {
+          "key": "D",
+          "text": "Exactly two link exists between each pair of processes"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "Under direct communication the two processes name each other and a link is set up between exactly that pair, so no link can be shared by N processes. The textbook also notes that the pair is joined by two links, one in each direction, which is what option D states, so this option set admits two readings.\n\nWhy B is correct: for direct communication a link is associated with exactly two processes.\n\nWhy the others are wrong:\n- A: \"A communication link can be associated with N number of process\" describes indirect communication through a shared mailbox.\n- C: \"Exactly N/2 links exist between each pair of processes\" is nonsense, the count does not depend on N.\n- D: \"Exactly two link exists between each pair of processes\" is also stated by the textbook, so the key is ambiguous.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Options B and D are both textbook-true for direct communication (a link is associated with exactly two processes, and exactly two links exist between each pair, one per direction), so the single-answer option set admits two keys.",
+      "sourcePage": 123
+    }
+  ]
+}

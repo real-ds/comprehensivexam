@@ -1,0 +1,935 @@
+{
+  "topic": "Operating Systems",
+  "answers": [
+    {
+      "id": "q_0355",
+      "subtopic": "Deadlock detection and recovery",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "A wait-for graph is obtained from the resource-allocation graph only when every resource type has at most one instance, so each resource can be reduced to a single edge between the holder and the requester. When a resource type has several instances, a cycle in the wait-for graph is only a necessary condition for deadlock, so the reduction algorithm applied to the resource-allocation graph is used instead.\n\nWhy A is correct: the wait-for graph detection method applies when all resources have a single instance.\n\nWhy the others are wrong:\n- B: \"all resources have multiple instances\" is precisely the case the wait-for graph does not handle correctly.\n- C: identical wording to option B, so it is wrong for the same reason.\n- D: \"all\" is false, since the method breaks down for multiple instances.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Options B and C are word-for-word identical (\"all resources have multiple instances\"), so the option set is defective; A is the only distinct statement and is the intended answer."
+    },
+    {
+      "id": "q_0356",
+      "subtopic": "Deadlock detection and recovery",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "In a wait-for graph each node is a process, and an edge Pi -> Pj is drawn only when Pi has requested a resource that is currently held by Pj. The arrow therefore runs from the blocked (requesting) process to the owning process that must release the resource.\n\nWhy A is correct: an edge Pi to Pj means Pi is waiting for Pj to release a resource that Pi needs.\n\nWhy the others are wrong:\n- B: identical wording to option A, so it states the same true thing twice.\n- C: \"all resources have multiple instances\" belongs to a different question and says nothing about edge direction.\n- D: \"all\" is false, because option C is meaningless here.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Options A and B are word-for-word identical, so two option keys carry the same correct statement."
+    },
+    {
+      "id": "q_0357",
+      "subtopic": "Deadlock detection and recovery",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "With single-instance resources a cycle in the wait-for graph is equivalent to a deadlock: every process on the cycle is blocked waiting for a resource held by the next process on the cycle, so none of them can ever proceed. The converse also holds, which is why the absence of a cycle proves that no deadlock exists.\n\nWhy B is correct: a cycle in the wait-for graph means a deadlock exists.\n\nWhy the others are wrong:\n- A: \"then a deadlock does not exist\" states the opposite of the standard rule.\n- C: \"hen a deadlock exists\" is a truncated duplicate of option B and means the same thing.\n- D: \"either deadlock exists or system is in a safe state\" only applies to the resource-allocation graph when a resource type has multiple instances, not to the wait-for graph.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Option C is a truncated copy of option B (\"hen\" is a lost \"T\"), so two keys carry the same correct statement; B is given as the properly spelled one."
+    },
+    {
+      "id": "q_0358",
+      "subtopic": "Deadlock detection and recovery",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Detection costs CPU time, so the OS trades detection overhead against how long a deadlocked set wastes resources and blocks everything behind it. When deadlocks occur frequently they must be discovered quickly, because invoking the detection algorithm only rarely would leave deadlocked processes in place for long stretches.\n\nWhy B is correct: frequent deadlocks call for invoking the detection algorithm frequently.\n\nWhy the others are wrong:\n- A: \"rarely\" would let deadlocked processes linger and block others.\n- C: \"rarely & frequently\" is self-contradictory.\n- D: \"none\" is false, the question has a definite answer.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0359",
+      "subtopic": "Deadlock detection and recovery",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "Running detection on every resource request would make the search cost dominate the real work, so the standard design is to invoke the detection algorithm periodically, at fixed time intervals such as once a second. This bounds how long a deadlock can persist while keeping detection overhead tolerable.\n\nWhy A is correct: the detection algorithm is invoked at fixed time intervals.\n\nWhy the others are wrong:\n- B: \"every time a resource request is made\" is far too expensive because each request triggers a full search.\n- C: \"every time a resource request is made at fixed time intervals\" is a garbled mash-up of the other two options and is self-contradictory.\n- D: \"none\" is false.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Widely circulated answer keys for this exact item select option C (\"every time a resource request is made at fixed time intervals\"), but that wording is self-contradictory; the textbook rule is periodic invocation at fixed time intervals, so A is given here."
+    },
+    {
+      "id": "q_0360",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The command interpreter, usually the shell, is a system program that reads a user command, decides whether it is a built-in command or the name of a program, and carries it out. Fetching and running that next user-specified command is its entire job.\n\nWhy C is correct: \"to get and execute the next user-specified command\" is exactly the role of the command interpreter.\n\nWhy the others are wrong:\n- A: \"to provide the interface between the API and application program\" describes the system-call or library layer, not the shell.\n- B: \"to handle the files in the operating system\" is the job of the file system.\n- D: \"None\" is false, because option C is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0361",
+      "subtopic": "Deadlocks",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "Avoidance differs from prevention in that it makes a decision at run time about each individual request, using the current resource-allocation state, that is the available, allocation and maximum-need vectors. By simulating the grant and confirming the system stays in a safe state, algorithms such as Banker's ensure a circular wait never actually forms.\n\nWhy D is correct: the term the textbook uses is \"resource allocation state\".\n\nWhy the others are wrong:\n- A: \"operating system\" is far too broad; avoidance inspects one specific data structure.\n- B: \"resources\" is too vague; the full allocation state is required, not the resource list.\n- C: \"system storage state\" is not a term used for deadlock avoidance.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "extractionFlags mark this as duplicate-stem-of:q_0348, which lies outside this shard; answered independently as instructed."
+    },
+    {
+      "id": "q_0362",
+      "subtopic": "Memory management",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "Swapping copies a process's entire memory image out to disk and later restores it, so any outstanding device request would still be pointing at an address whose contents are no longer in memory. For that reason a process that has pending I/O, or one whose I/O writes only into operating-system buffers, must not be swapped.\n\nWhy A is correct: swapping must never be performed in this situation.\n\nWhy the others are wrong:\n- B: \"maybe\" understates the rule, the condition is prohibitive rather than optional.\n- C: \"can\" would invalidate any I/O still in flight.\n- D: \"must\" is the opposite of the correct statement.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0363",
+      "subtopic": "Memory management",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "Main memory is split so that the resident portion holds the kernel and the rest holds the running user programs. Among the choices offered, the operating system is unambiguously the resident occupant of main memory for the whole session, which is the statement this item is keyed on.\n\nWhy C is correct: the operating system is accommodated in main memory.\n\nWhy the others are wrong:\n- A: \"cpu\" is wrong, the processor is a separate hardware unit and does not sit in main memory.\n- B: \"user processes\" is also genuinely true of main memory, which makes the option set ambiguous.\n- D: \"all\" is wrong because it drags in the CPU.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Option B (user processes) is also factually true of main memory, and the natural answer would be D \"all\" if it did not wrongly include the CPU; C is the keyed answer."
+    },
+    {
+      "id": "q_0364",
+      "subtopic": "Disk and file systems",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "The operating system owns the storage hardware and its failure handling: it runs the boot program to bring the system up from disk, formats and initialises disks, and maps bad blocks onto spare blocks whenever a disk error occurs. All three of the listed jobs are therefore OS responsibilities.\n\nWhy D is correct: bad-block recovery, booting from disk and disk initialization are all handled by the operating system.\n\nWhy the others are wrong:\n- A: \"bad-block recovery\" is true but covers only one of the three jobs.\n- B: \"booting from disk\" is true but covers only one of the three jobs.\n- C: \"disk initialization\" is true but covers only one of the three jobs.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0365",
+      "subtopic": "Memory management",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "In the relocation-register scheme the OS loads a base register with the lowest physical address of the process and a limit register with the extent of its logical address space. Hardware checks every logical address the CPU generates against the limit and then adds the base, so any address outside the process's own range traps before it can touch the kernel or another process.\n\nWhy A is correct: every CPU-generated address is checked against the relocation and limit registers.\n\nWhy the others are wrong:\n- B: \"they have a protection algorithm\" names no real mechanism; the protection is in hardware.\n- C: \"they are in different memory spaces\" is false, all processes share one physical memory.\n- D: \"they are in different logical addresses\" is true of every process, so it cannot be the distinguishing reason.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0366",
+      "subtopic": "Memory management",
+      "difficulty": "hard",
+      "correctAnswer": "B",
+      "explanation": "Transient operating-system code and data, such as device drivers or utilities, are loaded into memory only when needed and unloaded when no longer required. Because the resident kernel therefore grows and shrinks at run time instead of staying a fixed size, using transient code changes the size of the operating system during program execution.\n\nWhy B is correct: the OS size \"changes\" as transient code is loaded and unloaded.\n\nWhy the others are wrong:\n- A: \"maintains\" would require a fixed resident size, which is exactly what transient code avoids.\n- C: \"increases\" ignores that the code is also unloaded again.\n- D: \"decreases\" suggests a one-way shrink, whereas the size fluctuates.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0367",
+      "subtopic": "Memory management",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "Physical memory is divided into fixed-size frames, and the OS keeps a frame table, usually realised as a free-frame list, recording for every frame whether it is free and how many frames exist in total. The page table is a different structure: it belongs to a process and maps that process's pages to frames.\n\nWhy D is correct: it is the frame table that tracks allocated, total and available frames.\n\nWhy the others are wrong:\n- A: \"memory\" is too generic, there is no table simply called memory.\n- B: \"mapping\" tables are page tables or segment tables, which map logical to physical addresses.\n- C: \"page\" tables count a process's pages, not the frames of physical memory.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0368",
+      "subtopic": "Memory management",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "Dynamic loading differs from dynamic linking in that the program itself decides when to bring in a routine, normally by calling a stub that reads the routine from secondary storage and jumps to it. That is purely a software technique and requires neither paging hardware nor any help from the kernel.\n\nWhy C is correct: user programs implement dynamic loading without special hardware or operating-system support.\n\nWhy the others are wrong:\n- A: \"special support from operating system is essential\" is false, no OS support is needed.\n- B: \"special support from hardware is required\" is false, no hardware support is needed.\n- D: \"special support from both hardware and operating system is essential\" is false on both counts.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0369",
+      "subtopic": "I/O and device management",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "A device driver encapsulates the specifics of one controller and translates generic requests such as read and write into device commands, so that all devices look alike to the kernel and to applications. This is exactly parallel to system calls presenting one standard interface between the application and the operating system.\n\nWhy A is correct: Device drivers present a uniform device-access interface to the I/O subsystem.\n\nWhy the others are wrong:\n- B: \"I/O systems\" is the whole layer being presented, not the presenting interface.\n- C: \"Devices\" are physical units and cannot present an interface.\n- D: \"Buses\" merely carry signals between components.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0370",
+      "subtopic": "Process scheduling",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "A real-time OS is defined by timing guarantees rather than by fairness or throughput. It must guarantee that every task is serviced within its deadline, whether that is an absolute or a relative deadline, and missing a deadline counts as a functional failure rather than merely a delay.\n\nWhy D is correct: a task must be serviced by its deadline period.\n\nWhy the others are wrong:\n- A: \"process scheduling can be done only once\" is false, scheduling recurs constantly.\n- B: \"all processes have the same priority\" is false, real-time systems use multiple priority levels.\n- C: \"kernel is not required\" is false, a kernel is always present.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0371",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "Priority scheduling, round-robin (time-sharing) and shortest-job-first are all standard CPU scheduling policies, and SJF in turn underlies several non-preemptive and preemptive variants. Since every one of the three named policies is a genuine scheduling algorithm, the collective option applies.\n\nWhy D is correct: Priority, Round Robin and Shortest Job First are all CPU scheduling algorithms.\n\nWhy the others are wrong:\n- A: \"Priority\" is a real algorithm but accounts for only one of the three.\n- B: \"Round Robin\" is a real algorithm but accounts for only one of the three.\n- C: \"Shortest Job First\" is a real algorithm but accounts for only one of the three.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0372",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "Jitter is the variation in the time between successive activations or responses of a periodic task. A hard real-time system must behave deterministically, so its jitter is tightly bounded and therefore smaller than that of a soft real-time system, where occasional long delays are tolerated without penalty.\n\nWhy C is correct: hard real-time operating systems have less jitter.\n\nWhy the others are wrong:\n- A: \"equal\" contradicts the whole point of hard real-time determinism.\n- B: \"more\" is the wrong direction entirely.\n- D: \"none\" is false, since \"less\" completes the sentence correctly.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0373",
+      "subtopic": "I/O and device management",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "Interrupt latency is the delay between the arrival of an interrupt and the start of its service routine, which includes interrupt detection, acknowledgement and dispatch. It can never literally be zero because that hardware and kernel work takes real time, but a real-time OS must drive it as low as it can so that deadlines are still met.\n\nWhy B is correct: interrupt latency should be minimal.\n\nWhy the others are wrong:\n- A: \"zero\" is physically impossible, detection and dispatch consume time.\n- C: \"maximum\" is the opposite of the requirement.\n- D: \"dependent on the scheduling\" is wrong, latency is a hardware and kernel response time, not a scheduling decision.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0374",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "RTLinux is a real-time extension of Linux, VxWorks is a dedicated real-time OS, and Windows CE targets embedded hand-held devices with priority-based, bounded-latency scheduling and is listed among real-time operating systems in the standard textbook table. All three therefore qualify.\n\nWhy D is correct: Windows CE, RTLinux and VxWorks are all real-time operating systems.\n\nWhy the others are wrong:\n- A: \"Windows CE\" is an RTOS but covers only one of the three.\n- B: \"RTLinux\" is an RTOS but covers only one of the three.\n- C: \"VxWorks\" is an RTOS but covers only one of the three.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0375",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A static priority is assigned once, normally when the process is created or admitted, and the scheduler never recomputes it. That is the whole contrast with a dynamic or ageing priority, which is boosted while a process waits so that it cannot be starved.\n\nWhy C is correct: a static priority remains unchanged.\n\nWhy the others are wrong:\n- A: \"depends on the operating system\" is unnecessary, the word \"static\" already fixes the behaviour.\n- B: \"change\" would describe a dynamic priority.\n- D: \"none\" is false, because option C is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0376",
+      "subtopic": "Memory management",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "If the sum of the working-set sizes of all processes exceeds the number of available frames, thrashing sets in: pages are faulted in and evicted faster than the processes can complete useful work. The standard working-set remedy is to suspend one of the processes so the aggregate working set fits within the frames available.\n\nWhy A is correct: the operating system selects a process to suspend.\n\nWhy the others are wrong:\n- B: \"the system crashes\" is wrong, thrashing degrades performance without crashing.\n- C: \"then the process crashes\" is wrong, no process is terminated by thrashing.\n- D: \"the memory overflows\" is wrong, frames are simply over-subscribed.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0377",
+      "subtopic": "Disk and file systems",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "The operating system keeps a directory structure that is logically separate from the file data, and in that structure each file's name, location, owner and type are recorded. That directory is therefore the place where the information about all files is held.\n\nWhy B is correct: the information about all files is kept in a separate directory structure.\n\nWhy the others are wrong:\n- A: \"operating system\" is far too broad, the OS holds many structures and this names none of them.\n- C: \"swap space\" holds swapped-out process images, not file information.\n- D: \"none\" is false, because option B is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0378",
+      "subtopic": "Disk and file systems",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The OS maintains two levels of open-file tables: a small per-process table of file descriptors, and a single system-wide open-file table with one entry per open file holding the read/write pointers, access rights and location. The structure that keeps information about all open files is therefore the open-file table.\n\nWhy C is correct: the open-file table holds information about all open files.\n\nWhy the others are wrong:\n- A: \"file table\" is not the standard name for this structure.\n- B: \"directory table\" lists the names in a directory, not open files.\n- D: \"system table\" is a generic label, not the defined structure.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0379",
+      "subtopic": "Disk and file systems",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A single-level directory has exactly one directory for the entire system, so every file belonging to every user must be placed in that same directory. Its chief drawback is that two different users cannot own files with the same name, because names must be unique across the one directory.\n\nWhy A is correct: all files are contained in the same directory.\n\nWhy the others are wrong:\n- B: \"All files are contained in different directories all at the same level\" describes a two-level, per-user directory structure.\n- C: \"Depends on the operating system\" is wrong, the structure is defined by the scheme itself.\n- D: \"None\" is false, because option A is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0380",
+      "subtopic": "Disk and file systems",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "Symbolic, or soft, links can point anywhere in the file system and can therefore close a loop back onto an ancestor, turning the tree into a graph containing a cycle. To preserve the acyclic structure the operating system ignores such links while walking the directory structure, which is what stops a traversal from looping forever.\n\nWhy C is correct: the operating system ignores the offending links when traversing directory trees.\n\nWhy the others are wrong:\n- A: \"deletes\" would destroy valid user data during a mere directory walk.\n- B: \"considers\" is exactly what would allow the cycle to be followed.\n- D: \"none\" is false, because option C is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0381",
+      "subtopic": "Process concepts",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "Bootstrap code held in ROM only brings the hardware far enough up to read the boot sector; the component that reads that sector and decides which operating-system image or kernel to load is the boot loader. The choice between multiple installed operating systems is therefore made by the boot loader.\n\nWhy C is correct: the boot loader decides which operating system to load.\n\nWhy the others are wrong:\n- A: \"process control block\" describes a running process, not the boot decision.\n- B: \"file control block\" describes an open file.\n- D: \"bootstrap\" initialises hardware and then hands over to the boot loader.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0382",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A system call is the controlled, privileged entry point through which a user program asks the kernel for a service such as file access, process creation or memory. System calls are therefore the interface by which applications reach the services of the operating system.\n\nWhy B is correct: System Calls provide the interface to operating-system services.\n\nWhy the others are wrong:\n- A: \"Library\" is a collection of routines, some of which merely wrap system calls.\n- C: \"Assembly instructions\" refers to the few privileged instructions that trigger the trap, not to the user-level interface.\n- D: \"API - Application Programming Interface\" is the higher-level abstraction layered on top, not the mechanism of access.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0383",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The bootstrap program is the small routine held in ROM that runs at power-on: it initialises the CPU registers, the device controllers and the contents of main memory, locates and loads the operating system, and transfers control to it. That is precisely what the question describes.\n\nWhy A is correct: the bootstrap program initialises all aspects of the system and starts the OS.\n\nWhy the others are wrong:\n- B: \"main\" is an application's C entry point and has nothing to do with booting.\n- C: \"bootloader\" loads the OS, but the full hardware initialisation described belongs to the bootstrap.\n- D: \"rom\" is storage hardware, not a program.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0384",
+      "subtopic": "Multiprocessor and distributed systems",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "In the network operating-system model the shared resources such as files, printers and user accounts are managed centrally, and the system software that actually provides those services runs on the machine that owns them, which is the server. Machines elsewhere in the network act as clients and reach that software through the network protocol.\n\nWhy B is correct: the network operating system runs on the server.\n\nWhy the others are wrong:\n- A: \"every system in the network\" is wrong, clients run only client stubs, not the NOS itself.\n- C: \"both server and every system in the network\" double-counts, since the server is itself one of the systems in the network.\n- D: \"none\" is false, because option B is correct.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0385",
+      "subtopic": "Multiprocessor and distributed systems",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "Of the three categories listed, only the network operating system is a recognised member of the distributed-systems taxonomy, in which a single unified view of shared resources is offered across networked machines. \"Zone based\" and \"level based\" operating systems are not standard classifications of distributed operating systems.\n\nWhy C is correct: Network Operating system is a valid type of distributed operating system.\n\nWhy the others are wrong:\n- A: \"Zone based Operating system\" is not a recognised type of distributed operating system.\n- B: \"Level based Operating system\" is not a recognised type of distributed operating system.\n- D: \"All\" is false, because two of the listed items are not types of distributed OS.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0386",
+      "subtopic": "Process concepts",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "Uniprocessing means the machine has a single processor, and in the single-process form of such a system only one process may execute at any instant while all others wait their turn for the CPU. Strictly speaking the term that means one program resident in memory is uniprogramming, so the wording of the question and its keyed answer are not fully consistent.\n\nWhy B is correct: the intended key for this item is \"uniprocessing systems\".\n\nWhy the others are wrong:\n- A: \"uniprogramming systems\" is the term that actually means a single program in memory, so it is also defensible.\n- C: \"unitasking systems\" refers to a process executing one task at a time, not to single-process execution.\n- D: \"none\" is false, because option B is the intended answer.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Options A (\"uniprogramming systems\") and B (\"uniprocessing systems\") are both defensible readings of the stem; B is the key used by this source bank while A is the technically precise term."
+    },
+    {
+      "id": "q_0387",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "Each process owns a protected address space holding its code, data, stack and heap together with its globals, it has its own list of open files, and it has its own pending alarms, signals and signal handlers. All three statements are therefore true of every process.\n\nWhy D is correct: address space and globals, open files, and pending alarms and signals all belong to a process.\n\nWhy the others are wrong:\n- A: \"address space and global variables\" is true but is only part of the answer.\n- B: \"open files\" is true but is only part of the answer.\n- C: \"pending alarms, signals and signal handlers\" is true but is only part of the answer.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "extractionFlags mark this as duplicate-stem-of:q_0284, which lies outside this shard; answered independently as instructed."
+    },
+    {
+      "id": "q_0388",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "A process ends either normally when its main routine returns or exit() is called, abnormally when it encounters a fatal error, or forcibly when another process or the user kills it. The OS reclaims the process's resources in every one of those cases.\n\nWhy D is correct: normal exit, fatal error and being killed by another process are all reasons a process can terminate.\n\nWhy the others are wrong:\n- A: \"normal exit\" is only one of the three causes.\n- B: \"fatal error\" is only one of the three causes.\n- C: \"killed by another process\" is only one of the three causes.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0389",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The ready state means the process is sitting in the ready queue: it already holds everything it needs to execute and is waiting only for the CPU. Option A describes exactly that situation for a process that has finished some earlier execution and is now waiting to be dispatched again.\n\nWhy A is correct: the process is ready to be scheduled to run after some execution.\n\nWhy the others are wrong:\n- B: \"when process is unable to run until some task has been completed\" is the blocked or waiting state.\n- C: \"when process is using the CPU\" is the running state.\n- D: \"none\" is false, because option A is the intended answer.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0390",
+      "subtopic": "Classical IPC",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "IPC is the set of mechanisms by which separate processes, which do not share an address space, exchange data and coordinate their relative order of execution. Communication inside a single process, or between threads of one process, is ordinary shared-memory programming rather than IPC.\n\nWhy B is correct: interprocess communication is communication between two processes.\n\nWhy the others are wrong:\n- A: \"communication within the process\" is internal to one process, so it is not IPC.\n- C: \"communication between two threads of same process\" shares one address space, so it is not IPC.\n- D: \"none\" is false, because option B is correct.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "extractionFlags mark this as duplicate-stem-of:q_0441, which is also in this shard; both entries were answered independently as instructed."
+    },
+    {
+      "id": "q_0391",
+      "subtopic": "Deadlocks",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A set of processes is deadlocked when every member is blocked, each waiting for an event that only another member of the set can produce, so none of them can ever run again and none can release what the others need. That is precisely the condition of every process being blocked and remaining so forever.\n\nWhy A is correct: each process being blocked forever is the definition of deadlock.\n\nWhy the others are wrong:\n- B: \"each process is terminated\" describes finished processes, not deadlocked ones.\n- C: \"all processes are trying to kill each other\" is not the definition.\n- D: \"None\" is false, because option A is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0392",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "A stack frame holds the parameters of the active call, the local or automatic variables of that call, and the return address back to the caller. Process identifiers such as the PID of a child are recorded in the process control block and the process table instead, not on the stack.\n\nWhy D is correct: the PID of a child process is not contained in the process stack.\n\nWhy the others are wrong:\n- A: \"Function parameters\" are pushed onto the stack for every call.\n- B: \"Local variables\" are allocated on the stack.\n- C: \"Return addresses\" are stored on the stack to unwind the call chain.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0393",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Multiprogramming only pays off if the OS can switch the CPU between processes: while one is blocked on I/O another is dispatched to run. Without CPU scheduling the single running process would leave the CPU idle for the whole duration of its I/O, which is precisely what the technique exists to prevent.\n\nWhy A is correct: CPU scheduling is the basis of multiprogramming operating systems.\n\nWhy the others are wrong:\n- B: \"larger memory sized systems\" is a precondition for multiprogramming, not what scheduling is based on.\n- C: \"multiprocessor systems\" need multiprocessor scheduling and are not the basis of multiprogramming.\n- D: \"none\" is false, because option A is correct.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "extractionFlags mark this as duplicate-stem-of:q_0282, which lies outside this shard; answered independently as instructed."
+    },
+    {
+      "id": "q_0394",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The wait() call blocks the calling parent until one of its children terminates and then returns that child's exit status and PID, which is exactly how a parent learns that the child has finished. fork() creates a child and returns immediately, and exit() is called by the terminating child itself.\n\nWhy A is correct: wait() lets the parent determine the termination of its child.\n\nWhy the others are wrong:\n- B: \"exit\" is called by the child to terminate itself, not by the parent to observe it.\n- C: \"fork\" creates a new child process.\n- D: \"get\" is not a standard process-related system call.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0395",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "The program counter holds the address of the instruction currently executing and is incremented after each instruction, so it always holds the address of the next instruction to be fetched. Its value is saved in the PCB on every context switch so execution can resume in the right place.\n\nWhy B is correct: the Program counter provides the address of the next instruction to be executed.\n\nWhy the others are wrong:\n- A: \"CPU registers\" is a set of registers, not the specific holder of the next instruction address.\n- C: \"Process stack\" holds local variables, parameters and return addresses.\n- D: \"Pipe\" is an IPC mechanism and has nothing to do with the instruction address.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0396",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A PCB records identification data such as the PID, the process state, the program counter and CPU registers, scheduling information, memory-management data, and pointers or limits describing the process's code, data and stack. The bootstrap program is part of the fixed system image and has nothing to do with any individual process.\n\nWhy C is correct: the Bootstrap Program is not contained in a PCB.\n\nWhy the others are wrong:\n- A: \"Code\" is referenced by the PCB through the code segment pointer.\n- B: \"Stack\" is described by the stack pointer and stack limits stored in the PCB.\n- D: \"Data\" is referenced by the PCB through the data segment pointer.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0397",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Throughput is defined as the number of processes that complete per unit of time, and it is one of the classic CPU scheduling criteria alongside turnaround time, waiting time and response time. Output, efficiency and capacity are not the names of this metric.\n\nWhy B is correct: processes completed per unit time is Throughput.\n\nWhy the others are wrong:\n- A: \"Output\" is not a scheduling performance metric.\n- C: \"Efficiency\" is the fraction of time the CPU is busy, which is a different criterion.\n- D: \"Capacity\" is not a scheduling performance metric.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0398",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A process state such as new, ready, running, waiting or terminated is simply the activity the process is currently engaged in during its life cycle. It is not defined by what the process did last, nor by the instruction it will execute next.\n\nWhy A is correct: the state of a process is its current activity.\n\nWhy the others are wrong:\n- B: \"the final activity of the process\" is about termination, not state.\n- C: \"the activity just executed by the process\" describes history, not current state.\n- D: \"the activity to next be executed by the process\" describes the next instruction, not the process state.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0399",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "The canonical set of process states is new, ready, running, waiting (blocked) and terminated. \"Old\" is not a member of that model, so it is the odd one out in this list.\n\nWhy B is correct: \"Old\" is not one of the states of a process.\n\nWhy the others are wrong:\n- A: \"New\" is a standard process state.\n- C: \"Waiting\" is a standard process state.\n- D: \"Running\" is a standard process state.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0400",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "The PCB is the kernel's data structure in which every piece of information the OS needs about a process is recorded, which is what allows a process to be suspended and later resumed exactly where it left off. It is not a variable, not a region of secondary storage, and not merely an arbitrary block of memory.\n\nWhy B is correct: a Process Control Block is a Data Structure.\n\nWhy the others are wrong:\n- A: \"Process type variable\" is not a real entity.\n- C: \"A secondary storage section\" is wrong, PCBs live in kernel main memory.\n- D: \"A Block in memory\" is true but far too vague to be the definition.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0401",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "The OS keeps a process table, which is an array of pointers to the PCBs of every process currently in the system, and that is what lets the kernel find a process's control block from a PID. Neither a CPU register nor a program counter can hold such a list.\n\nWhy C is correct: the entries of all the current PCBs are held in the Process Table.\n\nWhy the others are wrong:\n- A: \"Process Register\" is a CPU register holding one context, not a table.\n- B: \"Program Counter\" holds a single address.\n- D: \"Process Unit\" is not a real structure in an operating system.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0402",
+      "subtopic": "Process scheduling",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "The degree of multiprogramming is the number of processes that are resident in main memory at a given moment, which bounds how many can compete for the CPU and how much memory the OS must hold at once. Processes completed per unit time is instead the definition of throughput.\n\nWhy D is correct: it is the number of processes in memory.\n\nWhy the others are wrong:\n- A: \"the number of processes executed per unit time\" is throughput.\n- B: \"the number of processes in the ready queue\" is a momentary count, not the degree of multiprogramming.\n- C: \"the number of processes in the I/O queue\" is unrelated to the degree of multiprogramming.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0403",
+      "subtopic": "Threads",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A thread of control is a single sequential path of execution with its own program counter, register set and stack. With only one such path a process can make progress on exactly one task at a time, and genuine simultaneity requires several threads.\n\nWhy A is correct: a single thread of control lets the process perform only one task at a time.\n\nWhy the others are wrong:\n- B: \"multiple tasks at a time\" requires more than one thread.\n- C: \"only two tasks at a time\" is arbitrary and false.\n- D: \"all\" is false because options B and C are both wrong.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0404",
+      "subtopic": "Process concepts",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "Three of the four statements are true: the kernel stays resident in memory, it is the central core of the operating system, and it is the first part of the OS loaded during booting. The false one is the claim that its modules can never be loaded into a running system, since modern kernels do load and unload modules dynamically at run time.\n\nWhy B is correct: it is false, kernel modules can be loaded into a running operating system.\n\nWhy the others are wrong:\n- A: \"kernel remains in the memory during the entire computer session\" is true.\n- C: \"kernel is the first part of the operating system to load into memory during booting\" is true.\n- D: \"kernel is the program that constitutes the central core of the operating system\" is true.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0405",
+      "subtopic": "Process scheduling",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "Multiprogramming keeps several processes in memory so that whenever one is blocked on I/O the CPU can be handed to another instead of idling. The purpose of that arrangement is to raise CPU utilisation, which is why utilisation is the headline objective of the technique.\n\nWhy C is correct: the objective of multiprogramming is to increase CPU utilization.\n\nWhy the others are wrong:\n- A: \"Have a process running at all time\" is a consequence of the objective rather than the stated aim.\n- B: \"Have multiple programs waiting in a queue ready to run\" describes the ready queue, not the objective.\n- D: \"None\" is false, because option C is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0406",
+      "subtopic": "Process scheduling",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "The standard queueing model of a multiprogrammed system contains the job queue, the ready queue and one device queue for each I/O device. A PCB is a record attached to a process rather than a queue of waiting entities, so it does not belong in that list.\n\nWhy B is correct: PCB Queue does not belong to queues for processes.\n\nWhy the others are wrong:\n- A: \"Job Queue\" is a genuine process queue.\n- C: \"Device Queue\" is a genuine process queue.\n- D: \"Ready Queue\" is a genuine process queue.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0407",
+      "subtopic": "Process scheduling",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "When a running process issues an I/O request it cannot continue, so the OS blocks it and links it into the device queue for that device; only when the I/O completes is it moved to the ready queue. The job queue, by contrast, holds jobs that have not yet been admitted to the system at all.\n\nWhy A is correct: the process is placed in an I/O queue.\n\nWhy the others are wrong:\n- B: \"It is placed in a waiting queue\" describes the same outcome in different words, so the option set is not exclusive.\n- C: \"It is placed in the ready queue\" happens only after the I/O completes.\n- D: \"It is placed in the Job queue\" is wrong, that queue holds jobs before admission.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Option B (\"placed in a waiting queue\") expresses the same outcome as A in different words; A is the term used for the device/I-O queue and is the keyed answer."
+    },
+    {
+      "id": "q_0408",
+      "subtopic": "Process concepts",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "When a process terminates the kernel releases all its resources, removes it from every queue to which it belongs, and frees its PCB, leaving at most a zombie entry until the parent waits. The first observable effect, and the one this item is keyed on, is its removal from all queues.\n\nWhy A is correct: a terminating process is removed from all the queues.\n\nWhy the others are wrong:\n- B: \"It is removed from all, but the job queue\" is wrong, it leaves every queue without exception.\n- C: \"Its process control block is de-allocated\" is also true of termination, so the option set is not exclusive.\n- D: \"Its process control block is never de-allocated\" is false, the PCB is freed or left only as a zombie entry.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Both A and C describe what the textbook says happens on termination (removal from all queues and freeing the PCB), so two options are defensible; A is the keyed answer."
+    },
+    {
+      "id": "q_0409",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The long-term, or job, scheduler chooses which processes from the job queue are admitted to the ready queue, and it runs only occasionally, for instance when the degree of multiprogramming must be changed. Handing the CPU to the next ready process and swapping processes out of memory are the jobs of the short- and medium-term schedulers.\n\nWhy A is correct: the long-term scheduler selects processes to bring into the ready queue.\n\nWhy the others are wrong:\n- B: \"It selects processes which have to be executed next and allocates CPU\" is the short-term scheduler.\n- C: \"It selects processes which heave to remove from memory by swapping\" is the medium-term scheduler.\n- D: \"None\" is false, because option A is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0410",
+      "subtopic": "Process scheduling",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "An I/O-bound process spends the great majority of its time blocked on a device, so processes leave the ready queue almost as fast as they enter it and very few are waiting to run. The ready queue is therefore almost empty, which leaves the short-term scheduler with little to choose between.\n\nWhy C is correct: the ready queue is empty and the scheduler has little to do.\n\nWhy the others are wrong:\n- A: \"full, little\" describes CPU-bound processes, which is the opposite situation.\n- B: \"full, lot\" contradicts the I/O-bound premise.\n- D: \"empty, lot\" is self-defeating, an empty queue leaves the scheduler nothing to do.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0411",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A medium-term scheduler swaps a process out of memory to suspend it and later swaps it back in, typically to relieve memory pressure or to let a higher-priority process run. It neither admits jobs from the job queue nor dispatches the running process.\n\nWhy C is correct: it selects which process to remove from memory by swapping.\n\nWhy the others are wrong:\n- A: \"It selects which process has to be brought into the ready queue\" is the long-term scheduler.\n- B: \"It selects which process has to be executed next and allocates CPU\" is the short-term scheduler.\n- D: \"None\" is false, because option C is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0412",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "The short-term, or CPU, scheduler runs on every interrupt or voluntary yield, picks a process out of the ready queue and dispatches it, thereby allocating the CPU to the next process to execute. Admitting jobs and swapping processes are the long-term and medium-term schedulers' jobs respectively.\n\nWhy B is correct: it selects which process is executed next and allocates the CPU.\n\nWhy the others are wrong:\n- A: \"It selects which process has to be brought into the ready queue\" is the long-term scheduler.\n- C: \"It selects which process to remove from memory by swapping\" is the medium-term scheduler.\n- D: \"None\" is false, because option B is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0413",
+      "subtopic": "Process scheduling",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "The short-term scheduler must fire on every timer tick or blocking event, while the long-term scheduler runs only occasionally to adjust the degree of multiprogramming. That difference in how often each one runs is what distinguishes them, since both schedule ordinary processes and both operate on queues.\n\nWhy C is correct: the distinction is the frequency of their execution.\n\nWhy the others are wrong:\n- A: \"The length of their queues\" is a consequence of their roles, not the defining difference.\n- B: \"The type of processes they schedule\" is the same for both.\n- D: \"None\" is false, because option C is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0414",
+      "subtopic": "Process concepts",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "A process moves itself from running to blocked only when it asks for something it cannot have yet, such as an I/O operation, so blocking is the one transition the process initiates by itself. The wake-up is triggered by the event the process was waiting for, and the dispatch is performed by the dispatcher after scheduling.\n\nWhy A is correct: block is the only transition the user process itself initiates.\n\nWhy the others are wrong:\n- B: \"wakeup\" is caused by the awaited event, not by the process.\n- C: \"dispatch\" is performed by the dispatcher after the scheduler decides.\n- D: \"none\" is false, because option A is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0415",
+      "subtopic": "Process concepts",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "The OS continuously monitors and recovers from errors it can act on: a paper-out condition is reported by the device driver and surfaced to the process, and a network connection failure is reported by the driver to the socket layer, which returns an error to the application. Power failure is likewise handled at the system level through orderly shutdown and recovery on restart, so all three are OS-handled errors.\n\nWhy D is correct: all the mentioned errors are handled by the operating system.\n\nWhy the others are wrong:\n- A: \"lack of paper in printer\" is handled, but it is only one of the three.\n- B: \"connection failure in the network\" is handled, but it is only one of the three.\n- C: \"power failure\" is handled, but it is only one of the three.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0416",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "In a round-robin time-sharing system a process runs until its time quantum expires or until it blocks; when the quantum expires a timer interrupt preempts it and it goes back to the ready queue to wait for its next turn. It is not suspended, since nothing is swapped out, and it is certainly not terminated.\n\nWhy B is correct: the process returns to the Ready state when its time slot ends.\n\nWhy the others are wrong:\n- A: \"Blocked state\" is entered only when the process waits for an event such as I/O.\n- C: \"Suspended state\" means swapped out of memory, which does not happen here.\n- D: \"Suspended state\" is a word-for-word duplicate of option C.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "Known source defect: options C and D are identical (\"Suspended state\"); the original fourth option was most likely \"Terminated state\", but B is correct either way."
+    },
+    {
+      "id": "q_0417",
+      "subtopic": "Process scheduling",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Multiprogramming means keeping several processes resident in main memory at once; the single CPU still executes only one of them at any instant and the OS switches between them as one blocks. Option A would describe true parallelism on multiple cores, not multiprogramming.\n\nWhy C is correct: more than one process resides in the memory.\n\nWhy the others are wrong:\n- A: \"the processor executes more than one process at a time\" is false, one CPU runs one process at a time.\n- B: \"the programs are developed by more than one person\" is unrelated to multiprogramming.\n- D: \"a single user can execute many programs at the same time\" describes the user's view of time sharing, not the definition.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0418",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "Once the awaited I/O completes the blocking condition disappears, so the OS unblocks the process and puts it in the ready queue. It reaches running only later, when the scheduler dispatches it, which is why a process never jumps straight from waiting to running.\n\nWhy B is correct: the process moves to the Ready state.\n\nWhy the others are wrong:\n- A: \"Running state\" is wrong, a blocked process must pass through ready first.\n- C: \"Suspended state\" is wrong, nothing is swapped out here.\n- D: \"Terminated state\" is wrong, completing an I/O does not end the process.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0419",
+      "subtopic": "Process concepts",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "The process context stored in the PCB comprises the values of the CPU registers including the program counter, the process state, and memory-management information such as the page-table base and the addressing limits. Context switch time is a cost incurred while switching, not part of any process's saved context.\n\nWhy D is correct: context switch time is not part of the stored context.\n\nWhy the others are wrong:\n- A: \"the value of the CPU registers\" is saved as part of the context.\n- B: \"the process state\" is part of the context.\n- C: \"memory-management information\" is part of the context.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0420",
+      "subtopic": "Process concepts",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "On a context switch the OS saves the general-purpose registers and the program counter, because those values belong to the outgoing process and are needed to resume it. The TLB is part of the MMU and is normally flushed or simply refilled by the hardware, so it need not be saved as process context.\n\nWhy B is correct: the Translation lookaside buffer need not necessarily be saved.\n\nWhy the others are wrong:\n- A: \"General purpose registers\" must be saved or the process cannot resume correctly.\n- C: \"Program counter\" must be saved or the process resumes at the wrong instruction.\n- D: \"All\" is false, since registers and the program counter must be saved.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0421",
+      "subtopic": "Process concepts",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "An I/O device raises an interrupt when it needs service, the timer raises one on every quantum expiry to drive preemption, and a power failure also generates an interrupt so the OS can halt safely. The scheduler itself interrupts nothing: it is invoked after an interrupt or a yield and simply chooses which process to dispatch next.\n\nWhy C is correct: the Schedular process does not interrupt a running process.\n\nWhy the others are wrong:\n- A: \"A device\" interrupts, which is the classic interrupt-driven I/O case.\n- B: \"Timer\" interrupts, driving round-robin preemption of the running process.\n- D: \"Power Failure\" also generates an interrupt.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0422",
+      "subtopic": "Synchronization",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "A cooperating process is one that shares data with, or otherwise communicates with, another process, so it can be affected by what that other process does and can equally affect it in turn. An ordinary child, an ordinary parent or the init process only stands in a hierarchical relationship and is not by definition influenced by other running processes.\n\nWhy A is correct: a cooperating process can be affected by other processes executing in the system.\n\nWhy the others are wrong:\n- B: \"child process\" shares a parent-child relationship, which is not mutual interference.\n- C: \"parent process\" shares the same relationship, not mutual interference.\n- D: \"init process\" is the root of the process tree, not a shared-resource process.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0423",
+      "subtopic": "Synchronization",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "A race condition arises when two or more concurrent processes access shared data without synchronisation and the resulting value depends on the unpredictable order in which the accesses occur. The remedy is to guard the shared data with mutual exclusion, and the guarded region is called the critical section.\n\nWhy B is correct: this is precisely a race condition.\n\nWhy the others are wrong:\n- A: \"dynamic condition\" is not a defined term.\n- C: \"essential condition\" is not a defined term.\n- D: \"critical condition\" is not a defined term.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0424",
+      "subtopic": "Synchronization",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Mutual exclusion is the requirement that at most one process at a time may be executing inside the critical section, so every other process must wait its turn. That is exactly the condition described in the question.\n\nWhy A is correct: the condition is called mutual exclusion.\n\nWhy the others are wrong:\n- B: \"critical exclusion\" is not a recognised term.\n- C: \"synchronous exclusion\" is not a recognised term.\n- D: \"asynchronous exclusion\" is not a recognised term.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0425",
+      "subtopic": "Semaphores",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A semaphore is the classic synchronisation primitive: an integer manipulated only through the atomic wait and signal operations, used to control entry to a critical section. Pipes, sockets and threads are communication or scheduling constructs rather than the synchronisation tool the question is asking for.\n\nWhy C is correct: semaphore is the synchronisation tool.\n\nWhy the others are wrong:\n- A: \"thread\" is a unit of execution, not a synchronisation primitive.\n- B: \"pipe\" is an IPC mechanism.\n- D: \"socket\" is an IPC endpoint.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0426",
+      "subtopic": "Memory management",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "The OS image can be linked at either end of physical memory depending on where the interrupt-vector table is placed: when the vector occupies low memory the OS is loaded at high memory, and the reverse when the vector is high. The placement therefore depends on the interrupt-vector location rather than on a fixed convention.\n\nWhy A is correct: the OS goes in low or high memory depending on the location of the interrupt vector.\n\nWhy the others are wrong:\n- B: \"in the low memory\" holds only when the interrupt vector is in high memory.\n- C: \"in the high memory\" holds only when the interrupt vector is in low memory.\n- D: \"none\" is false, because option A is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0427",
+      "subtopic": "Semaphores",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "In the usual presentation the semaphore starts at 1 for a binary lock or at the number of free units for a counting semaphore; signal increments it and wait decrements it, so the value is not driven below zero and a value of zero means no unit is free. Note that in Dijkstra's original formulation a counting semaphore may legitimately take negative values, so the wording here is a simplification.\n\nWhy A is correct: the intended statement is that a semaphore cannot drop below zero.\n\nWhy the others are wrong:\n- B: \"that can not be more than zero\" is wrong, a semaphore is positive when resources are free.\n- C: \"that can not drop below one\" is wrong, a binary semaphore legitimately sits at 0.\n- D: \"that can not be more than one\" is wrong, that would restrict it to a plain lock.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0428",
+      "subtopic": "Semaphores",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "A mutex is a lock owned by the thread that takes it, and a binary semaphore initialised to 1 and used purely for locking behaves the same way, blocking contenders until the holder signals it. Both constructs therefore provide mutual exclusion, so the combined option applies.\n\nWhy C is correct: both mutex locks and binary semaphores provide mutual exclusion.\n\nWhy the others are wrong:\n- A: \"mutex locks\" is true but names only one of the two mechanisms.\n- B: \"binary semaphores\" is true but names only one of the two mechanisms.\n- D: \"none\" is false, because option C is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0429",
+      "subtopic": "Scheduling algorithms",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Priority inversion occurs when a low-priority task holds a resource that a high-priority task needs, and a medium-priority task preempts the low-priority one so the high-priority task is effectively delayed by a task of lower priority. The usual remedy is the priority-inheritance protocol.\n\nWhy A is correct: the scenario is priority inversion.\n\nWhy the others are wrong:\n- B: \"priority removal\" is not a real term.\n- C: \"priority exchange\" is not a real term.\n- D: \"priority modification\" is not the name of the problem.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0430",
+      "subtopic": "Synchronization",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Mutual exclusion can be enforced by hardware instructions such as test-and-set and compare-and-swap, and equally by purely software algorithms such as Peterson's. Because both approaches work, process synchronisation can be carried out at either level, so the combined option is correct.\n\nWhy C is correct: process synchronization can be done at both hardware and software level.\n\nWhy the others are wrong:\n- A: \"hardware level\" is not the only possible level.\n- B: \"software level\" is not the only possible level.\n- D: \"none\" is false, because option C is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0431",
+      "subtopic": "Synchronization",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "A monitor packages the shared data structures, the procedures that operate on that data, and the mutual-exclusion and condition-variable machinery that serialises entry to them. All three of those things are encapsulated inside the monitor construct, so the collective option applies.\n\nWhy D is correct: a monitor encapsulates all the listed items.\n\nWhy the others are wrong:\n- A: \"shared data structures\" is only part of what a monitor encapsulates.\n- B: \"procedures that operate on shared data structure\" is only part of what a monitor encapsulates.\n- C: \"synchronization between concurrent procedure invocation\" is only part of what a monitor encapsulates.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0432",
+      "subtopic": "Synchronization",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "Monitors let a process wait through condition variables, which the programmer declares with the type condition inside the monitor and on which it performs wait and signal. Condition variables are queueing objects rather than boolean flags, and semaphores are a separate primitive that a monitor does not require.\n\nWhy A is correct: a condition variable must be declared as condition.\n\nWhy the others are wrong:\n- B: \"condition variables must be used as boolean objects\" is wrong, they queue processes.\n- C: \"semaphore must be used\" is wrong, semaphores are a separate primitive.\n- D: \"all\" is false because options B and C are wrong.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0433",
+      "subtopic": "Process concepts",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "Without a resource cap, a process that forks children in a loop can spawn an unbounded number of them, and the combined demands of all those sub-processes swamp the machine. Restricting each child to a subset of the parent's resources prevents that kind of system overload.\n\nWhy C is correct: it prevents overloading the system by creating a lot of sub-processes.\n\nWhy the others are wrong:\n- A: \"overloading the system by using a lot of secondary storage\" is not what the restriction targets.\n- B: \"under-loading the system by very less CPU utilization\" describes under-use, not overloading.\n- D: \"crashing the system by utilizing multiple resources\" is wrong, resource caps do not prevent crashes.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0434",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "The wait() call blocks the calling parent until one of its children terminates and then delivers that child's exit status, so it is the call that suspends a parent while its children finish. fork() creates a child, exit() is called by the child, and exec() replaces the calling process image.\n\nWhy A is correct: wait() suspends the parent until its children terminate.\n\nWhy the others are wrong:\n- B: \"fork\" returns immediately after creating the child.\n- C: \"exit\" terminates the calling process, it does not wait for anyone.\n- D: \"exec\" replaces the calling process image with a new program.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0435",
+      "subtopic": "Process concepts",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "Cascading termination means that when a parent ends, whether it returns normally or is killed abnormally, the system also terminates all of its descendants so no orphaned work continues. It therefore applies to either kind of parent termination.\n\nWhy C is correct: cascading termination applies if the parent terminates any one way.\n\nWhy the others are wrong:\n- A: \"Normally\" is too narrow, it also happens on abnormal termination.\n- B: \"Abnormally\" is too narrow, it also happens on normal termination.\n- D: \"None\" is false, because option C is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0436",
+      "subtopic": "Multiprocessor and distributed systems",
+      "difficulty": "medium",
+      "correctAnswer": "D",
+      "explanation": "Uniprogramming keeps a single program in memory so only one process executes while all the others wait for the processor. Multiprocessing, by contrast, gives each of several processors its own process so that several run simultaneously on different processors.\n\nWhy D is correct: Uniprogramming first, then Multiprocessing.\n\nWhy the others are wrong:\n- A: \"Uniprogramming, Multiprogramming\" is wrong because multiprogramming still uses one CPU, so nothing runs on a different processor.\n- B: \"Multiprocessing, Multiprogramming\" has the two terms in the wrong order.\n- C: \"Multiprogramming, Multiprocessing\" wrongly claims multiprogramming restricts execution to one process.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0437",
+      "subtopic": "Process concepts",
+      "difficulty": "medium",
+      "correctAnswer": "C",
+      "explanation": "When a process fails the OS usually records the reason in a system log file so an administrator can diagnose the failure after the fact. It does not hand the message to another running process, nor invent an ad-hoc new file on each failure.\n\nWhy C is correct: the error information is written to a log file.\n\nWhy the others are wrong:\n- A: \"new file\" is wrong, a fresh file per failure is not what operating systems do.\n- B: \"another running process\" is wrong, an unrelated process is not given the error.\n- D: \"none\" is false, because option C is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0438",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "fork() returns 0 in the child, which is how the child recognises itself, and returns the child's PID, a positive non-zero value, in the parent, which is how the parent identifies the new process. A negative return value signals an error and is not tied to either role.\n\nWhy C is correct: Zero for the child process and a nonzero integer for the parent.\n\nWhy the others are wrong:\n- A: \"A Negative integer, Zero\" is reversed, and a negative value means error.\n- B: \"Zero, A Negative integer\" is reversed, the parent gets a positive PID.\n- D: \"A nonzero integer, Zero\" is reversed.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0439",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "fork() gives the child a copy-on-write duplicate of the parent's address space and code, so initially the child is a duplicate of the parent. The child may then call exec() to replace that image with a different program, which is why the claims about never loading another program are also false.\n\nWhy A is correct: the child process can be a duplicate of the parent.\n\nWhy the others are wrong:\n- B: \"never be a duplicate of the parent process\" is false, fork creates exactly that duplicate.\n- C: \"cannot have another program loaded into it\" is false, exec() can replace the child's image.\n- D: \"never have another program loaded into it\" is false for the same reason.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0440",
+      "subtopic": "Process concepts",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "After a child exits, its address space is released but its entry in the process table stays until the parent calls wait() and reaps it. Such a terminated but not yet reaped child is called a zombie; an orphan is the opposite case, a child whose parent has already died.\n\nWhy B is correct: the child process is known as a Zombie.\n\nWhy the others are wrong:\n- A: \"Orphan\" is a child whose parent has terminated, which is the reverse situation.\n- C: \"Body\" is not a term.\n- D: \"Dead\" is not the defined term.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0441",
+      "subtopic": "Classical IPC",
+      "difficulty": "easy",
+      "correctAnswer": "B",
+      "explanation": "IPC is the activity by which separate processes exchange data and coordinate their relative order of execution, whether by shared memory or by message passing. The definition does not require a shared address space, and it is not limited to synchronisation without data exchange.\n\nWhy B is correct: IPC allows processes to communicate and synchronize their actions.\n\nWhy the others are wrong:\n- A: \"allows processes to communicate and synchronize their actions when using the same address space\" wrongly restricts IPC to a shared address space.\n- C: \"allows the processes to only synchronize their actions without communication\" is wrong, IPC includes communication.\n- D: \"none\" is false, because option B is correct.",
+      "confidence": "high",
+      "needsReview": true,
+      "reviewReason": "extractionFlags mark this as duplicate-stem-of:q_0390, which is also in this shard; both entries were answered independently as instructed."
+    },
+    {
+      "id": "q_0442",
+      "subtopic": "Classical IPC",
+      "difficulty": "easy",
+      "correctAnswer": "A",
+      "explanation": "Message passing gives each process its own private address space and moves data through send and receive operations on a channel or mailbox. That is exactly the alternative to shared memory, in which the participants would have to share one address space.\n\nWhy A is correct: message passing lets processes communicate without sharing the same address space.\n\nWhy the others are wrong:\n- B: \"communicate with one another by resorting to shared data\" describes the shared-memory model.\n- C: \"share data\" is wrong, message passing does not require sharing memory.\n- D: \"name the recipient or sender of the message\" is a property of direct communication, not what message passing enables.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0443",
+      "subtopic": "Classical IPC",
+      "difficulty": "easy",
+      "correctAnswer": "D",
+      "explanation": "The two primitives every message-passing facility must supply are send(message) and receive(message); without both, a process could neither deposit nor pick up a message. Delete is not one of them, so every option that mentions delete is wrong.\n\nWhy D is correct: the facility provides receive and send message.\n\nWhy the others are wrong:\n- A: \"write & delete message\" includes delete, which is not a message-passing primitive.\n- B: \"delete & receive message\" includes delete, which is not a message-passing primitive.\n- C: \"send & delete message\" includes delete, which is not a message-passing primitive.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0444",
+      "subtopic": "Classical IPC",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "Different message-passing designs differ in this respect: some implement a fixed-size message with a single send, while others allow variable-size messages with the receiver supplying a buffer. A message may therefore be either fixed or variable sized depending on the implementation.\n\nWhy C is correct: messages can be fixed or variable sized.\n\nWhy the others are wrong:\n- A: \"have to be of a fixed size\" is wrong, variable-size designs exist.\n- B: \"have to be a variable size\" is wrong, fixed-size designs exist.\n- D: \"none\" is false, because option C is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0445",
+      "subtopic": "Classical IPC",
+      "difficulty": "medium",
+      "correctAnswer": "A",
+      "explanation": "In the direct, or logical, communication model the connection that lets process P send and Q receive is called a communication link, and it is associated with exactly the two named processes. \"Message-passing link\" and \"synchronization link\" are not the terms used for it.\n\nWhy A is correct: it is a communication link.\n\nWhy the others are wrong:\n- B: \"message-passing link\" is not the defined term.\n- C: \"synchronization link\" is not the defined term.\n- D: \"all\" is false, since only option A uses the correct term.",
+      "confidence": "medium",
+      "needsReview": false,
+      "reviewReason": null
+    },
+    {
+      "id": "q_0446",
+      "subtopic": "Classical IPC",
+      "difficulty": "medium",
+      "correctAnswer": "B",
+      "explanation": "Under direct communication the two processes name each other and a link is set up between exactly that pair, so no link can be shared by N processes. The textbook also notes that the pair is joined by two links, one in each direction, which is what option D states, so this option set admits two readings.\n\nWhy B is correct: for direct communication a link is associated with exactly two processes.\n\nWhy the others are wrong:\n- A: \"A communication link can be associated with N number of process\" describes indirect communication through a shared mailbox.\n- C: \"Exactly N/2 links exist between each pair of processes\" is nonsense, the count does not depend on N.\n- D: \"Exactly two link exists between each pair of processes\" is also stated by the textbook, so the key is ambiguous.",
+      "confidence": "medium",
+      "needsReview": true,
+      "reviewReason": "Options B and D are both textbook-true for direct communication (a link is associated with exactly two processes, and exactly two links exist between each pair, one per direction), so the single-answer option set admits two keys."
+    },
+    {
+      "id": "q_0447",
+      "subtopic": "Classical IPC",
+      "difficulty": "easy",
+      "correctAnswer": "C",
+      "explanation": "In indirect communication P and Q do not name each other; they both name a shared mailbox or port, deposit messages into it and pick messages out of it. The mailbox is therefore the intermediary that makes the communication possible.\n\nWhy C is correct: there is a mailbox to help communication between P and Q.\n\nWhy the others are wrong:\n- A: \"there is another process R to handle and pass on the messages\" is wrong, no relaying process is involved.\n- B: \"there is another machine between the two processes\" is wrong, indirect communication can happen within one machine.\n- D: \"none\" is false, because option C is correct.",
+      "confidence": "high",
+      "needsReview": false,
+      "reviewReason": null
+    }
+  ]
+}

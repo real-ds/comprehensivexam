@@ -1,0 +1,107 @@
+{
+  "topic": "Web Technologies",
+  "questions": [
+    {
+      "id": "q_0598",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Web Technologies",
+      "subtopic": "JavaScript arrays and strings",
+      "question": "What will be the output?",
+      "code": "let str = \"JavaScript\";\nconsole.log(str.substring(0,4));",
+      "options": [
+        {
+          "key": "A",
+          "text": "Java"
+        },
+        {
+          "key": "B",
+          "text": "JavaS"
+        },
+        {
+          "key": "C",
+          "text": "Script"
+        },
+        {
+          "key": "D",
+          "text": "avaS"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "high",
+      "currentExplanation": "String.prototype.substring(start, end) returns the characters from index start up to but not including index end, so the end index is exclusive. With start = 0 and end = 4 on \"JavaScript\", the characters at indices 0, 1, 2 and 3 are J, a, v and a, giving \"Java\". Running the code under node confirms it prints Java.\n\nWhy A is correct: substring(0,4) takes indices 0 through 3 because the end index is excluded, which yields the four characters \"Java\".\n\nWhy the others are wrong:\n- B: \"JavaS\" would be the result of substring(0,5), which takes five characters.\n- C: \"Script\" is the tail of the string, not a prefix starting at index 0.\n- D: \"avaS\" is not produced by any substring range starting at index 0.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Shares the generic stem \"What will be the output?\" with q_0607 (extractionFlags duplicate-stem-of:q_0607); the two are unrelated code snippets. Answered independently from its own code, but the shared stem is too generic to identify the question in isolation.",
+      "sourcePage": 164
+    },
+    {
+      "id": "q_0607",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Web Technologies",
+      "subtopic": "JavaScript arrays and strings",
+      "question": "What will be the output?",
+      "code": "console.log(Array.isArray([10, 20, 30]));",
+      "options": [
+        {
+          "key": "A",
+          "text": "false"
+        },
+        {
+          "key": "B",
+          "text": "true"
+        },
+        {
+          "key": "C",
+          "text": "undefined"
+        },
+        {
+          "key": "D",
+          "text": "Error"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "high",
+      "currentExplanation": "Array.isArray() is a static predicate that tests whether the value passed to it is an array, returning the boolean true for a genuine Array and false for anything else. The array literal [10, 20, 30] creates a real Array, so the call returns true; running it under node prints true. It does not return undefined and it never throws for this input.\n\nWhy B is correct: [10, 20, 30] is an array literal, so Array.isArray() on it returns the boolean true.\n\nWhy the others are wrong:\n- A: false would only be returned for a non-array value such as an object, string or number.\n- C: the function is a predicate that always returns a boolean, it never returns undefined.\n- D: no error is raised; Array.isArray() accepts any value and simply answers the question.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Shares the generic stem \"What will be the output?\" with q_0598 (extractionFlags duplicate-stem-of:q_0598); the two are unrelated code snippets. Answered independently from its own code, but the shared stem is too generic to identify the question in isolation.",
+      "sourcePage": 166
+    },
+    {
+      "id": "q_0639",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Web Technologies",
+      "subtopic": "State management",
+      "question": "Which is more secure for storing sensitive user data?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Cookies"
+        },
+        {
+          "key": "B",
+          "text": "Sessions"
+        },
+        {
+          "key": "C",
+          "text": "Local storage"
+        },
+        {
+          "key": "D",
+          "text": "Cache"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "Sessions are the best of the four here because the sensitive data stays on the server and the browser holds only an opaque session identifier, so an attacker who reads the client-side value gains nothing and cannot tamper with it. Cookies travel with every request and, unless marked HttpOnly, are readable by any injected script. localStorage is worse still, because it is persistent, script-accessible and never expires, so one XSS exfiltrates everything. Cache is not a user-data store at all and can be evicted at any time. The caveat is that a well-configured cookie with Secure, HttpOnly and SameSite, or a stateless signed token, is also a defensible choice, which is why this question is flagged.\n\nWhy B is correct: Session data lives server-side behind an ID, so the sensitive values never leave the server and cannot be read or edited from the client.\n\nWhy the others are wrong:\n- A: a cookie's value is sent on every request and is readable by JavaScript unless HttpOnly is set, and it is tamperable if unsigned.\n- C: localStorage is script-accessible, persists indefinitely and has no automatic expiry, so any XSS on the origin can read it all.\n- D: the HTTP cache is not a store for user data; it may be evicted, shared or served stale, so it cannot be relied on for sensitive values.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Genuinely contestable opinion-shaped question. B matches the printed key and is the textbook answer, but A is defensible when the cookie is set Secure, HttpOnly and SameSite with signed values, and stateless signed tokens are a common alternative; the question supplies no threat model, so the secure answer depends on assumptions not stated in the stem.",
+      "sourcePage": 172
+    }
+  ]
+}

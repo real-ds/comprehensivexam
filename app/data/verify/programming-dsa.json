@@ -1,0 +1,1630 @@
+{
+  "topic": "Programming and Data Structures",
+  "questions": [
+    {
+      "id": "q_0134",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Sorting",
+      "question": "The following is the result after first partition of quicksort algorithm 10,8, 6, 9, 11, 14, 16, 15. Which of the following is true?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "11 could be the pivot , 14 could not be pivot."
+        },
+        {
+          "key": "B",
+          "text": "14 could be the pivot , 11 could not be pivot."
+        },
+        {
+          "key": "C",
+          "text": "Either 11 or 14 could be pivot element"
+        },
+        {
+          "key": "D",
+          "text": "11 and 14 both are pivot elements."
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "A single quicksort partition leaves the pivot sitting at its final sorted position: every element smaller than the pivot is on its left and every element larger is on its right. For 10, 8, 6, 9, 11, 14, 16, 15 a pivot of 11 is legal since 10, 8, 6, 9 are smaller and 14, 16, 15 are larger, and a pivot of 14 is equally legal since 10, 8, 6, 9, 11 are smaller and 16, 15 are larger. Both partitions can be produced, so the pivot cannot be pinned to one element.\n\nWhy C is correct: Both 11 and 14 satisfy the partition property for this sequence, so either one could have been the pivot of the first partition.\n\nWhy the others are wrong:\n- A: it claims 14 could not be the pivot, but 10, 8, 6, 9, 11 are all below 14 and 16, 15 above it.\n- B: it claims 11 could not be the pivot, but 10, 8, 6, 9 are below 11 and 14, 16, 15 above it.\n- D: one partition produces exactly one pivot, so 11 and 14 cannot both be pivot elements.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 35
+    },
+    {
+      "id": "q_0137",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Strings in C",
+      "question": "Consider the following code snippet",
+      "code": "char c[]=\"VITEEE2022\";\nchar *p=c;\nprintf(\"%s\",p+p[1]-p[3]);",
+      "options": [
+        {
+          "key": "A",
+          "text": "EE2022"
+        },
+        {
+          "key": "B",
+          "text": "EEE2022"
+        },
+        {
+          "key": "C",
+          "text": "E2022"
+        },
+        {
+          "key": "D",
+          "text": "Error"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "high",
+      "currentExplanation": "In c = \"VITEEE2022\" the subscripts are c[0]=V, c[1]=I, c[2]=T, c[3]=E, c[4]=E, c[5]=E, c[6..9]='2','0','2','2'. So p[1] is 'I' (73) and p[3] is 'E' (69), and p + p[1] - p[3] evaluates to p + 4, a pointer to c[4]. printf(\"%s\", ...) then prints from c[4] to the terminator, which is the string EE2022. Running the snippet on gcc confirms the printed text.\n\nWhy A is correct: p + 73 - 69 equals p + 4, and the characters from index 4 of \"VITEEE2022\" are E, E, 2, 0, 2, 2.\n\nWhy the others are wrong:\n- B: EEE2022 would require starting at index 3, but the offset is 4, not 3.\n- C: E2022 would require starting at index 5.\n- D: the code compiles and runs cleanly, so there is no error.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "extractionFlags mark this as duplicate-stem-of:q_0197,q_0209; the first two are genuine repeats of the same snippet but q_0209 is a different question.",
+      "sourcePage": 36
+    },
+    {
+      "id": "q_0138",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Arrays in C",
+      "question": "//considering the initial memory location of s is 1000 and one integer is of 4 byte Predict the output",
+      "code": "int main()\n{\nint s[5];\ns++;\nprintf(\"the array is at memory location %d\",s);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "1002"
+        },
+        {
+          "key": "B",
+          "text": "1004"
+        },
+        {
+          "key": "C",
+          "text": "1020"
+        },
+        {
+          "key": "D",
+          "text": "Error"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "high",
+      "currentExplanation": "An array name is not a modifiable object: s is not an lvalue, so s++ asks the compiler to increment something that has no storage of its own. Compiling the snippet gives 'lvalue required as increment operand', so no address is printed at all. Even if it were written as s = s + 1 the assignment would still be invalid for the same reason.\n\nWhy D is correct: Incrementing an array name is illegal in C, so the program fails to compile and nothing is printed.\n\nWhy the others are wrong:\n- A: 1002 cannot be produced because s++ is rejected before printf ever runs.\n- B: 1004 would be the address of s[1], but that requires s + 1, not s++.\n- C: 1020 would be s + 5, which is one past the end of a five-element array and is not reachable from the statement shown.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "extractionFlags mark this as duplicate-stem-of:q_0198,q_0199; the stem and code are repeated verbatim in those two questions.",
+      "sourcePage": 36
+    },
+    {
+      "id": "q_0141",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Stacks and queues",
+      "question": "If you keep track of front, rear and count(no. of items in array), in a circular array when front =0 and rear=maxsize-1, what will be the count value.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "0"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "2"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "For a circular array with an explicit count, the number of elements is count = (rear - front + maxsize) mod maxsize + 1. Substituting front = 0 and rear = maxsize - 1 gives count = maxsize, i.e. every slot is occupied and the queue is full. Taking maxsize = 4, which is what the option set presumes, count is 4.\n\nWhy C is correct: front = 0 with rear = maxsize - 1 fills every slot, so the count equals maxsize, which is 4 under the size implied by the options.\n\nWhy the others are wrong:\n- A: 0 would mean the queue is empty, which is the front = rear = -1 case, not front = 0 with rear = maxsize - 1.\n- B: 3 would correspond to front = 0 and rear = maxsize - 2.\n- D: 2 would correspond to only two occupied slots.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 37
+    },
+    {
+      "id": "q_0145",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Stacks and queues",
+      "question": "Which of the following type of queue is useful in building online multiplayer games.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Simple queue"
+        },
+        {
+          "key": "B",
+          "text": "Circular Queue"
+        },
+        {
+          "key": "C",
+          "text": "Priority Queue"
+        },
+        {
+          "key": "D",
+          "text": "Single Ended Queue"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "Online multiplayer games must serve players according to status rather than arrival time, for example match quality, rank or session priority. A priority queue orders elements by a key rather than by insertion time, which is exactly what such matchmaking needs, whereas a simple, circular or single-ended queue can only serve players in arrival order.\n\nWhy C is correct: Priority queue selects the next player by priority key, which is what online game matchmaking requires.\n\nWhy the others are wrong:\n- A: simple queue is strictly FIFO and cannot rank players by importance.\n- B: circular queue only recycles slots of a fixed array and gives no priority ordering.\n- D: single ended queue is just a restricted FIFO and offers no ordering by priority.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 38
+    },
+    {
+      "id": "q_0148",
+      "verifyReasons": [
+        "confidence=low",
+        "no answer recorded"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Binary trees",
+      "question": "In a binary tree, which of the following is not a valid argument?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "It should have at least one node."
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "3"
+        },
+        {
+          "key": "D",
+          "text": "0"
+        }
+      ],
+      "currentAnswer": null,
+      "currentConfidence": "low",
+      "currentExplanation": "The stem asks which argument is invalid, but options B, C and D are the bare numerals 2, 3 and 0 with the argument text missing, so none of them can be evaluated as a claim about binary trees. The question cannot be answered as printed because three of its four options have lost the content that made them arguments.\n\nWhy no option can be chosen: Options B, C and D are bare numbers with no accompanying claim, so there is no way to decide which one is the invalid argument.\n\nWhy the others are wrong:\n- A: 'It should have at least one node' is a recognisable claim and cannot be confirmed as the odd one out without the missing text of the other options.\n- B: the bare numeral 2 states no argument at all.\n- C: the bare numeral 3 states no argument at all.\n- D: the bare numeral 0 states no argument at all.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Question text is garbled: options B, C and D are bare numerals (2, 3, 0) with the arguments they were supposed to state missing.",
+      "sourcePage": 39
+    },
+    {
+      "id": "q_0150",
+      "verifyReasons": [
+        "confidence=low",
+        "no answer recorded",
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Recursion and complexity",
+      "question": "Which of the given options provides the decreasing order of asymptotic complexity of functions f1, f2, f3 and f4?",
+      "code": "f1=O(n),f2=O(log n), f3=O(n^2) f4=O(2n)",
+      "options": [
+        {
+          "key": "A",
+          "text": "f1, f2, f3, f4"
+        },
+        {
+          "key": "B",
+          "text": "f2, f1, f4,f3"
+        },
+        {
+          "key": "C",
+          "text": "f1, f2, f4, f3"
+        },
+        {
+          "key": "D",
+          "text": "f1, f3, f2, f4"
+        }
+      ],
+      "currentAnswer": null,
+      "currentConfidence": "low",
+      "currentExplanation": "Ordering the four functions from slowest growing to fastest: f2 = log n is smallest, f1 = n and f4 = 2n are both Theta(n) and therefore tied, and f3 = n^2 is the largest. The decreasing order is consequently f3, f1, f4, f2. None of the four options lists the functions in decreasing order of growth, so the option set does not match the question.\n\nWhy no option can be chosen: The decreasing order is f3, f1, f4, f2, and no option lists those four in that order.\n\nWhy the others are wrong:\n- A: f1, f2, f3, f4 puts the largest function f3 in the middle, so it is not decreasing.\n- B: f2, f1, f4, f3 is increasing from log n up to n^2, the exact opposite of what is asked.\n- C: f1, f2, f4, f3 interleaves the tied linear functions with log n, so it is not a valid decreasing order.\n- D: f1, f3, f2, f3's n^2 should come before n, and f4 = 2n is tied with f1, so the order is wrong.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "f4 is printed as O(2n), which is Theta(n) and tied with f1; the decreasing order is f3, f1, f4, f2, which none of the four options gives (f4 is likely an OCR error for 2^n).",
+      "sourcePage": 40
+    },
+    {
+      "id": "q_0151",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Searching",
+      "question": "Which of the following methods have time complexity O(n) for a sorted array in descending order, where elements are distinct? (i) Finding maximum element in the array. Finding minimum element in the array. (iii) Finding the mode of the array. any element in an array. i=1, j=1 j=j+1",
+      "code": "(ii)\n(iv) Find\nAlgorithm XY()\n{\nwhile(i<=n)\n{\nwhile(j<=n)\n{\nprint(\"Chennai\")\n}\n}\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "(i)"
+        },
+        {
+          "key": "B",
+          "text": "(ii),(iii),(iv)"
+        },
+        {
+          "key": "C",
+          "text": "(iii),(iv)"
+        },
+        {
+          "key": "D",
+          "text": "(i),(iii)"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "high",
+      "currentExplanation": "(i) Finding the maximum: although a descending sorted array puts the maximum at index 0, the operation as stated is still a linear scan, O(n). (iii) Finding the mode: the elements are distinct, so a full scan is needed to confirm no element repeats, which is O(n). (ii) Finding the minimum is O(1) because the last element of a descending sorted array is the minimum, and (iv) finding an arbitrary element cannot use binary search because the array is not sorted in the usual sense for that purpose, so it is not an O(n) case here.\n\nWhy D is correct: Finding the maximum and finding the mode both require a full linear pass over the n elements, giving O(n).\n\nWhy the others are wrong:\n- A: option (i) alone is incomplete because (iii) is also O(n).\n- B: (ii) is O(1) on a descending sorted array and the nested while loops of the shown code are worse than linear, so this grouping is wrong.\n- C: (iv) is not an O(n) case here and (i) is omitted, so the grouping is wrong.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 40
+    },
+    {
+      "id": "q_0156",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Stacks and queues",
+      "question": "We have two stacks, named as A and B. Function Push( &A, data) pushes data on stack A, whereas function Push( &B, data) pushes data on stack B. Pop function on stack A pop out the element from stack A, and pushes it on stack B. On the other hand, Pop function on stack B pops out the element from stack B, and prints it on the screen. Which sequence of character will be printed on the screen after following set of operations: Push( &A, 8 ), Push( &B, 9 ), Push( &A, 4 ), Push(& B, 7 ), Push(&A,3), Pop( &A), Push(&B, 5), Pop( &A ), Pop(&A), Pop(&B), Pop(&B),",
+      "code": "Pop(&B), Pop(&B), Pop(&B), Pop(&B)?",
+      "options": [
+        {
+          "key": "A",
+          "text": "9 7 3 5 4 8"
+        },
+        {
+          "key": "B",
+          "text": "8 4 5 3 7 9"
+        },
+        {
+          "key": "C",
+          "text": "3 4 8 5 7 9"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "high",
+      "currentExplanation": "Tracing the operations: after the five pushes A holds 8, 4, 3 (top 3) and B holds 9, 7 (top 7). Pop(&A) moves 3 to B, Push(&B,5) makes B = 9, 7, 3, 5. The next two Pop(&A) calls move 4 and then 8 to B, so B becomes 9, 7, 3, 5, 4, 8 with 8 on top. The four Pop(&B) calls then print 8, 4, 5, 3, 7, 9 in that order, which matches option B.\n\nWhy B is correct: Simulating the sequence prints 8 4 5 3 7 9, exactly the values in option B.\n\nWhy the others are wrong:\n- A: 9 7 3 5 4 8 has the wrong direction; 8 is on top of B first, not 9.\n- C: 3 4 8 5 7 9 would require the elements of A to be pushed back onto A in the wrong order.\n- D: 'None of the options' is wrong because option B reproduces the simulation exactly.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 42
+    },
+    {
+      "id": "q_0162",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Graphs",
+      "question": "Traversal of a graph is different than tree because",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "There can be a loop in the graph"
+        },
+        {
+          "key": "B",
+          "text": "DFS on a graph uses stack, while inorder traversal is recursive"
+        },
+        {
+          "key": "C",
+          "text": "Both the given properties"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "Two facts separate graph traversal from tree traversal. First, a graph may contain cycles, so a traversal must carry a visited marker to avoid looping forever, which a tree never needs. Second, DFS on a general graph must keep explicit state and is normally written with a stack, whereas the standard tree traversals such as inorder are written as simple self-recursive routines. Both differences are real.\n\nWhy C is correct: Both listed properties hold, because graphs may contain cycles and DFS on a graph relies on an explicit stack while inorder traversal of a tree is naturally recursive.\n\nWhy the others are wrong:\n- A: cycles are a genuine difference but not the only one stated in the question, so listing only this property is incomplete.\n- B: the DFS versus recursive-inorder contrast is genuine but again only covers one of the two differences.\n- D: 'None of the options' is wrong because the two properties above are both true.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 43
+    },
+    {
+      "id": "q_0163",
+      "verifyReasons": [
+        "confidence=low"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Graphs",
+      "question": "Why graph traversal is difficult than tree traversal ?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Because tree is binary"
+        },
+        {
+          "key": "B",
+          "text": "Because tree is undefined"
+        },
+        {
+          "key": "C",
+          "text": "Because tree have the root"
+        },
+        {
+          "key": "D",
+          "text": "All the options"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "low",
+      "currentExplanation": "A tree has a single well-defined root from which traversal descends, so no bookkeeping is needed to know where to begin or when to stop. A graph has no root, so the traversal must pick a start vertex, carry a visited set to survive cycles, and restart on each unvisited component. Of the three stated reasons, only the presence of a root is a true statement at all.\n\nWhy C is correct: A tree has a unique root that anchors traversal, whereas a graph has none, which forces visited tracking and multiple start points.\n\nWhy the others are wrong:\n- A: trees are not binary in general, only binary trees have at most two children, so this is factually false.\n- B: a tree is a well-defined structure, so 'tree is undefined' is not a reason for anything.\n- D: 'All the options' cannot be right because option A is false.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "All three stated reasons are poor; the real cause is cycles and the absence of a root, and option A ('tree is binary') is factually wrong, so only C is defensible.",
+      "sourcePage": 44
+    },
+    {
+      "id": "q_0165",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Sorting",
+      "question": "Consider the code given below: int what is line of code required for while statement to run the insertion sort",
+      "code": "void insertionsort(int arr[],int size)\n{\nI,j,value;\nfor(i=1;i<size;i++)\n{\nvalue=arr[i];\nj=i;\nwhile(...)\n{\narr[j]=arr[j-1];\nj=j-1;\n}\narr[j]=value;\n}\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "(j>0)||(arr[j-1]>value)"
+        },
+        {
+          "key": "B",
+          "text": "(j>0)&&(arr[j-1]>value)"
+        },
+        {
+          "key": "C",
+          "text": "(j>0)&&(arr[j+1]>value)"
+        },
+        {
+          "key": "D",
+          "text": "(j>0)&&(arr[j+1]<value)"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "high",
+      "currentExplanation": "The loop must keep shifting elements right while there is something to the left of position j that is bigger than the value being inserted. That is exactly (j > 0) && (arr[j - 1] > value): j > 0 protects arr[j - 1] from going before the start of the array, and arr[j - 1] > value says the element at j - 1 belongs further right. Using || instead would keep the loop running after j reaches 0.\n\nWhy B is correct: The shift loop must continue while j is still inside the array and while the element to the left of j exceeds value, which is precisely (j > 0) && (arr[j-1] > value).\n\nWhy the others are wrong:\n- A: using || makes the loop run even when j is 0 or when arr[j-1] is not greater, writing out of bounds.\n- C: arr[j+1] looks to the right of the current position, but the loop shifts elements from the left.\n- D: arr[j+1] < value compares the wrong element in the wrong direction and would never terminate correctly.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "The code declares 'I,j,value;' instead of 'int i,j,value;', so the snippet as printed does not compile (gcc: 'I' undeclared); appears to be an OCR defect.",
+      "sourcePage": 44
+    },
+    {
+      "id": "q_0169",
+      "verifyReasons": [
+        "confidence=low"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Trees",
+      "question": "How many different trees are possible with 10 nodes?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "512"
+        },
+        {
+          "key": "B",
+          "text": "1024"
+        },
+        {
+          "key": "C",
+          "text": "1014"
+        },
+        {
+          "key": "D",
+          "text": "90"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "low",
+      "currentExplanation": "As written the question does not specify what kind of tree or what distinguishes the nodes, so no standard counting formula applies cleanly: the number of distinct binary tree shapes on 10 nodes is the Catalan number 16796, and the number of labelled trees is n^(n-2), neither of which appears here. The option set 512, 1024, 1014, 90 corresponds to powers of two, so the intended reading is evidently that the number of trees doubles with each added node, giving 2^10 = 1024.\n\nWhy B is correct: Under the intended doubling argument each additional node doubles the number of possibilities, so ten nodes give 2^10 = 1024.\n\nWhy the others are wrong:\n- A: 512 = 2^9 would correspond to nine nodes, not ten.\n- C: 1014 is not a power of two and matches no counting formula.\n- D: 90 is far too small; even a balanced binary tree on 10 nodes admits many more shapes.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "The question does not define what makes two trees different; the standard answer (Catalan number for binary tree shapes) is 16796, which is not among the options, so 1024 is only a guess at the intended counting rule.",
+      "sourcePage": 45
+    },
+    {
+      "id": "q_0171",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Trees",
+      "question": "There are 8, 15, 13, 14 nodes in 4 different trees. Which of them could have formed a full binary tree?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "8"
+        },
+        {
+          "key": "B",
+          "text": "15"
+        },
+        {
+          "key": "C",
+          "text": "13"
+        },
+        {
+          "key": "D",
+          "text": "14"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "A full binary tree, in the standard sense that every node has either 0 or 2 children, always contains an odd number of nodes, so 8 and 14 are excluded. That leaves both 15 and 13, and both are achievable: 15 is a perfect tree of height 4, and 13 is 6 leaves plus 7 internal nodes, which can be realised as a complete full tree. If 'full' is instead taken to mean perfect, only 2^k - 1 node counts work and 15 is the unique answer.\n\nWhy B is correct: 15 = 2^4 - 1 is a perfect binary tree node count and 15 is odd, so it can certainly form a full binary tree.\n\nWhy the others are wrong:\n- A: 8 is even, and a full binary tree always has an odd number of nodes.\n- C: 13 is also odd and can form a full binary tree, so the question does not have a unique answer under the standard definition.\n- D: 14 is even, so it cannot form a full binary tree.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Both 13 and 15 satisfy the standard definition of a full binary tree (odd node count), so two options are defensible; 15 is chosen as the unique answer only if 'full' is read as 'perfect'.",
+      "sourcePage": 46
+    },
+    {
+      "id": "q_0180",
+      "verifyReasons": [
+        "confidence=medium",
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Linked lists",
+      "question": "What does the following lines of C code does? CURSOR_SPACE[p].next =",
+      "code": "CURSOR_SPACE[0].next;\nCURSOR_SPACE[0].next = p;",
+      "options": [
+        {
+          "key": "A",
+          "text": "Allocates cursor space"
+        },
+        {
+          "key": "B",
+          "text": "Releases cursor space"
+        },
+        {
+          "key": "C",
+          "text": "Initialization of cursor space"
+        },
+        {
+          "key": "D",
+          "text": "Declaration for cursor"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "CURSOR_SPACE is a free-list of nodes maintained as a linked list, with the sentinel slot CURSOR_SPACE[0].next acting as the head of that list. Writing CURSOR_SPACE[0].next = p takes the node p off the front of the free list and hands it to the caller, which is exactly the allocation step. Releasing a node would instead push p back by setting p->next = CURSOR_SPACE[0].next before updating the sentinel.\n\nWhy A is correct: Linking p into the head of the free list removes it from the list and hands it out, which is the allocation of cursor space.\n\nWhy the others are wrong:\n- B: releasing cursor space would require pushing p back onto the free list, the opposite link direction.\n- C: initialising cursor space would set CURSOR_SPACE[0].next to the first array slot, not to a node p.\n- D: declaring a cursor would use the storage-class keywords, not an assignment to a next field.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 48
+    },
+    {
+      "id": "q_0184",
+      "verifyReasons": [
+        "confidence=medium",
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Stacks and queues",
+      "question": "Consider the following code. else Which operation does the above code perform?",
+      "code": "int fun()\n{\nif(isEmpty())\n{\nreturn -10;\n}\n{\nint n;\nn= q[front];\nfront++;\nreturn n;\n}\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "Enqueue"
+        },
+        {
+          "key": "B",
+          "text": "Dequeue"
+        },
+        {
+          "key": "C",
+          "text": "Return the front element"
+        },
+        {
+          "key": "D",
+          "text": "Dequeue and return the front element"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "medium",
+      "currentExplanation": "The function first guards with isEmpty() and returns -10 if the queue has nothing in it. Otherwise it reads q[front], increments front so the element is logically removed, and returns the value it removed. Reading the front element and then advancing front is precisely the dequeue operation, and because the removed value is returned to the caller the function both dequeues and returns the front element.\n\nWhy D is correct: The body takes q[front], increments front to remove it, and returns that value, which is a dequeue that returns the front element.\n\nWhy the others are wrong:\n- A: enqueue would insert at the rear, but no insertion appears anywhere in the code.\n- B: dequeue is only half of what happens, since the removed value is also returned.\n- C: returning the front element would not advance front, but the code does front++.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 49
+    },
+    {
+      "id": "q_0187",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Arrays and strings",
+      "question": "Which of the following concepts make extensive use of arrays?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Binary trees"
+        },
+        {
+          "key": "B",
+          "text": "Scheduling of processes"
+        },
+        {
+          "key": "C",
+          "text": "Caching"
+        },
+        {
+          "key": "D",
+          "text": "Spatial locality"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "Process scheduling, for example round robin or multilevel feedback queues, is built on circular queues and ready lists that are held in fixed arrays of process or job descriptors, with indices wrapping modulo the array size. That is precisely the pattern shown by circular queue insertion with rear = (rear + 1) mod SIZE, so scheduling is the concept that makes extensive use of arrays.\n\nWhy B is correct: Scheduling of processes is implemented with array-based ready queues whose indices wrap modulo the array size.\n\nWhy the others are wrong:\n- A: binary trees are normally node-based pointer structures, not arrays.\n- C: caching can use arrays, but it is a memory-hierarchy technique rather than a data structure concept built on arrays.\n- D: spatial locality is a property of reference patterns, not a structure that stores data in an array.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 50
+    },
+    {
+      "id": "q_0189",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Recursion and complexity",
+      "question": "Whenever there is a pending operation to be performed, the function becomes ________ recursive.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Direct recursive"
+        },
+        {
+          "key": "B",
+          "text": "Indirect recursive"
+        },
+        {
+          "key": "C",
+          "text": "Tail recursive"
+        },
+        {
+          "key": "D",
+          "text": "Non-tail recursive"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "medium",
+      "currentExplanation": "A call is tail recursive when the recursive call is the very last thing the function does, so nothing is left pending when it returns. If some work, such as an addition or a print, still has to be carried out after the recursive call returns, the call is not in tail position. Such a function is classified as non-tail recursive.\n\nWhy D is correct: With an operation still pending after the recursive call, the call is not in tail position, so the function is non-tail recursive.\n\nWhy the others are wrong:\n- A: direct recursion describes how the function calls itself, not where the call sits relative to the pending work.\n- B: indirect recursion means the function is called through another function, which the question does not mention.\n- C: tail recursion is the opposite case, where nothing remains to be done after the recursive call.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 51
+    },
+    {
+      "id": "q_0194",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Graphs",
+      "question": "A person wants to visit some places. He starts from a vertex and then wants to visit every place connected to this vertex and so on. What algorithm he should use?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Depth First Search"
+        },
+        {
+          "key": "B",
+          "text": "Breadth First Search"
+        },
+        {
+          "key": "C",
+          "text": "Prim's algorithm"
+        },
+        {
+          "key": "D",
+          "text": "Kruskal's algorithm"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "Visiting a starting vertex and then 'every place connected to this vertex and so on' describes exploring all immediate neighbours first and only then their neighbours. Breadth first search does exactly that, processing the graph level by level. Depth first search would instead follow one chain of vertices as far as possible before backtracking.\n\nWhy B is correct: Breadth first search explores all vertices at the current distance before moving to the next level, which matches visiting every connected place and so on.\n\nWhy the others are wrong:\n- A: depth first search follows one path to its end before backtracking, which is not level-by-level exploration.\n- C: Prim's algorithm builds a minimum spanning tree, it does not perform a traversal.\n- D: Kruskal's algorithm also builds a minimum spanning tree by sorting edges, not by traversal.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 52
+    },
+    {
+      "id": "q_0197",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Strings in C",
+      "question": "Consider the following code snippet",
+      "code": "char c[]=\"VITEEE2022\";\nchar *p=c;\nprintf(\"%s\",p+p[1]-p[3]);",
+      "options": [
+        {
+          "key": "A",
+          "text": "EE2022"
+        },
+        {
+          "key": "B",
+          "text": "EEE2022"
+        },
+        {
+          "key": "C",
+          "text": "E2022"
+        },
+        {
+          "key": "D",
+          "text": "Error"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "high",
+      "currentExplanation": "In c = \"VITEEE2022\" we have c[1] = 'I' (73) and c[3] = 'E' (69), so p + p[1] - p[3] equals p + 4, a pointer to c[4]. printf(\"%s\", ...) then prints from index 4 to the terminating null, which is the characters E, E, 2, 0, 2, 2. Running the snippet on gcc produces exactly EE2022.\n\nWhy A is correct: The pointer offset is 73 - 69 = 4, and the substring of \"VITEEE2022\" starting at index 4 is EE2022.\n\nWhy the others are wrong:\n- B: EEE2022 would need the offset to be 3 rather than 4.\n- C: E2022 would need the offset to be 5.\n- D: the code compiles and runs correctly, so there is no error.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "extractionFlags mark this as duplicate-stem-of:q_0137,q_0209; the stem and code are verbatim identical to q_0137 (q_0209 is unrelated).",
+      "sourcePage": 53
+    },
+    {
+      "id": "q_0198",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Arrays in C",
+      "question": "//considering the initial memory location of s is 1000 and one integer is of 4 byte Predict the output",
+      "code": "int main()\n{\nint s[5];\ns++;\nprintf(\"the array is at memory location %d\",s);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "1002"
+        },
+        {
+          "key": "B",
+          "text": "1004"
+        },
+        {
+          "key": "C",
+          "text": "1020"
+        },
+        {
+          "key": "D",
+          "text": "Error"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "high",
+      "currentExplanation": "s names an array, and an array name is not an lvalue, so the compiler rejects s++ with 'lvalue required as increment operand'. Nothing is printed and no address is produced. Writing s = s + 1 would fail for exactly the same reason, since arrays are not assignable.\n\nWhy D is correct: Incrementing an array name is not legal C, so the program fails to compile and prints nothing.\n\nWhy the others are wrong:\n- A: 1002 would require an element size of 2 bytes, but the question states 4 bytes per integer.\n- B: 1004 would be the address of s[1], which needs s + 1 rather than s++.\n- C: 1020 would be s + 5, one past the end of a five-element array, and is not reachable by incrementing s.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "extractionFlags mark this as duplicate-stem-of:q_0138,q_0199; the stem and code are repeated verbatim across those questions.",
+      "sourcePage": 53
+    },
+    {
+      "id": "q_0199",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Pointers in C",
+      "question": "//considering the initial memory location of s is 1000 and one integer is of 4 byte Predict the output",
+      "code": "int main()\n{\nint s[5];\nprintf(\"%d %d\",s+1,&s+1);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "1004 1020"
+        },
+        {
+          "key": "B",
+          "text": "1004 1004"
+        },
+        {
+          "key": "C",
+          "text": "1020 garbage value"
+        },
+        {
+          "key": "D",
+          "text": "Not even pass compilation"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "high",
+      "currentExplanation": "s + 1 is pointer arithmetic on int*, so it advances by one element, 4 bytes, from 1000 to 1004. &s, on the other hand, is a pointer to the whole array and has type int (*)[5], so &s + 1 advances by sizeof(int[5]) = 20 bytes, from 1000 to 1020. Both facts were confirmed by measuring the byte offsets directly, and printf(\"%d\") prints the addresses as decimal numbers.\n\nWhy A is correct: s + 1 is at 1000 + 4 = 1004 and &s + 1 is at 1000 + 5*4 = 1020, so the output is 1004 1020.\n\nWhy the others are wrong:\n- B: 1004 1004 would only hold if &s + 1 advanced by one element rather than by the whole array.\n- C: 1020 garbage value wrongly swaps the roles of the two operands.\n- D: the expression is perfectly legal C; s decays to int* and &s has type int(*)[5], so it compiles cleanly.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "extractionFlags mark this as duplicate-stem-of:q_0138,q_0198; only the stem is shared, the code and answer differ from both.",
+      "sourcePage": 54
+    },
+    {
+      "id": "q_0200",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Pointers in C",
+      "question": "int return Output of the above will be",
+      "code": "#include<stdio.h>\nint main ()\n{\nint arrayVal[]={5,8,12,14,18,19};\n*pointerVal=(int*) (&arrayVal +1);\nprintf(\"%d\",*( pointerVal -1));\n0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "12"
+        },
+        {
+          "key": "B",
+          "text": "5"
+        },
+        {
+          "key": "C",
+          "text": "19"
+        },
+        {
+          "key": "D",
+          "text": "18"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "high",
+      "currentExplanation": "&arrayVal is a pointer to the whole array of 6 ints, so &arrayVal + 1 steps over the entire array (24 bytes) and lands one past the last element. Cast to int* this points at arrayVal[6], so pointerVal - 1 points at arrayVal[5]. In {5, 8, 12, 14, 18, 19} index 5 holds 19, and running the corrected program on gcc prints 19.\n\nWhy C is correct: pointerVal - 1 points at arrayVal[5], whose value in {5, 8, 12, 14, 18, 19} is 19.\n\nWhy the others are wrong:\n- A: 12 is at index 2, which is four positions before the pointer, not one.\n- B: 5 is at index 0, five positions before the pointer.\n- D: 18 is at index 4, two positions before the pointer, so it is only reached by subtracting 2.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "As printed the code never declares pointerVal (gcc: 'pointerVal' undeclared), so it does not compile; the answer assumes the obvious missing declaration int *pointerVal.",
+      "sourcePage": 54
+    },
+    {
+      "id": "q_0201",
+      "verifyReasons": [
+        "confidence=medium",
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Arrays in C",
+      "question": "What will be the output of the following code snippet",
+      "code": "int main()\n{\nint i;\nint s[5]={1};\nfor(i=0;i<5;i++)\n{\nprintf(\"%d\",arr[i]);\n}\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "1 followed by four garbage value"
+        },
+        {
+          "key": "B",
+          "text": "1 0 0 0 0"
+        },
+        {
+          "key": "C",
+          "text": "1 1 1 1 1"
+        },
+        {
+          "key": "D",
+          "text": "0 0 0 0 0"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "Answering the question as printed: the intent is the array s, and int s[5] = {1} sets s[0] to 1 and sets every remaining element of the array to 0, because a partially initialised array is padded with zeros. Printing all five elements therefore gives 1 0 0 0 0. Strictly the program does not compile, because the loop prints arr[i] and no array named arr is declared.\n\nWhy B is correct: In a partial initialisation the unlisted elements are set to zero, so the array s[5] = {1} reads back as 1 0 0 0 0.\n\nWhy the others are wrong:\n- A: there are no garbage values, because C guarantees zero initialisation of the remaining elements.\n- C: 1 1 1 1 1 would be the result if the initialiser 1 were repeated, which it is not.\n- D: 0 0 0 0 0 would ignore the explicitly assigned first element.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "The snippet declares int s[5] but the loop prints arr[i], an undeclared identifier, so as printed it does not compile (gcc: 'arr' undeclared); answered as printed assuming the intended array is s.",
+      "sourcePage": 54
+    },
+    {
+      "id": "q_0202",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Pointers in C",
+      "question": "Consider the following statement What the above statement represents?",
+      "code": "int (*p)[5];",
+      "options": [
+        {
+          "key": "A",
+          "text": "Compilation error"
+        },
+        {
+          "key": "B",
+          "text": "p is a pointer to 5 integers"
+        },
+        {
+          "key": "C",
+          "text": "p is an array of 5 pointers to integers"
+        },
+        {
+          "key": "D",
+          "text": "p is a pointer to an array of 5 integer"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "high",
+      "currentExplanation": "Read the declaration inside out. The brackets bind tightest, so [5] describes an array of 5 ints, then the parentheses make that array the pointee, and the leading int * makes p a pointer. So p is a pointer to an array of 5 integers. If the parentheses were placed differently, as in int *p[5], p would instead be an array of 5 pointers.\n\nWhy D is correct: In int (*p)[5] the parentheses make the array of 5 ints the pointee, so p is a pointer to an array of 5 integers.\n\nWhy the others are wrong:\n- A: the declaration is perfectly legal C and compiles without error.\n- B: p is a pointer to an array, not to a single integer, so the type is wrong.\n- C: an array of 5 pointers would be written int *p[5], with the brackets outside the parentheses.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 55
+    },
+    {
+      "id": "q_0203",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Stacks and queues",
+      "question": "Consider the following pseudocode for the queue Q What will be the change in a queue ?",
+      "code": "Function(Q)\nIf (Q!=empty)\nx=delete(Q)\nFunction(Q)\nInsert(Q,x)",
+      "options": [
+        {
+          "key": "A",
+          "text": "Q element order is reversed"
+        },
+        {
+          "key": "B",
+          "text": "Q is unchanged"
+        },
+        {
+          "key": "C",
+          "text": "Q's Front element is removed and inserted at the rear, other elements are unchanged."
+        },
+        {
+          "key": "D",
+          "text": "Q is emptied"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "high",
+      "currentExplanation": "The first call removes the front element of Q and stores it in x, so the queue loses only its first element. The second call inserts that same x at the rear, restoring the element at the back. If Q held a, b, c, d then after both calls it holds b, c, d, a, so every element keeps its relative order and only the front element has moved to the rear.\n\nWhy C is correct: Removing the front element and re-inserting it at the rear rotates the queue by one, leaving all other elements unchanged.\n\nWhy the others are wrong:\n- A: reversing the order would need the elements to be taken out one by one and pushed back, which is not what the pseudocode does.\n- B: Q is not unchanged, because its front element has moved to the rear.\n- D: Q is not emptied, since only one element was deleted and then re-inserted.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 55
+    },
+    {
+      "id": "q_0204",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Memory management in C",
+      "question": "What will be the output of the following code snippet #inlcude<stdio.h> void test(int *ptr) int",
+      "code": "{\nptr=(int*)malloc(sizeof(int));\n}\nint main()\n{\n*ptr;\ntest(ptr);\n*ptr=6;\nprintf(\"%d n\",*ptr);\nreturn(0);\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "May not work"
+        },
+        {
+          "key": "B",
+          "text": "Works and 6 will be printed"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "high",
+      "currentExplanation": "Even setting aside the misspelled #inlcude directive and the fact that ptr is never declared in main, the logic cannot work. test receives ptr by value, so assigning malloc's result to its local copy changes only that copy; the caller's pointer still holds whatever it held before, and the block is leaked. Writing *ptr = 6 afterwards then dereferences an uninitialised or dangling pointer. The program therefore does not reliably print 6.\n\nWhy A is correct: The malloc result is assigned to a local copy of the pointer parameter, so the caller's pointer is never updated and the program may not work.\n\nWhy the others are wrong:\n- B: for 6 to be printed, malloc's address would have to reach the caller, but pass-by-value assignment cannot do that; the correct fix is to take int **ptr.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 55
+    },
+    {
+      "id": "q_0205",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Memory management in C",
+      "question": "Consider the following code snippet and identify the true statement among the given options",
+      "code": "int i;\nint main()\n{\nint j;\nint *k=(int *)malloc\n(sizeof(int));\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "i,j and *k are stored in stack segment"
+        },
+        {
+          "key": "B",
+          "text": "i and j are stored in stack segment. *k is stored on heap"
+        },
+        {
+          "key": "C",
+          "text": "i is stored in static area, j is stored in stack area and *k is stored in heap area."
+        },
+        {
+          "key": "D",
+          "text": "j is stored in static area, i is stored in stack area and *k is stored in heap area."
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "high",
+      "currentExplanation": "i is declared at file scope, so it has static storage duration and lives in the static/data area for the whole run of the program. j is declared inside main, so it is an automatic variable and lives on the stack for the duration of the call. malloc allocates from the heap, so the block pointed to by k is in the heap. The snippet compiles cleanly.\n\nWhy C is correct: i is a global with static storage, j is an automatic local on the stack, and the memory returned by malloc is on the heap.\n\nWhy the others are wrong:\n- A: i is not on the stack, because its declaration is at file scope.\n- B: i is not on the stack, so the statement misplaces the global variable.\n- D: i is the static one and j is the stack one, which is the reverse of what this option says.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 55
+    },
+    {
+      "id": "q_0206",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Pointers in C",
+      "question": "Consider the following code snippet int",
+      "code": "#include <stdio.h>\nInt main()\n{\nnum=5;\nint const * p=&num;\n++(*p);\nprintf(\"%d\",num);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "Compile time error"
+        },
+        {
+          "key": "B",
+          "text": "Run time error"
+        },
+        {
+          "key": "C",
+          "text": "6"
+        },
+        {
+          "key": "D",
+          "text": "5"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "high",
+      "currentExplanation": "There are three separate compile-time problems in the snippet: 'Int main' uses an undefined type name instead of int, num is never declared, and ++(*p) tries to modify the object through a pointer-to-const, which gcc rejects with 'increment of read-only location'. Any one of them is enough to stop compilation, so the program produces no output at all.\n\nWhy A is correct: 'Int' is not a type, num is undeclared, and ++(*p) assigns through a const pointer, so the program cannot compile.\n\nWhy the others are wrong:\n- B: there is no runtime at all, since the errors are detected before compilation succeeds.\n- C: 6 would be printed only if p pointed to a non-const int, which it does not.\n- D: 5 would be printed only if the increment were allowed and then skipped, which is not the case.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 56
+    },
+    {
+      "id": "q_0207",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "C language fundamentals",
+      "question": "Consider the following code snippet int else",
+      "code": "#include <stdio.h>\nint main()\n{\nnum=5;\nstatic int num1=num;\nif(num== num1)\nprintf(\"equal\");\nif(num> num1)\nprintf(\"greater\");\nprintf(\"less\");\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "Compile time error"
+        },
+        {
+          "key": "B",
+          "text": "Equal"
+        },
+        {
+          "key": "C",
+          "text": "Greater"
+        },
+        {
+          "key": "D",
+          "text": "Less"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "high",
+      "currentExplanation": "num is used without ever being declared, so gcc reports 'num' undeclared and the program fails to compile. There is a second problem as well: static int num1 = num tries to use a runtime variable as the initialiser of a static object, which C does not allow because a static initialiser must be a constant expression. Neither 'equal', 'greater' nor 'less' can be printed.\n\nWhy A is correct: num is undeclared and the static initialiser is not a constant expression, so the program fails to compile.\n\nWhy the others are wrong:\n- B: 'equal' would require the code to run and to find num == num1, but it never compiles.\n- C: 'greater' is unreachable for the same reason.\n- D: 'less' is printed unconditionally after the two ifs, but only if compilation succeeds, which it does not.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 56
+    },
+    {
+      "id": "q_0208",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "C language fundamentals",
+      "question": "Consider the following code snippet val What will be the",
+      "code": "#include <stdio.h>\nint test(int val)\n{\nstatic int number=1;\nif(val >=5)\nreturn val;\n= val +number;\nnumber++;\nreturn test(val);\n}\nvalue of test(1) will be:",
+      "options": [
+        {
+          "key": "A",
+          "text": "5"
+        },
+        {
+          "key": "B",
+          "text": "6"
+        },
+        {
+          "key": "C",
+          "text": "7"
+        },
+        {
+          "key": "D",
+          "text": "8"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "high",
+      "currentExplanation": "number is static, so it keeps its value across calls. Tracing test(1): number is 1, val becomes 1 + 1 = 2 and number becomes 2, so it recurses on 2. test(2): val becomes 2 + 2 = 4, number becomes 3, recursing on 4. test(4): val becomes 4 + 3 = 7, number becomes 4, recursing on 7. test(7) has val >= 5 and returns 7 immediately. Running the function on gcc confirms test(1) = 7.\n\nWhy C is correct: The repeated val = val + number additions give 2, then 4, then 7, and 7 >= 5 so the last call returns 7.\n\nWhy the others are wrong:\n- A: 5 would be returned if the recursion stopped one step earlier, at val = 4 or 5.\n- B: 6 would require number to be reused differently between calls.\n- D: 8 would require one more addition of number after val reached 7.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 56
+    },
+    {
+      "id": "q_0209",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Pointers in C",
+      "question": "Consider the following code snippet",
+      "code": "#include <stdio.h>\nint main(void)\n{\nint num=10;\nconst int * p=&num;\n*p=100;\nprintf(\"i=%d\",num);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "i=100"
+        },
+        {
+          "key": "B",
+          "text": "i=10"
+        },
+        {
+          "key": "C",
+          "text": "compile time error"
+        },
+        {
+          "key": "D",
+          "text": "Runtime error"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "high",
+      "currentExplanation": "const applied to the pointer makes p a pointer to const int, so the object it points at may not be modified through p. The statement *p = 100 therefore violates the const qualification and gcc rejects it with 'assignment of read-only location'. No output is produced and num stays 10.\n\nWhy C is correct: p is a pointer to const int, so assigning through it is a constraint violation caught at compile time.\n\nWhy the others are wrong:\n- A: i = 100 would require p to be declared as int *, not const int *.\n- B: i = 10 would be printed if the assignment were legal but ineffective, which it is not.\n- D: the failure happens at compile time, not at run time.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "extractionFlags mark this as duplicate-stem-of:q_0137,q_0197, but this question and its code are entirely different; the flag is spurious.",
+      "sourcePage": 57
+    },
+    {
+      "id": "q_0210",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Recursion and complexity",
+      "question": "What will be the output if",
+      "code": "Part1 (int i) {\nif (i == 0) return;\nprintf (\"%d\", i);\npart2 (i - 2);\nprintf (\"%d\", i);\n}\nPart2 (int i) {\nif (i == 0) return;\nprintf (\"%d\",\ni;\npart1 (++i);\nprintf (\"%d\", i);\n}\npart1(5) is called",
+      "options": [
+        {
+          "key": "A",
+          "text": "53423122233445"
+        },
+        {
+          "key": "B",
+          "text": "53423120112233"
+        },
+        {
+          "key": "C",
+          "text": "53423122132435"
+        },
+        {
+          "key": "D",
+          "text": "53423120213243"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "high",
+      "currentExplanation": "Interleaving the two mutually recursive functions and writing each digit as it is printed: part1(5) prints 5, calls part2(3), which prints 3, calls part1(1), which prints 1, calls part2(-1), which prints -1, calls part1(0) returning immediately, prints -1 again, returns; part2 prints 1, part1 prints 3, then part2 prints 3, part1 calls part2(1), which prints 1, calls part1(2), which prints 2, calls part2(0) returning immediately, prints 2, then part1 prints 2, part2 prints 1, and part1 finally prints 5. The observed run gives 53423122233445.\n\nWhy C is correct: Running the mutually recursive pair on gcc produces exactly 53423122233445.\n\nWhy the others are wrong:\n- A: this string repeats the same characters and has the wrong ordering of the trailing digits.\n- B: 53423120112233 would result if the pre-increments were ignored, but ++i does change the argument passed.\n- D: 53423120213243 would result if ++i happened before the zero test in part2, which it does not.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 57
+    },
+    {
+      "id": "q_0211",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Recursion and complexity",
+      "question": "Consider the following code snippet What would be the output for fun(5)",
+      "code": "int part(int n)\n{\nint x = 1, k;\nif (n =\n= 1) return x;\nfor (k =1; k<n; ++k)\nx = x + fun(k) * fun(n-k);\nreturn x;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "49"
+        },
+        {
+          "key": "B",
+          "text": "50"
+        },
+        {
+          "key": "C",
+          "text": "51"
+        },
+        {
+          "key": "D",
+          "text": "52"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "high",
+      "currentExplanation": "Evaluating the recurrence with fun(1) = 1 and x starting at 1 before the loop: fun(1) = 1; fun(2) = 1 + fun(1)*fun(1) = 2; fun(3) = 1 + fun(1)*fun(2) + fun(2)*fun(1) = 5; fun(4) = 1 + fun(1)*fun(3) + fun(2)*fun(2) + fun(3)*fun(1) = 15; fun(5) = 1 + fun(1)*fun(4) + fun(2)*fun(3) + fun(3)*fun(2) + fun(4)*fun(1) = 1 + 15 + 10 + 10 + 15 = 51. A compiled and executed version of the function returns 51.\n\nWhy C is correct: fun(5) = 1 + 15 + 10 + 10 + 15 = 51, as confirmed by compiling and running the function.\n\nWhy the others are wrong:\n- A: 49 omits the initial 1 that x starts from before the loop.\n- B: 50 counts the two cross terms once instead of twice.\n- D: 52 adds one too many to the sum.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "The snippet defines the function as int part(int n) but its body calls fun, which is never declared, so the code as printed does not compile; also flagged exact-duplicate-of:q_0212.",
+      "sourcePage": 57
+    },
+    {
+      "id": "q_0212",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Recursion and complexity",
+      "question": "Consider the following code snippet What would be the output for fun(5)",
+      "code": "int part(int x)\n{\nint i = 1, n;\nif (x = =\n1) return i;\nfor (n =1; n<x; ++n)\ni = i + fun(n) * fun(x-n);\nreturn i;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "49"
+        },
+        {
+          "key": "B",
+          "text": "50"
+        },
+        {
+          "key": "C",
+          "text": "51"
+        },
+        {
+          "key": "D",
+          "text": "52"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "high",
+      "currentExplanation": "The recurrence is the same as in q_0211: starting from x = 1 with fun(1) = 1, the values are fun(1) = 1, fun(2) = 2, fun(3) = 5, fun(4) = 15 and fun(5) = 1 + fun(1)*fun(4) + fun(2)*fun(3) + fun(3)*fun(2) + fun(4)*fun(1) = 1 + 15 + 10 + 10 + 15 = 51. Compiling and running the function confirms the result.\n\nWhy C is correct: fun(5) evaluates to 51 when the loop is executed exactly as written.\n\nWhy the others are wrong:\n- A: 49 would be the result if x started at 0 instead of 1.\n- B: 50 double-counts nothing and misses the leading 1 plus one cross term.\n- D: 52 over-counts one of the terms.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "extractionFlags mark this exact-duplicate-of:q_0211, and the snippet defines int part(int x) while calling the undeclared fun, so it does not compile as printed.",
+      "sourcePage": 58
+    },
+    {
+      "id": "q_0213",
+      "verifyReasons": [
+        "confidence=medium",
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Strings in C",
+      "question": "What will be the output of the following code? <string.h> //concatenates str1 and str2 and resultant string is stored in str1.",
+      "code": "#include <stdio.h>\n#include\nint main()\n{\nchar str1[] = \"VIT\", str2[] = \" Chennai \";\nstrcat(str1,str2);\nputs(str1);\nputs(str2);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "VIT Chennai Chennai"
+        },
+        {
+          "key": "B",
+          "text": "VIT"
+        },
+        {
+          "key": "C",
+          "text": "VIT Chennai"
+        },
+        {
+          "key": "D",
+          "text": "Compilation Error"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "strcat appends str2 to str1 and leaves str1 holding the combined result while str2 is untouched. Compiling and running the program shows puts(str1) printing 'VIT Chennai ' and puts(str2) printing ' Chennai ', so the complete output is both strings, with the concatenated one first. That is what option A lists. Note that str1 is only 4 bytes, so the append actually overflows the buffer; the printed text is what the question intends.\n\nWhy A is correct: strcat makes str1 hold 'VIT Chennai ' and str2 still holds ' Chennai ', so the two puts calls print both strings, matching option A.\n\nWhy the others are wrong:\n- B: 'VIT' would be the output only if strcat did nothing, which it does not.\n- C: 'VIT Chennai' captures only the first puts call and omits the second line.\n- D: the code compiles once string.h is included, as the stem indicates, so there is no compilation error.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 58
+    },
+    {
+      "id": "q_0215",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Strings in C",
+      "question": "What will be the output of the C Program?",
+      "code": "#include<stdio.h>\nint main()\n{\nchar arr[]=\"function\\0\";\nint num=strlen(arr);\nprintf(\"Length of\nfunction is %d\",num);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "9"
+        },
+        {
+          "key": "B",
+          "text": "7"
+        },
+        {
+          "key": "C",
+          "text": "10"
+        },
+        {
+          "key": "D",
+          "text": "8"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "high",
+      "currentExplanation": "strlen counts characters up to, but not including, the first null terminator. The literal \"function\\0\" has an explicit null after the eight letters f, u, n, c, t, i, o, n, so strlen stops there and returns 8, even though the array actually holds ten bytes because the compiler adds a second terminator. Running the program confirms the printed length is 8.\n\nWhy D is correct: strlen stops at the explicit \\0 placed after the eight characters of \"function\", so it returns 8.\n\nWhy the others are wrong:\n- A: 9 would require nine visible characters before the null, but 'function' has eight letters.\n- B: 7 would be the length of the word without its final letter or null.\n- C: 10 is the size of the array including both null terminators, not the string length.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 58
+    },
+    {
+      "id": "q_0216",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Arrays in C",
+      "question": "Consider the following 2-D array initialization. Which of the options is correct? int abc[2][]",
+      "code": "= {1, 2, 3 ,4 };",
+      "options": [
+        {
+          "key": "A",
+          "text": "Valid Initalization"
+        },
+        {
+          "key": "B",
+          "text": "Invalid Initialization"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "high",
+      "currentExplanation": "C requires every dimension of a multidimensional array except the first to be given, because the compiler needs the row length to lay out the initialiser and to compute addresses. With int abc[2][] the row length is missing, and gcc rejects it with 'array type has incomplete element type' or 'multidimensional array must have bounds for all dimensions except the first'. Deducing the missing bound from the initialiser is a C++ feature, not a C one.\n\nWhy B is correct: In C the row dimension of int abc[2][] is not supplied, so the compiler cannot determine the element type and rejects the declaration.\n\nWhy the others are wrong:\n- A: 'Valid Initialization' would be true in C++, where the bound can be deduced, but this is C and gcc rejects it.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 59
+    },
+    {
+      "id": "q_0217",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Arrays and strings",
+      "question": "Consider the following 2-D character string MAX_STRING_SIZE 50 char arr[NUMBER_OF_STRING][MAX_STRING_SIZE] = {\"Getting into the Data Structure\", \"is interesting \", \"that make sure to effectively\", \"organize the data and\"\"access & apply the operation\" i++) What the above code will print",
+      "code": "#define NUMBER_OF_STRING 5\n#define\n};\nfor (int i = 0; i < NUMBER_OF_STRING;\n{\nprintf(\"'%s' has length %d\\n\", arr[i], strlen(arr[i]));\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "It will print the length of the string"
+        },
+        {
+          "key": "B",
+          "text": "It will print all strings in a string array with their lengths"
+        },
+        {
+          "key": "C",
+          "text": "It will print all the string in a string array"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "high",
+      "currentExplanation": "The loop runs from i = 0 to NUMBER_OF_STRING - 1 and each time executes printf(\"'%s' has length %d\\n\", arr[i], strlen(arr[i])). For each row of the two-dimensional character array it therefore prints the string itself in quotes followed by its length. That is exactly printing all the strings in the array together with their lengths, not merely the lengths and not merely the strings.\n\nWhy B is correct: Each iteration prints arr[i] and strlen(arr[i]), so every string is displayed along with its length.\n\nWhy the others are wrong:\n- A: this omits the strings themselves, but the format specifier %s prints each one too.\n- C: this omits the lengths, but strlen(arr[i]) is also printed for every element.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 59
+    },
+    {
+      "id": "q_0218",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "C language fundamentals",
+      "question": "Structure in C language is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "a collection of elements that can be of same data type"
+        },
+        {
+          "key": "B",
+          "text": "a collection of elements that can be of different data type"
+        },
+        {
+          "key": "C",
+          "text": "Elements of a structure are called members"
+        },
+        {
+          "key": "D",
+          "text": "All the options"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "A structure is a user-defined type that groups members of different data types under one name, which is what option B states, and its elements are indeed called members. Option A is wrong for a structure, because a collection of elements of the same type is an array, not a struct. Since A is false, option D, which claims all the options hold, is also false.\n\nWhy B is correct: A structure groups elements of possibly different data types into a single user-defined type.\n\nWhy the others are wrong:\n- A: elements of the same data type describe an array; a struct is specifically for mixed types.\n- C: it is a true statement but it is not the definition of a structure, and it also makes option D untenable.\n- D: 'All the options' cannot be right because option A is false.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Options B and C are both true statements about structures, so the single-answer format does not fit; B is chosen as the definition.",
+      "sourcePage": 59
+    },
+    {
+      "id": "q_0222",
+      "verifyReasons": [
+        "confidence=medium",
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "C language fundamentals",
+      "question": "What is the output of C program with structures.? structure hotel",
+      "code": "int main()\n{\n{\nint items;\nchar name[10];\n}a;\nstrcpy(a.name, \"TAJ\");\na.items=10;\nprintf(\"%s\", a.name);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "TAJ"
+        },
+        {
+          "key": "B",
+          "text": "Empty string"
+        },
+        {
+          "key": "C",
+          "text": "Compiler error"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "As printed the code has its braces misplaced: '{ int items; char name[10]; } a;' declares a as an instance of a struct type that has just been closed with no members and no tag. gcc rejects this with \"'a' undeclared\", and strcpy(a.name, ...) could not work anyway since a has no members. The stem fragment 'structure hotel' suggests the original was struct hotel { int items; char name[10]; } a;, and that corrected version compiles and prints TAJ.\n\nWhy C is correct: With the braces as printed, a is declared from a closed member-less struct definition, so the program fails to compile.\n\nWhy the others are wrong:\n- A: TAJ is what the corrected program (with struct hotel {...} a;) would print, but not what the printed code can do.\n- B: no output at all is produced, since compilation fails.\n- D: option C does match the code as printed, so 'none of the options' is wrong.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "The snippet is garbled: '{ int items; char name[10]; } a;' is missing the struct tag (the stem shows 'structure hotel'), so as printed it does not compile; the intended answer is most likely A (TAJ).",
+      "sourcePage": 60
+    },
+    {
+      "id": "q_0223",
+      "verifyReasons": [
+        "confidence=low",
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Arrays in C",
+      "question": "What will be the output of the program in C?",
+      "code": "#include<stdio.h>\nint main()\n{\nant arr[5], i=0;\nwhile(i<5)\narr[i]=++i;\nfor(i=0;i<5;i++)\nprintf(\"%d,\",arr[i]);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "1,2,3,4,5"
+        },
+        {
+          "key": "B",
+          "text": "Garbage value, 1, 2, 3, 4,"
+        },
+        {
+          "key": "C",
+          "text": "0, 1, 2, 3, 4,"
+        },
+        {
+          "key": "D",
+          "text": "2, 3, 4, 5, 6,"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "low",
+      "currentExplanation": "The textbook reading is that the pre-increment happens first, so each pass stores the new value of i into arr[i]: arr[0] = 1, arr[1] = 2, arr[2] = 3, arr[3] = 4, arr[4] = 5, and the loop prints 1,2,3,4,5. In practice the order of evaluation of the left index i and the right operand ++i is unspecified in C, so the statement has undefined behaviour: MinGW gcc evaluated ++i first, left arr[0] untouched, and printed a garbage value followed by 1, 2, 3, 4 (and even wrote out of bounds at arr[5]).\n\nWhy A is correct: Under the intended reading of pre-increment, each pass stores i after incrementing it, giving 1, 2, 3, 4, 5.\n\nWhy the others are wrong:\n- B: 'Garbage value, 1, 2, 3, 4' is what MinGW gcc actually printed because the evaluation order left arr[0] unassigned, so the two answers reflect the same undefined behaviour.\n- C: 0, 1, 2, 3, 4 would require arr[0] to be zero-initialised, but it is an automatic array.\n- D: 2, 3, 4, 5, 6 would result if the increment happened after the store rather than before it.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "arr[i] = ++i modifies and reads i in one expression with no sequencing, so it is undefined behaviour; MinGW gcc prints 'Garbage value, 1, 2, 3, 4,' (option B) while the textbook answer is A.",
+      "sourcePage": 61
+    },
+    {
+      "id": "q_0224",
+      "verifyReasons": [
+        "confidence=medium",
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Arrays in C",
+      "question": "What is the output of this program? int",
+      "code": "#include<stdio.h>\nvoid main()\n{\narr[10];\nprintf(\"%d %d\",arr[-2],arr[11]);\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "0 0"
+        },
+        {
+          "key": "B",
+          "text": "Garbage value 0"
+        },
+        {
+          "key": "C",
+          "text": "Garbage value Garbage value"
+        },
+        {
+          "key": "D",
+          "text": "Compilation Error"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "The trailing 'int' in the stem belongs to the declaration, so the program declares int arr[10] and then prints arr[-2] and arr[11]. Both indices lie outside the ten elements arr[0] to arr[9], so the two reads access memory that belongs to other objects and their values are indeterminate. Compiling and running the corrected program confirms two arbitrary values are printed.\n\nWhy C is correct: arr[-2] and arr[11] are both outside the bounds of a ten-element array, so both printed values are garbage.\n\nWhy the others are wrong:\n- A: 0 0 would require the compiler to zero-fill out-of-bounds memory, which it does not do.\n- B: 'Garbage value 0' assumes one index is valid, but both -2 and 11 are outside 0..9.\n- D: as literally printed, arr is not declared, but the stem's trailing 'int' clearly belongs to 'int arr[10];'.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "The stem is garbled, with a dangling 'int' at the end; the code field as printed has 'arr[10];' with no type, which would be a compile error.",
+      "sourcePage": 61
+    },
+    {
+      "id": "q_0229",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Strings in C",
+      "question": "char What will be the output of the above program",
+      "code": "#include<stdio.h>\n#include<conio.h>\nvoid main()\n{\nstr[]=\"VIT\\0Chennai\";\nprintf(\"%s\",str);\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "VIT Chennai"
+        },
+        {
+          "key": "B",
+          "text": "Chennai"
+        },
+        {
+          "key": "C",
+          "text": "VIT\\0Chennai"
+        },
+        {
+          "key": "D",
+          "text": "VIT"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "high",
+      "currentExplanation": "printf(\"%s\", ...) does not print the whole array, it prints characters starting at str until it hits the first null byte. In the literal \"VIT\\0Chennai\" the explicit backslash-zero inserts a null right after the T, so the string ends there and only VIT is written to the output. The characters Chennai remain in the array but are never reached. Compiling and running the program confirms the output is VIT.\n\nWhy D is correct: %s stops at the first null, and the explicit \\0 placed after VIT terminates the printed string there.\n\nWhy the others are wrong:\n- A: the embedded null stops the print, so no space or Chennai appears.\n- B: Chennai is stored after the null but is never printed.\n- C: \\0 is an escape sequence that becomes a single null byte, not the two literal characters backslash and zero.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 62
+    },
+    {
+      "id": "q_0230",
+      "verifyReasons": [
+        "confidence=medium",
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Strings in C",
+      "question": "What is the output of C program with string",
+      "code": "int main()\n{\nchar str[]={'V','I','T'};\nprintf(\"%s\",str);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "VIT"
+        },
+        {
+          "key": "B",
+          "text": "V"
+        },
+        {
+          "key": "C",
+          "text": "VIT\\0"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "medium",
+      "currentExplanation": "A brace-enclosed list of character constants builds an array of exactly three bytes holding 'V', 'I' and 'T'. Unlike the string literal form, no terminating null is added automatically, so the array is not a valid C string. printf(\"%s\", str) therefore reads past the end of the array looking for a null, which is undefined behaviour, and a compiled run printed arbitrary bytes from adjacent memory rather than a defined result.\n\nWhy D is correct: Because the array has no null terminator, %s reads out of bounds and the output is undefined, so none of the listed strings can be guaranteed.\n\nWhy the others are wrong:\n- A: printing VIT reliably would require a null terminator, which this array lacks.\n- B: V would be printed only if a null followed the first character, which is not the case.\n- C: VIT\\0 describes a correctly terminated string, which is exactly what this array is not.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 63
+    },
+    {
+      "id": "q_0231",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Strings in C",
+      "question": "What is the output of following C program",
+      "code": "int main()\n{\nchar str1[]=\"VIT\";\nchar str2[20];\nstr2= str1;\nprintf(\"%s\",str2);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "VIT"
+        },
+        {
+          "key": "B",
+          "text": "VIT\\0"
+        },
+        {
+          "key": "C",
+          "text": "Compile Error"
+        },
+        {
+          "key": "D",
+          "text": "V"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "high",
+      "currentExplanation": "An array type in C is not assignable: str1 and str2 are arrays, not pointers, and the statement str2 = str1 therefore tries to copy an array object. gcc rejects it with 'assignment to expression with array type'. The array name decays to a pointer only in expressions such as printf, not on the left side of an assignment, so no output is produced.\n\nWhy C is correct: Arrays are not assignable in C, so str2 = str1 is rejected at compile time.\n\nWhy the others are wrong:\n- A: VIT would be printed only if the copy were legal, which it is not.\n- B: VIT\\0 is not an output a %s conversion can produce.\n- D: V would be printed only from a one-character string, which neither array is.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 63
+    },
+    {
+      "id": "q_0232",
+      "verifyReasons": [
+        "confidence=low",
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Strings in C",
+      "question": "what will be the output of the program",
+      "code": "#include<stdio.h>\n#include<string.h>\nvoid main()\n{\nchar str1[20]= \"VIT\", char str2[20]= \"Chennai\";\nprintf(\"%s\",strcpy(str2,strcat(str1,str2)));\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "ChennaiVIT"
+        },
+        {
+          "key": "B",
+          "text": "Chennai"
+        },
+        {
+          "key": "C",
+          "text": "VIT Chennai"
+        },
+        {
+          "key": "D",
+          "text": "VIT"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "low",
+      "currentExplanation": "As printed the declaration 'char str1[20] = \"VIT\", char str2[20] = \"Chennai\";' repeats the type keyword in one declarator and is a syntax error, so strictly the program does not compile. Removing the stray second char gives char str1[20] = \"VIT\", str2[20] = \"Chennai\", and then strcat(str1, str2) makes str1 hold \"VITChennai\", which strcpy copies into str2, so the printf prints that combined string. Option C is the only option representing that combined result.\n\nWhy C is correct: After correcting the duplicated type keyword, strcat then strcpy leave str2 holding the concatenation of both strings, which is what option C shows.\n\nWhy the others are wrong:\n- A: ChennaiVIT is the wrong order; strcat appends str2 to str1, so str1 comes first.\n- B: Chennai would be the result if strcat had not been applied first.\n- D: VIT would be the result if the assignment order of the two calls were reversed.\n\nNote: strictly the code as printed fails to compile (duplicate type specifier) and no option offers a compilation error.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "The declaration 'char str1[20]= \"VIT\", char str2[20]= \"Chennai\";' is a syntax error (duplicate type specifier); no option offers 'Compilation Error', so C is the intended answer for the corrected code.",
+      "sourcePage": 63
+    },
+    {
+      "id": "q_0233",
+      "verifyReasons": [
+        "confidence=medium",
+        "code/calculation question"
+      ],
+      "topic": "Programming and Data Structures",
+      "subtopic": "Strings in C",
+      "question": "char str1[] = \"VIT\", //concatenates str1 and str2 and resultant string is stored in str1.",
+      "code": "#include <stdio.h>\n#include <string.h>\nint main()\n{\nstr2[] = \" Chennai \";\nstrcat(str1,str2);\nputs(str1);\nputs(str2);\nreturn 0;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "VIT Chennai Chennai"
+        },
+        {
+          "key": "B",
+          "text": "VIT"
+        },
+        {
+          "key": "C",
+          "text": "VIT Chennai"
+        },
+        {
+          "key": "D",
+          "text": "Compilation Error"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "strcat appends str2 onto str1 and leaves str1 holding the combined string while str2 is unchanged. puts(str1) therefore prints 'VIT Chennai ' and puts(str2) then prints ' Chennai '. The complete output is therefore both strings, with the concatenated one first, which is what option A lists. Running an equivalent compiled program confirms those two lines.\n\nWhy A is correct: strcat makes str1 hold 'VIT Chennai ' and str2 still holds ' Chennai ', so both strings appear in the output.\n\nWhy the others are wrong:\n- B: VIT alone would be printed only if strcat did nothing.\n- C: VIT Chennai captures only the first puts call and omits the second line.\n- D: the code compiles once string.h is included and str1 is declared as the stem shows.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 64
+    }
+  ]
+}

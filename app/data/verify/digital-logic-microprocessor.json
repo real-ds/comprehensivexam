@@ -1,0 +1,73 @@
+{
+  "topic": "Digital Logic and Microprocessor",
+  "questions": [
+    {
+      "id": "q_0242",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Digital Logic and Microprocessor",
+      "subtopic": "Flip-flops",
+      "question": "In a J-K flip-flop if the clock input frequency is 20kHz what is the output at Q",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "constantly LOW"
+        },
+        {
+          "key": "B",
+          "text": "constantly HIGH"
+        },
+        {
+          "key": "C",
+          "text": "a 20 kHz square wave"
+        },
+        {
+          "key": "D",
+          "text": "a 10 kHz square wave"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "medium",
+      "currentExplanation": "A single flip-flop can change its output at most once per clock cycle, so the maximum frequency at Q is half the clock frequency. With the JK flip-flop in toggle mode (J = K = 1) and a 20 kHz clock, Q toggles every clock pulse, giving 20/2 = 10 kHz, i.e. a square wave at half the clock frequency.\n\nWhy D is correct: One flip-flop divides the 20 kHz clock by two, so Q is a 10 kHz square wave.\n\nWhy the others are wrong:\n- A: Q is not held LOW; in toggle mode the output alternates between 0 and 1.\n- B: Q is not held HIGH either; a constant HIGH would require J = 1, K = 0 (set mode).\n- C: 20 kHz at Q would require no division, but one flip-flop must divide by at least two.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 67
+    },
+    {
+      "id": "q_0253",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Digital Logic and Microprocessor",
+      "subtopic": "Flip-flops",
+      "question": "Which of the following is correct for a gated D-type flip-flop?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "The Q output is either SET or RESET as soon as the input goes HIGH or LOW"
+        },
+        {
+          "key": "B",
+          "text": "The output complement follows the input when enabled"
+        },
+        {
+          "key": "C",
+          "text": "Only one of the inputs can be HIGH at a time"
+        },
+        {
+          "key": "D",
+          "text": "The output toggles if one of the inputs is held HIGH"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "A gated D-type flip-flop passes data only while its enable is HIGH. While the gate is open Q follows D, so a HIGH input sets Q and a LOW input resets Q; once the gate closes the output is frozen regardless of D. The feature that distinguishes the gated type from the plain D flip-flop is precisely this enable qualifier, which is why option B is the only statement that captures it correctly.\n\nWhy B is correct: With the enable HIGH the D flip-flop copies the input onto its outputs, which is what the enabled statement describes.\n\nWhy the others are wrong:\n- A: As soon as is wrong for a gated D flip-flop, because with the gate closed a change on D has no effect on Q.\n- C: Mutual exclusion of two HIGH inputs is a property of the S-R latch, not of a D flip-flop.\n- D: Toggling when an input is held HIGH is JK behaviour with J = K = 1; a D flip-flop only follows D.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Option B is imprecisely worded (the complementary output follows the complement of D, not D), and option A would be correct for an ungated D flip-flop, so the intended answer cannot be pinned down cleanly.",
+      "sourcePage": 70
+    }
+  ]
+}

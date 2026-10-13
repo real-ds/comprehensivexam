@@ -1,0 +1,759 @@
+{
+  "topic": "Digital Logic and Microprocessor",
+  "questions": [
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 1,
+      "sourcePage": 65,
+      "question": "How many minterms can be formed with two variable inputs",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Eight minterms"
+        },
+        {
+          "key": "B",
+          "text": "Six minterms"
+        },
+        {
+          "key": "C",
+          "text": "Five minterms"
+        },
+        {
+          "key": "D",
+          "text": "Four minterms"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0236"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 2,
+      "sourcePage": 65,
+      "question": "What was the JK levels to toggle the switch?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "J = 0, K = 0"
+        },
+        {
+          "key": "B",
+          "text": "J = 1, K = 0"
+        },
+        {
+          "key": "C",
+          "text": "J = 0, K = 1"
+        },
+        {
+          "key": "D",
+          "text": "J = 1, K = 1"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0237"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 3,
+      "sourcePage": 66,
+      "question": "How many flip-flops are required to produce a divide-by-128 device?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "4"
+        },
+        {
+          "key": "C",
+          "text": "6"
+        },
+        {
+          "key": "D",
+          "text": "7"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0238"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 4,
+      "sourcePage": 66,
+      "question": "The phenomenon of interpreting unwanted signals on J and K while Cp (clock pulse) is HIGH is called ________.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "parity error checking"
+        },
+        {
+          "key": "B",
+          "text": "ones catching"
+        },
+        {
+          "key": "C",
+          "text": "digital discrimination"
+        },
+        {
+          "key": "D",
+          "text": "digital filtering"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0239"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 5,
+      "sourcePage": 66,
+      "question": "How the master is enabled in master-slave flip-flop?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "when the gate is LOW"
+        },
+        {
+          "key": "B",
+          "text": "when the gate is HIGH"
+        },
+        {
+          "key": "C",
+          "text": "both LOW and HIGH"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0240"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 6,
+      "sourcePage": 66,
+      "question": "Which of the following is correct for a gated D flip-flop?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "The output toggles if one of the inputs is held HIGH."
+        },
+        {
+          "key": "B",
+          "text": "Only one of the inputs can be HIGH at a time."
+        },
+        {
+          "key": "C",
+          "text": "The output complement follows the input when enabled."
+        },
+        {
+          "key": "D",
+          "text": "Q output follows the input D when the enable is HIGH."
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0241"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 7,
+      "sourcePage": 67,
+      "question": "In a J-K flip-flop if the clock input frequency is 20kHz what is the output at Q",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "constantly LOW"
+        },
+        {
+          "key": "B",
+          "text": "constantly HIGH"
+        },
+        {
+          "key": "C",
+          "text": "a 20 kHz square wave"
+        },
+        {
+          "key": "D",
+          "text": "a 10 kHz square wave"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0242"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 8,
+      "sourcePage": 67,
+      "question": "If an active-HIGH S-R latch has a 0 on the S input and a 1 on the R input and then the R input goes to 0, the latch will be ________.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "SET"
+        },
+        {
+          "key": "B",
+          "text": "RESET"
+        },
+        {
+          "key": "C",
+          "text": "Clear"
+        },
+        {
+          "key": "D",
+          "text": "Invalid"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0243"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 9,
+      "sourcePage": 67,
+      "question": "To made MOD-32 binary counter how many flip-flops are required?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "3"
+        },
+        {
+          "key": "B",
+          "text": "45"
+        },
+        {
+          "key": "C",
+          "text": "5"
+        },
+        {
+          "key": "D",
+          "text": "6"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0244"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 10,
+      "sourcePage": 67,
+      "question": "The reason behind that the delay problems faced in asynchronous counters is eliminated by Synchronous counters :",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "input clock pulses are applied only to the first and last stages"
+        },
+        {
+          "key": "B",
+          "text": "input clock pulses are applied only to the last stage"
+        },
+        {
+          "key": "C",
+          "text": "input clock pulses are not used to activate any of the counter stages"
+        },
+        {
+          "key": "D",
+          "text": "input clock pulses are applied simultaneously to each stage"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0245"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 11,
+      "sourcePage": 68,
+      "question": "The minimum number of NAND gates required to implement the Boolean function X+XY'+XY'Z is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "one"
+        },
+        {
+          "key": "B",
+          "text": "Two"
+        },
+        {
+          "key": "C",
+          "text": "Three"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0246"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 12,
+      "sourcePage": 68,
+      "question": "In tabulation method how the procedures is started to specify the function in terms of",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "List of minterms"
+        },
+        {
+          "key": "B",
+          "text": "List of maxterms"
+        },
+        {
+          "key": "C",
+          "text": "List of integers"
+        },
+        {
+          "key": "D",
+          "text": "List of terms"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0247"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 13,
+      "sourcePage": 68,
+      "question": "The output Y of a Two-bit comparator is logic \"1\" whenever the two-bit input \"A\" is greater than the two-bit input \"B\". The number of combination for which the output is logic \"1\" is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "2"
+        },
+        {
+          "key": "B",
+          "text": "4"
+        },
+        {
+          "key": "C",
+          "text": "6"
+        },
+        {
+          "key": "D",
+          "text": "8"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0248"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 14,
+      "sourcePage": 69,
+      "question": "Which one of the following set of gates are best suited for 'parity' checking and 'parity' generation.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "AND, OR, NOT gates"
+        },
+        {
+          "key": "B",
+          "text": "EX-NOR or EX-OR gates"
+        },
+        {
+          "key": "C",
+          "text": "NAND gates"
+        },
+        {
+          "key": "D",
+          "text": "NOR gates"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0249"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 15,
+      "sourcePage": 69,
+      "question": "Which of the following code is also known as rereflected code",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Excess-3 codes"
+        },
+        {
+          "key": "B",
+          "text": "Gray code"
+        },
+        {
+          "key": "C",
+          "text": "BCD code"
+        },
+        {
+          "key": "D",
+          "text": "Error code"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0250"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 16,
+      "sourcePage": 69,
+      "question": "How '-5' is represented in hex format in 2's complement in 8-bits?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "(FB)16"
+        },
+        {
+          "key": "B",
+          "text": "(7F)16"
+        },
+        {
+          "key": "C",
+          "text": "(FF)16"
+        },
+        {
+          "key": "D",
+          "text": "(FA)16"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0251"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 17,
+      "sourcePage": 69,
+      "question": "Which statement below best describes the function of a decoder?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "A decoder will convert a decimal number into the proper binary equivalent"
+        },
+        {
+          "key": "B",
+          "text": "A decoder will convert a binary number into a specific output representing a particular character or digit."
+        },
+        {
+          "key": "C",
+          "text": "Decoders are used to prevent improper operation of digital systems."
+        },
+        {
+          "key": "D",
+          "text": "Decoders are special ICs that are used to make it possible for one brand of computer to talk to another."
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0252"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 18,
+      "sourcePage": 70,
+      "question": "Which of the following is correct for a gated D-type flip-flop?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "The Q output is either SET or RESET as soon as the input goes HIGH or LOW"
+        },
+        {
+          "key": "B",
+          "text": "The output complement follows the input when enabled"
+        },
+        {
+          "key": "C",
+          "text": "Only one of the inputs can be HIGH at a time"
+        },
+        {
+          "key": "D",
+          "text": "The output toggles if one of the inputs is held HIGH"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0253"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 19,
+      "sourcePage": 70,
+      "question": "What labelling code is carried in the K-map",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "8-4-2-1 binary"
+        },
+        {
+          "key": "B",
+          "text": "Hexadecimal"
+        },
+        {
+          "key": "C",
+          "text": "Gray"
+        },
+        {
+          "key": "D",
+          "text": "Octal"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0254"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 20,
+      "sourcePage": 70,
+      "question": "A computer has a word length of 8 bits (including sign). It is required to determine the range of integers that can be stored in the computer. If 1's complement is used to represent the numbers, then the range will be",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "-256 to 256"
+        },
+        {
+          "key": "B",
+          "text": "-256 to 255"
+        },
+        {
+          "key": "C",
+          "text": "-127 to 127"
+        },
+        {
+          "key": "D",
+          "text": "-128 to 127"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0255"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 21,
+      "sourcePage": 70,
+      "question": "Choose the gray code form for the binary value 101011?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "101011"
+        },
+        {
+          "key": "B",
+          "text": "110101"
+        },
+        {
+          "key": "C",
+          "text": "011111"
+        },
+        {
+          "key": "D",
+          "text": "111110"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0256"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 22,
+      "sourcePage": 71,
+      "question": "To design 1-of-32 decoder how many 3-to-8-line decoders are required?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "8"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0257"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 23,
+      "sourcePage": 71,
+      "question": "Consider Binary coded decimal value 0001 0010 0110 . Convert the given value to binary form.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "1111110"
+        },
+        {
+          "key": "B",
+          "text": "1111101"
+        },
+        {
+          "key": "C",
+          "text": "1111000"
+        },
+        {
+          "key": "D",
+          "text": "1111111"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0258"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 24,
+      "sourcePage": 71,
+      "question": "Consider, there are 8 doors in an automated cinema theatre. Minimum, How many number of On/Off switches are required to open any doors using digital circuit?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "3"
+        },
+        {
+          "key": "D",
+          "text": "4"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0259"
+    },
+    {
+      "topic": "Digital Logic and Microprocessor",
+      "sourceSection": "Digital MP",
+      "sourceNumber": 25,
+      "sourcePage": 72,
+      "question": "What are the output values of the 4-bit comparator when the two input binary numbers are given as A = 1011 and B = 1010.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "A > B = 1, A < B = 0, A < B = 1"
+        },
+        {
+          "key": "B",
+          "text": "A > B = 0, A < B = 1, A = B = 0"
+        },
+        {
+          "key": "C",
+          "text": "A > B = 1, A < B = 0, A = B = 0"
+        },
+        {
+          "key": "D",
+          "text": "A > B = 0, A < B = 1, A = B = 1"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0260"
+    }
+  ]
+}

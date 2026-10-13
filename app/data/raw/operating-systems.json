@@ -1,0 +1,5903 @@
+{
+  "topic": "Operating Systems",
+  "questions": [
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 1,
+      "sourcePage": 73,
+      "question": "What is an operating system?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "interface between the hardware and application programs"
+        },
+        {
+          "key": "B",
+          "text": "collection of programs that manages hardware resources"
+        },
+        {
+          "key": "C",
+          "text": "system service provider to the application programs"
+        },
+        {
+          "key": "D",
+          "text": "All the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0261"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 2,
+      "sourcePage": 73,
+      "question": "Which one of the following is not a real time operating system?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "RTLinux"
+        },
+        {
+          "key": "B",
+          "text": "Palm OS"
+        },
+        {
+          "key": "C",
+          "text": "QNX"
+        },
+        {
+          "key": "D",
+          "text": "VxWorks"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0262"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 3,
+      "sourcePage": 73,
+      "question": "In the non blocking send __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the sending process keeps sending until the message is received"
+        },
+        {
+          "key": "B",
+          "text": "the sending process sends the message and resumes operation"
+        },
+        {
+          "key": "C",
+          "text": "the sending process keeps sending until it receives a message"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0263"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 4,
+      "sourcePage": 73,
+      "question": "In the Zero capacity queue __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the queue can store at least one message"
+        },
+        {
+          "key": "B",
+          "text": "the sender blocks until the receiver receives the message"
+        },
+        {
+          "key": "C",
+          "text": "the sender keeps sending and the messages don't wait in the queue"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0264"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 5,
+      "sourcePage": 74,
+      "question": "The Zero Capacity queue __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "is referred to as a message system with buffering"
+        },
+        {
+          "key": "B",
+          "text": "is referred to as a message system with no buffering"
+        },
+        {
+          "key": "C",
+          "text": "is referred to as a link"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0265"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 6,
+      "sourcePage": 74,
+      "question": "Bounded capacity and Unbounded capacity queues are referred to as __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Programmed buffering"
+        },
+        {
+          "key": "B",
+          "text": "Automatic buffering"
+        },
+        {
+          "key": "C",
+          "text": "User defined buffering"
+        },
+        {
+          "key": "D",
+          "text": "No buffering"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0266"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 7,
+      "sourcePage": 74,
+      "question": "A process that is based on IPC mechanism which executes on different systems and can communicate with other processes using message based communication, is called ________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Local Procedure Call"
+        },
+        {
+          "key": "B",
+          "text": "Inter Process Communication"
+        },
+        {
+          "key": "C",
+          "text": "Remote Procedure Call"
+        },
+        {
+          "key": "D",
+          "text": "Remote Machine Invocation"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0267"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 8,
+      "sourcePage": 74,
+      "question": "The initial program that is run when the computer is powered up is called __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "boot program"
+        },
+        {
+          "key": "B",
+          "text": "bootloader"
+        },
+        {
+          "key": "C",
+          "text": "initializer"
+        },
+        {
+          "key": "D",
+          "text": "bootstrap program"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0268"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 9,
+      "sourcePage": 75,
+      "question": "What is a trap/exception?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "hardware generated interrupt caused by an error"
+        },
+        {
+          "key": "B",
+          "text": "software generated interrupt caused by an error"
+        },
+        {
+          "key": "C",
+          "text": "user generated interrupt caused by an error"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0269"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 10,
+      "sourcePage": 75,
+      "question": "In a memory mapped input/output __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the CPU uses polling to watch the control bit constantly, looping to see if a device is ready"
+        },
+        {
+          "key": "B",
+          "text": "the CPU writes one data byte to the data register and sets a bit in control register to show that a byte is available"
+        },
+        {
+          "key": "C",
+          "text": "the CPU receives an interrupt when the device is ready for the next byte"
+        },
+        {
+          "key": "D",
+          "text": "the CPU runs a user written code and does accordingly"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0270"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 11,
+      "sourcePage": 75,
+      "question": "Which module gives control of the CPU to the process selected by the short-term scheduler?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "dispatcher"
+        },
+        {
+          "key": "B",
+          "text": "interrupt"
+        },
+        {
+          "key": "C",
+          "text": "scheduler"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0271"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 12,
+      "sourcePage": 76,
+      "question": "The processes that are residing in main memory and are ready and waiting to execute are kept on a list called _____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "job queue"
+        },
+        {
+          "key": "B",
+          "text": "ready queue"
+        },
+        {
+          "key": "C",
+          "text": "execution queue"
+        },
+        {
+          "key": "D",
+          "text": "process queue"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0272"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 13,
+      "sourcePage": 76,
+      "question": "What does OS X has?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "monolithic kernel with modules"
+        },
+        {
+          "key": "B",
+          "text": "microkernel"
+        },
+        {
+          "key": "C",
+          "text": "monolithic kernel"
+        },
+        {
+          "key": "D",
+          "text": "hybrid kernel"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0273"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 14,
+      "sourcePage": 76,
+      "question": "The interval from the time of submission of a process to the time of completion is termed as ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "waiting time"
+        },
+        {
+          "key": "B",
+          "text": "turnaround time"
+        },
+        {
+          "key": "C",
+          "text": "response time"
+        },
+        {
+          "key": "D",
+          "text": "throughput"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0274"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 15,
+      "sourcePage": 76,
+      "question": "Which scheduling algorithm allocates the CPU first to the process that requests the CPU first?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "first-come, first-served scheduling"
+        },
+        {
+          "key": "B",
+          "text": "shortest job scheduling"
+        },
+        {
+          "key": "C",
+          "text": "priority scheduling"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0275"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 16,
+      "sourcePage": 77,
+      "question": "In priority scheduling algorithm ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "CPU is allocated to the process with highest priority"
+        },
+        {
+          "key": "B",
+          "text": "CPU is allocated to the process with lowest priority"
+        },
+        {
+          "key": "C",
+          "text": "Equal priority processes can not be scheduled"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0276"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 17,
+      "sourcePage": 77,
+      "question": "In priority scheduling algorithm, when a process arrives at the ready queue, its priority is compared with the priority of ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "all process"
+        },
+        {
+          "key": "B",
+          "text": "currently running process"
+        },
+        {
+          "key": "C",
+          "text": "parent process"
+        },
+        {
+          "key": "D",
+          "text": "init process"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0277"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 18,
+      "sourcePage": 77,
+      "question": "Which algorithm is defined in Time quantum?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "shortest job scheduling algorithm"
+        },
+        {
+          "key": "B",
+          "text": "round robin scheduling algorithm"
+        },
+        {
+          "key": "C",
+          "text": "priority scheduling algorithm"
+        },
+        {
+          "key": "D",
+          "text": "multilevel queue scheduling algorithm"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0278"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 19,
+      "sourcePage": 77,
+      "question": "Process are classified into different groups in ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "shortest job scheduling algorithm"
+        },
+        {
+          "key": "B",
+          "text": "round robin scheduling algorithm"
+        },
+        {
+          "key": "C",
+          "text": "priority scheduling algorithm"
+        },
+        {
+          "key": "D",
+          "text": "multilevel queue scheduling algorithm"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0279"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 20,
+      "sourcePage": 78,
+      "question": "In multilevel feedback scheduling algorithm ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "a process can move to a different classified ready queue"
+        },
+        {
+          "key": "B",
+          "text": "classification of ready queue is permanent"
+        },
+        {
+          "key": "C",
+          "text": "processes are not classified into groups"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0280"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 21,
+      "sourcePage": 78,
+      "question": "Which one of the following can not be scheduled by the kernel?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "kernel level thread"
+        },
+        {
+          "key": "B",
+          "text": "user level thread"
+        },
+        {
+          "key": "C",
+          "text": "process"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0281"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 22,
+      "sourcePage": 78,
+      "question": "CPU scheduling is the basis of ___________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "multiprocessor systems"
+        },
+        {
+          "key": "B",
+          "text": "multiprogramming operating systems"
+        },
+        {
+          "key": "C",
+          "text": "larger memory sized systems"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank",
+        "duplicate-stem-of:q_0393"
+      ],
+      "id": "q_0282"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 23,
+      "sourcePage": 78,
+      "question": "With multiprogramming ______ is used productively.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "time"
+        },
+        {
+          "key": "B",
+          "text": "space"
+        },
+        {
+          "key": "C",
+          "text": "money"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0283"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 24,
+      "sourcePage": 79,
+      "question": "In operating system, each process has its own __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "open files"
+        },
+        {
+          "key": "B",
+          "text": "pending alarms, signals, and signal handlers"
+        },
+        {
+          "key": "C",
+          "text": "address space and global variables"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank",
+        "duplicate-stem-of:q_0387"
+      ],
+      "id": "q_0284"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 25,
+      "sourcePage": 79,
+      "question": "What are the two steps of a process execution?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "I/O & OS Burst"
+        },
+        {
+          "key": "B",
+          "text": "CPU & I/O Burst"
+        },
+        {
+          "key": "C",
+          "text": "Memory & I/O Burst"
+        },
+        {
+          "key": "D",
+          "text": "OS & Memory Burst"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0285"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 26,
+      "sourcePage": 79,
+      "question": "An I/O bound program will typically have ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "a few very short CPU bursts"
+        },
+        {
+          "key": "B",
+          "text": "many very short I/O bursts"
+        },
+        {
+          "key": "C",
+          "text": "many very short CPU bursts"
+        },
+        {
+          "key": "D",
+          "text": "a few very short I/O bursts"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0286"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 27,
+      "sourcePage": 79,
+      "question": "A process is selected from the ______ queue by the ________ scheduler, to be executed.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "blocked, short term"
+        },
+        {
+          "key": "B",
+          "text": "wait, long term"
+        },
+        {
+          "key": "C",
+          "text": "ready, short term"
+        },
+        {
+          "key": "D",
+          "text": "a few very short I/O bursts"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0287"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 28,
+      "sourcePage": 80,
+      "question": "In the following cases non - preemptive scheduling occurs?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "When a process switches from the running state to the ready state"
+        },
+        {
+          "key": "B",
+          "text": "When a process goes from the running state to the waiting state"
+        },
+        {
+          "key": "C",
+          "text": "When a process switches from the waiting state to the ready state"
+        },
+        {
+          "key": "D",
+          "text": "All"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0288"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 29,
+      "sourcePage": 80,
+      "question": "The switching of the CPU from one process or thread to another is called ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "process switch"
+        },
+        {
+          "key": "B",
+          "text": "task switch"
+        },
+        {
+          "key": "C",
+          "text": "context switch"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0289"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 30,
+      "sourcePage": 80,
+      "question": "What is Dispatch latency?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the speed of dispatching a process from running to the ready state"
+        },
+        {
+          "key": "B",
+          "text": "the time of dispatching a process from running to ready state and keeping the CPU idle"
+        },
+        {
+          "key": "C",
+          "text": "the time to stop one process and start running another one"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0290"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 31,
+      "sourcePage": 81,
+      "question": "Scheduling is done so as to ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "increase CPU utilization"
+        },
+        {
+          "key": "B",
+          "text": "decrease CPU utilization"
+        },
+        {
+          "key": "C",
+          "text": "keep the CPU more idle"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank",
+        "duplicate-stem-of:q_0293"
+      ],
+      "id": "q_0291"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 32,
+      "sourcePage": 81,
+      "question": "What is Turnaround time?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the total waiting time for a process to finish execution"
+        },
+        {
+          "key": "B",
+          "text": "the total time spent in the ready queue"
+        },
+        {
+          "key": "C",
+          "text": "the total time spent in the running queue"
+        },
+        {
+          "key": "D",
+          "text": "the total time from the completion till the submission of a process"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0292"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 33,
+      "sourcePage": 81,
+      "question": "Scheduling is done so as to ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "increase the turnaround time"
+        },
+        {
+          "key": "B",
+          "text": "decrease the turnaround time"
+        },
+        {
+          "key": "C",
+          "text": "keep the turnaround time same"
+        },
+        {
+          "key": "D",
+          "text": "there is no relation between scheduling and turnaround time"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank",
+        "duplicate-stem-of:q_0291"
+      ],
+      "id": "q_0293"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 34,
+      "sourcePage": 81,
+      "question": "What is Waiting time?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the total time in the blocked and waiting queues"
+        },
+        {
+          "key": "B",
+          "text": "the total time spent in the ready queue"
+        },
+        {
+          "key": "C",
+          "text": "the total time spent in the running queue"
+        },
+        {
+          "key": "D",
+          "text": "the total time from the completion till the submission of a process"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0294"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 35,
+      "sourcePage": 82,
+      "question": "In a timeshare operating system, when the time slot assigned to a process is completed, the process switches from the current state to?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Suspended state"
+        },
+        {
+          "key": "B",
+          "text": "Terminated state"
+        },
+        {
+          "key": "C",
+          "text": "Ready state"
+        },
+        {
+          "key": "D",
+          "text": "Blocked state"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0295"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 36,
+      "sourcePage": 82,
+      "question": "Scheduling is done so as to __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "increase the waiting time"
+        },
+        {
+          "key": "B",
+          "text": "keep the waiting time the same"
+        },
+        {
+          "key": "C",
+          "text": "decrease the waiting time"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0296"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 37,
+      "sourcePage": 82,
+      "question": "What is Response time?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the total time taken from the submission time till the completion time"
+        },
+        {
+          "key": "B",
+          "text": "the total time taken from the submission time till the first response is produced"
+        },
+        {
+          "key": "C",
+          "text": "the total time taken from submission time till the response is output"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0297"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 38,
+      "sourcePage": 82,
+      "question": "Round robin scheduling falls under the category of ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Non-preemptive scheduling"
+        },
+        {
+          "key": "B",
+          "text": "Preemptive scheduling"
+        },
+        {
+          "key": "C",
+          "text": "All"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0298"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 39,
+      "sourcePage": 83,
+      "question": "With round robin scheduling algorithm in a time shared system ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "using very large time slices converts it into First come First served scheduling algorithm"
+        },
+        {
+          "key": "B",
+          "text": "using very small time slices converts it into First come First served scheduling algorithm"
+        },
+        {
+          "key": "C",
+          "text": "using extremely small time slices increases performance"
+        },
+        {
+          "key": "D",
+          "text": "using very small time slices converts it into Shortest Job First algorithm"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0299"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 40,
+      "sourcePage": 83,
+      "question": "The portion of the process scheduler in an operating system that dispatches processes is concerned with ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "assigning ready processes to CPU"
+        },
+        {
+          "key": "B",
+          "text": "assigning ready processes to waiting queue"
+        },
+        {
+          "key": "C",
+          "text": "assigning running processes to blocked queue"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank",
+        "duplicate-stem-of:q_0339"
+      ],
+      "id": "q_0300"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 41,
+      "sourcePage": 83,
+      "question": "What is FIFO algorithm?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "first executes the job that came in last in the queue"
+        },
+        {
+          "key": "B",
+          "text": "first executes the job that came in first in the queue"
+        },
+        {
+          "key": "C",
+          "text": "first executes the job that needs minimal processor"
+        },
+        {
+          "key": "D",
+          "text": "first executes the job that has maximum processor needs"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "exact-duplicate-of:q_0304"
+      ],
+      "id": "q_0301"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 42,
+      "sourcePage": 83,
+      "question": "The strategy of making processes that are logically runnable to be temporarily suspended is called ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Non preemptive scheduling"
+        },
+        {
+          "key": "B",
+          "text": "Preemptive scheduling"
+        },
+        {
+          "key": "C",
+          "text": "Shortest job first"
+        },
+        {
+          "key": "D",
+          "text": "First come First served"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank",
+        "exact-duplicate-of:q_0305"
+      ],
+      "id": "q_0302"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 43,
+      "sourcePage": 84,
+      "question": "Complex scheduling algorithms ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "are very appropriate for very large computers"
+        },
+        {
+          "key": "B",
+          "text": "use minimal resources"
+        },
+        {
+          "key": "C",
+          "text": "use many resources"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0303"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 44,
+      "sourcePage": 84,
+      "question": "What is FIFO algorithm?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "first executes the job that came in last in the queue"
+        },
+        {
+          "key": "B",
+          "text": "first executes the job that came in first in the queue"
+        },
+        {
+          "key": "C",
+          "text": "first executes the job that needs minimal processor"
+        },
+        {
+          "key": "D",
+          "text": "first executes the job that has maximum processor needs"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "exact-duplicate-of:q_0301"
+      ],
+      "id": "q_0304"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 45,
+      "sourcePage": 84,
+      "question": "The strategy of making processes that are logically runnable to be temporarily suspended is called ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Non preemptive scheduling"
+        },
+        {
+          "key": "B",
+          "text": "Preemptive scheduling"
+        },
+        {
+          "key": "C",
+          "text": "Shortest job first"
+        },
+        {
+          "key": "D",
+          "text": "First come First served"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank",
+        "exact-duplicate-of:q_0302"
+      ],
+      "id": "q_0305"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 46,
+      "sourcePage": 85,
+      "question": "Cascading termination refers to the termination of all child processes if the parent process terminates ______",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Normally or abnormally"
+        },
+        {
+          "key": "B",
+          "text": "Abnormally"
+        },
+        {
+          "key": "C",
+          "text": "Normally"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0306"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 47,
+      "sourcePage": 85,
+      "question": "There are 10 different processes running on a workstation. Idle processes are waiting for an input event in the input queue. Busy processes are scheduled with the Round-Robin time sharing method. Which out of the following quantum times is the best value for small response times, if the processes have a short runtime, e.g. less than 10ms?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "tQ = 15ms"
+        },
+        {
+          "key": "B",
+          "text": "tQ = 40ms"
+        },
+        {
+          "key": "C",
+          "text": "tQ = 45ms"
+        },
+        {
+          "key": "D",
+          "text": "tQ = 50ms"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0307"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 48,
+      "sourcePage": 85,
+      "question": "Orders are processed in the sequence they arrive if _______ rule sequences the jobs.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "earliest due date"
+        },
+        {
+          "key": "B",
+          "text": "slack time remaining"
+        },
+        {
+          "key": "C",
+          "text": "first come, first served"
+        },
+        {
+          "key": "D",
+          "text": "critical ratio"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0308"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 49,
+      "sourcePage": 85,
+      "question": "Under multiprogramming, turnaround time for short jobs is usually ________ and that for long jobs is slightly ___________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Lengthened; Shortened"
+        },
+        {
+          "key": "B",
+          "text": "Shortened; Lengthened"
+        },
+        {
+          "key": "C",
+          "text": "Shortened; Shortened"
+        },
+        {
+          "key": "D",
+          "text": "Shortened; Unchanged"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0309"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 50,
+      "sourcePage": 86,
+      "question": "Which of the following statements are true? I. Shortest remaining time first scheduling may cause starvation II. Preemptive scheduling may cause starvation III. Round robin is better than FCFS in terms of response time",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "I Only"
+        },
+        {
+          "key": "B",
+          "text": "I and III only"
+        },
+        {
+          "key": "C",
+          "text": "II and III only"
+        },
+        {
+          "key": "D",
+          "text": "All"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0310"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 51,
+      "sourcePage": 86,
+      "question": "The real difficulty with SJF in short term scheduling is ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "it is too good an algorithm"
+        },
+        {
+          "key": "B",
+          "text": "knowing the length of the next CPU request"
+        },
+        {
+          "key": "C",
+          "text": "it is too complex to understand"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0311"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 52,
+      "sourcePage": 86,
+      "question": "The FCFS algorithm is particularly troublesome for ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "time sharing systems"
+        },
+        {
+          "key": "B",
+          "text": "multiprogramming systems"
+        },
+        {
+          "key": "C",
+          "text": "multiprocessor systems"
+        },
+        {
+          "key": "D",
+          "text": "operating systems"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank",
+        "duplicate-stem-of:q_0350"
+      ],
+      "id": "q_0312"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 53,
+      "sourcePage": 87,
+      "question": "Consider the following set of processes, the length of the CPU burst time given in milliseconds. Process Burst time P1 6 P2 8 P3 7 P4 3 Assuming the above process being scheduled with the SJF scheduling algorithm.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "The waiting time for process P1 is 3ms"
+        },
+        {
+          "key": "B",
+          "text": "The waiting time for process P1 is 0ms"
+        },
+        {
+          "key": "C",
+          "text": "The waiting time for process P1 is 16ms"
+        },
+        {
+          "key": "D",
+          "text": "The waiting time for process P1 is 9ms"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0313"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 54,
+      "sourcePage": 87,
+      "question": "An SJF algorithm is simply a priority algorithm where the priority is ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the predicted next CPU burst"
+        },
+        {
+          "key": "B",
+          "text": "the inverse of the predicted next CPU burst"
+        },
+        {
+          "key": "C",
+          "text": "the current CPU burst"
+        },
+        {
+          "key": "D",
+          "text": "anything the user wants"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0314"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 55,
+      "sourcePage": 87,
+      "question": "A solution to the problem of indefinite blockage of low - priority processes is ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Starvation"
+        },
+        {
+          "key": "B",
+          "text": "Wait queue"
+        },
+        {
+          "key": "C",
+          "text": "Ready queue"
+        },
+        {
+          "key": "D",
+          "text": "Aging"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0315"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 56,
+      "sourcePage": 87,
+      "question": "Which of the following statements are true? i) Shortest remaining time first scheduling may cause starvation ii) Preemptive scheduling may cause starvation iii) Round robin is better than FCFS in terms of response time",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "I only"
+        },
+        {
+          "key": "B",
+          "text": "I and III Only"
+        },
+        {
+          "key": "C",
+          "text": "II and III only"
+        },
+        {
+          "key": "D",
+          "text": "I, II, and III"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "stem-enumeration"
+      ],
+      "id": "q_0316"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 57,
+      "sourcePage": 88,
+      "question": "When a process is in a \"Blocked\" state waiting for some I/O service. When the service is completed, it goes to the __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Terminated state"
+        },
+        {
+          "key": "B",
+          "text": "Suspended state"
+        },
+        {
+          "key": "C",
+          "text": "Running state"
+        },
+        {
+          "key": "D",
+          "text": "Ready state"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0317"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 58,
+      "sourcePage": 88,
+      "question": "Mutual exclusion implies that ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "if a process is executing in its critical section, then no other process must be executing in their critical sections"
+        },
+        {
+          "key": "B",
+          "text": "if a process is executing in its critical section, then other processes must be executing in their critical sections"
+        },
+        {
+          "key": "C",
+          "text": "if a process is executing in its critical section, then all the resources of the system must be blocked until it finishes execution"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0318"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 59,
+      "sourcePage": 88,
+      "question": "Bounded waiting implies that there exists a bound on the number of times a process is allowed to enter its critical section ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "after a process has made a request to enter its critical section and before the request is granted"
+        },
+        {
+          "key": "B",
+          "text": "when another process is in its critical section"
+        },
+        {
+          "key": "C",
+          "text": "before a process has made a request to enter its critical section"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0319"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 60,
+      "sourcePage": 89,
+      "question": "A minimum of _____ variable(s) is/are required to be shared between processes to solve the critical section problem.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "3"
+        },
+        {
+          "key": "D",
+          "text": "4"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0320"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 61,
+      "sourcePage": 89,
+      "question": "The following program consists of 3 concurrent processes and 3 binary semaphores. The semaphores are initialized as S0 = 1, S1 = 0, S2 = 0. Process P0 Process P1 Process P2 How many times will P0 print '0'?",
+      "code": "while(true)\n{\nwait(S0);\nprint '0';\nrelease(S1);\nrelease(S2);\n}\nwait(S1);\nrelease(S0);\nwait(S2);\nrelease(S0);",
+      "options": [
+        {
+          "key": "A",
+          "text": "At least twice"
+        },
+        {
+          "key": "B",
+          "text": "Exactly twice"
+        },
+        {
+          "key": "C",
+          "text": "Exactly thrice"
+        },
+        {
+          "key": "D",
+          "text": "Exactly once"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0321"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 62,
+      "sourcePage": 89,
+      "question": "Each process Pi, i = 0,1,2,3,......,9 is coded as follows. repeat forever The code for P10 is identical except that it uses V(mutex) instead of P(mutex). What is the largest number of processes that can be inside the critical section at any moment (the mutex being initialized to 1)?",
+      "code": "P(mutex)\n{Critical Section}\nV(mutex)",
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "3"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0322"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 63,
+      "sourcePage": 90,
+      "question": "Two processes, P1 and P2, need to access a critical section of code. Consider the following synchronization construct used by the processes. Process P1 : Critical section Remainder Section Process P2 : Critical section Remainder Section Here, w1 and w2 have shared variables, which are initialized to false. Which one of the following statements is TRUE about the above construct?",
+      "code": "while(true)\n{\nw1 = true;\nwhile(w2 == true);\nw1 = false;\n}\nwhile(true)\n{\nw2 = true;\nwhile(w1\n== true);\nw2 = false;\n}",
+      "options": [
+        {
+          "key": "A",
+          "text": "It does not ensure mutual exclusion"
+        },
+        {
+          "key": "B",
+          "text": "It does not ensure bounded waiting"
+        },
+        {
+          "key": "C",
+          "text": "It requires that processes enter the critical section in strict alternation"
+        },
+        {
+          "key": "D",
+          "text": "It does not prevent deadlocks but ensures mutual exclusion"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0323"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 64,
+      "sourcePage": 90,
+      "question": "Semaphore is a/an _______ to solve the critical section problem.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "after a particular process"
+        },
+        {
+          "key": "B",
+          "text": "periodically"
+        },
+        {
+          "key": "C",
+          "text": "atomically"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0324"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 65,
+      "sourcePage": 90,
+      "question": "What are the two atomic operations permissible on semaphores?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "wait and signal"
+        },
+        {
+          "key": "B",
+          "text": "stop and wait"
+        },
+        {
+          "key": "C",
+          "text": "hold and wait"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0325"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 66,
+      "sourcePage": 90,
+      "question": "The following pair of processes share a common variable X. Process A Process B X is set to 5 before either process begins execution. As usual, statements within a process are executed sequentially, but statements in process A may execute in any order with respect to statements in process B. How many different values of X are possible after both processes finish executing?",
+      "code": "int Y;\nA1: Y = X*2;\nA2: X = Y;\nint Z;\nB1: Z = X+1;\nB2: X = Z;",
+      "options": [
+        {
+          "key": "A",
+          "text": "2"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "8"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0326"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 67,
+      "sourcePage": 91,
+      "question": "The program follows to use a shared binary semaphore T. Process A Process B B1: T is set to 0 before either process begins execution and, as before, X is set to 5. Now, how many different values of X are possible after both processes finish executing?",
+      "code": "int Y;\nA1: Y = X*2;\nA2: X = Y;\nsignal(T);\nint Z;\nwait(T);\nB2: Z = X+1;\nX = Z;",
+      "options": [
+        {
+          "key": "A",
+          "text": "1"
+        },
+        {
+          "key": "B",
+          "text": "2"
+        },
+        {
+          "key": "C",
+          "text": "3"
+        },
+        {
+          "key": "D",
+          "text": "4"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0327"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 68,
+      "sourcePage": 91,
+      "question": "Transient operating system code is a code that ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "stays in the memory always"
+        },
+        {
+          "key": "B",
+          "text": "never enters the memory space"
+        },
+        {
+          "key": "C",
+          "text": "comes and goes as needed"
+        },
+        {
+          "key": "D",
+          "text": "is not easily accessible"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0328"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 69,
+      "sourcePage": 91,
+      "question": "All processes share a semaphore variable mutex, initialized to 1. Each process must execute wait(mutex) before entering the critical section and signal(mutex) afterward. Suppose a process executes in the following manner. ..... critical section ..... In this situation :",
+      "code": "signal(mutex);\nwait(mutex);",
+      "options": [
+        {
+          "key": "A",
+          "text": "a deadlock will occur"
+        },
+        {
+          "key": "B",
+          "text": "processes will starve to enter critical section"
+        },
+        {
+          "key": "C",
+          "text": "several processes maybe executing in their critical section"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0329"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 70,
+      "sourcePage": 92,
+      "question": "All processes share a semaphore variable mutex, initialized to 1. Each process must execute wait(mutex) before entering the critical section and signal(mutex) afterward. Suppose a process executes in the following manner. ..... critical section .....",
+      "code": "wait(mutex);\nwait(mutex);",
+      "options": [
+        {
+          "key": "A",
+          "text": "a deadlock will occur"
+        },
+        {
+          "key": "B",
+          "text": "processes will starve to enter critical section"
+        },
+        {
+          "key": "C",
+          "text": "several processes maybe executing in their critical section"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0330"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 71,
+      "sourcePage": 92,
+      "question": "Consider the methods used by processes P1 and P2 for accessing their critical sections whenever needed, as given below. The initial values of shared boolean variables S1 and S2 are randomly assigned. Method used by P1 : Critical section Method used by P2 : Critical section S2 = Which of the following statements describes properties achieved?",
+      "code": "while(S1==S2);\nS1 = S2;\nwhile(S1!=S2);\nnot(S1);",
+      "options": [
+        {
+          "key": "A",
+          "text": "Mutual exclusion but not progress"
+        },
+        {
+          "key": "B",
+          "text": "Progress but not mutual exclusion"
+        },
+        {
+          "key": "C",
+          "text": "Neither mutual exclusion nor progress"
+        },
+        {
+          "key": "D",
+          "text": "Both mutual exclusion and progress"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0331"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 72,
+      "sourcePage": 92,
+      "question": "What is a reusable resource?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "that can be used by one process at a time and is not depleted by that use"
+        },
+        {
+          "key": "B",
+          "text": "that can be used by more than one process at a time"
+        },
+        {
+          "key": "C",
+          "text": "that can be shared between various threads"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0332"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 73,
+      "sourcePage": 93,
+      "question": "A system is in the safe state if ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the system can allocate resources to each process in some order and still avoid a deadlock"
+        },
+        {
+          "key": "B",
+          "text": "there exist a safe sequence"
+        },
+        {
+          "key": "C",
+          "text": "all"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0333"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 74,
+      "sourcePage": 93,
+      "question": "The circular wait condition can be prevented by ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "defining a linear ordering of resource types"
+        },
+        {
+          "key": "B",
+          "text": "using thread"
+        },
+        {
+          "key": "C",
+          "text": "using pipes"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0334"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 75,
+      "sourcePage": 93,
+      "question": "A problem encountered in multitasking when a process is perpetually denied necessary resources is called ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "deadlock"
+        },
+        {
+          "key": "B",
+          "text": "starvation"
+        },
+        {
+          "key": "C",
+          "text": "inversion"
+        },
+        {
+          "key": "D",
+          "text": "aging"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0335"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 76,
+      "sourcePage": 94,
+      "question": "To avoid deadlock ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "there must be a fixed number of resources to allocate"
+        },
+        {
+          "key": "B",
+          "text": "resource allocation must be done only once"
+        },
+        {
+          "key": "C",
+          "text": "all deadlocked processes must be aborted"
+        },
+        {
+          "key": "D",
+          "text": "inversion technique can be used"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0336"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 77,
+      "sourcePage": 94,
+      "question": "The request and release of resources are ___________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "command line statements"
+        },
+        {
+          "key": "B",
+          "text": "interrupts"
+        },
+        {
+          "key": "C",
+          "text": "system calls"
+        },
+        {
+          "key": "D",
+          "text": "special programs"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0337"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 78,
+      "sourcePage": 94,
+      "question": "What are Multithreaded programs?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "lesser prone to deadlocks"
+        },
+        {
+          "key": "B",
+          "text": "more prone to deadlocks"
+        },
+        {
+          "key": "C",
+          "text": "not at all prone to deadlocks"
+        },
+        {
+          "key": "D",
+          "text": "none of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0338"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 79,
+      "sourcePage": 94,
+      "question": "The portion of the process scheduler in an operating system that dispatches processes is concerned with ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "assigning ready processes to waiting queue"
+        },
+        {
+          "key": "B",
+          "text": "assigning running processes to blocked queue"
+        },
+        {
+          "key": "C",
+          "text": "assigning ready processes to CPU"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank",
+        "duplicate-stem-of:q_0300"
+      ],
+      "id": "q_0339"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 80,
+      "sourcePage": 95,
+      "question": "For Mutual exclusion to prevail in the system ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "at least one resource must be held in a non sharable mode"
+        },
+        {
+          "key": "B",
+          "text": "the processor must be a uniprocessor rather than a multiprocessor"
+        },
+        {
+          "key": "C",
+          "text": "there must be at least one resource in a sharable mode"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0340"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 81,
+      "sourcePage": 95,
+      "question": "For a Hold and wait condition to prevail ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "A process must be not be holding a resource, but waiting for one to be freed, and then request to acquire it"
+        },
+        {
+          "key": "B",
+          "text": "A process must be holding at least one resource and waiting to acquire additional resources that are being held by other processes"
+        },
+        {
+          "key": "C",
+          "text": "A process must hold at least one resource and not be waiting to acquire additional resources"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0341"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 82,
+      "sourcePage": 95,
+      "question": "Deadlock prevention is a set of methods ___________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "to ensure that at least one of the necessary conditions cannot hold"
+        },
+        {
+          "key": "B",
+          "text": "to ensure that all of the necessary conditions do not hold"
+        },
+        {
+          "key": "C",
+          "text": "to decide if the requested resources for a process have to be given or not"
+        },
+        {
+          "key": "D",
+          "text": "to recover from a deadlock"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0342"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 83,
+      "sourcePage": 95,
+      "question": "For sharable resources, mutual exclusion ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "is required"
+        },
+        {
+          "key": "B",
+          "text": "is not required"
+        },
+        {
+          "key": "C",
+          "text": "may be or may not be required"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0343"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 84,
+      "sourcePage": 96,
+      "question": "The disadvantage of a process being allocated all its resources before beginning its execution is ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Low CPU utilization"
+        },
+        {
+          "key": "B",
+          "text": "Low resource utilization"
+        },
+        {
+          "key": "C",
+          "text": "Very high resource utilization"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0344"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 85,
+      "sourcePage": 96,
+      "question": "To ensure no preemption, if a process is holding some resources and requests another resource that cannot be immediately allocated to it ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "then the process waits for the resources be allocated to it"
+        },
+        {
+          "key": "B",
+          "text": "the process keeps sending requests until the resource is allocated to it"
+        },
+        {
+          "key": "C",
+          "text": "the process resumes execution without the resource being allocated to it"
+        },
+        {
+          "key": "D",
+          "text": "then all resources currently being held are preempted"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0345"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 86,
+      "sourcePage": 96,
+      "question": "Each request requires that the system consider the _____________ to decide whether the current request can be satisfied or must wait to avoid a future possible deadlock.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "resources currently available"
+        },
+        {
+          "key": "B",
+          "text": "processes that have previously been in the system"
+        },
+        {
+          "key": "C",
+          "text": "resources currently allocated to each process"
+        },
+        {
+          "key": "D",
+          "text": "future requests and releases of each process"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0346"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 87,
+      "sourcePage": 97,
+      "question": "Given a priori information about the ________ number of resources of each type that maybe requested for each process, it is possible to construct an algorithm that ensures that the system will never enter a deadlock state.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "minimum"
+        },
+        {
+          "key": "B",
+          "text": "average"
+        },
+        {
+          "key": "C",
+          "text": "maximum"
+        },
+        {
+          "key": "D",
+          "text": "approximate"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0347"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 88,
+      "sourcePage": 97,
+      "question": "A deadlock avoidance algorithm dynamically examines the __________ to ensure that a circular wait condition can never exist.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "resource allocation state"
+        },
+        {
+          "key": "B",
+          "text": "system storage state"
+        },
+        {
+          "key": "C",
+          "text": "operating system"
+        },
+        {
+          "key": "D",
+          "text": "resources"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank",
+        "duplicate-stem-of:q_0361"
+      ],
+      "id": "q_0348"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 89,
+      "sourcePage": 97,
+      "question": "A system is in a safe state only if there exists a ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "safe allocation"
+        },
+        {
+          "key": "B",
+          "text": "safe resource"
+        },
+        {
+          "key": "C",
+          "text": "safe sequence"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0349"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 90,
+      "sourcePage": 97,
+      "question": "The FCFS algorithm is particularly troublesome for ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "operating systems"
+        },
+        {
+          "key": "B",
+          "text": "multiprocessor systems"
+        },
+        {
+          "key": "C",
+          "text": "time sharing systems"
+        },
+        {
+          "key": "D",
+          "text": "multiprogramming systems"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank",
+        "duplicate-stem-of:q_0312"
+      ],
+      "id": "q_0350"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 91,
+      "sourcePage": 98,
+      "question": "A system has 12 magnetic tape drives and 3 processes : P0, P1, and P2. Process P0 requires 10 tape drives, P1 requires 4 and P2 requires 9 tape drives. Process P0 P1 P2 Maximum needs (process-wise: P0 through P2 top to bottom) 10 4 9 5 2 2 Which of the following sequence is a safe sequence?",
+      "code": "Currently allocated (process-wise)",
+      "options": [
+        {
+          "key": "A",
+          "text": "P0, P1, P2"
+        },
+        {
+          "key": "B",
+          "text": "P1, P2, P0"
+        },
+        {
+          "key": "C",
+          "text": "P2, P0, P1"
+        },
+        {
+          "key": "D",
+          "text": "P1, P0, P2"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0351"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 92,
+      "sourcePage": 98,
+      "question": "The resource allocation graph is not applicable to a resource allocation system ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "with multiple instances of each resource type"
+        },
+        {
+          "key": "B",
+          "text": "with a single instance of each resource type"
+        },
+        {
+          "key": "C",
+          "text": "single & multiple instances of each resource type"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0352"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 93,
+      "sourcePage": 98,
+      "question": "The Banker's algorithm is _____________ than the resource allocation graph algorithm.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "less efficient"
+        },
+        {
+          "key": "B",
+          "text": "more efficient"
+        },
+        {
+          "key": "C",
+          "text": "equal"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0353"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 94,
+      "sourcePage": 99,
+      "question": "A system with 5 processes P0 through P4 and three resource types A, B, C have A with 10 instances, B with 5 instances, and C with 7 instances. At time t0, the following snapshot has been taken: Process P0 P1 P2 P3 P4 Allocation (process-wise : P0 through P4 top TO bottom) A B C 0 1 0 2 0 0 3 0 2 2 1 1 0 0 2 MAX (process-wise: P0 through P4 top TO bottom) A B C 7 5 3 3 2 2 9 0 2 2 2 2 4 3 3 Available A B C 3 3 2 The sequence <P1, P3, P4, P2, P0> leads the system to ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "an unsafe state"
+        },
+        {
+          "key": "B",
+          "text": "a safe state"
+        },
+        {
+          "key": "C",
+          "text": "a protected state"
+        },
+        {
+          "key": "D",
+          "text": "a deadlock"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0354"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 95,
+      "sourcePage": 99,
+      "question": "The wait-for graph is a deadlock detection algorithm that is applicable when ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "all resources have a single instance"
+        },
+        {
+          "key": "B",
+          "text": "all resources have multiple instances"
+        },
+        {
+          "key": "C",
+          "text": "all resources have multiple instances"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0355"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 96,
+      "sourcePage": 99,
+      "question": "An edge from process Pi to Pj in a wait for graph indicates that ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Pi is waiting for Pj to release a resource that Pi needs"
+        },
+        {
+          "key": "B",
+          "text": "Pi is waiting for Pj to release a resource that Pi needs"
+        },
+        {
+          "key": "C",
+          "text": "all resources have multiple instances"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0356"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 97,
+      "sourcePage": 99,
+      "question": "If the wait for graph contains a cycle ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "then a deadlock does not exist"
+        },
+        {
+          "key": "B",
+          "text": "then a deadlock exists"
+        },
+        {
+          "key": "C",
+          "text": "hen a deadlock exists"
+        },
+        {
+          "key": "D",
+          "text": "either deadlock exists or system is in a safe state"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0357"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 98,
+      "sourcePage": 100,
+      "question": "If deadlocks occur frequently, the detection algorithm must be invoked ________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "rarely"
+        },
+        {
+          "key": "B",
+          "text": "frequently"
+        },
+        {
+          "key": "C",
+          "text": "rarely & frequently"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0358"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 99,
+      "sourcePage": 100,
+      "question": "For an effective operating system, when to check for deadlock?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "at fixed time intervals"
+        },
+        {
+          "key": "B",
+          "text": "every time a resource request is made"
+        },
+        {
+          "key": "C",
+          "text": "every time a resource request is made at fixed time intervals"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0359"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 100,
+      "sourcePage": 100,
+      "question": "What is the main function of the command interpreter?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "to provide the interface between the API and application program"
+        },
+        {
+          "key": "B",
+          "text": "to handle the files in the operating system"
+        },
+        {
+          "key": "C",
+          "text": "to get and execute the next user-specified command"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0360"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 101,
+      "sourcePage": 101,
+      "question": "A deadlock avoidance algorithm dynamically examines the __________ to ensure that a circular wait condition can never exist.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "operating system"
+        },
+        {
+          "key": "B",
+          "text": "resources"
+        },
+        {
+          "key": "C",
+          "text": "system storage state"
+        },
+        {
+          "key": "D",
+          "text": "resource allocation state"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank",
+        "duplicate-stem-of:q_0348"
+      ],
+      "id": "q_0361"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 102,
+      "sourcePage": 101,
+      "question": "Swapping _______ be done when a process has pending I/O, or has to execute I/O operations only into operating system buffers.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "must never"
+        },
+        {
+          "key": "B",
+          "text": "maybe"
+        },
+        {
+          "key": "C",
+          "text": "can"
+        },
+        {
+          "key": "D",
+          "text": "must"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0362"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 103,
+      "sourcePage": 101,
+      "question": "The main memory accommodates ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "cpu"
+        },
+        {
+          "key": "B",
+          "text": "user processes"
+        },
+        {
+          "key": "C",
+          "text": "operating system"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0363"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 104,
+      "sourcePage": 101,
+      "question": "The operating system is responsible for?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "bad-block recovery"
+        },
+        {
+          "key": "B",
+          "text": "booting from disk"
+        },
+        {
+          "key": "C",
+          "text": "disk initialization"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0364"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 105,
+      "sourcePage": 102,
+      "question": "The operating system and the other processes are protected from being modified by an already running process because ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "every address generated by the CPU is being checked against the relocation and limit registers"
+        },
+        {
+          "key": "B",
+          "text": "they have a protection algorithm"
+        },
+        {
+          "key": "C",
+          "text": "they are in different memory spaces"
+        },
+        {
+          "key": "D",
+          "text": "they are in different logical addresses"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0365"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 106,
+      "sourcePage": 102,
+      "question": "Using transient code, _______ the size of the operating system during program execution.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "maintains"
+        },
+        {
+          "key": "B",
+          "text": "changes"
+        },
+        {
+          "key": "C",
+          "text": "increases"
+        },
+        {
+          "key": "D",
+          "text": "decreases"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0366"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 107,
+      "sourcePage": 102,
+      "question": "The operating system maintains a ______ table that keeps track of how many frames have been allocated, how many are there, and how many are available.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "memory"
+        },
+        {
+          "key": "B",
+          "text": "mapping"
+        },
+        {
+          "key": "C",
+          "text": "page"
+        },
+        {
+          "key": "D",
+          "text": "frame"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0367"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 108,
+      "sourcePage": 102,
+      "question": "To obtain better memory utilization, dynamic loading is used. With dynamic loading, a routine is not loaded until it is called. For implementing dynamic loading ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "special support from operating system is essential"
+        },
+        {
+          "key": "B",
+          "text": "special support from hardware is required"
+        },
+        {
+          "key": "C",
+          "text": "user programs can implement dynamic loading without any special support from hardware or operating system"
+        },
+        {
+          "key": "D",
+          "text": "special support from both hardware and operating system is essential"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0368"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 109,
+      "sourcePage": 103,
+      "question": "The _________ presents a uniform device-access interface to the I/O subsystem, much as system calls provide a standard interface between the application and the operating system.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Device drivers"
+        },
+        {
+          "key": "B",
+          "text": "I/O systems"
+        },
+        {
+          "key": "C",
+          "text": "Devices"
+        },
+        {
+          "key": "D",
+          "text": "Buses"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0369"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 110,
+      "sourcePage": 103,
+      "question": "In real time operating system ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "process scheduling can be done only once"
+        },
+        {
+          "key": "B",
+          "text": "all processes have the same priority"
+        },
+        {
+          "key": "C",
+          "text": "kernel is not required"
+        },
+        {
+          "key": "D",
+          "text": "a task must be serviced by its deadline period"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0370"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 111,
+      "sourcePage": 103,
+      "question": "In Operating Systems, which of the following is/are CPU scheduling algorithms?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Priority"
+        },
+        {
+          "key": "B",
+          "text": "Round Robin"
+        },
+        {
+          "key": "C",
+          "text": "Shortest Job First"
+        },
+        {
+          "key": "D",
+          "text": "All"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0371"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 112,
+      "sourcePage": 104,
+      "question": "Hard real time operating system has ______________ jitter than a soft real time operating system.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "equal"
+        },
+        {
+          "key": "B",
+          "text": "more"
+        },
+        {
+          "key": "C",
+          "text": "less"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0372"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 113,
+      "sourcePage": 104,
+      "question": "For real time operating systems, interrupt latency should be ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "zero"
+        },
+        {
+          "key": "B",
+          "text": "minimal"
+        },
+        {
+          "key": "C",
+          "text": "maximum"
+        },
+        {
+          "key": "D",
+          "text": "dependent on the scheduling"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0373"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 114,
+      "sourcePage": 104,
+      "question": "Which one of the following is a real time operating system?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Windows CE"
+        },
+        {
+          "key": "B",
+          "text": "RTLinux"
+        },
+        {
+          "key": "C",
+          "text": "VxWorks"
+        },
+        {
+          "key": "D",
+          "text": "All"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0374"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 115,
+      "sourcePage": 104,
+      "question": "The priority of a process will ______________ if the scheduler assigns it a static priority.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "depends on the operating system"
+        },
+        {
+          "key": "B",
+          "text": "change"
+        },
+        {
+          "key": "C",
+          "text": "remains unchanged"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0375"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 116,
+      "sourcePage": 105,
+      "question": "If the sum of the working set sizes increases, exceeding the total number of available frames ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the operating system selects a process to suspend"
+        },
+        {
+          "key": "B",
+          "text": "the system crashes"
+        },
+        {
+          "key": "C",
+          "text": "then the process crashes"
+        },
+        {
+          "key": "D",
+          "text": "the memory overflows"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0376"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 117,
+      "sourcePage": 105,
+      "question": "The information about all files is kept in ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "operating system"
+        },
+        {
+          "key": "B",
+          "text": "separate directory structure"
+        },
+        {
+          "key": "C",
+          "text": "swap space"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0377"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 118,
+      "sourcePage": 105,
+      "question": "The operating system keeps a small table containing information about all open files called ____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "file table"
+        },
+        {
+          "key": "B",
+          "text": "directory table"
+        },
+        {
+          "key": "C",
+          "text": "open-file table"
+        },
+        {
+          "key": "D",
+          "text": "system table"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0378"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 119,
+      "sourcePage": 105,
+      "question": "What will happen in the single level directory?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "All files are contained in the same directory"
+        },
+        {
+          "key": "B",
+          "text": "All files are contained in different directories all at the same level"
+        },
+        {
+          "key": "C",
+          "text": "Depends on the operating system"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0379"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 120,
+      "sourcePage": 106,
+      "question": "The operating system _______ the links when traversing directory trees, to preserve the acyclic structure of the system.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "deletes"
+        },
+        {
+          "key": "B",
+          "text": "considers"
+        },
+        {
+          "key": "C",
+          "text": "ignores"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0380"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 121,
+      "sourcePage": 106,
+      "question": "On systems where there are multiple operating system, the decision to load a particular one is done by _____________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "process control block"
+        },
+        {
+          "key": "B",
+          "text": "file control block"
+        },
+        {
+          "key": "C",
+          "text": "boot loader"
+        },
+        {
+          "key": "D",
+          "text": "bootstrap"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0381"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 122,
+      "sourcePage": 106,
+      "question": "To access the services of the operating system, the interface is provided by the ___________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Library"
+        },
+        {
+          "key": "B",
+          "text": "System Calls"
+        },
+        {
+          "key": "C",
+          "text": "Assembly instructions"
+        },
+        {
+          "key": "D",
+          "text": "API - Application Programming Interface"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0382"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 123,
+      "sourcePage": 107,
+      "question": "The _______ program initializes all aspects of the system, from CPU registers to device controllers and the contents of main memory, and then starts the operating system.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "bootstrap"
+        },
+        {
+          "key": "B",
+          "text": "main"
+        },
+        {
+          "key": "C",
+          "text": "bootloader"
+        },
+        {
+          "key": "D",
+          "text": "rom"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0383"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 124,
+      "sourcePage": 107,
+      "question": "Network operating system runs on ___________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "every system in the network"
+        },
+        {
+          "key": "B",
+          "text": "server"
+        },
+        {
+          "key": "C",
+          "text": "both server and every system in the network"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0384"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 125,
+      "sourcePage": 107,
+      "question": "What are the types of distributed operating systems?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Zone based Operating system"
+        },
+        {
+          "key": "B",
+          "text": "Level based Operating system"
+        },
+        {
+          "key": "C",
+          "text": "Network Operating system"
+        },
+        {
+          "key": "D",
+          "text": "All"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0385"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 126,
+      "sourcePage": 107,
+      "question": "The systems which allow only one process execution at a time, are called __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "uniprogramming systems"
+        },
+        {
+          "key": "B",
+          "text": "uniprocessing systems"
+        },
+        {
+          "key": "C",
+          "text": "unitasking systems"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0386"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 127,
+      "sourcePage": 108,
+      "question": "In operating system, each process has its own __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "address space and global variables"
+        },
+        {
+          "key": "B",
+          "text": "open files"
+        },
+        {
+          "key": "C",
+          "text": "pending alarms, signals and signal handlers"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank",
+        "duplicate-stem-of:q_0284"
+      ],
+      "id": "q_0387"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 128,
+      "sourcePage": 108,
+      "question": "A process can be terminated due to __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "normal exit"
+        },
+        {
+          "key": "B",
+          "text": "fatal error"
+        },
+        {
+          "key": "C",
+          "text": "killed by another process"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0388"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 129,
+      "sourcePage": 108,
+      "question": "What is the ready state of a process?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "when process is scheduled to run after some execution"
+        },
+        {
+          "key": "B",
+          "text": "when process is unable to run until some task has been completed"
+        },
+        {
+          "key": "C",
+          "text": "when process is using the CPU"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0389"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 130,
+      "sourcePage": 108,
+      "question": "What is interprocess communication?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "communication within the process"
+        },
+        {
+          "key": "B",
+          "text": "communication between two process"
+        },
+        {
+          "key": "C",
+          "text": "communication between two threads of same process"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "duplicate-stem-of:q_0441"
+      ],
+      "id": "q_0390"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 131,
+      "sourcePage": 109,
+      "question": "A set of processes is deadlock if __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "each process is blocked and will remain so forever"
+        },
+        {
+          "key": "B",
+          "text": "each process is terminated"
+        },
+        {
+          "key": "C",
+          "text": "all processes are trying to kill each other"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0391"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 132,
+      "sourcePage": 109,
+      "question": "A process stack does not contain __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Function parameters"
+        },
+        {
+          "key": "B",
+          "text": "Local variables"
+        },
+        {
+          "key": "C",
+          "text": "Return addresses"
+        },
+        {
+          "key": "D",
+          "text": "PID of child process"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0392"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 133,
+      "sourcePage": 109,
+      "question": "CPU scheduling is the basis of ___________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "multiprogramming operating systems"
+        },
+        {
+          "key": "B",
+          "text": "larger memory sized systems"
+        },
+        {
+          "key": "C",
+          "text": "multiprocessor systems"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank",
+        "duplicate-stem-of:q_0282"
+      ],
+      "id": "q_0393"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 134,
+      "sourcePage": 109,
+      "question": "Which system call can be used by a parent process to determine the termination of child process?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "wait"
+        },
+        {
+          "key": "B",
+          "text": "exit"
+        },
+        {
+          "key": "C",
+          "text": "fork"
+        },
+        {
+          "key": "D",
+          "text": "get"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0394"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 135,
+      "sourcePage": 110,
+      "question": "The address of the next instruction to be executed by the current process is provided by the __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "CPU registers"
+        },
+        {
+          "key": "B",
+          "text": "Program counter"
+        },
+        {
+          "key": "C",
+          "text": "Process stack"
+        },
+        {
+          "key": "D",
+          "text": "Pipe"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0395"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 136,
+      "sourcePage": 110,
+      "question": "A Process Control Block(PCB) does not contain which of the following?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Code"
+        },
+        {
+          "key": "B",
+          "text": "Stack"
+        },
+        {
+          "key": "C",
+          "text": "Bootstrap Program"
+        },
+        {
+          "key": "D",
+          "text": "Data"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0396"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 137,
+      "sourcePage": 110,
+      "question": "The number of processes completed per unit time is known as __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Output"
+        },
+        {
+          "key": "B",
+          "text": "Throughput"
+        },
+        {
+          "key": "C",
+          "text": "Efficiency"
+        },
+        {
+          "key": "D",
+          "text": "Capacity"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0397"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 138,
+      "sourcePage": 110,
+      "question": "The state of a process is defined by __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the current activity of the process"
+        },
+        {
+          "key": "B",
+          "text": "the final activity of the process"
+        },
+        {
+          "key": "C",
+          "text": "the activity just executed by the process"
+        },
+        {
+          "key": "D",
+          "text": "the activity to next be executed by the process"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0398"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 139,
+      "sourcePage": 111,
+      "question": "Which of the following is not the state of a process?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "New"
+        },
+        {
+          "key": "B",
+          "text": "Old"
+        },
+        {
+          "key": "C",
+          "text": "Waiting"
+        },
+        {
+          "key": "D",
+          "text": "Running"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0399"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 140,
+      "sourcePage": 111,
+      "question": "What is a Process Control Block?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Process type variable"
+        },
+        {
+          "key": "B",
+          "text": "Data Structure"
+        },
+        {
+          "key": "C",
+          "text": "A secondary storage section"
+        },
+        {
+          "key": "D",
+          "text": "A Block in memory"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0400"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 141,
+      "sourcePage": 111,
+      "question": "The entry of all the PCBs of the current processes is in __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Process Register"
+        },
+        {
+          "key": "B",
+          "text": "Program Counter"
+        },
+        {
+          "key": "C",
+          "text": "Process Table"
+        },
+        {
+          "key": "D",
+          "text": "Process Unit"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0401"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 142,
+      "sourcePage": 111,
+      "question": "What is the degree of multiprogramming?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the number of processes executed per unit time"
+        },
+        {
+          "key": "B",
+          "text": "the number of processes in the ready queue"
+        },
+        {
+          "key": "C",
+          "text": "the number of processes in the I/O queue"
+        },
+        {
+          "key": "D",
+          "text": "the number of processes in memory"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0402"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 143,
+      "sourcePage": 112,
+      "question": "A single thread of control allows the process to perform __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "only one task at a time"
+        },
+        {
+          "key": "B",
+          "text": "multiple tasks at a time"
+        },
+        {
+          "key": "C",
+          "text": "only two tasks at a time"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0403"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 144,
+      "sourcePage": 112,
+      "question": "Which one of the following is not true?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "kernel remains in the memory during the entire computer session"
+        },
+        {
+          "key": "B",
+          "text": "kernel is made of various modules which can not be loaded in running operating system"
+        },
+        {
+          "key": "C",
+          "text": "kernel is the first part of the operating system to load into memory during booting"
+        },
+        {
+          "key": "D",
+          "text": "kernel is the program that constitutes the central core of the operating system"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0404"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 145,
+      "sourcePage": 112,
+      "question": "What is the objective of multiprogramming?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Have a process running at all time"
+        },
+        {
+          "key": "B",
+          "text": "Have multiple programs waiting in a queue ready to run"
+        },
+        {
+          "key": "C",
+          "text": "To increase CPU utilization"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0405"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 146,
+      "sourcePage": 113,
+      "question": "Which of the following do not belong to queues for processes?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Job Queue"
+        },
+        {
+          "key": "B",
+          "text": "PCB Queue"
+        },
+        {
+          "key": "C",
+          "text": "Device Queue"
+        },
+        {
+          "key": "D",
+          "text": "Ready Queue"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0406"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 147,
+      "sourcePage": 113,
+      "question": "When the process issues an I/O request __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "It is placed in an I/O queue"
+        },
+        {
+          "key": "B",
+          "text": "It is placed in a waiting queue"
+        },
+        {
+          "key": "C",
+          "text": "It is placed in the ready queue"
+        },
+        {
+          "key": "D",
+          "text": "It is placed in the Job queue"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0407"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 148,
+      "sourcePage": 113,
+      "question": "What will happen when a process terminates?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "It is removed from all queues"
+        },
+        {
+          "key": "B",
+          "text": "It is removed from all, but the job queue"
+        },
+        {
+          "key": "C",
+          "text": "Its process control block is de-allocated"
+        },
+        {
+          "key": "D",
+          "text": "Its process control block is never de-allocated"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0408"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 149,
+      "sourcePage": 113,
+      "question": "What is a long-term scheduler?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "It selects processes which have to be brought into the ready queue"
+        },
+        {
+          "key": "B",
+          "text": "It selects processes which have to be executed next and allocates CPU"
+        },
+        {
+          "key": "C",
+          "text": "It selects processes which heave to remove from memory by swapping"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0409"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 150,
+      "sourcePage": 114,
+      "question": "If all processes I/O bound, the ready queue will almost always be ______ and the Short term Scheduler will have a ______ to do.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "full, little"
+        },
+        {
+          "key": "B",
+          "text": "full, lot"
+        },
+        {
+          "key": "C",
+          "text": "empty, little"
+        },
+        {
+          "key": "D",
+          "text": "empty, lot"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0410"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 151,
+      "sourcePage": 114,
+      "question": "What is a medium-term scheduler?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "It selects which process has to be brought into the ready queue"
+        },
+        {
+          "key": "B",
+          "text": "It selects which process has to be executed next and allocates CPU"
+        },
+        {
+          "key": "C",
+          "text": "It selects which process to remove from memory by swapping"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0411"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 152,
+      "sourcePage": 114,
+      "question": "What is a short-term scheduler?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "It selects which process has to be brought into the ready queue"
+        },
+        {
+          "key": "B",
+          "text": "It selects which process has to be executed next and allocates CPU"
+        },
+        {
+          "key": "C",
+          "text": "It selects which process to remove from memory by swapping"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0412"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 153,
+      "sourcePage": 114,
+      "question": "The primary distinction between the short term scheduler and the long term scheduler is __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "The length of their queues"
+        },
+        {
+          "key": "B",
+          "text": "The type of processes they schedule"
+        },
+        {
+          "key": "C",
+          "text": "The frequency of their execution"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0413"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 154,
+      "sourcePage": 115,
+      "question": "The only state transition that is initiated by the user process itself is __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "block"
+        },
+        {
+          "key": "B",
+          "text": "wakeup"
+        },
+        {
+          "key": "C",
+          "text": "dispatch"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0414"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 155,
+      "sourcePage": 115,
+      "question": "Which one of the following errors will be handle by the operating system?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "lack of paper in printer"
+        },
+        {
+          "key": "B",
+          "text": "connection failure in the network"
+        },
+        {
+          "key": "C",
+          "text": "power failure"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0415"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 156,
+      "sourcePage": 115,
+      "question": "In a time-sharing operating system, when the time slot given to a process is completed, the process goes from the running state to the __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Blocked state"
+        },
+        {
+          "key": "B",
+          "text": "Ready state"
+        },
+        {
+          "key": "C",
+          "text": "Suspended state"
+        },
+        {
+          "key": "D",
+          "text": "Suspended state"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0416"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 157,
+      "sourcePage": 115,
+      "question": "In a multiprogramming environment __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the processor executes more than one process at a time"
+        },
+        {
+          "key": "B",
+          "text": "the programs are developed by more than one person"
+        },
+        {
+          "key": "C",
+          "text": "more than one process resides in the memory"
+        },
+        {
+          "key": "D",
+          "text": "a single user can execute many programs at the same time"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0417"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 158,
+      "sourcePage": 116,
+      "question": "Suppose that a process is in \"Blocked\" state waiting for some I/O service. When the service is completed, it goes to the __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Running state"
+        },
+        {
+          "key": "B",
+          "text": "Ready state"
+        },
+        {
+          "key": "C",
+          "text": "Suspended state"
+        },
+        {
+          "key": "D",
+          "text": "Terminated state"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0418"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 159,
+      "sourcePage": 116,
+      "question": "The context of a process in the PCB of a process does not contain __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "the value of the CPU registers"
+        },
+        {
+          "key": "B",
+          "text": "the process state"
+        },
+        {
+          "key": "C",
+          "text": "memory-management information"
+        },
+        {
+          "key": "D",
+          "text": "context switch time"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0419"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 160,
+      "sourcePage": 116,
+      "question": "Which of the following need not necessarily be saved on a context switch between processes?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "General purpose registers"
+        },
+        {
+          "key": "B",
+          "text": "Translation lookaside buffer"
+        },
+        {
+          "key": "C",
+          "text": "Program counter"
+        },
+        {
+          "key": "D",
+          "text": "All"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0420"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 161,
+      "sourcePage": 116,
+      "question": "Which of the following does not interrupt a running process?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "A device"
+        },
+        {
+          "key": "B",
+          "text": "Timer"
+        },
+        {
+          "key": "C",
+          "text": "Schedular process"
+        },
+        {
+          "key": "D",
+          "text": "Power Failure"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0421"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 162,
+      "sourcePage": 117,
+      "question": "Which process can be affected by other processes executing in the system?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "cooperating process"
+        },
+        {
+          "key": "B",
+          "text": "child process"
+        },
+        {
+          "key": "C",
+          "text": "parent process"
+        },
+        {
+          "key": "D",
+          "text": "init process"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0422"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 163,
+      "sourcePage": 117,
+      "question": "When several processes access the same data concurrently and the outcome of the execution depends on the particular order in which the access takes place is called ________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "dynamic condition"
+        },
+        {
+          "key": "B",
+          "text": "race condition"
+        },
+        {
+          "key": "C",
+          "text": "essential condition"
+        },
+        {
+          "key": "D",
+          "text": "critical condition"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0423"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 164,
+      "sourcePage": 117,
+      "question": "If a process is executing in its critical section, then no other processes can be executing in their critical section. What is this condition called?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "mutual exclusion"
+        },
+        {
+          "key": "B",
+          "text": "critical exclusion"
+        },
+        {
+          "key": "C",
+          "text": "synchronous exclusion"
+        },
+        {
+          "key": "D",
+          "text": "asynchronous exclusion"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0424"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 165,
+      "sourcePage": 118,
+      "question": "Which one of the following is a synchronization tool?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "thread"
+        },
+        {
+          "key": "B",
+          "text": "pipe"
+        },
+        {
+          "key": "C",
+          "text": "semaphore"
+        },
+        {
+          "key": "D",
+          "text": "socket"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0425"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 166,
+      "sourcePage": 118,
+      "question": "Where is the operating system placed in the memory?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "either low or high memory (depending on the location of interrupt vector)"
+        },
+        {
+          "key": "B",
+          "text": "in the low memory"
+        },
+        {
+          "key": "C",
+          "text": "in the high memory"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0426"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 167,
+      "sourcePage": 118,
+      "question": "A semaphore is a shared integer variable __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "that can not drop below zero"
+        },
+        {
+          "key": "B",
+          "text": "that can not be more than zero"
+        },
+        {
+          "key": "C",
+          "text": "that can not drop below one"
+        },
+        {
+          "key": "D",
+          "text": "that can not be more than one"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0427"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 168,
+      "sourcePage": 118,
+      "question": "Mutual exclusion can be provided by the __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "mutex locks"
+        },
+        {
+          "key": "B",
+          "text": "binary semaphores"
+        },
+        {
+          "key": "C",
+          "text": "both mutex locks and binary semaphores"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0428"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 169,
+      "sourcePage": 119,
+      "question": "When high priority task is indirectly preempted by medium priority task effectively inverting the relative priority of the two tasks, the scenario is called __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "priority inversion"
+        },
+        {
+          "key": "B",
+          "text": "priority removal"
+        },
+        {
+          "key": "C",
+          "text": "priority exchange"
+        },
+        {
+          "key": "D",
+          "text": "priority modification"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0429"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 170,
+      "sourcePage": 119,
+      "question": "Process synchronization can be done on __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "hardware level"
+        },
+        {
+          "key": "B",
+          "text": "software level"
+        },
+        {
+          "key": "C",
+          "text": "both hardware and software level"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0430"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 171,
+      "sourcePage": 119,
+      "question": "A monitor is a module that encapsulates __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "shared data structures"
+        },
+        {
+          "key": "B",
+          "text": "procedures that operate on shared data structure"
+        },
+        {
+          "key": "C",
+          "text": "synchronization between concurrent procedure invocation"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0431"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 172,
+      "sourcePage": 119,
+      "question": "To enable a process to wait within the monitor __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "a condition variable must be declared as condition"
+        },
+        {
+          "key": "B",
+          "text": "condition variables must be used as boolean objects"
+        },
+        {
+          "key": "C",
+          "text": "semaphore must be used"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0432"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 173,
+      "sourcePage": 120,
+      "question": "Restricting the child process to a subset of the parent's resources prevents any process from __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "overloading the system by using a lot of secondary storage"
+        },
+        {
+          "key": "B",
+          "text": "under-loading the system by very less CPU utilization"
+        },
+        {
+          "key": "C",
+          "text": "overloading the system by creating a lot of sub-processes"
+        },
+        {
+          "key": "D",
+          "text": "crashing the system by utilizing multiple resources"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0433"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 174,
+      "sourcePage": 120,
+      "question": "A parent process calling _____ system call will be suspended until children processes terminate.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "wait"
+        },
+        {
+          "key": "B",
+          "text": "fork"
+        },
+        {
+          "key": "C",
+          "text": "exit"
+        },
+        {
+          "key": "D",
+          "text": "exec"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0434"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 175,
+      "sourcePage": 120,
+      "question": "Cascading termination refers to termination of all child processes if the parent process terminates ______",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Normally"
+        },
+        {
+          "key": "B",
+          "text": "Abnormally"
+        },
+        {
+          "key": "C",
+          "text": "Any one"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0435"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 176,
+      "sourcePage": 121,
+      "question": "With _____________ only one process can execute at a time; meanwhile all other process are waiting for the processor. With ______________ more than one process can be running simultaneously each on a different processor.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Uniprogramming, Multiprogramming"
+        },
+        {
+          "key": "B",
+          "text": "Multiprocessing, Multiprogramming"
+        },
+        {
+          "key": "C",
+          "text": "Multiprogramming, Multiprocessing"
+        },
+        {
+          "key": "D",
+          "text": "Uniprogramming, Multiprocessing"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0436"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 177,
+      "sourcePage": 121,
+      "question": "If a process fails, most operating system write the error information to a ______",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "new file"
+        },
+        {
+          "key": "B",
+          "text": "another running process"
+        },
+        {
+          "key": "C",
+          "text": "log file"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0437"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 178,
+      "sourcePage": 121,
+      "question": "In UNIX, the return value for the fork system call is _____ for the child process and _____ for the parent process.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "A Negative integer, Zero"
+        },
+        {
+          "key": "B",
+          "text": "Zero, A Negative integer"
+        },
+        {
+          "key": "C",
+          "text": "Zero, A nonzero integer"
+        },
+        {
+          "key": "D",
+          "text": "A nonzero integer, Zero"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0438"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 179,
+      "sourcePage": 121,
+      "question": "The child process can __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "be a duplicate of the parent process"
+        },
+        {
+          "key": "B",
+          "text": "never be a duplicate of the parent process"
+        },
+        {
+          "key": "C",
+          "text": "cannot have another program loaded into it"
+        },
+        {
+          "key": "D",
+          "text": "never have another program loaded into it"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0439"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 180,
+      "sourcePage": 122,
+      "question": "The child process completes execution, but the parent keeps executing, then the child process is known as __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Orphan"
+        },
+        {
+          "key": "B",
+          "text": "Zombie"
+        },
+        {
+          "key": "C",
+          "text": "Body"
+        },
+        {
+          "key": "D",
+          "text": "Dead"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0440"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 181,
+      "sourcePage": 122,
+      "question": "What is Interprocess communication?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "allows processes to communicate and synchronize their actions when using the same address space"
+        },
+        {
+          "key": "B",
+          "text": "allows processes to communicate and synchronize their actions"
+        },
+        {
+          "key": "C",
+          "text": "allows the processes to only synchronize their actions without communication"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "duplicate-stem-of:q_0390"
+      ],
+      "id": "q_0441"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 182,
+      "sourcePage": 122,
+      "question": "Message passing system allows processes to __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "communicate with each other without sharing the same address space"
+        },
+        {
+          "key": "B",
+          "text": "communicate with one another by resorting to shared data"
+        },
+        {
+          "key": "C",
+          "text": "share data"
+        },
+        {
+          "key": "D",
+          "text": "name the recipient or sender of the message"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0442"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 183,
+      "sourcePage": 122,
+      "question": "Which of the following two operations are provided by the IPC facility?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "write & delete message"
+        },
+        {
+          "key": "B",
+          "text": "delete & receive message"
+        },
+        {
+          "key": "C",
+          "text": "send & delete message"
+        },
+        {
+          "key": "D",
+          "text": "receive & send message"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0443"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 184,
+      "sourcePage": 123,
+      "question": "Messages sent by a process __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "have to be of a fixed size"
+        },
+        {
+          "key": "B",
+          "text": "have to be a variable size"
+        },
+        {
+          "key": "C",
+          "text": "can be fixed or variable sized"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0444"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 185,
+      "sourcePage": 123,
+      "question": "The link between two processes P and Q to send and receive messages is called __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "communication link"
+        },
+        {
+          "key": "B",
+          "text": "message-passing link"
+        },
+        {
+          "key": "C",
+          "text": "synchronization link"
+        },
+        {
+          "key": "D",
+          "text": "all"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0445"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 186,
+      "sourcePage": 123,
+      "question": "Which of the following are TRUE for direct communication?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "A communication link can be associated with N number of process(N = max. number of processes supported by system)"
+        },
+        {
+          "key": "B",
+          "text": "A communication link is associated with exactly two processes"
+        },
+        {
+          "key": "C",
+          "text": "Exactly N/2 links exist between each pair of processes(N = max. number of processes supported by system)"
+        },
+        {
+          "key": "D",
+          "text": "Exactly two link exists between each pair of processes"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0446"
+    },
+    {
+      "topic": "Operating Systems",
+      "sourceSection": "OS",
+      "sourceNumber": 187,
+      "sourcePage": 124,
+      "question": "In indirect communication between processes P and Q __________",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "there is another process R to handle and pass on the messages between P and Q"
+        },
+        {
+          "key": "B",
+          "text": "there is another machine between the two processes to help communication"
+        },
+        {
+          "key": "C",
+          "text": "there is a mailbox to help communication between P and Q"
+        },
+        {
+          "key": "D",
+          "text": "none"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0447"
+    }
+  ]
+}

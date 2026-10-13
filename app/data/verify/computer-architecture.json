@@ -1,0 +1,243 @@
+{
+  "topic": "Computer Architecture and Organization",
+  "questions": [
+    {
+      "id": "q_0488",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Architecture and Organization",
+      "subtopic": "Memory interfacing",
+      "question": "In memory transfer location address is supplied by____ that puts this on address bus",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "ALU"
+        },
+        {
+          "key": "B",
+          "text": "CPU"
+        },
+        {
+          "key": "C",
+          "text": "MAR"
+        },
+        {
+          "key": "D",
+          "text": "MDR"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "Every CPU to memory transfer starts by loading the address of the target word into a dedicated register whose only job is to drive the address bus, and that register is the memory address register (MAR). The MAR is wired directly to the address bus and holds the address stable for the whole read or write cycle, while the data word travels on the separate data bus through the MDR. The ALU computes addresses but is never connected to the address bus, and the CPU as a whole supplies the address only indirectly, through its MAR.\n\nWhy C is correct: The MAR holds the address of the memory location and is the register whose output is placed on the address bus.\n\nWhy the others are wrong:\n- A: The ALU only computes addresses and is not connected to the address bus.\n- B: The CPU produces the address through its MAR; the CPU itself is not the register that drives the bus.\n- D: The MDR (data register) sits on the data bus and carries the data word, not the address.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "The published key for this item in the source question bank is CPU, but the register that puts the address on the address bus is unambiguously the MAR; answered as printed using standard theory.",
+      "sourcePage": 134
+    },
+    {
+      "id": "q_0489",
+      "verifyReasons": [
+        "confidence=low"
+      ],
+      "topic": "Computer Architecture and Organization",
+      "subtopic": "Data path and control unit",
+      "question": "Control memory is part of ______ that has addressable storage registers and used as temporary storage for data",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "ROM"
+        },
+        {
+          "key": "B",
+          "text": "RAM"
+        },
+        {
+          "key": "C",
+          "text": "CPU"
+        },
+        {
+          "key": "D",
+          "text": "Memory"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "low",
+      "currentExplanation": "Control memory is the control store of a microprogrammed control unit, holding the microinstructions that drive the datapath. The relative clause in the stem, \"that has addressable storage registers and used as temporary storage for data\", is the textbook description of random access memory, so the blank is RAM on the wording of the source text. Note that mainstream textbooks instead present the control store as a read only memory inside the CPU, which is why this item is flagged.\n\nWhy B is correct: RAM is random access memory made of addressable storage locations and used as temporary storage for data, exactly as the stem describes.\n\nWhy the others are wrong:\n- A: ROM is read only, so it cannot serve as temporary storage for data as the stem requires.\n- C: The CPU does contain the control unit, but a CPU is not described as addressable storage registers used for temporary data storage.\n- D: \"Memory\" is too general; the stem's wording points specifically at random access memory.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Stem is garbled and contradicts standard theory (control memory/control store is normally a ROM inside the CPU); the source text defines control memory as a RAM of addressable storage registers, which is why RAM was chosen.",
+      "sourcePage": 134
+    },
+    {
+      "id": "q_0491",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Architecture and Organization",
+      "subtopic": "Data path and control unit",
+      "question": "which of the following is interrupt mode",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Task mode"
+        },
+        {
+          "key": "B",
+          "text": "Executive mode"
+        },
+        {
+          "key": "C",
+          "text": "Both a & b"
+        },
+        {
+          "key": "D",
+          "text": "None of these"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "Control memory addresses are divided into a task mode and an executive mode, and the executive mode is explicitly the interrupt mode, used for the control storage that serves interrupt handling while the task mode serves normal programmed operation. Since the question asks which of the listed modes is the interrupt mode, the executive mode is the answer.\n\nWhy B is correct: The executive mode is the interrupt mode group of control memory addresses.\n\nWhy the others are wrong:\n- A: Task mode is the other address group, used for ordinary programmed CPU operation rather than interrupts.\n- C: Both are control memory modes, but only the executive mode carries the interrupt label.\n- D: A defined mode does exist, namely the executive mode.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 135
+    },
+    {
+      "id": "q_0497",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Architecture and Organization",
+      "subtopic": "Addressing modes",
+      "question": "which addressing is a way of direct addressing",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Immediate addressing"
+        },
+        {
+          "key": "B",
+          "text": "Direct addressing"
+        },
+        {
+          "key": "C",
+          "text": "Register addressing"
+        },
+        {
+          "key": "D",
+          "text": "None of these"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "The stem is circular, asking which addressing is a way of direct addressing, so it can only be answered as printed. Answered that way, direct addressing is the mode in which the address field of the instruction is the effective address of the operand itself, with no pointer or index involved, and that is the option chosen.\n\nWhy B is correct: Direct addressing is the mode in which the address given in the instruction is used as the effective address of the operand.\n\nWhy the others are wrong:\n- A: Immediate addressing places the operand itself in the instruction, so it is not a way of direct addressing.\n- C: Register addressing names a register rather than using the address in the instruction.\n- D: Incorrect, direct addressing is one of the listed options.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Stem is tautological/garbled (\"which addressing is a way of direct addressing\"); answered B as printed, which is the only option consistent with the wording.",
+      "sourcePage": 136
+    },
+    {
+      "id": "q_0499",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Computer Architecture and Organization",
+      "subtopic": "Memory interfacing",
+      "question": "Operation of memory transfer are",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Read"
+        },
+        {
+          "key": "B",
+          "text": "Write"
+        },
+        {
+          "key": "C",
+          "text": "Both Read and Write"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "Memory transfer covers both directions of traffic between the CPU and memory. A read moves a word from a memory location into the processor, and a write moves a word from the processor into a memory location, so the set of memory transfer operations is read and write together.\n\nWhy C is correct: The memory transfer operations are read and write, so both are required.\n\nWhy the others are wrong:\n- A: Read is only one direction of memory transfer; the write operation is the other.\n- B: Write is only one direction of memory transfer; the read operation is the other.\n- D: Incorrect, read and write are both genuine memory transfer operations.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 137
+    },
+    {
+      "id": "q_0505",
+      "verifyReasons": [
+        "confidence=low"
+      ],
+      "topic": "Computer Architecture and Organization",
+      "subtopic": "Memory interfacing",
+      "question": "Which operation puts memory address in memory address register and data in DR",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Memory read"
+        },
+        {
+          "key": "B",
+          "text": "Memory write"
+        },
+        {
+          "key": "C",
+          "text": "Both"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "low",
+      "currentExplanation": "In a memory write cycle the CPU itself loads both halves of the transfer before the cycle starts: the address of the destination word goes into the memory address register and the data word goes into the data register, and only then is the write signal asserted so the memory latches the word. In a read the CPU loads only the address, and the data word arrives from memory into the data register rather than being put there by the CPU, which is the distinction the stem relies on.\n\nWhy B is correct: In a memory write the CPU puts the address in the MAR and the data in the DR before the write cycle begins.\n\nWhy the others are wrong:\n- A: In a memory read the data is delivered by memory into the DR, the CPU does not put it there.\n- C: \"Both\" can also be defended, since a read uses the MAR and the DR too, which is why this item is flagged for review.\n- D: Incorrect, memory write is a defined memory transfer operation.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Genuinely ambiguous: in a memory read the address also goes into the MAR and the returned data lands in the DR, so option C (Both) is defensible as well as B; answered B as the published key has it.",
+      "sourcePage": 138
+    },
+    {
+      "id": "q_0506",
+      "verifyReasons": [
+        "confidence=low"
+      ],
+      "topic": "Computer Architecture and Organization",
+      "subtopic": "Memory interfacing",
+      "question": "The memory bus is also referred as______",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Data bus"
+        },
+        {
+          "key": "B",
+          "text": "Address bus"
+        },
+        {
+          "key": "C",
+          "text": "Memory bus"
+        },
+        {
+          "key": "D",
+          "text": "All of these"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "low",
+      "currentExplanation": "The memory bus is the collection of lines that connects the CPU to main memory, and it comprises the address lines that select the location, the data lines that carry the word in each direction, and the control lines that mark read or write. Since the option set offers the address bus, the data bus and the memory bus itself, only the option that accepts all of those can be describing the whole memory bus, even though the usual synonym offered in textbooks is system bus, which is missing from the options.\n\nWhy D is correct: The memory bus comprises the address and data lines (plus control) used to reach memory, so the only option covering all of the listed names is All of these.\n\nWhy the others are wrong:\n- A: The data bus carries only the data word and is just one part of the memory bus.\n- B: The address bus carries only the address and is just one part of the memory bus.\n- C: \"Memory bus\" merely repeats the words already in the stem and names no alternative.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Stem appears mis-extracted or garbled: the standard synonym for the memory bus is the system bus, which is not offered, and none of the individual options is a true synonym; answered D as the only option that can cover the whole memory bus.",
+      "sourcePage": 138
+    }
+  ]
+}

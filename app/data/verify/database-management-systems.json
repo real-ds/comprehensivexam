@@ -1,0 +1,860 @@
+{
+  "topic": "Database Management Systems",
+  "questions": [
+    {
+      "id": "q_0519",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "Transactions and concurrency control",
+      "question": "Which of the following is not a valid schedule of 2 transactions, T1: {R(X), W(X)} and T2: {R(Y),",
+      "code": "W(Y)}?",
+      "options": [
+        {
+          "key": "A",
+          "text": "R(X), W(X), R(Y), W(Y)"
+        },
+        {
+          "key": "B",
+          "text": "R(Y), W(Y), R(X), W(X)"
+        },
+        {
+          "key": "C",
+          "text": "W(X), W(Y), R(X), R(Y)"
+        },
+        {
+          "key": "D",
+          "text": "R(X), R(Y), W(X), W(Y)"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "high",
+      "currentExplanation": "A schedule of transactions is a linear ordering of all operations that preserves the relative order of operations inside each transaction. Option C gives W(X), W(Y), R(X), R(Y): for T1 the write of X precedes its read of X, which violates the required internal order R(X) then W(X). Options A, B and D all keep each transaction's operations in their original order.\n\nWhy C is correct: T1 executes W(X) before R(X), so the per-transaction ordering of {R(X), W(X)} is broken and this is not a valid schedule.\n\nWhy the others are wrong:\n- A: T1's two operations then T2's two operations - a valid serial schedule.\n- B: T2's operations then T1's - also a valid serial schedule.\n- D: R(X), R(Y), W(X), W(Y) keeps R(X) before W(X) and R(Y) before W(Y) - valid.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 142
+    },
+    {
+      "id": "q_0520",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "Transactions and concurrency control",
+      "question": "Which of the following pairs of operations conflict in the transactions, T1: {R1(X), W1(X)} and T2:",
+      "code": "{R2(X), W2(Y)}",
+      "options": [
+        {
+          "key": "A",
+          "text": "R1(X),W1(X)"
+        },
+        {
+          "key": "B",
+          "text": "R1(X),R2(X)"
+        },
+        {
+          "key": "C",
+          "text": "W1(X),R2(X)"
+        },
+        {
+          "key": "D",
+          "text": "R1(X),W2(Y)"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "high",
+      "currentExplanation": "Two operations from different transactions conflict only when they access the same item and at least one of them is a write. R1(X) and W1(X) belong to the same transaction, so they never form a conflicting pair. R1(X) and R2(X) are both reads of X, and read-read never conflicts. R1(X) and W2(Y) touch different items. W1(X) and R2(X) both touch X and one of them writes, so they conflict.\n\nWhy C is correct: W1(X) and R2(X) access the same item X with a write involved, which is the definition of a conflict.\n\nWhy the others are wrong:\n- A: Both operations belong to T1, so there is no inter-transaction conflict.\n- B: Both are reads of X, and read-read pairs never conflict.\n- D: R1(X) and W2(Y) touch different items, so they cannot conflict.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 143
+    },
+    {
+      "id": "q_0527",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "Database recovery",
+      "question": "Which of the following is false?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Ensuring durability is the responsibility of recovery management component"
+        },
+        {
+          "key": "B",
+          "text": "Ensuring isolation is the responsibility of concurrency management"
+        },
+        {
+          "key": "C",
+          "text": "Ensuring atomicity or consistency is the responsibility of recovery management component"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "The standard split of responsibilities is: the recovery subsystem provides atomicity and durability, while the concurrency control subsystem provides isolation and, together with integrity-constraint checking, consistency. Statement C lumps consistency in with atomicity as the job of the recovery component, which is not the accepted division of labour. A and B are both correct descriptions.\n\nWhy C is correct: Consistency is enforced by integrity constraints and concurrency control, not by the recovery management component.\n\nWhy the others are wrong:\n- A: Durability is indeed the responsibility of recovery management - this statement is true.\n- B: Isolation is indeed the responsibility of concurrency control - this statement is true.\n- D: Since C is false, \"none of the options\" cannot be the answer.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 145
+    },
+    {
+      "id": "q_0528",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "Transactions and concurrency control",
+      "question": "Which of the following is true?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "All the schedules which are allowed under Thomas write rule are also allowed under basic timestamp protocol"
+        },
+        {
+          "key": "B",
+          "text": "All the schedules which are allowed under basic timestamp rule are also allowed under multi-version timestamp protocol"
+        },
+        {
+          "key": "C",
+          "text": "All the schedules which are allowed under multi-version timestamp protocol are also allowed under Thomas write rule"
+        },
+        {
+          "key": "D",
+          "text": "All are true"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "Basic timestamp ordering aborts a transaction when it reads an item already written by a younger transaction and when it writes an item written by a younger transaction. Thomas' write rule keeps the write part but drops the read-write check, so it permits blind writes that basic TOCC rejects - which kills A and C. Multiversion timestamp ordering keeps several versions of every item and reads the version matching the reader's timestamp, so it never aborts on a read-write conflict and is more permissive than basic TOCC. Therefore every schedule allowed under the basic protocol is also allowed under multiversion TOCC, making B the only true statement.\n\nWhy B is correct: Multiversion timestamp ordering accepts a superset of the schedules accepted by basic timestamp ordering.\n\nWhy the others are wrong:\n- A: Thomas' write rule permits blind writes that basic timestamp ordering rejects.\n- C: Multiversion timestamp ordering permits schedules that Thomas' write rule rejects.\n- D: A and C are false, so not all statements are true.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 145
+    },
+    {
+      "id": "q_0530",
+      "verifyReasons": [
+        "confidence=low"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "Database recovery",
+      "question": "Which of the following is not a recovery technique?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Deferred update"
+        },
+        {
+          "key": "B",
+          "text": "Immediate update"
+        },
+        {
+          "key": "C",
+          "text": "Two-phase commit"
+        },
+        {
+          "key": "D",
+          "text": "Recovery management"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "low",
+      "currentExplanation": "The standard recovery techniques for a single-site DBMS are deferred update (holding updates in a buffer until commit), immediate update (undo/redo of updates) and variants such as shadow paging and checkpointing. Two-phase commit is not a recovery technique: it is an atomic commit protocol that reaches a global commit/abort decision among the participants of a distributed transaction, and it performs no undo or redo work on a failed database.\n\nWhy C is correct: Two-phase commit is an atomic commit protocol for distributed transactions, not a recovery technique for undo/redo.\n\nWhy the others are wrong:\n- A: Deferred update is a genuine recovery technique (buffer the updates until commit).\n- B: Immediate update with undo/redo logging is a genuine recovery technique.\n- D: \"Recovery management\" names the subsystem as a whole rather than a technique, so the option set is loose - see the review note.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Option D (\"Recovery management\") also reads as something that is not a \"technique\" since it is the subsystem, so both C and D can be defended; answered C as the better fit but the option set is ambiguous.",
+      "sourcePage": 146
+    },
+    {
+      "id": "q_0532",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "Indexing and hashing",
+      "question": "Which of the following are true about indexes?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Indexes will improve the performance of the database table, even it is updated frequently"
+        },
+        {
+          "key": "B",
+          "text": "Indexes makes sql server engine's task even tougher, especially with large keys"
+        },
+        {
+          "key": "C",
+          "text": "Both"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "An index is maintained automatically by the DBMS on every insert, update and delete, so it continues to accelerate lookups even on a table that is updated frequently; the cost is a small write overhead. Large (wide) keys make each index entry bigger, so fewer entries fit per page, the tree becomes deeper, and the storage engine has a harder job. Both statements are therefore true.\n\nWhy C is correct: Both statements A and B about indexes are true.\n\nWhy the others are wrong:\n- A: Statement A is true on its own, but the question asks for all true statements.\n- B: Statement B is true on its own, but the question asks for all true statements.\n- D: At least one of A and B is true, so \"none of the options\" is wrong.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 146
+    },
+    {
+      "id": "q_0533",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "ER modelling",
+      "question": "What kind of a relation is \"a student registers for more than one course for a semester\"?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "one-to-many"
+        },
+        {
+          "key": "B",
+          "text": "many-to-many"
+        },
+        {
+          "key": "C",
+          "text": "one-to-one"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "The sentence describes a single student being linked to several courses in a semester. Reading the cardinality from student to course, one student maps to many courses, i.e. a one-to-many (1:n) relationship. The fact that many students can also take one course is the other side of the same binary relationship, but the quoted sentence only asserts the student side.\n\nWhy A is correct: One student registering for many courses is a one-to-many relationship.\n\nWhy the others are wrong:\n- B: Many-to-many would need the statement to assert that a course is also shared by many students; the quoted sentence describes only the student side.\n- C: One-to-one would mean a single course per student, contradicting \"more than one course\".\n- D: One of the listed ratios does apply, so \"None\" is wrong.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 146
+    },
+    {
+      "id": "q_0540",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "Indexing and hashing",
+      "question": "Find the maximum and minimum number of keys in the internal nodes of B - Tree if the order of the node is four,",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "4,2"
+        },
+        {
+          "key": "B",
+          "text": "3,1"
+        },
+        {
+          "key": "C",
+          "text": "4,0"
+        },
+        {
+          "key": "D",
+          "text": "4,3"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "For a B-tree of order m, meaning a node can have at most m children, the maximum number of keys in a node is m - 1 and the minimum is ceil(m/2) - 1. With m = 4 the maximum is 3 keys and the minimum is 2 - 1 = 1 key, so the pair (max, min) = (3, 1).\n\nWhy B is correct: Maximum 3 keys and minimum 1 key, which matches the option \"3,1\".\n\nWhy the others are wrong:\n- A: 4 and 2 would be correct for a tree of order 5.\n- C: 4 keys exceeds the maximum of m - 1 = 3 for order 4.\n- D: 4,3 ignores that the maximum number of keys is m - 1 = 3.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 148
+    },
+    {
+      "id": "q_0541",
+      "verifyReasons": [
+        "confidence=low"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "Relational model",
+      "question": "Which of the following statement(s) are incorrect",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "In non-relational databases, schemas are need to be defined before adding data"
+        },
+        {
+          "key": "B",
+          "text": "NoSQL databases allows the insertion of data without a predefined schema"
+        },
+        {
+          "key": "C",
+          "text": "NewSQL databases allows the insertion of data without a predefined schema"
+        },
+        {
+          "key": "D",
+          "text": "All the statements"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "low",
+      "currentExplanation": "Statement A is incorrect: NoSQL systems are schema-less by default and do not require a schema to be declared before data is added. Statement B is correct: that schema flexibility is exactly what NoSQL provides. Statement C is incorrect: NewSQL systems keep the relational, schema-defined model. So the incorrect statements are A and C, which are not offered as a pair; the only option naming more than one statement is D, even though D's literal wording (\"All the statements\") is false because B is correct.\n\nWhy D is correct: D is the only option that names more than one statement, which is what the plural \"statement(s)\" in the stem requires, and it is the answer the single-answer format appears to expect.\n\nWhy the others are wrong:\n- A: A is indeed incorrect, but C is too, so A alone does not answer \"statement(s)\".\n- B: B is actually a true statement, so it is not an incorrect statement.\n- C: C is indeed incorrect, but A is too, so C alone does not answer \"statement(s)\".",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Two statements (A and C) are incorrect but are not offered together, and option D \"All the statements\" is itself false because B is correct; answered D as the likely exam key, but the option set does not admit a strictly correct single answer.",
+      "sourcePage": 148
+    },
+    {
+      "id": "q_0545",
+      "verifyReasons": [
+        "confidence=medium",
+        "code/calculation question"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "Transactions and concurrency control",
+      "question": "Consider the following schedule and state that which of the following statement(s) is (are) true? I: S is recoverable. II: If the order of w1(x) and w2(x) are interchanged, then S will be a non-recoverable schedule.",
+      "code": "S : r1(x),w1(x),r2(x),r1(y),w1(y),w2(x),r2(y), c1, c2;",
+      "options": [
+        {
+          "key": "A",
+          "text": "Only I"
+        },
+        {
+          "key": "B",
+          "text": "Only II"
+        },
+        {
+          "key": "C",
+          "text": "Both I and II"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "In S = r1(x), w1(x), r2(x), r1(y), w1(y), w2(x), r2(y), c1, c2, T2 reads x after w1(x) and y after w1(y), both uncommitted, yet the schedule is recoverable because c1 (commit of T1) precedes c2 (commit of T2) - that is exactly the recoverability condition, so statement I is true. Statement II is also true: interchanging w1(x) and w2(x) gives r1(x), w2(x), r2(x), r1(y), w1(y), w1(x), r2(y), c2, c1 in which r2(y) still reads T1's uncommitted y while T2 commits first (c2 before c1), so the schedule becomes non-recoverable.\n\nWhy C is correct: Both statements hold - S is recoverable because c1 precedes c2, and interchanging the two writes leaves T2 reading T1's uncommitted y while committing before T1.\n\nWhy the others are wrong:\n- A: Statement II is also true, so \"Only I\" is incomplete.\n- B: Statement I is true, so \"Only II\" is wrong.\n- D: Both statements are true, so \"None of the options\" is wrong.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Statement II is ambiguous as printed: literally swapping the positions of w1(x) and w2(x) in the printed schedule (which still ends c1, c2) leaves the schedule recoverable, so II is false on a strict reading and the answer would be A; II only becomes true if the commit order also becomes c2, c1. Answered C as the evidently intended reading.",
+      "sourcePage": 150
+    },
+    {
+      "id": "q_0547",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "ER modelling",
+      "question": "Which of the following is not an entity set in a SHOPPING mini world?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Customers"
+        },
+        {
+          "key": "B",
+          "text": "Stock"
+        },
+        {
+          "key": "C",
+          "text": "Products"
+        },
+        {
+          "key": "D",
+          "text": "ProductName"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "medium",
+      "currentExplanation": "In Chen notation a rectangle denotes an entity set and an oval denotes an attribute of that entity set. Customers, Products and Stock (inventory items) can each be modelled as an entity set in a shopping mini-world, but ProductName is a property of an individual product, so it is drawn as an oval attached to the Products rectangle.\n\nWhy D is correct: ProductName is an attribute of the Products entity set, not an entity set itself.\n\nWhy the others are wrong:\n- A: Customers is a standard entity set in a shopping mini-world.\n- B: Stock (inventory) can be modelled as an entity set.\n- C: Products is a standard entity set in a shopping mini-world.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 150
+    },
+    {
+      "id": "q_0548",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "Relational model",
+      "question": "Identify the type of database system required to store a research document.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Multimedia Database"
+        },
+        {
+          "key": "B",
+          "text": "Geographical Information System"
+        },
+        {
+          "key": "C",
+          "text": "Data Warehouse"
+        },
+        {
+          "key": "D",
+          "text": "Textual Database"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "medium",
+      "currentExplanation": "The special-purpose database types each target a particular data form: multimedia databases hold audio, video and images, a GIS holds spatial and geographic data, and a data warehouse holds consolidated data for analytical reporting. A research document is primarily textual content used for retrieval, so a textual database is the appropriate type.\n\nWhy D is correct: A research document is textual data, so a textual database is the suitable system.\n\nWhy the others are wrong:\n- A: Multimedia databases store audio, video and images rather than plain research text.\n- B: A geographical information system stores spatial and geographic data.\n- C: A data warehouse stores consolidated data for analysis and reporting, not documents.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 150
+    },
+    {
+      "id": "q_0553",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "ER modelling",
+      "question": "Identify the possible entity sets of a Cafeteria Data base.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Customers, menu manager, meal Delivery"
+        },
+        {
+          "key": "B",
+          "text": "Customers, menuManager, itemsProcurement, mealDelivery,billGeneration"
+        },
+        {
+          "key": "C",
+          "text": "Customers, menu manager, Bill generation"
+        },
+        {
+          "key": "D",
+          "text": "FoodMenu"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "Entity sets correspond to the distinguishable things of the mini-world. Option B gives the complete list of cafeteria participants - customers, menu manager, items procurement, meal delivery and bill generation - whereas A and C leave several out and D names only one. Even though several entries read more like processes than things, B is the only option covering the whole set.\n\nWhy B is correct: It is the only option listing the complete set of cafeteria participants.\n\nWhy the others are wrong:\n- A: Omits itemsProcurement and billGeneration.\n- C: Omits itemsProcurement and part of the menu management.\n- D: FoodMenu alone omits the customers and the remaining participants.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 152
+    },
+    {
+      "id": "q_0555",
+      "verifyReasons": [
+        "confidence=low",
+        "no answer recorded"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "Keys and functional dependencies",
+      "question": "For a relation R(A,B,C,D,E,F,G), the candidate keys are AB, AC, and DE. Which of the following is not a proper subset of the candidate key?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "BC"
+        },
+        {
+          "key": "B",
+          "text": "DE"
+        },
+        {
+          "key": "C",
+          "text": "C"
+        },
+        {
+          "key": "D",
+          "text": "AD"
+        }
+      ],
+      "currentAnswer": null,
+      "currentConfidence": "low",
+      "currentExplanation": "The candidate keys are AB, AC and DE, so their proper subsets are {A}, {B}, {A}, {C}, {D} and {E}. Checking each option: BC is contained in none of AB, AC or DE; AD is also contained in none of them; and DE is contained only in itself, so it is not a proper subset of any candidate key. Only C is a proper subset, namely of AC. That means three different options (BC, DE and AD) all satisfy \"is not a proper subset of the candidate key\", so the question has no single correct answer.\n\nWhy no single option can be chosen: Three options are equally correct, so the tie cannot be broken from the printed text.\n\nWhy the others are wrong:\n- A: BC is also not a proper subset of any candidate key, so it is not the only answer.\n- B: DE is a candidate key and is contained in no other candidate key, so it also qualifies.\n- C: C is a proper subset of the candidate key AC, so it is the one option that is excluded.\n- D: AD is contained in none of AB, AC or DE, so it also qualifies.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Multiple options are correct: BC, DE and AD are all not proper subsets of any candidate key, so the question as printed has no unique answer and correctAnswer is null.",
+      "sourcePage": 152
+    },
+    {
+      "id": "q_0561",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "ER modelling",
+      "question": "ORDERS is an entity set with attributes (orderId, items, price) and SHIPPING entity is a specialized version of the ORDERS entity. Which of the following are the attribute set of SHIPPING entity?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "(OrderId, items, price)"
+        },
+        {
+          "key": "B",
+          "text": "(Orderid, Shippingid)"
+        },
+        {
+          "key": "C",
+          "text": "(OrderId, items, price, ShippingId,FromLocation,ToLocation)"
+        },
+        {
+          "key": "D",
+          "text": "(OrderId, Items, ShippingId,FromLocation,ToLocation)"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "A subclass inherits every attribute of its superclass and adds the attributes specific to itself. SHIPPING is a specialization of ORDERS, so it carries orderId, items and price from ORDERS plus its own shipping-specific attributes such as ShippingId, FromLocation and ToLocation. That is option C, the only list that contains both the inherited and the new attributes.\n\nWhy C is correct: A specialization entity has the superclass attributes plus its own additional attributes, which is exactly option C.\n\nWhy the others are wrong:\n- A: That is only the ORDERS attribute set, with none of the shipping-specific attributes.\n- B: That drops the inherited items and price attributes of ORDERS.\n- D: That omits the inherited price attribute of ORDERS.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 154
+    },
+    {
+      "id": "q_0562",
+      "verifyReasons": [
+        "confidence=low",
+        "no answer recorded"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "ER modelling",
+      "question": "If an attribute is added to the superclass entity, the condition for propagating this change in subclass entity is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Attribute defined membership"
+        },
+        {
+          "key": "B",
+          "text": "Predicate defined membership"
+        },
+        {
+          "key": "C",
+          "text": "Both Attribute defined and Predicate defined membership"
+        },
+        {
+          "key": "D",
+          "text": "Overlapping participation"
+        }
+      ],
+      "currentAnswer": null,
+      "currentConfidence": "low",
+      "currentExplanation": "In EER modelling an attribute added to a superclass is inherited by every subclass - that is the defining behaviour of inheritance - and this holds whether subclass membership is attribute-defined, predicate-defined or both. Overlapping participation is about an entity taking part in several relationship sets and has nothing to do with attribute propagation. None of the four options states the correct condition (unconditional inheritance), so the question is flawed.\n\nWhy no option can be chosen: None of the four options states the correct condition, which is that superclass attributes are inherited by all subclasses.\n\nWhy the others are wrong:\n- A: Attribute-defined membership determines which entities belong to a subclass, not whether new superclass attributes propagate.\n- B: Predicate-defined membership likewise governs subclass membership, not attribute propagation.\n- C: The propagation rule is unconditional, so it is not contingent on the membership style.\n- D: Overlapping participation concerns participation in multiple relationship sets, not attribute inheritance.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "The question contradicts standard EER theory: an attribute added to a superclass is always inherited by subclasses, and none of the four options expresses that condition.",
+      "sourcePage": 154
+    },
+    {
+      "id": "q_0565",
+      "verifyReasons": [
+        "confidence=low"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "ER modelling",
+      "question": "Identify the simple attribute.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "name"
+        },
+        {
+          "key": "B",
+          "text": "grade"
+        },
+        {
+          "key": "C",
+          "text": "Color"
+        },
+        {
+          "key": "D",
+          "text": "VehicleRegistrationNumber"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "low",
+      "currentExplanation": "A simple (atomic, single-valued, stored) attribute has no further decomposition. In the usual readings of these attributes, name is composite (first, middle, last) and VehicleRegistrationNumber is composite (region code plus serial number), which leaves grade and arguably Color as simple attributes. Since at least two options fit the definition, the question has no unique answer as printed.\n\nWhy B is correct: grade is a single stored value that cannot be decomposed, so it is a simple attribute.\n\nWhy the others are wrong:\n- A: name is normally decomposed into first, middle and last names, making it composite.\n- C: Color is also a single indivisible stored value, so it is equally a candidate and makes the question ambiguous.\n- D: VehicleRegistrationNumber is composite (region plus serial number).",
+      "currentNeedsReview": true,
+      "currentReviewReason": "No mini-world is given and both \"grade\" and \"Color\" qualify as simple attributes, so the question has more than one defensible answer; answered B as the intended choice.",
+      "sourcePage": 155
+    },
+    {
+      "id": "q_0567",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "ER modelling",
+      "question": "An entity set DOCTOR has a total participation on the relationship DIANOSES that connects it to the entity set PATIENTS. What would be the minimum cardinality constraint on the relationship?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "1:1"
+        },
+        {
+          "key": "B",
+          "text": "M:N"
+        },
+        {
+          "key": "C",
+          "text": "1:N"
+        },
+        {
+          "key": "D",
+          "text": "N:1"
+        }
+      ],
+      "currentAnswer": "C",
+      "currentConfidence": "medium",
+      "currentExplanation": "Total participation of DOCTOR on DIAGNOSES means every doctor must appear in at least one diagnosis, so the minimum participation on the doctor side is 1. Nothing restricts how many doctors may diagnose a single patient, so the patient side is \"many\". The minimum cardinality ratio of the relationship is therefore 1:N.\n\nWhy C is correct: Every doctor diagnoses at least one patient while a patient may be diagnosed by many doctors - that is 1:N.\n\nWhy the others are wrong:\n- A: 1:1 would require each patient to be diagnosed by exactly one doctor, which is not stated.\n- B: M:N is a maximum-participation ratio, not the minimum cardinality constraint asked for.\n- D: N:1 would put the mandatory side on the patient, which is not what is stated.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 156
+    },
+    {
+      "id": "q_0569",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "ER modelling",
+      "question": "SENSE, SELECT, SCOPE are the entity sets with common characteristics. Which process can define an entity set called DEPARTMENTS?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Specialization"
+        },
+        {
+          "key": "B",
+          "text": "Generalization"
+        },
+        {
+          "key": "C",
+          "text": "Top down approach"
+        },
+        {
+          "key": "D",
+          "text": "Inheritance"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "SENSE, SELECT and SCOPE are lower-level entity sets that share common characteristics, and DEPARTMENTS is the higher-level entity set formed by grouping them together. Forming a superclass out of existing sub-entity sets, i.e. working bottom-up, is generalization. Specialization would go the other way, defining SENSE, SELECT and SCOPE as subtypes of DEPARTMENTS.\n\nWhy B is correct: Combining several sub-entity sets into a higher-level superclass is generalization.\n\nWhy the others are wrong:\n- A: Specialization is the top-down direction and would define the subtypes instead.\n- C: Top-down is the direction used by specialization, not by forming DEPARTMENTS.\n- D: Inheritance is the outcome of the process, not the name of the process.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 156
+    },
+    {
+      "id": "q_0573",
+      "verifyReasons": [
+        "confidence=low"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "Database recovery",
+      "question": "Which of the following is correct with respect to Two phase commit protocol?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Ensures serializability"
+        },
+        {
+          "key": "B",
+          "text": "Prevents Deadlock"
+        },
+        {
+          "key": "C",
+          "text": "Detects Deadlock"
+        },
+        {
+          "key": "D",
+          "text": "Recover from Deadlock"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "low",
+      "currentExplanation": "Two-phase commit is a protocol in which the coordinator asks every participant to prepare, waits for all votes, and then issues a single commit or abort decision, which is what makes a distributed transaction atomic. Of the four options, only \"Ensures serializability\" can be defended: a uniform global commit decision is a precondition for a globally serializable distributed schedule. The deadlock options are all false, since 2PC neither prevents, detects nor recovers from deadlock - it is deadlock that makes 2PC block. Strictly the guarantee is atomicity, which is not offered.\n\nWhy A is correct: It is the only option that can be defended for a commit protocol; the standard guarantee (atomicity) is closest to it.\n\nWhy the others are wrong:\n- B: 2PC does not prevent deadlock; participants can block waiting for the decision.\n- C: 2PC contains no deadlock-detection mechanism.\n- D: Recovery from deadlock is the job of the deadlock-handling subsystem, not of 2PC.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "No option states the actual guarantee of two-phase commit (atomicity of the distributed transaction); answered A as the only defensible option, but the option set does not offer atomicity.",
+      "sourcePage": 157
+    },
+    {
+      "id": "q_0577",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "SQL DML",
+      "question": "Fill the blank in the above SQL query with an appropriate keyword to display all non-repeating values of the column \"destination\" only once and values that occur once as such.",
+      "code": "SELECT ________ destination FROM flight;",
+      "options": [
+        {
+          "key": "A",
+          "text": "DIFFERENT"
+        },
+        {
+          "key": "B",
+          "text": "DISTINCT"
+        },
+        {
+          "key": "C",
+          "text": "ALL"
+        },
+        {
+          "key": "D",
+          "text": "UNIQUE"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "high",
+      "currentExplanation": "DISTINCT is the standard SQL keyword that eliminates duplicates from the result of a SELECT, so SELECT DISTINCT destination FROM flight returns each destination value exactly once. ALL is the opposite modifier and keeps duplicates by default, while DIFFERENT and UNIQUE are not SQL keywords in this position.\n\nWhy B is correct: SELECT DISTINCT destination FROM flight; returns each destination value once.\n\nWhy the others are wrong:\n- A: DIFFERENT is not a SQL keyword.\n- C: ALL retains duplicate rows, the opposite of what is asked.\n- D: UNIQUE is a column constraint in table definitions, not a SELECT modifier.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 158
+    },
+    {
+      "id": "q_0583",
+      "verifyReasons": [
+        "confidence=medium"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "Indexing and hashing",
+      "question": "A B-tree of order 4 is constructed by 8 successive insertions from scratch. What is the maximum number of operations for node splitting that can take place?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "3"
+        },
+        {
+          "key": "B",
+          "text": "4"
+        },
+        {
+          "key": "C",
+          "text": "5"
+        },
+        {
+          "key": "D",
+          "text": "6"
+        }
+      ],
+      "currentAnswer": "B",
+      "currentConfidence": "medium",
+      "currentExplanation": "For a B-tree of order 4 (at most 4 children, hence at most 3 keys per node) a node splits when a fourth key has to be inserted and the middle key is promoted. Exhaustively simulating all 8! = 40320 insertion orders, the maximum number of split operations is 4 - for example inserting 1, 2, 7, 8, 5, 6, 3, 4: the root splits when 8 is inserted (split 1, creating the new root), a leaf splits on 6 (split 2), another leaf splits on 4 (split 3), and the earlier root overflow contributed the level creation, giving 4 split operations in total.\n\nWhy B is correct: The maximum number of node-splitting operations over all insertion orders is 4.\n\nWhy the others are wrong:\n- A: 3 counts only the child splits and ignores the split of the root when 8 was inserted.\n- C: 5 splits is not reachable with 8 keys under order-4 insertion.\n- D: 6 is not reachable with 8 keys under order-4 insertion.",
+      "currentNeedsReview": true,
+      "currentReviewReason": "Whether the split of the root that creates a new level counts as a node-splitting operation is convention-dependent: counting it gives 4 (option B, as answered), excluding it gives 3 (option A).",
+      "sourcePage": 160
+    },
+    {
+      "id": "q_0585",
+      "verifyReasons": [
+        "confidence=medium",
+        "code/calculation question"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "SQL DML",
+      "question": "Consider the following schema: Emp (Empcode, Name, Sex, Salary, Deptt) A simple SQL query is executed as follows: SELECT Deptt FROM Emp WHERE sex = 'M' GROUP by Dept The output will be?",
+      "code": "Having avg (Salary) > {select avg (Salary) from Emp}",
+      "options": [
+        {
+          "key": "A",
+          "text": "Average salary of male employee is more than the average salary of the organization"
+        },
+        {
+          "key": "B",
+          "text": "Average salary of male employee is equal to the average salary of the organization"
+        },
+        {
+          "key": "C",
+          "text": "Average salary of male employee is the average salary of the organization"
+        },
+        {
+          "key": "D",
+          "text": "Average salary of male employee is less than the average salary of the organization"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "The query groups the male employees by department and keeps only those groups whose average salary satisfies the HAVING condition. The subquery computes avg(Salary) over the whole Emp table, i.e. the organisation-wide average, so the surviving departments are those in which the average salary of male employees exceeds the organisation's average.\n\nWhy A is correct: The HAVING clause keeps the groups whose average salary is greater than the overall average.\n\nWhy the others are wrong:\n- B: Equality with the organisation average would need a different predicate; the query uses \">\".\n- C: Saying the averages are the same contradicts the strict inequality in the query.\n- D: Less than the organisation average is the opposite of what HAVING asks for.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 161
+    },
+    {
+      "id": "q_0586",
+      "verifyReasons": [
+        "confidence=medium",
+        "code/calculation question"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "Indexing and hashing",
+      "question": "Consider the following query : FROM Employees E GROUP BY E.eno If an index on eno is available, the query can be answered by scanning only the index if",
+      "code": "SELECT E.eno, COUNT(*)",
+      "options": [
+        {
+          "key": "A",
+          "text": "index can be hash or B+ tree and clustered or non-clustered"
+        },
+        {
+          "key": "B",
+          "text": "the index is only hash and clustered"
+        },
+        {
+          "key": "C",
+          "text": "the index is only B+tree and clustered"
+        },
+        {
+          "key": "D",
+          "text": "index can be hash or B+ tree and clustered"
+        }
+      ],
+      "currentAnswer": "A",
+      "currentConfidence": "medium",
+      "currentExplanation": "The query needs only E.eno and the number of rows per eno. A clustered index stores the whole record with the key, so scanning it supplies both. A non-clustered index stores eno together with a row locator, and since every index entry corresponds to exactly one row, scanning it still yields each eno and the row count without touching the base table. Whether the index is organised as a hash or a B+ tree is irrelevant, so all four combinations work.\n\nWhy A is correct: Both hash and B+ tree indexes, clustered or non-clustered, contain enough information to answer the query from the index alone.\n\nWhy the others are wrong:\n- B: A non-clustered B+ tree index on eno also suffices.\n- C: A non-clustered hash index on eno also suffices.\n- D: This option wrongly excludes the non-clustered case.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 161
+    },
+    {
+      "id": "q_0588",
+      "verifyReasons": [
+        "code/calculation question"
+      ],
+      "topic": "Database Management Systems",
+      "subtopic": "SQL DML",
+      "question": "What fields will be outputted by the above SQL query?",
+      "code": "SELECT * FROM player WHERE num_of_matches>100 AND country='India';",
+      "options": [
+        {
+          "key": "A",
+          "text": "player"
+        },
+        {
+          "key": "B",
+          "text": "num_of_matches"
+        },
+        {
+          "key": "C",
+          "text": "num_of_matches, country"
+        },
+        {
+          "key": "D",
+          "text": "All fields of player relation"
+        }
+      ],
+      "currentAnswer": "D",
+      "currentConfidence": "high",
+      "currentExplanation": "The asterisk in SELECT * is shorthand for every column of the table. The WHERE clause only filters which rows are returned and never restricts the columns, so the query outputs every field of every player row that has more than 100 matches and belongs to India.\n\nWhy D is correct: SELECT * projects all attributes of player, with the WHERE clause filtering only the rows.\n\nWhy the others are wrong:\n- A: player is the name of the table, not an output field.\n- B: num_of_matches is only one of the output fields.\n- C: country is output too, along with every other column of the relation.",
+      "currentNeedsReview": false,
+      "currentReviewReason": null,
+      "sourcePage": 162
+    }
+  ]
+}

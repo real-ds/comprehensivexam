@@ -1,0 +1,2394 @@
+{
+  "topic": "Database Management Systems",
+  "questions": [
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 1,
+      "sourcePage": 140,
+      "question": "While drawing the ER diagram for a relation \"student registers a course\", \"registers\" should be mentioned _________ 2 rectangles.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "inside a diamond between"
+        },
+        {
+          "key": "B",
+          "text": "over the line connecting"
+        },
+        {
+          "key": "C",
+          "text": "inside an oval between"
+        },
+        {
+          "key": "D",
+          "text": "inside a rectangle between"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0511"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 2,
+      "sourcePage": 140,
+      "question": "What is the number of candidate keys for a relation R(A,B,C,D) having functional dependencies {AB->CD, D->B, C->A}?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "2"
+        },
+        {
+          "key": "B",
+          "text": "3"
+        },
+        {
+          "key": "C",
+          "text": "4"
+        },
+        {
+          "key": "D",
+          "text": "5"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0512"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 3,
+      "sourcePage": 141,
+      "question": "In a relation R(A,B,C,D) having functional dependencies {AB->CD, D->B}, the extraneous attribute in AB->CD is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "A"
+        },
+        {
+          "key": "B",
+          "text": "B"
+        },
+        {
+          "key": "C",
+          "text": "C"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0513"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 4,
+      "sourcePage": 141,
+      "question": "The highest normal form of a relation R(A,B,C,D) with functional dependencies {A->BCD, BC- >AD, D->B} is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "1NF"
+        },
+        {
+          "key": "B",
+          "text": "2NF"
+        },
+        {
+          "key": "C",
+          "text": "3NF"
+        },
+        {
+          "key": "D",
+          "text": "BCNF"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0514"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 5,
+      "sourcePage": 141,
+      "question": "The non-prime attributes of the relation R(A,B,C,D,E) with functional dependencies {AE->BC, AC->D, CD->BE, D->E} is/are:",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "A,C,D,E"
+        },
+        {
+          "key": "B",
+          "text": "B"
+        },
+        {
+          "key": "C",
+          "text": "A,C"
+        },
+        {
+          "key": "D",
+          "text": "B,D,E"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0515"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 6,
+      "sourcePage": 142,
+      "question": "In the relation R(A,B,C,D,E,F) with functional dependencies {AB->C, C->DE, E->F, D->A, C->B}, AB+ is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "{C}"
+        },
+        {
+          "key": "B",
+          "text": "{C,D,E}"
+        },
+        {
+          "key": "C",
+          "text": "{C,D,E,F}"
+        },
+        {
+          "key": "D",
+          "text": "{A,B,C,D,E,F}"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0516"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 7,
+      "sourcePage": 142,
+      "question": "What is the relational algebra expression corresponding to the SQL query \"SELECT city FROM store\"?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "sigmacity(store)"
+        },
+        {
+          "key": "B",
+          "text": "picity(store)"
+        },
+        {
+          "key": "C",
+          "text": "sigmastore(city)"
+        },
+        {
+          "key": "D",
+          "text": "pistore(city)"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0517"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 8,
+      "sourcePage": 142,
+      "question": "Which of the following expressions is used to fetch the details of all stores located in India?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "sigmacountry='India'(store)"
+        },
+        {
+          "key": "B",
+          "text": "picountry='India'(store)"
+        },
+        {
+          "key": "C",
+          "text": "sigmastore(country='India')"
+        },
+        {
+          "key": "D",
+          "text": "pistore(country='India')"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0518"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 9,
+      "sourcePage": 142,
+      "question": "Which of the following is not a valid schedule of 2 transactions, T1: {R(X), W(X)} and T2: {R(Y),",
+      "code": "W(Y)}?",
+      "options": [
+        {
+          "key": "A",
+          "text": "R(X), W(X), R(Y), W(Y)"
+        },
+        {
+          "key": "B",
+          "text": "R(Y), W(Y), R(X), W(X)"
+        },
+        {
+          "key": "C",
+          "text": "W(X), W(Y), R(X), R(Y)"
+        },
+        {
+          "key": "D",
+          "text": "R(X), R(Y), W(X), W(Y)"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0519"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 10,
+      "sourcePage": 143,
+      "question": "Which of the following pairs of operations conflict in the transactions, T1: {R1(X), W1(X)} and T2:",
+      "code": "{R2(X), W2(Y)}",
+      "options": [
+        {
+          "key": "A",
+          "text": "R1(X),W1(X)"
+        },
+        {
+          "key": "B",
+          "text": "R1(X),R2(X)"
+        },
+        {
+          "key": "C",
+          "text": "W1(X),R2(X)"
+        },
+        {
+          "key": "D",
+          "text": "R1(X),W2(Y)"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0520"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 11,
+      "sourcePage": 143,
+      "question": "Which of the following is a conflict serializable schedule of the transactions, T1: {R1(X), W1(X), R1(Y)} and T2: {R2(Y), R2(X), W2(X)}?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "R1(X), R2(Y), R2(X), W1(X), W2(X), R1(Y)"
+        },
+        {
+          "key": "B",
+          "text": "R2(Y), R2(X), R1(X), W1(X), W2(X), R1(Y)"
+        },
+        {
+          "key": "C",
+          "text": "R1(X), W1(X), R2(Y), R2(X), W2(X), R1(Y)"
+        },
+        {
+          "key": "D",
+          "text": "R2(Y), R2(X), R1(X), W2(X), W1(X), R1(Y)"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0521"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 12,
+      "sourcePage": 143,
+      "question": "A database designed to store global information contains a field \"contact number\" in a specific relation. If contact number is to be saved in multiple parts like country code and the actual number, what kind of attribute should be used to represent contact number in the ER diagram?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Atomic attribute"
+        },
+        {
+          "key": "B",
+          "text": "Composite attribute"
+        },
+        {
+          "key": "C",
+          "text": "Multi-valued attribute"
+        },
+        {
+          "key": "D",
+          "text": "Derived attribute"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0522"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 13,
+      "sourcePage": 144,
+      "question": "Which of the following statement(s) is/are TRUE? Consider the following two statements about database transaction schedules: I. Strict two-phase locking protocol produces conflict serializable schedules which are not recoverable. II. Timestamp-ordering concurrency control protocol with Thomas' Write Rule can produce view serializable schedules that are not conflict serializable.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "I only"
+        },
+        {
+          "key": "B",
+          "text": "II only"
+        },
+        {
+          "key": "C",
+          "text": "Both I and II"
+        },
+        {
+          "key": "D",
+          "text": "Neither I nor II"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0523"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 14,
+      "sourcePage": 144,
+      "question": "Which of the following is not a goal of concurrent execution of a transaction?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Improved Resource Utilization"
+        },
+        {
+          "key": "B",
+          "text": "Improved Throughput"
+        },
+        {
+          "key": "C",
+          "text": "Reduced probability of deadlock"
+        },
+        {
+          "key": "D",
+          "text": "Reduced waiting time"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0524"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 15,
+      "sourcePage": 144,
+      "question": "Which one of the following is true about the concurrency?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "It ensures that no interference between simultaneous operations on the database"
+        },
+        {
+          "key": "B",
+          "text": "It ensures that a transaction allows either all of its operations are executed or none"
+        },
+        {
+          "key": "C",
+          "text": "It make sure that database transactions allows any integrity violation in the database."
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0525"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 16,
+      "sourcePage": 144,
+      "question": "Which of the following will not allow both dirty reads and non-repeatable reads, but allows phantom reads?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Read committed"
+        },
+        {
+          "key": "B",
+          "text": "Read uncommitted"
+        },
+        {
+          "key": "C",
+          "text": "Repeatable read"
+        },
+        {
+          "key": "D",
+          "text": "Serializable"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0526"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 17,
+      "sourcePage": 145,
+      "question": "Which of the following is false?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Ensuring durability is the responsibility of recovery management component"
+        },
+        {
+          "key": "B",
+          "text": "Ensuring isolation is the responsibility of concurrency management"
+        },
+        {
+          "key": "C",
+          "text": "Ensuring atomicity or consistency is the responsibility of recovery management component"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0527"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 18,
+      "sourcePage": 145,
+      "question": "Which of the following is true?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "All the schedules which are allowed under Thomas write rule are also allowed under basic timestamp protocol"
+        },
+        {
+          "key": "B",
+          "text": "All the schedules which are allowed under basic timestamp rule are also allowed under multi-version timestamp protocol"
+        },
+        {
+          "key": "C",
+          "text": "All the schedules which are allowed under multi-version timestamp protocol are also allowed under Thomas write rule"
+        },
+        {
+          "key": "D",
+          "text": "All are true"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0528"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 19,
+      "sourcePage": 145,
+      "question": "Which of the following statement is not correct for serializable of transactions?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "In a serial schedule, each transaction is independent of others."
+        },
+        {
+          "key": "B",
+          "text": "Every schedule is serializable"
+        },
+        {
+          "key": "C",
+          "text": "In non-serial schedule may not always result in an incorrect outcome"
+        },
+        {
+          "key": "D",
+          "text": "In non-serial schedule, may result with overlapping of two transaction's executions"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0529"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 20,
+      "sourcePage": 146,
+      "question": "Which of the following is not a recovery technique?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Deferred update"
+        },
+        {
+          "key": "B",
+          "text": "Immediate update"
+        },
+        {
+          "key": "C",
+          "text": "Two-phase commit"
+        },
+        {
+          "key": "D",
+          "text": "Recovery management"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0530"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 21,
+      "sourcePage": 146,
+      "question": "Rollback of transactions is normally used to :",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Recover from transaction failure"
+        },
+        {
+          "key": "B",
+          "text": "Update the transaction"
+        },
+        {
+          "key": "C",
+          "text": "Retrieve old records"
+        },
+        {
+          "key": "D",
+          "text": "Repeat a transaction"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0531"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 22,
+      "sourcePage": 146,
+      "question": "Which of the following are true about indexes?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Indexes will improve the performance of the database table, even it is updated frequently"
+        },
+        {
+          "key": "B",
+          "text": "Indexes makes sql server engine's task even tougher, especially with large keys"
+        },
+        {
+          "key": "C",
+          "text": "Both"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0532"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 23,
+      "sourcePage": 146,
+      "question": "What kind of a relation is \"a student registers for more than one course for a semester\"?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "one-to-many"
+        },
+        {
+          "key": "B",
+          "text": "many-to-many"
+        },
+        {
+          "key": "C",
+          "text": "one-to-one"
+        },
+        {
+          "key": "D",
+          "text": "None"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0533"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 24,
+      "sourcePage": 147,
+      "question": "Consider a B+ tree, the size of the block and node is same as 4 kilobytes. Suppose each index entry is 40 bytes long, find out the height of the tree of a file with one million search key values?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "5"
+        },
+        {
+          "key": "B",
+          "text": "4"
+        },
+        {
+          "key": "C",
+          "text": "6"
+        },
+        {
+          "key": "D",
+          "text": "3"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0534"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 25,
+      "sourcePage": 147,
+      "question": "The schedule S: r1(X), w3(X), w3(Y), w2(Y), r1(Z), w3(Z), w2(Z) is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Both view serializable and conflict serializable schedule"
+        },
+        {
+          "key": "B",
+          "text": "View serializable but not conflict serializable schedule"
+        },
+        {
+          "key": "C",
+          "text": "Only View serializable"
+        },
+        {
+          "key": "D",
+          "text": "Only conflict serializable"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0535"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 26,
+      "sourcePage": 147,
+      "question": "Which of the following statement(s) is/are not TRUE about the B+ tree, which is used for creating an index of a database table?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "B+ Tree is a height-balanced tree"
+        },
+        {
+          "key": "B",
+          "text": "Non-leaf nodes have pointers to data records"
+        },
+        {
+          "key": "C",
+          "text": "Key values in each node are kept in sorted order"
+        },
+        {
+          "key": "D",
+          "text": "Each leaf node has a pointer to the next leaf node"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0536"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 27,
+      "sourcePage": 147,
+      "question": "B+ Trees are normally considered as BALANCED, since",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Lengths of the paths from the root to all leaf nodes are all equal."
+        },
+        {
+          "key": "B",
+          "text": "Lengths of the paths from the root to all leaf nodes differ from each other by at most"
+        },
+        {
+          "key": "C",
+          "text": "Number of children of any two non-leaf sibling nodes differ by at most 1."
+        },
+        {
+          "key": "D",
+          "text": "Number of records in any two leaf nodes differ by at most 1"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0537"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 28,
+      "sourcePage": 148,
+      "question": "Primary indexes of multilevel indexes are created usually based on its first level and it is normally referred as",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "zero level of multilevel index"
+        },
+        {
+          "key": "B",
+          "text": "third level of multilevel index"
+        },
+        {
+          "key": "C",
+          "text": "second level of multilevel index"
+        },
+        {
+          "key": "D",
+          "text": "first level of multilevel index"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0538"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 29,
+      "sourcePage": 148,
+      "question": "Which of the following is/are correct?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "B-trees are for storing data on disk and B+ trees are for main memory."
+        },
+        {
+          "key": "B",
+          "text": "Range queries are faster on B+ trees."
+        },
+        {
+          "key": "C",
+          "text": "B-trees are for primary indexes and B+ trees are for secondary indexes."
+        },
+        {
+          "key": "D",
+          "text": "The height of a B+ tree is independent of the number of records."
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0539"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 30,
+      "sourcePage": 148,
+      "question": "Find the maximum and minimum number of keys in the internal nodes of B - Tree if the order of the node is four,",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "4,2"
+        },
+        {
+          "key": "B",
+          "text": "3,1"
+        },
+        {
+          "key": "C",
+          "text": "4,0"
+        },
+        {
+          "key": "D",
+          "text": "4,3"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0540"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 31,
+      "sourcePage": 148,
+      "question": "Which of the following statement(s) are incorrect",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "In non-relational databases, schemas are need to be defined before adding data"
+        },
+        {
+          "key": "B",
+          "text": "NoSQL databases allows the insertion of data without a predefined schema"
+        },
+        {
+          "key": "C",
+          "text": "NewSQL databases allows the insertion of data without a predefined schema"
+        },
+        {
+          "key": "D",
+          "text": "All the statements"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0541"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 32,
+      "sourcePage": 149,
+      "question": "NoSQL databases is used mainly for handling large volumes of ______________ data.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Unstructured"
+        },
+        {
+          "key": "B",
+          "text": "Structured"
+        },
+        {
+          "key": "C",
+          "text": "Semi-structured"
+        },
+        {
+          "key": "D",
+          "text": "All the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "fill-in-the-blank"
+      ],
+      "id": "q_0542"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 33,
+      "sourcePage": 149,
+      "question": "Which of the following are the NoSQL databases?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Key-value"
+        },
+        {
+          "key": "B",
+          "text": "Wide-column"
+        },
+        {
+          "key": "C",
+          "text": "Document"
+        },
+        {
+          "key": "D",
+          "text": "All the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0543"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 34,
+      "sourcePage": 149,
+      "question": "If an athlete can participate in a maximum of 3 activities, what is cardinality ratio of ATHLETE:ACTIVITY in PARITICIPATE?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "1:n"
+        },
+        {
+          "key": "B",
+          "text": "2:1"
+        },
+        {
+          "key": "C",
+          "text": "1:3"
+        },
+        {
+          "key": "D",
+          "text": "n:1"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0544"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 35,
+      "sourcePage": 150,
+      "question": "Consider the following schedule and state that which of the following statement(s) is (are) true? I: S is recoverable. II: If the order of w1(x) and w2(x) are interchanged, then S will be a non-recoverable schedule.",
+      "code": "S : r1(x),w1(x),r2(x),r1(y),w1(y),w2(x),r2(y), c1, c2;",
+      "options": [
+        {
+          "key": "A",
+          "text": "Only I"
+        },
+        {
+          "key": "B",
+          "text": "Only II"
+        },
+        {
+          "key": "C",
+          "text": "Both I and II"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "stem-enumeration",
+        "code-detected"
+      ],
+      "id": "q_0545"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 36,
+      "sourcePage": 150,
+      "question": "For the given schedule, which of the following statements is true about the schedule S? S : r1(y), r2(x), r2(y), r3(y), w2(x), w1(y), w3(x), r1(x)",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "S is the conflict serializable but not view serializable"
+        },
+        {
+          "key": "B",
+          "text": "S is neither conflict serializable nor view serializable"
+        },
+        {
+          "key": "C",
+          "text": "S is both conflict serializable as well as view serializable"
+        },
+        {
+          "key": "D",
+          "text": "S is view serializable but not conflict serializable"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0546"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 37,
+      "sourcePage": 150,
+      "question": "Which of the following is not an entity set in a SHOPPING mini world?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Customers"
+        },
+        {
+          "key": "B",
+          "text": "Stock"
+        },
+        {
+          "key": "C",
+          "text": "Products"
+        },
+        {
+          "key": "D",
+          "text": "ProductName"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0547"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 38,
+      "sourcePage": 150,
+      "question": "Identify the type of database system required to store a research document.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Multimedia Database"
+        },
+        {
+          "key": "B",
+          "text": "Geographical Information System"
+        },
+        {
+          "key": "C",
+          "text": "Data Warehouse"
+        },
+        {
+          "key": "D",
+          "text": "Textual Database"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0548"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 39,
+      "sourcePage": 151,
+      "question": "In a Bank scenario, the window visible to a customer while doing transactions via net banking is referred to as -----",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "The database state"
+        },
+        {
+          "key": "B",
+          "text": "The Schema"
+        },
+        {
+          "key": "C",
+          "text": "The View"
+        },
+        {
+          "key": "D",
+          "text": "Data dictionary"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0549"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 40,
+      "sourcePage": 151,
+      "question": "A bank operation accommodates several operations in a day. A snapshot taken at 4 p.m to know the transactions currently happening is referred to as------------",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Database Schema"
+        },
+        {
+          "key": "B",
+          "text": "Database state"
+        },
+        {
+          "key": "C",
+          "text": "Abstraction"
+        },
+        {
+          "key": "D",
+          "text": "Catalogue"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0550"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 41,
+      "sourcePage": 151,
+      "question": "Which of the following is a possible schema construct in a supermarket mini world?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Products"
+        },
+        {
+          "key": "B",
+          "text": "inventory"
+        },
+        {
+          "key": "C",
+          "text": "sales"
+        },
+        {
+          "key": "D",
+          "text": "All the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0551"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 42,
+      "sourcePage": 152,
+      "question": "Suppose you are assigned to do a standalone database application, what type of DBMS architecture is required?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Single tier architecture"
+        },
+        {
+          "key": "B",
+          "text": "Two tier"
+        },
+        {
+          "key": "C",
+          "text": "Three tier"
+        },
+        {
+          "key": "D",
+          "text": "None of the mentioned"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0552"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 43,
+      "sourcePage": 152,
+      "question": "Identify the possible entity sets of a Cafeteria Data base.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Customers, menu manager, meal Delivery"
+        },
+        {
+          "key": "B",
+          "text": "Customers, menuManager, itemsProcurement, mealDelivery,billGeneration"
+        },
+        {
+          "key": "C",
+          "text": "Customers, menu manager, Bill generation"
+        },
+        {
+          "key": "D",
+          "text": "FoodMenu"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0553"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 44,
+      "sourcePage": 152,
+      "question": "The attribute Address could be structured as door no, street_name, City and Zipcode. This type of attribute is called ---------",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Simple attribute"
+        },
+        {
+          "key": "B",
+          "text": "Multivalued attribute"
+        },
+        {
+          "key": "C",
+          "text": "Composite attribute"
+        },
+        {
+          "key": "D",
+          "text": "Derived attribute"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0554"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 45,
+      "sourcePage": 152,
+      "question": "For a relation R(A,B,C,D,E,F,G), the candidate keys are AB, AC, and DE. Which of the following is not a proper subset of the candidate key?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "BC"
+        },
+        {
+          "key": "B",
+          "text": "DE"
+        },
+        {
+          "key": "C",
+          "text": "C"
+        },
+        {
+          "key": "D",
+          "text": "AD"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0555"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 46,
+      "sourcePage": 153,
+      "question": "The function that an entity Instructor plays in a relationship teaches refers to the -------",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Participation"
+        },
+        {
+          "key": "B",
+          "text": "Role"
+        },
+        {
+          "key": "C",
+          "text": "Instance"
+        },
+        {
+          "key": "D",
+          "text": "Position"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0556"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 47,
+      "sourcePage": 153,
+      "question": "Which of the following can be a multivalued attribute?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Phone_number"
+        },
+        {
+          "key": "B",
+          "text": "Name"
+        },
+        {
+          "key": "C",
+          "text": "Date_of_birth"
+        },
+        {
+          "key": "D",
+          "text": "All the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0557"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 48,
+      "sourcePage": 153,
+      "question": "Identify the key attribute of the entity PROJECT( ProjectId, Projectname, ProjLocation)",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "ProjectId, ProjectName"
+        },
+        {
+          "key": "B",
+          "text": "ProjectName"
+        },
+        {
+          "key": "C",
+          "text": "ProjLocation"
+        },
+        {
+          "key": "D",
+          "text": "ProjectId"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0558"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 49,
+      "sourcePage": 153,
+      "question": "The attribute experience is calculated from the attribute dateOfJoining. What is the type of the attribute?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Derived attribute"
+        },
+        {
+          "key": "B",
+          "text": "Descriptive attribute"
+        },
+        {
+          "key": "C",
+          "text": "Simple attribute"
+        },
+        {
+          "key": "D",
+          "text": "Multivalued attribute"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0559"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 50,
+      "sourcePage": 154,
+      "question": "SLOT is a weak entity of the University schema. Which of the statements is not true?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "It requires a identifying relationship TAKES"
+        },
+        {
+          "key": "B",
+          "text": "It has a identifying owner entity TIMETABLE"
+        },
+        {
+          "key": "C",
+          "text": "It should have total participation with respect to the entity TAKES"
+        },
+        {
+          "key": "D",
+          "text": "There is no existence dependency of the entity SLOT with respect to the entity TIMETABLE"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0560"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 51,
+      "sourcePage": 154,
+      "question": "ORDERS is an entity set with attributes (orderId, items, price) and SHIPPING entity is a specialized version of the ORDERS entity. Which of the following are the attribute set of SHIPPING entity?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "(OrderId, items, price)"
+        },
+        {
+          "key": "B",
+          "text": "(Orderid, Shippingid)"
+        },
+        {
+          "key": "C",
+          "text": "(OrderId, items, price, ShippingId,FromLocation,ToLocation)"
+        },
+        {
+          "key": "D",
+          "text": "(OrderId, Items, ShippingId,FromLocation,ToLocation)"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0561"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 52,
+      "sourcePage": 154,
+      "question": "If an attribute is added to the superclass entity, the condition for propagating this change in subclass entity is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Attribute defined membership"
+        },
+        {
+          "key": "B",
+          "text": "Predicate defined membership"
+        },
+        {
+          "key": "C",
+          "text": "Both Attribute defined and Predicate defined membership"
+        },
+        {
+          "key": "D",
+          "text": "Overlapping participation"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0562"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 53,
+      "sourcePage": 155,
+      "question": "\"Customer buys Products\". Identify the relationship set.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Customer"
+        },
+        {
+          "key": "B",
+          "text": "Products"
+        },
+        {
+          "key": "C",
+          "text": "Buys"
+        },
+        {
+          "key": "D",
+          "text": "Customer and Products"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0563"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 54,
+      "sourcePage": 155,
+      "question": "The entity set MovieZone is classified as Hollywood and Bollywood. This process is called ------",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Generalization"
+        },
+        {
+          "key": "B",
+          "text": "Specialization"
+        },
+        {
+          "key": "C",
+          "text": "Inheritance"
+        },
+        {
+          "key": "D",
+          "text": "Constraint generalization"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0564"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 55,
+      "sourcePage": 155,
+      "question": "Identify the simple attribute.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "name"
+        },
+        {
+          "key": "B",
+          "text": "grade"
+        },
+        {
+          "key": "C",
+          "text": "Color"
+        },
+        {
+          "key": "D",
+          "text": "VehicleRegistrationNumber"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0565"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 56,
+      "sourcePage": 155,
+      "question": "If a relational schema \"R\" is in BCNF, which of the following statements is true?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "R is in 4NF"
+        },
+        {
+          "key": "B",
+          "text": "R is in 2NF but not in 3NF"
+        },
+        {
+          "key": "C",
+          "text": "R is not in 1NF"
+        },
+        {
+          "key": "D",
+          "text": "R is in 2NF and 3NF"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0566"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 57,
+      "sourcePage": 156,
+      "question": "An entity set DOCTOR has a total participation on the relationship DIANOSES that connects it to the entity set PATIENTS. What would be the minimum cardinality constraint on the relationship?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "1:1"
+        },
+        {
+          "key": "B",
+          "text": "M:N"
+        },
+        {
+          "key": "C",
+          "text": "1:N"
+        },
+        {
+          "key": "D",
+          "text": "N:1"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0567"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 58,
+      "sourcePage": 156,
+      "question": "An entity set SHIPPING has the attributes (shippingId, ShipLocations). Which of the following is true?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "ShippingId is the primary key"
+        },
+        {
+          "key": "B",
+          "text": "ShipLocations is the primary key"
+        },
+        {
+          "key": "C",
+          "text": "ShippingId, ShipLocations is a composite key"
+        },
+        {
+          "key": "D",
+          "text": "None of the options"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0568"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 59,
+      "sourcePage": 156,
+      "question": "SENSE, SELECT, SCOPE are the entity sets with common characteristics. Which process can define an entity set called DEPARTMENTS?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Specialization"
+        },
+        {
+          "key": "B",
+          "text": "Generalization"
+        },
+        {
+          "key": "C",
+          "text": "Top down approach"
+        },
+        {
+          "key": "D",
+          "text": "Inheritance"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0569"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 60,
+      "sourcePage": 156,
+      "question": "In a share market application, an entity set INVESTOR can buy or sell SHARES. This refers to --- -----",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Relationship"
+        },
+        {
+          "key": "B",
+          "text": "Role definition"
+        },
+        {
+          "key": "C",
+          "text": "Recursive relationship"
+        },
+        {
+          "key": "D",
+          "text": "Participation"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0570"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 61,
+      "sourcePage": 157,
+      "question": "Which one of the following events in a database system can lead to an irrecoverable mistake?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "A transaction reads a data item after it is written by an uncommitted transaction"
+        },
+        {
+          "key": "B",
+          "text": "A transaction reads a data item after it is written by a committed transaction"
+        },
+        {
+          "key": "C",
+          "text": "A transaction reads a data item after it is read by an uncommitted transaction"
+        },
+        {
+          "key": "D",
+          "text": "A transaction writes a data item after it is read by an uncommitted transaction"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0571"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 62,
+      "sourcePage": 157,
+      "question": "Consider the table R with attributes A, B and C. The functional dependencies that hold on R are : A → B, C → AB. Which of the following statements is/are True ? I. The decomposition of R into R1(C, A) and R2(A, B) is lossless. II. The decomposition of R into R1(A, B) and R2(B, C) is lossy.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Only I"
+        },
+        {
+          "key": "B",
+          "text": "Only II"
+        },
+        {
+          "key": "C",
+          "text": "Both I and II"
+        },
+        {
+          "key": "D",
+          "text": "Neither I nor II"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0572"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 63,
+      "sourcePage": 157,
+      "question": "Which of the following is correct with respect to Two phase commit protocol?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Ensures serializability"
+        },
+        {
+          "key": "B",
+          "text": "Prevents Deadlock"
+        },
+        {
+          "key": "C",
+          "text": "Detects Deadlock"
+        },
+        {
+          "key": "D",
+          "text": "Recover from Deadlock"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0573"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 64,
+      "sourcePage": 158,
+      "question": "Consider a B+-tree in which the maximum number of keys in a node is 7. What is the minimum number of keys in any non-root node?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "3"
+        },
+        {
+          "key": "B",
+          "text": "1"
+        },
+        {
+          "key": "C",
+          "text": "2"
+        },
+        {
+          "key": "D",
+          "text": "4"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0574"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 65,
+      "sourcePage": 158,
+      "question": "A file is structured in such a way that the ordering of data records in certain indexes is the same as or similar to the ordering of data entries. That index is then called",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Clustered"
+        },
+        {
+          "key": "B",
+          "text": "Sparse"
+        },
+        {
+          "key": "C",
+          "text": "Dense"
+        },
+        {
+          "key": "D",
+          "text": "Unclustered"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0575"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 66,
+      "sourcePage": 158,
+      "question": "The physical position of a record is calculated by a formula that translates a file key into a position for the record is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "B-Tree file"
+        },
+        {
+          "key": "B",
+          "text": "Hashed file"
+        },
+        {
+          "key": "C",
+          "text": "Indexed file"
+        },
+        {
+          "key": "D",
+          "text": "Sequential file"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0576"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 67,
+      "sourcePage": 158,
+      "question": "Fill the blank in the above SQL query with an appropriate keyword to display all non-repeating values of the column \"destination\" only once and values that occur once as such.",
+      "code": "SELECT ________ destination FROM flight;",
+      "options": [
+        {
+          "key": "A",
+          "text": "DIFFERENT"
+        },
+        {
+          "key": "B",
+          "text": "DISTINCT"
+        },
+        {
+          "key": "C",
+          "text": "ALL"
+        },
+        {
+          "key": "D",
+          "text": "UNIQUE"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0577"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 68,
+      "sourcePage": 159,
+      "question": "Relation R has six attributes ABCDEF. Fields of R contain only atomic values. F = { A -> BC, B -> CFH, E -> A, F -> E} is a set of functional dependencies (FDs) so that F+ is exactly the set of FDs that hold for R. How many candidate keys does the relation R have?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "5"
+        },
+        {
+          "key": "B",
+          "text": "6"
+        },
+        {
+          "key": "C",
+          "text": "3"
+        },
+        {
+          "key": "D",
+          "text": "4"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0578"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 69,
+      "sourcePage": 159,
+      "question": "Consider the given functional dependencys (FDs) of a relation R has six attributes ABCDEF. Fields of R contain only atomic values. F = { A -> BC, B -> CFH, E -> A, F -> E} is a set of functional dependencies (FDs) so that F+ is exactly the set of FDs that hold for R. The relation R is in",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "2NF, but not in 3NF."
+        },
+        {
+          "key": "B",
+          "text": "3NF, but not in BCNF."
+        },
+        {
+          "key": "C",
+          "text": "1NF, but not in 2NF."
+        },
+        {
+          "key": "D",
+          "text": "BCNF."
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0579"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 70,
+      "sourcePage": 159,
+      "question": "Consider the relation scheme R = {A, B, C, D, E, F, G} and the set of functional dependencies {{A, B} -> {C}, {B} -> {E, F}, {A, D} ->{G}} on R. What is the key for R?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "{A, B, C, D, G}"
+        },
+        {
+          "key": "B",
+          "text": "{A, D}"
+        },
+        {
+          "key": "C",
+          "text": "{A, B}"
+        },
+        {
+          "key": "D",
+          "text": "{A, B, D}"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0580"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 71,
+      "sourcePage": 160,
+      "question": "The maximum number of superkeys for the relation schema R(A, B, C, D, E, F, G, H) with H as the key is",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "64"
+        },
+        {
+          "key": "B",
+          "text": "128"
+        },
+        {
+          "key": "C",
+          "text": "7"
+        },
+        {
+          "key": "D",
+          "text": "256"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0581"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 72,
+      "sourcePage": 160,
+      "question": "Select the 'False' statement from the following statements about Normal Forms:",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Lossless preserving decomposition into 3NF is always possible"
+        },
+        {
+          "key": "B",
+          "text": "Any Relation with two attributes is in BCNF"
+        },
+        {
+          "key": "C",
+          "text": "Lossless preserving decomposition into BCNF is always possible"
+        },
+        {
+          "key": "D",
+          "text": "BCNF is stronger than 3NF"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0582"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 73,
+      "sourcePage": 160,
+      "question": "A B-tree of order 4 is constructed by 8 successive insertions from scratch. What is the maximum number of operations for node splitting that can take place?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "3"
+        },
+        {
+          "key": "B",
+          "text": "4"
+        },
+        {
+          "key": "C",
+          "text": "5"
+        },
+        {
+          "key": "D",
+          "text": "6"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0583"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 74,
+      "sourcePage": 160,
+      "question": "The 'Durability' property among the ACID properties of a transaction requires that the modifications made by a successful transaction to the database survive.",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Except in case of an Operating System crash"
+        },
+        {
+          "key": "B",
+          "text": "Always, even if there is a failure of any kind"
+        },
+        {
+          "key": "C",
+          "text": "Except in case of a power failure"
+        },
+        {
+          "key": "D",
+          "text": "Except in case of a Disk crash"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0584"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 75,
+      "sourcePage": 161,
+      "question": "Consider the following schema: Emp (Empcode, Name, Sex, Salary, Deptt) A simple SQL query is executed as follows: SELECT Deptt FROM Emp WHERE sex = 'M' GROUP by Dept The output will be?",
+      "code": "Having avg (Salary) > {select avg (Salary) from Emp}",
+      "options": [
+        {
+          "key": "A",
+          "text": "Average salary of male employee is more than the average salary of the organization"
+        },
+        {
+          "key": "B",
+          "text": "Average salary of male employee is equal to the average salary of the organization"
+        },
+        {
+          "key": "C",
+          "text": "Average salary of male employee is the average salary of the organization"
+        },
+        {
+          "key": "D",
+          "text": "Average salary of male employee is less than the average salary of the organization"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0585"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 76,
+      "sourcePage": 161,
+      "question": "Consider the following query : FROM Employees E GROUP BY E.eno If an index on eno is available, the query can be answered by scanning only the index if",
+      "code": "SELECT E.eno, COUNT(*)",
+      "options": [
+        {
+          "key": "A",
+          "text": "index can be hash or B+ tree and clustered or non-clustered"
+        },
+        {
+          "key": "B",
+          "text": "the index is only hash and clustered"
+        },
+        {
+          "key": "C",
+          "text": "the index is only B+tree and clustered"
+        },
+        {
+          "key": "D",
+          "text": "index can be hash or B+ tree and clustered"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0586"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 77,
+      "sourcePage": 161,
+      "question": "Which level of locking provides the highest degree of concurrency in a relational data base?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "Table"
+        },
+        {
+          "key": "B",
+          "text": "Row"
+        },
+        {
+          "key": "C",
+          "text": "Page"
+        },
+        {
+          "key": "D",
+          "text": "Page, table and row level locking allow the same degree of concurrency"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0587"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 78,
+      "sourcePage": 162,
+      "question": "What fields will be outputted by the above SQL query?",
+      "code": "SELECT * FROM player WHERE num_of_matches>100 AND country='India';",
+      "options": [
+        {
+          "key": "A",
+          "text": "player"
+        },
+        {
+          "key": "B",
+          "text": "num_of_matches"
+        },
+        {
+          "key": "C",
+          "text": "num_of_matches, country"
+        },
+        {
+          "key": "D",
+          "text": "All fields of player relation"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [
+        "code-detected"
+      ],
+      "id": "q_0588"
+    },
+    {
+      "topic": "Database Management Systems",
+      "sourceSection": "DBMS",
+      "sourceNumber": 79,
+      "sourcePage": 162,
+      "question": "Which of the following SQL queries can be used to change \"Mishra\" to \"Singh\" in the \"LastName\" column in the People relation?",
+      "code": null,
+      "options": [
+        {
+          "key": "A",
+          "text": "UPDATE People SET LastName='Mishra' INTO LastName='Singh'"
+        },
+        {
+          "key": "B",
+          "text": "UPDATE People SET LastName='Singh' WHERE LastName='Mishra'"
+        },
+        {
+          "key": "C",
+          "text": "MODIFY People SET LastName='Mishra' INTO LastName='Singh'"
+        },
+        {
+          "key": "D",
+          "text": "MODIFY People SET LastName='Singh' WHERE LastName='Mishra'"
+        }
+      ],
+      "printedAnswer": null,
+      "marks": 1,
+      "extractionFlags": [],
+      "id": "q_0589"
+    }
+  ]
+}
