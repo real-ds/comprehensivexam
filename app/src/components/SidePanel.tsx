@@ -7,7 +7,8 @@ const NAV_ITEMS = [
   { path: '/study',   label: 'Study'  },
   { path: '/test',    label: 'Test'   },
   { path: '/exam',    label: 'Exam'   },
-  { path: '/progress',label: 'Progress'},
+  { path: '/progress', label: 'Progress' },
+  { path: '/leaderboard', label: 'Leaderboard' },
 ] as const
 
 function MenuIcon({ open }: { open: boolean }) {

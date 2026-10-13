@@ -4,6 +4,7 @@ import { useProgress } from '../context/ProgressContext'
 import { QuestionCard } from '../components/QuestionCard'
 import { Button }       from '../components/Button'
 import type { Question, TestConfig, QuizAttempt, AnswerRecord } from '../types'
+import { addLeaderboardEntry } from '../utils/leaderboard'
 
 const Q_COUNTS = [10, 20, 30] as const
 
@@ -47,7 +48,8 @@ export function Test() {
   const [idx, setIdx]         = useState(0)
   const [answers, setAnswers] = useState<Record<string, string>>({})
   const [timeLeft, setTL]     = useState<number | null>(null)
-  const [startTime, setST]    = useState(0)
+  const [startTime, setST]     = useState(0)
+  const [playerName, setPlayerName] = useState(() => localStorage.getItem('mcq-player-name') || '')
 
   const current = questions[idx]
   const isLast  = idx === questions.length - 1
@@ -89,6 +91,16 @@ export function Test() {
       answers: records, score: correct, totalQuestions: questions.length, correctCount: correct, topicBreakdown: {},
     }
     addAttempt(attempt)
+    addLeaderboardEntry({
+      name: playerName.trim() || 'Anonymous',
+      mode: 'test',
+      score: correct,
+      total: questions.length,
+      percent: Math.round((correct / questions.length) * 100),
+      topics: config.topics,
+      durationMs: endTime - startTime,
+    })
+    localStorage.setItem('mcq-player-name', playerName.trim())
     setPhase('results')
   }
 
@@ -113,6 +125,17 @@ export function Test() {
         <h1 style={{ margin: '0 0 24px', fontSize: 24, fontWeight: 600, color: 'var(--text)' }}>Test Setup</h1>
 
         <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 8, padding: 24, boxShadow: 'var(--shadow-sm)' }}>
+          {/* Name */}
+          <div style={{ marginBottom: 20 }}>
+            <p style={{ margin: '0 0 8px', fontSize: 13, fontWeight: 600, color: 'var(--text)' }}>Your name (for leaderboard)</p>
+            <input
+              value={playerName}
+              onChange={(e) => setPlayerName(e.target.value)}
+              placeholder="Anonymous"
+              style={{ height: 36, width: '100%', padding: '0 12px', border: '1px solid var(--border)', borderRadius: 6, background: 'var(--surface)', color: 'var(--text)', fontSize: 15 }}
+            />
+          </div>
+
           {/* Topics */}
           <fieldset style={{ margin: 0, padding: 0, border: 'none', marginBottom: 24 }}>
             <legend style={{ fontSize: 13, fontWeight: 600, color: 'var(--text)', marginBottom: 10 }}>Topics</legend>

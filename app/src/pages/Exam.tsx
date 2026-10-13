@@ -4,6 +4,7 @@ import { useProgress } from '../context/ProgressContext'
 import { QuestionCard } from '../components/QuestionCard'
 import { Button }       from '../components/Button'
 import type { Question, ExamConfig, QuizAttempt, AnswerRecord, ExamBlueprint } from '../types'
+import { addLeaderboardEntry } from '../utils/leaderboard'
 
 // Small toggle button (reused from Test page pattern)
 function SegButton({ active, onClick, children }: { active: boolean; onClick: () => void; children: React.ReactNode }) {
@@ -46,6 +47,7 @@ export function Exam() {
   const [marked, setMarked]   = useState<Set<string>>(new Set())
   const [timeLeft, setTL]     = useState(config.durationMinutes * 60)
   const [startTime, setST]    = useState(0)
+  const [playerName, setPlayerName] = useState(() => localStorage.getItem('mcq-player-name') || '')
   const [confirmOpen, setConfirmOpen] = useState(false)
 
   const current     = examQs[idx]
@@ -127,9 +129,19 @@ export function Exam() {
         totalQuestions: examQs.length, correctCount: correct, topicBreakdown: {},
       }
       addAttempt(attempt)
+      addLeaderboardEntry({
+        name: playerName.trim() || 'Anonymous',
+        mode: 'exam',
+        score: correct,
+        total: examQs.length,
+        percent: Math.round((correct / examQs.length) * 100),
+        topics: [],
+        durationMs: endTime - startTime,
+      })
+      localStorage.setItem('mcq-player-name', playerName.trim())
       setPhase('results')
     },
-    [answers, examQs, startTime, config, marked, addAttempt]
+    [answers, examQs, startTime, config, marked, addAttempt, playerName]
   )
 
   // Timer
@@ -206,6 +218,17 @@ export function Exam() {
 
         {/* Config */}
         <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 8, padding: 24, boxShadow: 'var(--shadow-sm)' }} className="space-y-5">
+          {/* Name */}
+          <div>
+            <label style={{ display: 'block', fontSize: 13, fontWeight: 600, color: 'var(--text)', marginBottom: 6 }}>Your name (for leaderboard)</label>
+            <input
+              value={playerName}
+              onChange={(e) => setPlayerName(e.target.value)}
+              placeholder="Anonymous"
+              style={{ height: 36, width: '100%', padding: '0 12px', border: '1px solid var(--border)', borderRadius: 6, background: 'var(--surface)', color: 'var(--text)', fontSize: 15 }}
+            />
+          </div>
+
           {/* Duration */}
           <div>
             <label htmlFor="dur" style={{ display: 'block', fontSize: 13, fontWeight: 600, color: 'var(--text)', marginBottom: 6 }}>

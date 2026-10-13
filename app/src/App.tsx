@@ -4,7 +4,8 @@ import { Home }      from './pages/Home'
 import { Study }     from './pages/Study'
 import { Test }      from './pages/Test'
 import { Exam }      from './pages/Exam'
-import { Progress }  from './pages/Progress'
+import { Progress }    from './pages/Progress'
+import { Leaderboard } from './pages/Leaderboard'
 
 function App() {
   return (
@@ -19,8 +20,9 @@ function App() {
             <Route path="/study"    element={<Study />}    />
             <Route path="/test"     element={<Test />}     />
             <Route path="/exam"     element={<Exam />}     />
-            <Route path="/progress" element={<Progress />} />
-            <Route path="*"         element={<Home />}     />
+            <Route path="/progress"     element={<Progress />}     />
+            <Route path="/leaderboard"  element={<Leaderboard />}  />
+            <Route path="*"             element={<Home />}         />
           </Routes>
         </div>
       </main>
