@@ -8,7 +8,6 @@ import type { Question } from '../types'
 
 const DIFFICULTIES = ['easy', 'medium', 'hard'] as const
 
-// Thin toggle button used in filter bar
 function ToggleChip({ label, checked, onChange }: { label: string; checked: boolean; onChange: (v: boolean) => void }) {
   return (
     <label
@@ -85,9 +84,23 @@ export function Study() {
     )
   ) as string[]
 
-  // ---------------------------------------------------------------------------
-  // Empty state
-  // ---------------------------------------------------------------------------
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault()
+        go(index - 1)
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault()
+        go(index + 1)
+      } else if (e.key === 'Shift') {
+        e.preventDefault()
+        setShow((f) => !f)
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+    return () => window.removeEventListener('keydown', handleKeyDown)
+  }, [index])
+
   if (!q) {
     return (
       <div style={{ textAlign: 'center', padding: '64px 0' }}>
@@ -104,19 +117,14 @@ export function Study() {
     `${index + 1} of ${filtered.length}`,
   ].filter(Boolean).join(' · ')
 
-  // ---------------------------------------------------------------------------
-  // Render
-  // ---------------------------------------------------------------------------
   return (
     <div className="space-y-5">
-      {/* Filter bar */}
       <div
         style={{
           display: 'flex', flexWrap: 'wrap', gap: 8,
           paddingBottom: 16, borderBottom: '1px solid var(--border)',
         }}
       >
-        {/* Topic */}
         <select
           value={topicParam}
           onChange={(e) => updateParam('topic', e.target.value)}
@@ -127,7 +135,6 @@ export function Study() {
           {topics.map((t) => <option key={t} value={t}>{t}</option>)}
         </select>
 
-        {/* Subtopic */}
         <select
           value={subtopicParam}
           onChange={(e) => updateParam('subtopic', e.target.value)}
@@ -139,7 +146,6 @@ export function Study() {
           {subtopics.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
 
-        {/* Difficulty */}
         <select
           value={diffParam}
           onChange={(e) => updateParam('difficulty', e.target.value)}
@@ -154,7 +160,6 @@ export function Study() {
         <ToggleChip label="Not studied" checked={notStudiedOnly} onChange={(v) => updateParam('notStudied', v)} />
       </div>
 
-      {/* Question card */}
       <QuestionCard
         question={q}
         selectedOption={selected}
@@ -168,7 +173,6 @@ export function Study() {
         currentStatus={status}
       />
 
-      {/* Navigation row */}
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 12 }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
           <Button variant="secondary" onClick={() => go(index - 1)} disabled={index === 0}>Previous</Button>
@@ -182,7 +186,10 @@ export function Study() {
         </Button>
       </div>
 
-      {/* Personal note */}
+      <div style={{ fontSize: 12, color: 'var(--text-muted)', textAlign: 'center', marginTop: 8 }}>
+        Keyboard: ← Previous | → Next | Shift: Toggle answer
+      </div>
+
       <div>
         <label
           htmlFor={`note-${q.id}`}
@@ -207,7 +214,6 @@ export function Study() {
         />
       </div>
 
-      {/* Jump-to palette */}
       <div style={{ paddingTop: 12, borderTop: '1px solid var(--border)' }}>
         <h3 style={{ margin: '0 0 8px', fontSize: 13, fontWeight: 600, color: 'var(--text-muted)' }}>
           Jump to question
