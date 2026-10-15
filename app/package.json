@@ -11,14 +11,15 @@
     "lint": "eslint . --ext ts,tsx"
   },
   "dependencies": {
+    "date-fns": "^3.3.0",
+    "idb": "^8.0.0",
+    "lucide-react": "^0.344.0",
+    "next-themes": "^0.4.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.0",
-    "zustand": "^4.5.0",
-    "idb": "^8.0.0",
     "react-syntax-highlighter": "^15.5.0",
-    "date-fns": "^3.3.0",
-    "lucide-react": "^0.344.0"
+    "zustand": "^4.5.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.55",
