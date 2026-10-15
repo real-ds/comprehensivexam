@@ -34,10 +34,12 @@ export function SidePanel({
   isExam = false,
   examPalette,
   onPaletteSelect,
+  sidebarOpen = true,
 }: {
   isExam?: boolean;
   examPalette?: { id: string; state: 'unanswered' | 'answered' | 'marked' | 'current' }[];
   onPaletteSelect?: (id: string) => void;
+  sidebarOpen?: boolean;
 }) {
   const { topics, topicStats } = useQueries()
   const [mobileOpen, setMobileOpen] = useState(false)
@@ -60,15 +62,7 @@ export function SidePanel({
   if (isExam && examPalette) {
     return (
       <aside
-        style={{
-          position: 'fixed', inset: '0 auto 0 0',
-          width: 256,
-          background: 'var(--panel)',
-          borderRight: '1px solid var(--border)',
-          zIndex: 40,
-          display: 'flex',
-          flexDirection: 'column',
-        }}
+        className={`fixed left-0 top-0 h-full w-64 bg-panel border-r border-border z-40 transition-transform duration-default ${!sidebarOpen ? '-translate-x-full' : ''}`}
       >
         <div style={{ padding: '20px 16px', borderBottom: '1px solid var(--border)' }}>
           <h2 style={{ margin: 0, fontSize: 15, fontWeight: 600, color: 'var(--text)' }}>
